@@ -122,3 +122,21 @@ Record:
 - reusable ideas worth synthesis.
 
 Do not blindly merge code from candidates.
+
+
+## Architecture V3 additions
+
+Audit explicitly:
+- four-domain architecture is visible in source boundaries;
+- UI and MCP share application/core use cases;
+- durable domain model exists beyond generic UI state;
+- CharacterRevision / CanonRevision immutability;
+- PromptBuild reproducibility;
+- GenerationJob vs GenerationAttempt separation;
+- AssetVersion + graph lineage;
+- ProviderConnection secret boundary;
+- Workflow / WorkflowRevision / WorkflowRun separation;
+- Expert Workflow Graph has typed/executable semantics, not decorative nodes;
+- guided Studios and expert graph share the same objects;
+- bounded 30–45 item media pack is used as assigned;
+- public-run current founder decisions supersede stale inaccessible private status.
