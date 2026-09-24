@@ -1,83 +1,65 @@
-# Design Recipe C — Authoring Instrument
+# Design Recipe C — TouchDesigner × Fragment × Jo Iijima
 
-## Priority chain
+Exactly **3 run-specific design references**.
 
-### 1. PRIMARY ANCHOR — TouchDesigner
+Common product architecture still comes from OS23.6 + Higgsfield + Figma Weave + existing V2.
+
+## 1. PRIMARY PRODUCT/WORKBENCH ANCHOR — TouchDesigner
+
 https://derivative.ca/
 
-Research:
+Role:
+- authoring philosophy;
 - visible system relationships;
-- authoring depth;
-- hierarchy of parameters;
-- persistent preview/output;
-- how expert density remains navigable.
+- parameter hierarchy;
+- output/preview always connected to cause.
 
-Transfer to IOS:
+Transfer:
 - Character Studio;
 - Prompt Lab;
 - Canvas;
 - Scene;
 - Series/Shoot/Feed.
 
-Do not default to a node graph just because TouchDesigner uses nodes.
+Hard rule:
+do not turn the whole product into a node editor.
 
-### 2. LIVE PREVIEW / PANEL LOGIC — Fragment
+## 2. LIVE PREVIEW / CONTROL-SURFACE ANCHOR — Fragment
+
 https://fragment.tools/
 
-Research:
-- live preview;
-- flexible panels/windows;
-- parameter grouping;
-- input/output proximity.
+Role:
+- continuous live preview;
+- flexible control surfaces;
+- input/output proximity;
+- creative-tool ergonomics.
 
 Transfer:
-- Image/Video studio layout;
+- Image Studio;
+- Video Studio;
 - adapter/payload inspector;
-- compare.
+- Compare.
 
-### 3. SCALE / RELATIONSHIP THINKING — Nodes
-https://nodes.io/
+## 3. PUBLIC VISUAL / TYPOGRAPHIC ANCHOR — Jo Iijima
 
-Research:
-- zooming between problem scales;
-- complexity made visible;
-- canvas vs focused detail.
+https://joiijima.com/
+
+Role:
+- prevent the product from becoming an enterprise dashboard;
+- bold type/colour;
+- authorial composition;
+- precise craft despite complexity.
 
 Transfer:
-- Canvas/workflow;
-- project overview;
-- deep prompt/scene inspection.
+- Home;
+- Models;
+- Examples;
+- public framing around the workbench.
 
-### 4. PUBLIC-SITE ART DIRECTION — Studio K95
-https://www.k95.it/
+## Design synthesis rule
 
-Use for:
-- typography;
-- landing/public identity;
-- preventing enterprise-dashboard aesthetics.
+TouchDesigner decides authoring logic.
+Fragment decides panel/preview ergonomics.
+Jo Iijima decides public visual character.
 
-### 5. MEDIA / PROVENANCE — Getty Tracing Art
-https://www.getty.edu/tracingart/
-
-Use for:
-- examples;
-- asset evidence;
-- provenance;
-- output case studies.
-
-### 6. MOTION TEMPERAMENT — R—K ’26
-https://tympanus.net/codrops/2026/04/07/r-k-26-the-thinking-and-code-behind-a-portfolio-led-by-presence/
-
-Use for:
-- consistent motion;
-- reveal discipline;
-- transitions between dense workbench and media detail.
-
-## Required synthesis
-
-TouchDesigner decides authoring philosophy.
-Fragment decides preview/panel ergonomics.
-Nodes decides scale relationships.
-K95 decides public/type character.
-Getty decides evidence/media.
-R—K decides motion temperament.
+Figma Weave remains a COMMON architecture benchmark, not a fourth visual reference.
