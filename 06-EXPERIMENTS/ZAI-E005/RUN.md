@@ -30,7 +30,7 @@ Read everything from the exact INPUT_COMMIT supplied by the launch prompt:
 2. all files required by START-HERE
 3. `03-REFERENCES/common/`
 4. `03-REFERENCES/design-set-a/REFERENCE-RECIPE.md`
-5. `04-MEDIA/packs/wave01-A-public-v3.json`
+5. `04-MEDIA/transport/wave01-v4/packs/A.json`
 6. `07-RESULTS/AUDIT-RUBRIC.md`
 7. this RUN.md
 8. `01-BASE/MASTER-MISSION-FULL.md` only as exhaustive implementation/source appendix
@@ -41,9 +41,7 @@ Do not read sibling run folders for creative direction.
 
 Preferred UI model: `GLM-5.3`. If unavailable, `GLM-5.3-Flash` is the preferred fallback.
 
-Record the exact visible runtime model label in RUN-MANIFEST.md.
-
-Record the exact visible runtime model label. If it differs from the preferred runtime, continue and record `MODEL_OVERRIDE_AT_LAUNCH`. This is a PRODUCT_QUALITY run, not a clean model benchmark.
+Record the exact visible runtime model label in RUN-MANIFEST.md. If it differs from the preferred runtime, continue and record `MODEL_OVERRIDE_AT_LAUNCH`. This is a PRODUCT_QUALITY run, not a clean model benchmark.
 
 ## Media transport
 
