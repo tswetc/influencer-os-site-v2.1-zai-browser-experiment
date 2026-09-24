@@ -64,6 +64,7 @@ PACK_CAPS = {
         "still-life-01": 2,
         "capability-flora-01": 4,
         "capability-bts-01": 2,
+        "motion-pack-01": 3,
     },
     "B": {
         "founder-character-01": 4,
@@ -84,6 +85,7 @@ PACK_CAPS = {
         "world-raw-01": 2,
         "world-staged-01": 2,
         "motion-pack-01": 5,
+        "capability-flora-01": 3,
     },
     "C": {
         "founder-character-01": 4,
