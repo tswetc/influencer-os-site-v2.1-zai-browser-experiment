@@ -1,91 +1,75 @@
-# Design Recipe A — Editorial Evidence System
+# Design Recipe A — Jo Iijima × Getty × R—K
 
-This is not a mood label. Use the references below in explicit roles.
+Exactly **3 run-specific visual references**.
 
-## Priority chain
+Common product architecture still comes from OS23.6 + Higgsfield + Figma Weave + existing V2.
 
-### 1. TYPOGRAPHIC / SYSTEM ANCHOR — Studio K95
-https://www.k95.it/
+## 1. PRIMARY VISUAL / COMPOSITION ANCHOR — Jo Iijima
 
-Research:
-- typographic scale and contrast;
-- black/white/dark editorial balance;
-- use of motion without “AI app” aesthetics;
-- how navigation/system UI remains graphic.
+https://joiijima.com/
 
-Transfer to IOS:
-- global typography;
-- navigation;
-- section numerals/metadata;
-- restrained motion temperament.
+Role:
+- overall visual courage;
+- controlled chaos;
+- colour/shape composition;
+- precise typography holding heterogeneous material together;
+- pages that feel authored rather than templated.
 
-Do NOT copy their identity, projects, imagery or branded compositions.
+Required research:
+- screenshot major desktop/mobile states;
+- identify grid vs deliberate grid-breaking;
+- typography hierarchy;
+- colour relationships;
+- overlap/layer rules;
+- navigation behavior;
+- motion/reveal behavior.
 
-### 2. MEDIA / NARRATIVE ANCHOR — Getty Tracing Art
+Transfer:
+- Home;
+- public Models/Examples;
+- selected Character/Project editorial states.
+
+Do not transfer:
+- personal portfolio identity/content;
+- arbitrary chaos without hierarchy.
+
+## 2. MEDIA / NARRATIVE ANCHOR — Getty Tracing Art
+
 https://www.getty.edu/tracingart/
 
-Research:
-- how many photographs coexist without becoming a Pinterest wall;
-- chapter/sequence logic;
-- captions, evidence, provenance;
-- transitions between narrative and data/information;
-- desktop/mobile image density.
+Role:
+- large photographic volume without Pinterest-wall behavior;
+- chapter/evidence structure;
+- captions/provenance;
+- transition between image-led narrative and information.
 
-Transfer to IOS:
+Transfer:
 - Home proof sections;
-- Examples/Community;
+- Examples;
 - Character identity evidence;
-- project/case narratives;
-- provenance states.
+- Projects;
+- Assets/case narratives.
 
-### 3. SPACING / PHOTOGRAPHIC RESTRAINT — Gionatan Nese
-https://www.gionatannese.com/
+## 3. MOTION / TRANSITION ANCHOR — R—K ’26
 
-Research:
-- image scale;
-- quiet whitespace;
-- light/material emphasis;
-- how UI gets out of the way.
-
-Transfer to IOS:
-- public editorial surfaces;
-- Character/Asset viewing modes;
-- result detail states.
-
-### 4. MOTION GRAMMAR — R—K ’26
 https://tympanus.net/codrops/2026/04/07/r-k-26-the-thinking-and-code-behind-a-portfolio-led-by-presence/
 
-Research:
+Role:
+- one motion temperament;
 - reveal timing;
-- masking;
-- transition rhythm;
-- consistency of motion temperament.
+- masks;
+- transition discipline;
+- consistent movement rather than many unrelated effects.
 
-Transfer to IOS:
+Transfer:
 - section reveals;
-- transition timing;
-- modal/detail transitions.
+- detail transitions;
+- media/state changes.
 
-### 5. CREATOR COUNTERWEIGHT — TouchDesigner
-https://derivative.ca/
+## Design synthesis rule
 
-Transfer only to the workbench:
-- visible relationships;
-- authoring logic;
-- controls near consequences;
-- inspectable system.
+Jo Iijima decides the visual/compositional character.
+Getty decides how large amounts of media/evidence are structured.
+R—K decides how things move.
 
-## Required synthesis
-
-Do not average all five visually.
-
-Use:
-- K95 for type/system;
-- Getty for media/evidence;
-- Gionatan for photographic restraint;
-- R—K for motion;
-- TouchDesigner for studios.
-
-Existing V2 Dossier is the ancestry layer.
-
-Before coding, write exact measured tokens and a transfer matrix.
+Do not add a fourth visual reference unless a documented gap remains after teardown.
