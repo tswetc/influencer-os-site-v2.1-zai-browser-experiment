@@ -26,7 +26,7 @@
 
 ## 4. Identity continuity (RUN.md steps 4, 6)
 
-- **Main identity established: Milena Ioanna** (founder), evidenced four ways (Bazaar contact sheet name; @milenaioanna watermark; milenaioanna.com collage; comp card "MILENA MILANI CAROL"). Hair color varies across shoots (blonde/brunette/pink wig) — continuity confirmed visually.
+- **Main identity established: founder-main-01** (founder), evidenced four ways (Bazaar contact sheet name; [REDACTED_HANDLE] watermark; [REDACTED_DOMAIN] collage; comp card "[REDACTED_NAME]"). Hair color varies across shoots (blonde/brunette/pink wig) — continuity confirmed visually.
 - No narrative family mixes identities. Companion appearances (partner, friends, crew, celebrities, children) are labeled and excluded from single-identity families.
 - Third-party creators (12+ named handles) and a third-party shop (TTSWTRS) were reviewed and segregated as reference-only.
 
