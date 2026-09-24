@@ -21,7 +21,7 @@ Model output location: local sandbox only (no GitHub writes).
 
 ## 3. Identity map (established during review)
 
-- **MAIN identity = Milena Ioanna** (founder). Evidence: Bazaar contact sheet "Milena Ioanna" (G0084 slot 03), `@milenaioanna` watermark (G0131 slot 03), `milenaioanna.com` collage (G0154 slot 03), comp card "MODEL: MILENA MILANI CAROL" (G0027). Hair varies (blonde/brunette/pink wig) — identity continuity confirmed across the `3/01_MAIN_CHARACTER` and `4/…` trees.
+- **MAIN identity = founder-main-01** (founder). Evidence: Bazaar contact sheet "founder-main-01" (G0084 slot 03), `[REDACTED_HANDLE]` watermark (G0131 slot 03), `[REDACTED_DOMAIN]` collage (G0154 slot 03), comp card "MODEL: [REDACTED_NAME]" (G0027). Hair varies (blonde/brunette/pink wig) — identity continuity confirmed across the `3/01_MAIN_CHARACTER` and `4/…` trees.
 - OTHER_IDENTITY (third-party creators, named handles): lesya (G0001), sofykil (G0002–0003), acehimiko (G0161), alsoknownas_feya (G0162–0164), hiilda_romantique (G0165), jonorriiss (G0166), karina.vslshn (G0167–0168), Lizzie young (G0169), marpiva (G0170), nastymazhara (G0171–0173), paninavasilina (G0174), Ref ingachibis (G0175).
 - THIRD_PARTY_COMMERCE: TTSWTRS Official Online Shop product pages (G0176–0184).
 - NO_PEOPLE / OBJECT: 3/02_NO_MAIN_CHARACTER (G0022–0024), предметка (G0185–0188).
@@ -30,7 +30,7 @@ Model output location: local sandbox only (no GitHub writes).
 
 ## 4. Full 200-group review table
 
-Legend — ID: M=MAIN(Milena) · O=OTHER identity · R=reference · N=no-people · A=AI/workflow · X=mixed/unknown.
+Legend — ID: M=MAIN(founder-main-01) · O=OTHER identity · R=reference · N=no-people · A=AI/workflow · X=mixed/unknown.
 Status: CAND=candidate family · WEAK · EXCL=excluded (rights/identity/quality) · REF=reference-only.
 
 | Group | Folder (SSD-relative) | Media | ID | Verdict / notes |
@@ -61,7 +61,7 @@ Status: CAND=candidate family · WEAK · EXCL=excluded (rights/identity/quality)
 | 0024 | …/02_NO_PEOPLE | 6 | N | s01 ship+rainbow (beautiful!); s02/04 infinity-pool sunset skyline (cinematic); s03/05 coffee still. STRONG world texture. |
 | 0025 | 4/01 Студия — постановочная съёмка | 74 | M | Root samples: s01 B/W mirror twins (artistic); s02 BTS palm-canvas rig; s03 fur try-on lightbox; s04 black lace editorial; s05 catalog pose; s06 boxing video w/ caption. STRONG root. |
 | 0026 | …/Студия — бежевый фон | 4 | M | Brown bandeau + slit skirt on sand-set, beige drape. PRO editorial. s01, s02. |
-| 0027 | …/Студия — белый топ — гримёрка | 4 | M | Makeup-room mirror w/ comp card "MILENA MILANI CAROL". GREAT capability/backstage. s01, s03. |
+| 0027 | …/Студия — белый топ — гримёрка | 4 | M | Makeup-room mirror w/ comp card "[REDACTED_NAME]". GREAT capability/backstage. s01, s03. |
 | 0028 | …/Студия — белый фон — закулисье | 4 | M | White cyc BTS w/ photographer (print pants). STRONG BTS. s01, s02. |
 | 0029 | …/Студия — двое на полу — закулисье | 4 | M | Overhead crew prep (braids, scissors, cables). BTS context. s01. |
 | 0030 | …/Студия — крупный портрет — бьюти | 7 | M | HYPER-CLEAN beauty close-ups (blonde, wind hair). VERY STRONG identity/beauty. s01–s05. |
@@ -118,7 +118,7 @@ Status: CAND=candidate family · WEAK · EXCL=excluded (rights/identity/quality)
 | 0081 | …/Терраса и сад — белые платья | 13 | M | Palace terrace white gown + gloves (s02 stone; s05 palm; s06 pond video); s01 two women (flag). STRONG. |
 | 0082 | …/Улица и авто — белый мех | 7 | M | Pink lace + mall retro (s01/02/05); Istanbul rooftop Bosphorus (s03/04). CAND. |
 | 0083 | …/Цветочное поле — чёрное платье — эдиториал | 9 | M | VINTAGE ROLLS-ROYCE + white fur (s01 interior; s02 B/W grille — stunning; s03/05 hood poses; s04 exterior). Rolls-Royce ™ flag. VERY STRONG. |
-| 0084 | …/Цветочное поле — чёрное платье — эдиториал (Bazaar) | 9 | M | HARPER'S BAZAAR cover shoot in rapeseed: s01 black corset + headscarf (STUNNING); s02 COVER mockup (published!); s03 contact sheet w/ name "Milena Ioanna" (identity evidence); s05 field portrait; s04 couple w/ male model (flag). VERY STRONG; third-party publication rights flag. |
+| 0084 | …/Цветочное поле — чёрное платье — эдиториал (Bazaar) | 9 | M | HARPER'S BAZAAR cover shoot in rapeseed: s01 black corset + headscarf (STUNNING); s02 COVER mockup (published!); s03 contact sheet w/ name "founder-main-01" (identity evidence); s05 field portrait; s04 couple w/ male model (flag). VERY STRONG; third-party publication rights flag. |
 | 0085 | 4/04 Море, пляж, вода root | 148 | M | s03 yacht polka bikini; s05 cliff girl; s02 horse beach; s06 video two women. STRONG root. |
 | 0086 | …/Балкон у моря — купальник | 4 | M | Lake Como deck bikinis (s02 group; s04 single back). CAND. |
 | 0087 | …/Бассейн — купальник — летняя | 5 | M | White bikini + pink sarong rooftop golden hour (s01–04; s05 bag "ML" detail). STRONG-lite. |
@@ -165,7 +165,7 @@ Status: CAND=candidate family · WEAK · EXCL=excluded (rights/identity/quality)
 | 0128 | …/Комната — коричневое платье — селфи | 6 | M | Brown slip mirror set (s02/04 smiling). Clean CAND. |
 | 0129 | …/Сборная подборка — портреты и быт | 8 | M | s03 DRZZZ top; s04 TV+flowers+feet cozy; s05 cherry dress; s01 two people; s06 explicit-caption video (EXCL). Mixed. |
 | 0130 | …/Селфи — пастельный топ — портрет | 5 | M | Paisley pastel golden-hour selfies (s02/03/04 — freckles, necklace). GORGEOUS beauty. STRONG. |
-| 0131 | 4/10 Арт и творчество root | 90 | M(ART) | OWN ART: s02 "One of my latest art works" BTS in bedroom; s03 blue moon-face w/ @milenaioanna (handle evidence!); s05 self-portrait painting (talent); s01 abstract eyes; s04 surreal house; s06 video. VERY STRONG creator narrative. |
+| 0131 | 4/10 Арт и творчество root | 90 | M(ART) | OWN ART: s02 "One of my latest art works" BTS in bedroom; s03 blue moon-face w/ [REDACTED_HANDLE] (handle evidence!); s05 self-portrait painting (talent); s01 abstract eyes; s04 surreal house; s06 video. VERY STRONG creator narrative. |
 | 0132 | …/Галерея — светлый образ — выставка | 11 | M | Mint babydoll at gallery (s04/05 solo back — editorial; s02 w/ others flag; s03 mushroom painting). STRONG. |
 | 0133 | …/Галерея — экспонаты | 6 | M+R | s01 dancing in white gallery (kinetic!); s02 red devil mask (playful art); s04 sculpture; s05 Porsche. CAND. |
 | 0134 | …/Дом — чёрные холсты — процесс | 7 | M(ART) | Artist-at-work: s01 black bra + paintings (smoking imagery — brand flag); s04 holding painting; s05 brush process; s02 tongue w/ painting (fun); s03 blue/red devils. STRONG process. |
@@ -188,7 +188,7 @@ Status: CAND=candidate family · WEAK · EXCL=excluded (rights/identity/quality)
 | 0151 | 4/13 Парные съёмки root | 52 | M+P | COUPLE: s01 Istanbul street kiss (cinematic!); s03 yacht; s02 beach embrace; s04 beach walk; s05 sunset w/ baby; s06 playful video. STRONG couple. Partner-identity flag (implicit consent assumption). |
 | 0152 | …/Пляж — пара и лошадь — берег | 15 | M+P | Horse beach romance (s02 man leading horse; s05 duo on horse). STRONG. s01/04 face-distortion note. |
 | 0153 | …/Свадьба — пара — торжество | 7 | M+P | WEDDING: s01 B/W confetti kiss (STUNNING); s04 park kiss; s02 ceremony; s03 sofa B/W; s05 family group (flag). VERY STRONG. |
-| 0154 | 4/14 Текст и графика | 15 | M | Stories/screenshots: s02 collage w/ studio BTS + @milenaioanna; s03 collage w/ milenaioanna.com; s06 "FACE TIME" story. Text-overlay heavy — limited pack value; handle evidence noted. |
+| 0154 | 4/14 Текст и графика | 15 | M | Stories/screenshots: s02 collage w/ studio BTS + [REDACTED_HANDLE]; s03 collage w/ [REDACTED_DOMAIN]; s06 "FACE TIME" story. Text-overlay heavy — limited pack value; handle evidence noted. |
 | 0155 | 4/15 Животные | 8 | M | s01/05 CAT eye macro (GREAT animal texture); s03 shelduck family (dup of 0075/05); s02 balcony yoga; s04 nursing w/ cat (intimate — sensitive); s06 shower video (SENSITIVE — EXCL). s01/03 CAND (animals). |
 | 0156 | 4/16 Спорт и тренировки root | 20 | M | s01 mint yoga mat flat (sporty editorial); s02 golf w/ boots; s05 aerial yoga red hammock (dynamic!); s04 gym; s06 video. STRONG sport. Mat-brand flag (SEE.SENSE). |
 | 0157 | …/Зал — растяжка — форма | 4 | M | Gym stretch teal (s02). |
