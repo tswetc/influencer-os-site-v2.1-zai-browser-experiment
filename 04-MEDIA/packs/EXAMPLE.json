@@ -1,0 +1,16 @@
+{
+  "pack_id": "example-pack",
+  "version": 1,
+  "description": "Schema example only",
+  "items": [
+    {
+      "path": "04-MEDIA/founder-drop/characters/example/001.jpg",
+      "sha256": "REPLACE",
+      "media_type": "image",
+      "role": "identity_reference",
+      "provenance": "founder_media",
+      "rights_status": "REPLACE",
+      "notes": ""
+    }
+  ]
+}
