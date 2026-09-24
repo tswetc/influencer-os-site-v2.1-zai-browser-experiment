@@ -1,0 +1,11 @@
+# ZAI-E003
+
+STATUS: PLANNED
+TYPE: MODEL_COMPARISON
+MODEL: GLM-5.3
+DESIGN_VARIANT: NEUTRAL
+REFERENCE_SET: common
+MEDIA_SET: bootstrap
+SOURCE_COMMIT: TO_BE_PINNED_AFTER_TRANSPORT_VALIDATION
+
+Purpose: controlled GLM-5.3 baseline when model capacity becomes available.
