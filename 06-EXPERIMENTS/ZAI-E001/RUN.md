@@ -1,0 +1,11 @@
+# ZAI-E001
+
+STATUS: PLANNED
+TYPE: MODEL_COMPARISON
+MODEL: GLM-5.2
+DESIGN_VARIANT: NEUTRAL
+REFERENCE_SET: common
+MEDIA_SET: bootstrap
+SOURCE_COMMIT: TO_BE_PINNED_AFTER_TRANSPORT_VALIDATION
+
+Purpose: first controlled GLM-5.2 baseline after transport/source bridge validation.
