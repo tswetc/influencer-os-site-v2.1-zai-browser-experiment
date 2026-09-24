@@ -1,11 +1,12 @@
 # ZAI-E009 — Full Product Development Wave
 
-STATUS: READY_FOR_FREEZE_LAUNCH
-TYPE: MODEL_COMPARISON
-EXPECTED_UI_MODEL: GLM-5.3-Flash
+STATUS: WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE
+TYPE: PRODUCT_QUALITY
+PREFERRED_UI_MODEL: GLM-5.3
+FALLBACK_UI_MODEL: GLM-5.3-Flash
 DESIGN_VARIANT: AUTHORING-INSTRUMENT
 REFERENCE_SET: design-set-c
-MEDIA_SET: wave01-C-public-v3
+MEDIA_SET: wave01-C-public-v4
 INPUT_COMMIT: PROVIDED_BY_LAUNCH_PROMPT
 GITHUB_MODE: READ_ONLY_INPUT
 
@@ -38,27 +39,23 @@ Do not read sibling run folders for creative direction.
 
 ## Runtime identity
 
-Expected UI model: `GLM-5.3-Flash`.
+Preferred UI model: `GLM-5.3`. If unavailable, `GLM-5.3-Flash` is the preferred fallback.
 
 Record the exact visible runtime model label in RUN-MANIFEST.md.
 
-If it differs:
-- continue the mission;
-- record `MODEL_OVERRIDE_AT_LAUNCH`;
-- do not claim a clean model comparison for this pair.
+Record the exact visible runtime model label. If it differs from the preferred runtime, continue and record `MODEL_OVERRIDE_AT_LAUNCH`. This is a PRODUCT_QUALITY run, not a clean model benchmark.
 
 ## Media transport
 
 Use ONLY:
-`04-MEDIA/packs/wave01-C-public-v3.json`
+`04-MEDIA/transport/wave01-v4/packs/C.json`
 
-Fetch/extract it with:
-`tools/fetch_public_atlas_pack.py`
+Fetch and SHA-verify it with:
+`tools/fetch_public_wave_pack.py`
 
 All raw GitHub URLs must be pinned to the exact INPUT_COMMIT.
 
-These are bounded `ATLAS_PREVIEW_DERIVATIVE` development assets.
-Do not call them original-resolution publication masters.
+These are bounded sanitized web derivatives built from the audited local master library. They are development transport assets, not claims of original camera/source resolution.
 
 Use neutral identity ID `founder-main-01`.
 Do not infer or publish a real-world founder identity.
@@ -164,7 +161,7 @@ including representative EN/RU and light/dark states where implemented.
 ## Export
 
 Export exactly:
-`ZAI-E009-GLM53Flash-AUTHORING-INSTRUMENT-FINAL.zip`
+`ZAI-E009-AUTHORING-INSTRUMENT-FINAL.zip`
 
 Mandatory evidence includes:
 RUN-MANIFEST.md
