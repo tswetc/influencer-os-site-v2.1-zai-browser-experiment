@@ -1,63 +1,92 @@
-# Full Product Run Readiness — Current
+# Full Product Run Readiness — Final Pre-Freeze
 
-Status: TRANSPORT_PACK_BUILD_PENDING
+Status: READY_FOR_IMMUTABLE_FREEZE
 
-## Proven
+## Proven transport / source
 
 - [x] public GitHub raw transport proven;
 - [x] large-text transport proven;
 - [x] image transport/readability proven;
 - [x] authoritative OS23.6 core published;
-- [x] current private product behavior contract derived;
+- [x] current product behavior contract derived;
 - [x] current founder decisions recorded publicly;
-- [x] four-domain architecture selected;
-- [x] versioned domain model defined;
-- [x] expert workflow graph contract defined;
+- [x] current public project memory created;
+- [x] public lab explicitly allowed as temporary development transport;
+- [x] real-world founder identity inference removed from current public text artifacts checked in the active pipeline;
+- [x] neutral identity ID = `founder-main-01`.
+
+## Product architecture
+
+- [x] four logical areas selected;
+- [x] shared versioned domain model defined;
+- [x] Expert Workflow Graph defined as a required professional mode;
+- [x] guided/direct Studios and expert graph share the same core;
 - [x] full-product run contract V3 defined;
-- [x] design-set recipes defined;
-- [x] reference-fidelity/QA loops defined;
-- [x] M001 curation completed and centrally audited;
-- [x] founder identity normalized to opaque IDs in current public HEAD;
-- [x] clean local master-library rebuild reported: 156 materialized / 4 held / 0 errors;
-- [x] clean local filesystem/manifest exactness reported: 156 files / 156 unique paths / 156 unique sources;
-- [x] rejected G0028/s01 stale derivative absent in clean rebuild;
-- [x] E004–E011 updated for Architecture V3 and bounded v2 media IDs;
-- [x] disposable Q001 qualification run defined.
+- [x] source/current behavior reconciliation rules defined.
 
-Local rebuild evidence is founder terminal evidence. It is not evidence that public transport packs have been published yet.
+## Media
 
-## Still required before final freeze
+M001 / local master:
+- [x] curation completed + centrally audited;
+- [x] founder decisions applied;
+- [x] current normalized local state = 156 allowed / 4 held;
+- [x] child / selected other-identity hard rejects excluded.
 
-- [ ] rerun bounded `wave01-*-v2` pack builder;
-- [ ] confirm A/B/C/D each contain 30–45 items;
-- [ ] build sanitized public transport packs;
-- [ ] verify metadata/path/name sanitization;
-- [ ] verify every transport SHA-256;
-- [ ] commit only bounded transport packs + manifests;
-- [ ] run `tools/verify_public_wave.py`;
-- [ ] create one immutable launch-freeze commit;
-- [ ] record one immutable launch-freeze HEAD SHA;
-- [ ] generate launch prompts that pin every raw URL to that SHA;
-- [ ] launch.
+Full-wave browser packs:
+- [x] A = 39 items;
+- [x] B = 42 items;
+- [x] C = 37 items;
+- [x] D = 36 items;
+- [x] all pack items use neutral IDs;
+- [x] no SSD source paths in public pack manifests;
+- [x] every item references an immutable atlas sheet Git blob SHA + slot;
+- [x] commit-pinned fetch/extract tool exists;
+- [x] each pack includes image coverage and motion/video preview evidence.
 
-## Launch decision
+These packs are DEVELOPMENT atlas-preview derivatives, not final publication masters.
 
-The founder has chosen to run full product-quality candidates in parallel as soon as the transport freeze exists.
+## References / design
 
-Q001 runs in parallel as a disposable qualification test rather than blocking the product-quality runs.
+- [x] design-set A recipe defined;
+- [x] design-set B recipe defined;
+- [x] design-set C recipe defined;
+- [x] design-set D recipe defined;
+- [x] concrete reference roles defined;
+- [x] Figma Weave expert-workflow research explicitly integrated;
+- [x] Higgsfield product-architecture research integrated;
+- [x] measured design constitution / screenshot / correction loops required at run time.
 
-If Q001 finds a shared-input defect, record that defect against every candidate that used the same freeze. Do not misattribute it to a model.
+## Runs
 
+- [x] E004 GLM-5.3 / A;
+- [x] E005 GLM-5.3-Flash / A;
+- [x] E006 GLM-5.3 / B;
+- [x] E007 GLM-5.3-Flash / B;
+- [x] E008 GLM-5.3 / C;
+- [x] E009 GLM-5.3-Flash / C;
+- [x] E010 GLM-5.3 / D;
+- [x] E011 GLM-5.3-Flash / D;
+- [x] every RUN uses INPUT_COMMIT supplied by launch prompt;
+- [x] GitHub read-only / isolated sandbox rule explicit;
+- [x] unique export name required;
+- [x] actual runtime label / model override recording required.
 
-## Freeze-SHA rule
+## QA / export
 
-Do NOT try to write the commit's own SHA into a file inside the same commit.
+- [x] P0/P1/P2/P3 audit rubric exists;
+- [x] source/truth review required;
+- [x] functional/security review required;
+- [x] UX/visual responsive EN/RU/a11y review required;
+- [x] packaging/portability review required;
+- [x] integrated regression required;
+- [x] exact screenshots widths required;
+- [x] final export freshness/manifests required.
 
-Run specs use:
-`INPUT_COMMIT: PROVIDED_BY_LAUNCH_PROMPT`
+## Freeze action
 
-The launch prompt pins:
-- the exact commit SHA;
-- the exact commit-pinned raw RUN.md URL.
+Create one final commit containing the completed freeze-verification note.
 
-This avoids an impossible self-referential freeze.
+The exact 40-character SHA of that commit becomes the immutable INPUT_COMMIT for E004–E011.
+
+Do not modify that frozen input after launch.
+A later correction requires a NEW freeze SHA and a clearly named second wave.
