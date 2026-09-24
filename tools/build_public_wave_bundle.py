@@ -3,7 +3,7 @@
 
 Input:
   repo root containing the LOCAL (untracked) master-v1 library + master manifest
-  and four bounded wave01-{A,B,C,D}-v2 manifests.
+  and four explicitly curated wave01-{A,B,C,D}-v3-curated manifests.
 
 Output:
   04-MEDIA/transport/wave01-v4/
@@ -39,7 +39,7 @@ repo=Path(sys.argv[1]).expanduser().resolve()
 out=repo/"04-MEDIA/transport/wave01-v4"
 staging=out.with_name(out.name+".__staging__")
 
-PACK_FILES={d:repo/f"04-MEDIA/packs/wave01-{d}-v2.json" for d in "ABCD"}
+PACK_FILES={d:repo/f"04-MEDIA/packs/wave01-{d}-v3-curated.json" for d in "ABCD"}
 FORBIDDEN=re.compile(
     r"(founder_milena_ioanna|milena\s+ioanna|@milenaioanna|milenaioanna\.com|milena\s+milani\s+carol|/Users/|/Volumes/|ssd_relative_source_path)",
     re.I,
