@@ -16,7 +16,7 @@ Per RUN.md step 8 ("flag questionable provenance/rights rather than assuming pub
 
 ## 2. Identity & consent
 
-- **Main identity:** Milena Ioanna (evidence: G0084/s03 contact name; G0131/s03 `@milenaioanna`; G0154/s03 `milenaioanna.com`; G0027 comp card "MILENA MILANI CAROL").
+- **Main identity:** founder-main-01 (evidence: G0084/s03 contact name; G0131/s03 `[REDACTED_HANDLE]`; G0154/s03 `[REDACTED_DOMAIN]`; G0027 comp card "[REDACTED_NAME]").
 - **Third-party individuals appearing in otherwise-founder groups** (need founder confirmation of their consent before use): partner/companion (G0057? no — specifically G0067/s03, G0063/s02, G0071 event crowd, G0070/s03–s05, G0148/s01–s04 incl. a recognizable celebrity, G0149/s03,s05, G0150/s01,s03, G0081/s01, G0132/s02, G0160/s01, G0151–0153 partner, G0045, G0046, G0029 crew, G0028 photographer, G0075/s04).
 - **Hard exclusions (identity/rights):** all named-handle groups G0161–G0175 — these are third-party creators' social content; G0168 contains explicit full nudity; G0169 shows a very young-looking subject (age unverified) — excluded pending founder/legal check.
 - **Privacy-sensitive artifacts:** chat screenshots (G0173/s03 — profanity + a political figure's contact name; G0173/s05; G0154 stories) — excluded; personal medical scene (G0124/s04 IV-drip) — excluded.
