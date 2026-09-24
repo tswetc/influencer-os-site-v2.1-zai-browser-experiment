@@ -1,73 +1,72 @@
-# Design Recipe D — Continuous Object System
+# Design Recipe D — Maria Vasilyeva × Non-Objective Times × IVRESS
 
-## Priority chain
+Exactly **3 run-specific visual references**.
 
-### 1. PRIMARY INTERACTION ANCHOR — Maria Vasilyeva
+Common product architecture still comes from OS23.6 + Higgsfield + Figma Weave + existing V2.
+
+## 1. PRIMARY INTERACTION ANCHOR — Maria Vasilyeva
+
 https://www.mariavasilyeva.com/
 
-Founder-specific target:
-- gallery scrolling behavior/physics.
+Founder-specific interest:
+**gallery scrolling behavior / physics**.
 
-Research:
+Required research:
 - wheel/trackpad mapping;
 - inertia;
 - item spacing;
-- active-item behavior;
+- active item;
 - velocity response;
 - edge behavior;
 - mobile fallback;
-- detail-entry transition.
-
-Transfer to IOS:
-- references;
-- generations;
-- compare;
-- project assets.
-
-### 2. TRANSFORMATION MODEL — Garden Eight / Continuous Transformation
-https://tympanus.net/codrops/2026/07/24/the-art-of-continuous-transformation-how-garden-eight-blends-integrity-with-play/
+- transition into detail.
 
 Transfer:
-- Character/Scene/Asset should persist conceptually across modes;
-- mode switching should transform state, not reset context.
+- References;
+- generations;
+- Compare;
+- Assets;
+- Projects.
 
-### 3. PERSISTENT MEDIA TRANSITION — WebGPU page-transition research
-https://tympanus.net/codrops/2026/06/30/building-persistent-page-transitions-with-webgpu-and-vanilla-javascript/
+Do not copy her brand/visual identity.
 
-Use only if environment/performance permit.
-Always design a non-WebGPU/reduced-motion fallback.
+## 2. STRUCTURAL / TYPOGRAPHIC ANCHOR — Clockwise and Otherwise: Non-Objective Times
 
-### 4. MEDIA NARRATIVE — Getty Tracing Art
-https://www.getty.edu/tracingart/
+https://1-145.non-objective.works/
 
-Use:
-- chapters;
-- evidence;
-- high media density;
-- captions/provenance.
+Role:
+- structural rigor;
+- bare typographic grid;
+- black/white discipline;
+- centered/navigation geometry;
+- experimentalism through system, not decoration.
 
-### 5. TYPOGRAPHIC ANCHOR — Studio K95
-https://www.k95.it/
+Transfer:
+- Prompt Lab;
+- Docs;
+- Models;
+- provenance/system states;
+- stable anchors around spatial media.
 
-Use:
-- keep spatial experimentation disciplined;
-- strong editorial anchors;
-- stable navigation/type hierarchy.
+## 3. SEQUENCING / STATE-CHANGE ANCHOR — IVRESS
 
-### 6. WORKBENCH ANCHOR — TouchDesigner
-https://derivative.ca/
+https://brand.ivress.co.jp/en/
 
-Use:
-- once the user enters studio mode, continuity remains visible but tooling becomes explicit and usable.
+Role:
+- transitions between radically different modes;
+- image choreography;
+- controlled texture;
+- rare state change.
 
-## Required synthesis
+Transfer:
+- Character ↔ Image;
+- Image ↔ Video;
+- selected project/detail transitions.
 
-Maria governs gallery physics.
-Continuous Transformation governs product-state continuity.
-Persistent-transition research supplies implementation possibilities.
-Getty governs media evidence.
-K95 governs type/system.
-TouchDesigner governs workbench.
+## Design synthesis rule
 
-No scroll hijacking that harms control.
-No motion that hides provenance/state.
+Maria determines gallery physics.
+Non-Objective Times determines structural/type discipline.
+IVRESS determines selected cross-mode sequencing.
+
+No fourth reference unless a concrete unsolved design problem is documented.
