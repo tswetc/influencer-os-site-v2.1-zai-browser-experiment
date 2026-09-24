@@ -1,7 +1,7 @@
 {
   "pack_id": "wave01-C-public-v3",
   "version": 3,
-  "status": "READY_FOR_COMMIT_PINNED_BROWSER_FETCH",
+  "status": "DEPRECATED_PREVIEW_TRANSPORT_PILOT_ONLY",
   "design_set": "design-set-c",
   "item_count": 37,
   "target_range": [
@@ -700,5 +700,7 @@
       "provenance": "generated_or_demo_media",
       "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
     }
-  ]
+  ],
+  "deprecated_by": "04-MEDIA/transport/wave01-v4/packs/C.json",
+  "deprecation_reason": "Atlas-preview crops/posters are insufficient for the full product-quality wave. Retained only as historical/pilot transport evidence."
 }
