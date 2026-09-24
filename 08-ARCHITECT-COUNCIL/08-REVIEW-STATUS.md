@@ -1,66 +1,52 @@
 # Architecture Council Status
 
 Date: 2026-09-25
-Status: ASTRA_R001_TARGETED_ESCALATION_READY
+Status: ASTRA_R001_FUNDAMENTAL_PACKET_PREPARED
 
 ## Current strategy
 
-The prior plan for two symmetric independent high-cost architecture reviews is superseded.
+1. central architect reconstructs full product/context;
+2. routine decisions are closed in the baseline;
+3. founder intent is compressed into an architecture gap map;
+4. Astra receives six fundamental decision knots only;
+5. Astra reads evidence progressively;
+6. central architect promotes accepted deltas into ADRs/contracts;
+7. a lower-cost adversarial implementation audit may verify the promoted architecture;
+8. new immutable product-wave freeze is created only after accepted architecture changes.
 
-Current sequence:
+## Astra R001
 
-1. central architect reconstructs and reduces the architecture;
-2. central architect closes routine/solvable decisions;
-3. GPT-6 Astra in Codex receives only the five remaining hard decision knots;
-4. central architect ingests Astra deltas into ADRs;
-5. a lower-cost independent reviewer may then adversarially test the resulting architecture;
-6. implementation feasibility is checked against the real private codebase;
-7. a new immutable product-wave freeze is created only after accepted architecture changes.
+Model:
+GPT-6 Astra in Codex.
 
-## Why
+Reasoning:
+XHIGH first pass.
 
-GPT-6 Astra is a scarce high-capability model.
-Its value is highest on the concentrated decisions most likely to cause:
-- conceptual rewrite;
-- transaction inconsistency;
-- incorrect workflow history;
-- under/over-versioning;
-- unsafe auth/secret boundaries;
-- failed migration from current behavior.
+MAX:
+only as a narrow second pass for one unresolved material decision after XHIGH.
 
-It should not spend its context reconstructing the whole project.
-
-## Astra R001 inputs
-
-Primary:
+Primary inputs:
 - `11-ASTRA-R001-FOCUS-PACKET.md`
 - `10-CENTRAL-ARCHITECT-BASELINE-2026-09-25.md`
-- `03-OPEN-ARCHITECTURE-QUESTIONS.md`
+- `13-FOUNDER-ARCHITECTURE-GAP-MAP.md`
+- `14-ASTRA-R001-EVIDENCE-MAP.md`
 
-Conditional:
-- Product Architecture V3
-- Domain Model V1
-- Expert Workflow Graph Contract
-- Current Product Behavior Contract
-- selected exact files from the private canonical Web App when available.
+Output:
+one raw `ASTRA-R001-DECISIONS.md`.
 
-## Output
+## Six decision knots
 
-One raw artifact:
-
-`ASTRA-R001-DECISIONS.md`
-
-Preserve it unchanged when ingesting it.
-
-Then the central architect creates:
-- contradiction/delta matrix only where Astra changes the baseline;
-- ADR promotion patch;
-- updated freeze readiness.
+A1 execution substrate across Studios/Graph/API/MCP
+A2 creative revision/pin/stale/rebase
+A3 dynamic models/providers/adapters + eval lifecycle
+A4 paid-generation durability/failure/cost
+A5 auth/MCP/BYOK/managed secrets
+A6 migration from current local-first Web App
 
 ## Existing product runs
 
-P001–P004 continue unchanged on their pinned historical inputs.
+P001–P004 continue unchanged on pinned historical inputs.
 
-Do not mutate their historical run SHAs because of this architecture escalation.
+Do not reinterpret them as controlled model benchmarks unless inputs/runtime are actually controlled.
 
-E004–E011 should use a new post-Astra freeze if the Astra decisions materially change run contracts or product architecture.
+E004–E011 should use a new post-Astra freeze if accepted decisions change execution/product contracts.

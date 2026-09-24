@@ -5,7 +5,7 @@ Date: 2026-09-25
 Status values:
 ACCEPTED · PROVISIONAL · OPEN · SUPERSEDED.
 
-Astra R001 should focus only on OPEN sub-decisions or produce a concrete failure case against an ACCEPTED/PROVISIONAL baseline.
+Astra R001 should focus only on OPEN sub-decisions or show a concrete failure in the baseline.
 
 ## ADR-001 — One product / four logical areas
 Status: ACCEPTED
@@ -20,25 +20,31 @@ One shared domain/application model.
 ## ADR-002 — Modular monolith first
 Status: ACCEPTED
 
-One codebase with strict module/package boundaries first.
+Strict module/package boundaries first.
 Service extraction only after operational evidence.
 
 ## ADR-003 — Shared application/core behavior
 Status: ACCEPTED
 
 Web, HTTP API and MCP invoke the same application use cases.
-No transport-specific prompt/generation semantics.
 
-## ADR-004 — Immutable creative/execution history
+OPEN SUB-DECISION:
+whether direct Studio operations also instantiate an implicit WorkflowRun, or Workflow remains composition/orchestration over the same commands.
+Owner: Astra A1.
+
+## ADR-004 — Immutable historical creative/execution state
 Status: ACCEPTED
 
-Historical revisions/builds/runs/attempts/assets are immutable.
-Current pointers may move; history does not.
+Executed historical revisions/builds/runs/attempts/assets are immutable.
+
+OPEN SUB-DECISION:
+draft/commit/stale/rebase and minimum first-class revision semantics.
+Owner: Astra A2.
 
 ## ADR-005 — GenerationJob != GenerationAttempt
 Status: ACCEPTED
 
-Retry/fallback creates a new attempt.
+Retry/fallback creates another attempt.
 No attempt overwrite.
 
 ## ADR-006 — Typed AssetVersion lineage graph
@@ -49,118 +55,118 @@ Lineage targets exact versions and supports multiple parents/derivations.
 ## ADR-007 — Guided Studios + Expert Workflow Graph
 Status: ACCEPTED
 
-Two interaction layers, one underlying system.
+Two interaction layers, one system.
 
 ## ADR-008 — Workflow v1 is DAG-first
 Status: ACCEPTED
 
-No arbitrary cycles in v1.
-Iteration is expressed through bounded explicit nodes/policies.
+No arbitrary cycles.
 
 OPEN SUB-DECISION:
-exact WorkflowRun/WorkflowNodeRun partial-rerun, cache/reuse and child-run semantics.
-Owner: Astra R001 / A2.
+WorkflowRun/NodeRun, partial rerun, cache/reuse, manual gates, subworkflow binding and direct-Studio relationship.
+Owner: Astra A1.
 
 ## ADR-009 — Production metadata persistence
 Status: ACCEPTED
 
-Postgres-class relational primary store for durable product metadata/transactions.
-Object storage for media binaries/derivatives.
-
-OPEN SUB-DECISION:
-none at technology-family level.
+Postgres-class relational store + object storage.
 
 ## ADR-010 — Async worker boundary
 Status: PROVISIONAL
 
-Hosted beta/production-capable shape uses a worker boundary for long-running generation.
+Hosted production-capable shape uses an async worker for long generation.
 
-Accepted semantics:
-- at-least-once work delivery;
-- idempotent workers;
-- explicit Job/Attempt state;
-- retry/fallback history.
+Accepted constraints:
+at-least-once/idempotent execution, Job/Attempt history, explicit fallback.
 
 OPEN SUB-DECISION:
-exact transaction/outbox/inbox/queue implementation and crash/cancel semantics.
-Owner: Astra R001 / A1.
+transaction/outbox/inbox/queue/cancel/crash/cost semantics.
+Owner: Astra A4.
 
-## ADR-011 — Provider abstraction / model registry
-Status: ACCEPTED
+## ADR-011 — Model/provider/adapter lifecycle
+Status: PROVISIONAL / MAJOR OPEN SUB-DECISION
 
-Provider-specific differences remain behind explicit adapters.
-Do not erase real capability differences into a fake universal provider abstraction.
-Provider fallback is explicit and policy-controlled.
+Current hardcoded EngineId and per-engine compiler are source behavior, not sufficient future extensibility.
 
-OPEN SUB-DECISION:
-how much provider/model state is a first-class version object versus immutable execution snapshot.
-Owner: Astra R001 / A3.
+Accepted constraints:
+- provider/model differences remain explicit;
+- historical builds never inherit future model/adapter semantics;
+- LIVE requires runtime/evaluation evidence;
+- model research must pass promotion gates.
+
+OPEN:
+exact task/provider/deployment/profile/version/adapter/eval/rollout architecture.
+Owner: Astra A3.
 
 ## ADR-012 — Production asset/media storage
 Status: ACCEPTED
 
-Object storage + relational metadata + cryptographic integrity hashes + exact AssetVersion lineage.
-Public Wave transport remains development-only and is not production media architecture.
+Object storage + relational metadata + hashes + AssetVersion lineage.
+Public Wave transport is development-only.
 
 ## ADR-013 — Authentication / authorization / entitlement separation
 Status: ACCEPTED
 
-Principal authentication, workspace authorization, membership roles and Entitlements are distinct.
+Principal, workspace authorization, membership role and Entitlement are distinct.
 
-Provider secrets are server-side, encrypted and never exported/logged as ordinary domain data.
+Provider secrets are server-side/encrypted and never ordinary export/log data.
 
-OPEN SUB-DECISION:
-remote MCP token/session/scope and service-to-worker auth model.
-Owner: Astra R001 / A5.
+OPEN:
+web/API/MCP token/session/scope, BYOK/managed connection modes and worker identity.
+Owner: Astra A5.
 
 ## ADR-014 — Browser candidate promotion
 Status: ACCEPTED
 
 No whole-candidate merge.
 
-Promote only audited contracts/modules/components/design systems/interaction patterns into a private canonical branch with compatibility tests.
+Promote only audited contracts/modules/components/design/interaction units.
 
-## ADR-015 — Source ruleset/version provenance
+## ADR-015 — Source/compiler/version provenance
 Status: PROVISIONAL
 
-PromptBuild must bind enough immutable source/compiler/model/adapter state to reconstruct the exact effective provider request.
+PromptBuild must persist enough exact state to reconstruct effective provider request.
 
-Proposed anchors include:
-OSRulesetVersion, EngineAdapterVersion, ModelProfileVersion/effective snapshot,
-CharacterRevision, CanonRevision, SceneRevision, PlanRevision.
+OPEN:
+minimum first-class revision set vs immutable snapshots/hashes, including model/provider drift.
+Owners: Astra A2 + A3.
 
-OPEN SUB-DECISION:
-minimum sufficient first-class revision set and snapshot/hash boundary.
-Owner: Astra R001 / A3.
-
-## ADR-016 — Audit and telemetry are separate
+## ADR-016 — Audit and telemetry separate
 Status: ACCEPTED
 
-Audit = durable product/security event history.
-Telemetry = operational traces/metrics/logs.
-Correlation IDs connect them without turning telemetry into product canon.
+Audit = durable product/security history.
+Telemetry = operational trace/metrics/logs.
 
-## ADR-017 — Export/import is versioned and fail-closed
+## ADR-017 — Export/import versioned and fail-closed
 Status: ACCEPTED
 
-Two-phase import:
-validate/plan without mutation → transactional apply.
+Two-phase import.
 No provider secrets/tokens in normal exports.
 
-## ADR-018 — Current Web App migration is incremental
+## ADR-018 — Current Web App migration incremental
 Status: ACCEPTED PRINCIPLE / OPEN SEQUENCE
 
 No big-bang rewrite.
-No indefinite permanent dual architecture.
+No permanent dual local/cloud architecture.
+No silent upload of legacy provider keys.
 
-OPEN SUB-DECISION:
-exact reversible migration seams and sequence from local-first current behavior to Architecture V3.
-Owner: Astra R001 / A4.
+OPEN:
+exact reversible seams and phase gates.
+Owner: Astra A6.
 
-## ADR-019 — No premature generalized infrastructure
+## ADR-019 — User-upload/generated media private by default
 Status: ACCEPTED
 
-Not currently justified:
-microservice mesh, distributed saga framework, arbitrary cyclic workflows,
-multiple-database portability layer, custom identity provider, generic event-sourced CRUD,
-vector/RAG layer without a product need, Kubernetes for appearance alone.
+Publication/rights state is explicit and separate.
+
+## ADR-020 — Community is deferred
+Status: ACCEPTED
+
+Future community/social features may build on ownership/publication, but do not shape the core schema now.
+
+## ADR-021 — No premature generalized infrastructure
+Status: ACCEPTED
+
+No microservice mesh, distributed saga framework, arbitrary graph cycles,
+multi-DB layer, custom IdP, fake universal provider DSL, vector/RAG without need,
+Kubernetes for appearance, or event-sourced CRUD.

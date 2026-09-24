@@ -1,11 +1,11 @@
 # Central Architect State — Influencer OS
 
 Date: 2026-09-25
-Status: CENTRAL_BASELINE_READY_FOR_TARGETED_ASTRA_R001
+Status: FUNDAMENTAL_ASTRA_R001_READY_AFTER_FREEZE
 
-## Product we are actually building
+## Product
 
-One coherent Influencer OS product platform, not a landing page.
+Influencer OS is now treated architecturally as one product platform, not a landing page.
 
 Four logical areas:
 1. Public / Product Experience
@@ -13,164 +13,102 @@ Four logical areas:
 3. OS Core / API / Generation Services
 4. MCP / Agent Surface
 
-They share one domain/application model.
+One shared domain/application model.
 
-Current engineering direction:
-modular monolith / monorepo-compatible boundaries first.
-No microservice split without operational evidence.
+Guided Studios + Expert Workflow Graph are both first-class interaction modes.
 
-## Current verified repository anchors
+## Current canonical/private implementation evidence
 
-Public browser lab:
-- repository: `tswetc/influencer-os-site-v2.1-zai-browser-experiment`
-- current architecture-preparation head before Astra packet: `8ff05e44030079d1d70dbdb84ee9d0d3e924111e`
+`tswetc/influencer-os`
+audited main:
+`1158007fdaefd823e24d7a38d4fa7258814b541c`
 
-Canonical private Web App:
-- repository: `tswetc/influencer-os`
-- audited `main`: `1158007fdaefd823e24d7a38d4fa7258814b541c`
-- product/package family: current Web App release lineage around 1.23 / OS23.6
+Current source facts relevant to migration:
+- Next.js Web App;
+- CharacterPassport and SceneSpec are current core browser types;
+- hardcoded six-route EngineId union;
+- engine-specific compiler logic lives in code;
+- Settings contains provider/apiKey/model/customEndpoint;
+- heavy browser state uses IndexedDB, small state uses localStorage;
+- PassportVersion snapshots exist;
+- validated backup/import exists;
+- provider switching clears stale provider keys/model;
+- tested product consistency/edge cases exist.
+
+These are current behavior constraints, not the target hosted architecture.
+
+## Public lab
+
+This repository remains an intentionally temporary PUBLIC transport/experiment lab.
+
+No secrets/private customer data.
+Neutral identity IDs only.
+
+Current architecture-preparation lineage:
+- pre-Astra architecture prep reached `e21cd0c488cadb8dba1a4ccf9749f2b6aa24c7e0`;
+- final Astra packet will be pinned at the later freeze commit recorded after precheck.
+
+## Historical site anchors
 
 Frozen Site V2:
-- repository: `tswetc/influencer-os-site`
-- branch: `codex/influencer-os-site-v2`
-- frozen completion head: `672f5722e0316beb7139526be93a5a60b9f4a8a4`
+`tswetc/influencer-os-site@672f5722e0316beb7139526be93a5a60b9f4a8a4`
 
-Private Site V2.1:
-- repository: `tswetc/influencer-os-site`
-- branch: `codex/influencer-os-site-v2.1`
-- current observed head: `8973b3df689eeb6c72367a806e103602239a4036`
-- its historical state files predate the current public-lab architecture and must not override current founder decisions.
+Private Site V2.1 observed head:
+`8973b3df689eeb6c72367a806e103602239a4036`
 
-Private `project-memory` remains durable historical/shared context but its current status is older than the 2026-09-24/25 founder decisions. Public browser runs do not depend on it.
+Private V2.1 status predates current public-lab architecture and does not override current founder decisions.
 
-## Current product/source invariants
+## Browser product runs
 
-OS23.6 behavior represented in the lab remains authoritative where published:
-- Worlds A=Diary, B=Raw, C=Staged;
-- 24 techniques;
-- 18 scene packs;
-- 92 explicit scenes;
-- 164 source self-check assertions;
-- Character Passport / Canon semantics;
-- engine-specific prompt transformation;
-- Series / Shoot / Feed and related planning mechanics.
+Already-running historical pilots:
+- P001 GLM-5.2 design A
+- P002 GLM-5.3-Flash design A
+- P003 GLM-5.3 design B
+- P004 GLM-5.3 design B
 
-Current private Web App behavior outside the public source pack is represented by:
-`../01-BASE/CURRENT-PRODUCT-BEHAVIOR-CONTRACT.md`.
+Do not mutate their pinned inputs.
 
-## Current domain spine
+Official E004–E011 should use a new post-Astra/product-freeze if Astra materially changes contracts.
 
-Stable identities/containers:
-- Workspace
-- Project
-- Character
-- Scene
-- Plan
-- Workflow
-- Asset
-- ModelProfile
+## Media
 
-Immutable/versioned execution state:
-- CharacterRevision
-- CanonRevision
-- SceneRevision
-- PlanRevision
-- PromptBuild
-- SelfCheckReport
-- EngineAdapterVersion
-- ModelProfileVersion / effective snapshot
-- OSRulesetVersion
-- WorkflowRevision
-- WorkflowRun
-- WorkflowNodeRun
-- GenerationJob
-- GenerationAttempt
-- AssetVersion
-- LineageEdge
-- ExportBundle
-- AuditEvent
+M001 complete + audited.
 
-Access/runtime support:
-- Principal/User
-- WorkspaceMembership/Role
-- ProviderConnection
-- ProviderStrategySnapshot
-- Entitlement
-
-The additional revision/runtime objects above are central-architect baseline refinements intended to close provenance gaps in the earlier model. Astra must challenge only where they are redundant or insufficient.
-
-## Creator interaction layers
-
-Guided/direct Studios remain the default interaction for ordinary jobs.
-
-Expert Workflow Graph exists for:
-- branching;
-- model/provider switching;
-- image/edit/video chains;
-- intermediate inspection;
-- reusable workflows;
-- controlled downstream reruns;
-- subflows/tools.
-
-Both call the same application/core use cases.
-
-## Current media state
-
-M001 is complete and centrally audited.
-
-Current normalized local state reported by the founder workflow:
-- 160 unique selected source paths after raw selection normalization;
-- 156 locally materializable/allowed items;
+Current founder-reported clean local master:
+- 160 normalized unique selected sources;
+- 156 materialized;
 - 4 holds;
-- clean rebuild: 156 files / 0 errors;
-- opaque identity IDs only;
-- child/privacy-rejected and selected other-identity media excluded;
-- a visible identity-card frame is excluded from public transport;
-- official run packs target approximately 30–45 items, not the whole library.
+- 156 filesystem files;
+- 0 errors.
 
-Wave v4 full-quality transport remains a separate freeze task.
+Official bounded packs target 30–45 assets/design.
+Current v4 target counts:
+A 39 · B 42 · C 33 · D 36.
 
-## Current run state
+Wave v4 still requires public-transport freeze and visual pixel-privacy review before official launches.
 
-Historical/integration pilots already running:
-- P001 — GLM-5.2 — design A
-- P002 — GLM-5.3-Flash — design A
-- P003 — GLM-5.3 — design B
-- P004 — GLM-5.3 — design B
+## Public-history privacy debt
 
-They remain immutable historical evidence.
+Current active text uses neutral IDs.
+Older historical public commits may still contain obsolete inferred identity strings.
 
-Official E004–E011 product-quality wave is not yet the architecture-vetted final freeze.
+Do not rewrite history while already-running pinned experiments need it.
 
-## Central architect decisions already settled
+Before official long-lived public transport:
+create a sanitized clean bridge/root or otherwise remove historical privacy debt without breaking current evidence.
+
+## Central architect settled baseline
 
 See:
-`10-CENTRAL-ARCHITECT-BASELINE-2026-09-25.md`.
+`10-CENTRAL-ARCHITECT-BASELINE-2026-09-25.md`
 
-In summary:
-- modular monolith first;
-- server/domain durable state, not localStorage-as-canon;
-- Postgres-class relational primary metadata store;
-- object storage for media binaries;
-- explicit application command/query boundary shared by web/API/MCP;
-- immutable historical creative revisions;
-- retry never overwrites an attempt;
-- provider fallback never silently rewrites semantic history;
-- v1 workflow runtime is DAG-first;
-- secrets are server-side and excluded from exports/logs;
-- audit state is separate from telemetry;
-- export/import is schema-versioned and hash-addressed;
-- browser candidates are promoted selectively, never wholesale.
+## Astra R001 remaining hard decisions
 
-## Why Astra is needed now
+1. one execution substrate across Studios / Workflow / API / MCP;
+2. creative revision / staleness / rebase semantics;
+3. model/provider/adapter + eval/promotion lifecycle;
+4. durable paid-generation orchestration/failure/cost semantics;
+5. web/API/MCP auth + BYOK/managed secret boundary;
+6. reversible migration from current local-first Web App.
 
-The remaining questions are not broad architecture questions.
-They are concentrated consistency/migration decisions where subtle mistakes can survive normal review:
-
-1. exact WorkflowRun / NodeRun / partial-rerun / cache-reuse semantics;
-2. exact generation consistency model across DB transaction, durable queue, provider dispatch, webhook/polling, cancellation and crash recovery;
-3. the minimum sufficient version/snapshot model for real reproducibility without revision-object explosion;
-4. migration sequence from the current local-first Web App into server-backed Architecture V3 without losing current tested behavior;
-5. remote MCP/web/API auth + workspace + provider-secret boundary.
-
-Those five are the Astra R001 mission.
+Everything else should be solved later at lower cost unless one of these decisions exposes a new foundational contradiction.

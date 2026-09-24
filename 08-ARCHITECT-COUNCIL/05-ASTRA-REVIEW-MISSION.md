@@ -1,78 +1,59 @@
-# GPT-6 Astra R001 — Targeted Architecture Escalation
+# GPT-6 Astra R001 — Fundamental Architecture Escalation
 
 Status: CURRENT
-Supersedes: the earlier broad independent-review framing for Astra R001.
+Mode: READ_ONLY
+Recommended reasoning: XHIGH
 
-ROLE:
-highest-capability technical architecture escalation inside Codex.
-
-MODE:
-READ_ONLY.
-
-Astra is not being asked to redo the central architect's work.
-A lower-cost independent reviewer may be used later for verification.
+Astra R001 is not a broad independent review.
+It is the top-capability escalation for six tightly scoped architecture decisions that remain dangerous after central reduction.
 
 ## Mission
 
-Resolve only the five hard architecture decisions in:
+Resolve A1–A6 in:
 `11-ASTRA-R001-FOCUS-PACKET.md`.
 
 Do not implement.
 Do not edit repositories.
-Do not redesign product intent.
-Do not review visual design.
+Do not redesign visual/product intent.
 Do not review media.
-Do not produce a generic SaaS architecture report.
+Do not grade GLM candidates.
+Do not spend time restating source counts.
 
 ## Read order
 
 1. `11-ASTRA-R001-FOCUS-PACKET.md`
 2. `10-CENTRAL-ARCHITECT-BASELINE-2026-09-25.md`
-3. `03-OPEN-ARCHITECTURE-QUESTIONS.md`
-4. only supporting files explicitly relevant to A1–A5.
+3. `13-FOUNDER-ARCHITECTURE-GAP-MAP.md`
+4. use `14-ASTRA-R001-EVIDENCE-MAP.md` to read only support files needed per question.
 
-Progressive disclosure is mandatory.
-Do not crawl the entire repository before answering.
+Do not pre-read the repository.
 
-## Reasoning setting
+## Reasoning
 
-Recommended first pass:
-GPT-6 Astra · HIGH reasoning.
+Use GPT-6 Astra / XHIGH for R001.
 
-Rationale:
-this is high-value architecture/debugging/planning work, but the task has already been compressed to five decision knots.
+Why:
+the task is now concentrated into coupled architecture, security, model-lifecycle, distributed-failure and migration decisions.
+OpenAI guidance positions XHIGH for deeper research, security/code review and challenging long-running agentic work.
 
-Do not default to MAX merely because it exists.
+MAX is intentionally not the first pass.
 
-If one specific question remains materially uncertain after R001, run a separate narrow follow-up on that question at XHIGH.
-Use MAX only if a representative retry shows XHIGH still fails to resolve the issue and the decision is important enough to justify the extra usage.
+If one decision remains materially unresolved after XHIGH:
+run a separate follow-up containing only that decision at MAX.
 
 ## Deliverable
 
-Produce one file only:
-
+One file:
 `ASTRA-R001-DECISIONS.md`
 
-Use the output contract inside the focus packet.
+Follow the exact output contract in the focus packet.
 
-The useful result is:
-- a hard decision;
-- exact semantics;
-- failure cases;
-- exact delta to the current baseline.
-
-The useful result is NOT:
-- a long restatement of context;
-- a score;
-- a list of fashionable technologies;
-- a menu with no choice.
+Do not return a generic survey.
+Make technical decisions.
 
 ## Completion
 
 Final status exactly:
-
 `ASTRA_R001_COMPLETE`
-
 or
-
 `ASTRA_R001_BLOCKED`

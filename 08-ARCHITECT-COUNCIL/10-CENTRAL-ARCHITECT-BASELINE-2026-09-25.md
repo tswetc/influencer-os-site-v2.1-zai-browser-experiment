@@ -4,35 +4,43 @@ Status: SETTLED_BASELINE_UNLESS_ASTRA_FINDS_A_CONCRETE_FAILURE
 
 Purpose: remove already-solvable architecture work from Astra R001 so scarce high-capability reasoning is spent only on the remaining dangerous decision knots.
 
-## B1 — Deployment topology
+## B1 — Product shape
+
+Influencer OS is one coherent platform with four logical areas:
+
+1. Public / Product Experience
+2. Creator App
+3. OS Core / API / Generation Services
+4. MCP / Agent Surface
+
+These share one domain/application model.
+
+Guided/direct Studios and Expert Workflow Graph both exist.
+Neither is a fake demo layer.
+
+Public pages and Creator routes may initially live in one Next.js deployment, but logical boundaries remain explicit.
+
+## B2 — Deployment topology
 
 Use a modular monolith first.
-
-Browser candidate:
-- one repository;
-- strict internal packages/modules;
-- mock/local adapters allowed;
-- no fake microservices.
 
 Hosted beta / first production-capable shape:
 - web/API/MCP process;
 - separate async worker process;
 - one relational primary database;
 - one object-storage system;
-- optional queue transport behind an interface.
+- queue/scheduling behind an internal interface.
 
-Keep the web/API/MCP transport layer thin over shared application use cases.
-
-Service extraction is justified only by measured operational pressure such as:
+Service extraction only after measured evidence:
 - independent scaling profile;
-- failure isolation requirement;
+- failure-isolation requirement;
 - materially different deployment/security boundary;
-- queue throughput or video-processing load that harms interactive traffic;
+- heavy media/queue load harming interactive traffic;
 - independent release cadence with a stable contract.
 
-Do not split services for aesthetic architecture reasons.
+No microservice split for appearance.
 
-## B2 — Primary persistence
+## B3 — Primary persistence
 
 Use a Postgres-class relational database for durable product metadata and transactions.
 
@@ -42,66 +50,62 @@ Use object storage for:
 - immutable derivatives;
 - export archives when retained.
 
-Database rows store:
-- object-storage keys;
-- cryptographic hashes;
-- media metadata;
-- provenance;
-- rights/publication state;
-- lineage;
-- ownership/workspace scope.
+DB stores storage keys, hashes, metadata, provenance, rights/publication state, lineage and ownership.
 
-Do not store large media blobs in the relational database by default.
-
-## B3 — Durable object/version model
-
-Stable container identities and immutable revisions are separate concepts.
-
-Required stable containers:
-Workspace, Project, Character, Scene, Plan, Workflow, Asset, ModelProfile.
-
-Required immutable/versioned execution anchors:
-CharacterRevision, CanonRevision, SceneRevision, PlanRevision, PromptBuild,
-SelfCheckReport, EngineAdapterVersion, OSRulesetVersion, WorkflowRevision,
-WorkflowRun, WorkflowNodeRun, GenerationJob, GenerationAttempt, AssetVersion.
-
-ModelProfile has a stable identity plus a version/effective snapshot used by execution.
-
-A generated result must be traceable to the exact versions/snapshots that influenced the request.
-
-Important definition:
-reproducibility means reconstructing the exact effective inputs/request/lineage.
-It does NOT promise identical future pixels from a stochastic external model.
+Do not store large media blobs in ordinary relational rows.
 
 ## B4 — Application boundary
 
-The canonical behavior boundary is application use cases, not UI components and not transport handlers.
+Canonical behavior lives in application use cases, not UI components and not transport handlers.
 
 Examples:
-- CreateCharacter
-- ReviseCharacter
-- ReviseCanon
-- ReviseScene
-- BuildPrompt
-- ValidatePrompt
-- CreateGenerationJob
-- CancelGenerationJob
-- RetryGeneration
-- SaveAssetVersion
-- SaveWorkflowRevision
-- ExecuteWorkflow
-- ExportProject
-- ImportProject
+CreateCharacter, CommitCharacterRevision, CommitCanonRevision, BuildPrompt,
+ValidatePrompt, CreateGenerationJob, CancelGenerationJob, RetryGeneration,
+SaveAssetVersion, SaveWorkflowRevision, ExecuteWorkflow, ExportProject, ImportProject.
 
 Creator UI, HTTP API and MCP call the same application services.
 
-No separate `webBuildPrompt`, `apiBuildPrompt`, `mcpBuildPrompt` semantic implementations.
+No transport-specific prompt/generation semantics.
 
-## B5 — Generation history
+Open question delegated to Astra A1:
+whether simple direct executions also create implicit WorkflowRuns, or Workflow is only an orchestration layer over the same commands.
 
-`GenerationJob` = one logical user intent.
+## B5 — Durable object/version model
 
-`GenerationAttempt` = one actual provider/model execution attempt.
+Stable containers are distinct from historical execution state.
+
+Stable containers:
+Workspace, Project, Character, Scene, Plan, Workflow, Asset, ModelProfile.
+
+Historical anchors include:
+CharacterRevision, CanonRevision, SceneRevision, PlanRevision, PromptBuild,
+SelfCheckReport, EngineAdapterVersion, ModelProfileVersion/effective snapshot,
+OSRulesetVersion, WorkflowRevision, WorkflowRun, WorkflowNodeRun,
+GenerationJob, GenerationAttempt, AssetVersion.
+
+Astra A2/A3 may reduce this set where snapshots/hashes are sufficient.
+
+Reproducibility means reconstructing exact effective inputs/request/lineage.
+It does not promise identical future pixels from a stochastic external model.
+
+## B6 — Draft vs historical truth
+
+Accepted constraints:
+- uncommitted UI editing state is not historical canon;
+- generation may never depend on an ambiguous moving “latest” at execution time;
+- before PromptBuild/GenerationJob, effective creative dependencies become immutable IDs/snapshots;
+- historical PromptBuilds/Runs/Assets never rebase;
+- upstream edits must not silently mutate already-executed downstream meaning.
+
+Open to Astra A2:
+- exact commit/revision boundaries;
+- staleness/rebase UX and semantics;
+- which objects need first-class revisions versus embedded snapshots.
+
+## B7 — Generation history
+
+GenerationJob = one logical user intent.
+GenerationAttempt = one actual provider/model execution attempt.
 
 Retry/fallback always creates another attempt.
 
@@ -112,153 +116,186 @@ Never overwrite:
 - prior cost/usage record;
 - prior output lineage.
 
-Provider fallback must be explicit in history.
-A fallback is allowed automatically only when a policy confirms capability/semantic compatibility.
-Otherwise it requires explicit user/workflow approval.
+Provider fallback must be explicit.
+Automatic fallback requires proven semantic/capability compatibility; otherwise explicit user/workflow approval.
 
-## B6 — Idempotency baseline
+Exact durable dispatch/cancel/crash semantics are Astra A4.
 
-Every externally retryable command has an idempotency key at the application boundary.
+## B8 — Idempotency constraints
 
-Provider dispatch uses a stable attempt identifier and provider-native idempotency when supported.
+Externally retryable commands have idempotency keys.
 
-Webhook/event handlers deduplicate using stable external event/request IDs where available.
+Workers assume at-least-once delivery and must be idempotent.
 
-Worker execution assumes at-least-once delivery and must therefore be idempotent.
+Provider-native idempotency is used when supported.
 
-The exact queue/outbox implementation remains an Astra question, not the semantics above.
+Webhook/event handling deduplicates by stable provider identifiers when available.
 
-## B7 — Workflow v1 shape
+These are constraints, not the complete A4 state machine.
+
+## B9 — Workflow v1 constraints
 
 WorkflowRevision is immutable.
-
 Workflow v1 is DAG-first.
 No arbitrary graph cycles.
 
-Iteration is represented explicitly through bounded nodes such as:
-- Batch / Map
-- Variant
-- Retry policy
-- reusable Subworkflow
+Iteration is expressed through bounded constructs such as:
+Batch/Map, Variant, retry policy, reusable Subworkflow.
 
-Editing and execution are separate.
+Editing and execution are distinct.
+Manual gates may suspend and resume a run.
 
-Manual approval gates may suspend a run and resume it later.
+Pure deterministic nodes may use content-addressed cache.
+Paid/non-deterministic generation output is never silently memoized as a “new” generation.
+Reuse must be explicit and visible in lineage.
 
-Pure deterministic nodes may use automatic content-addressed caching.
-Non-deterministic or paid generation nodes must not silently memoize as if a fresh generation occurred.
-Reuse of an existing generated output must be explicit and visible in lineage.
+Astra A1 decides exact execution/rerun/reuse semantics and relationship to direct Studios/MCP.
 
-The exact representation of partial reruns and reused node executions remains an Astra question.
+## B10 — Model ecosystem constraints
 
-## B8 — Auth / authorization / entitlement separation
+Current OS23.6 hardcoded EngineId + executable engine rules are verified source behavior, not the final extensibility model.
 
-Authentication answers: who is the principal?
+Future architecture must preserve meaningful model/provider differences.
 
-Authorization answers: what workspace/project/object may they access?
+Do not create a fake lowest-common-denominator provider DSL.
 
-WorkspaceMembership/Role answers: what role do they have in that workspace?
+A model/provider change must never silently rewrite historical PromptBuild semantics.
 
-Entitlement answers: what product capabilities may the principal/workspace use?
+Founder-required model research must pass through an evidence/evaluation/promotion path before LIVE status.
 
-These concepts must not be collapsed.
+Astra A3 decides:
+- task/capability vs provider/model/profile/adapter separation;
+- code/config boundary;
+- model/profile version semantics;
+- rollout/eval/rollback lifecycle.
+
+## B11 — Auth / authorization / entitlement separation
+
+Authentication = who is the principal.
+Authorization = what workspace/project/object may they access.
+WorkspaceMembership/Role = role within workspace.
+Entitlement = what product capabilities may be used.
+
+These are distinct concepts.
 
 ProviderConnection secrets:
-- server-side only for production-capable architecture;
+- server-side for production-capable architecture;
 - encrypted at rest;
-- referenced by ID from jobs;
-- never serialized into standard domain exports;
-- never copied into audit/telemetry payloads;
-- never stored in ordinary browser local persistence.
+- referenced by ID;
+- not serialized into ordinary exports/logs/telemetry;
+- not retained in ordinary browser persistence.
 
-Exact remote MCP token/session design remains an Astra question.
+BYOK and platform-managed credentials may both exist but must be explicit ownership modes.
 
-## B9 — Asset and lineage model
+Anonymous demo is transient and must not become a hidden long-lived workspace.
+
+Exact web/API/MCP/worker token model is Astra A5.
+
+## B12 — Asset and lineage model
 
 Asset = logical creative identity.
 AssetVersion = immutable binary/file version.
 
-Every edit creates a new AssetVersion.
+Edits create new AssetVersions.
 
 Lineage is a typed directed graph over exact versions.
-A lineage edge never points ambiguously to “latest”.
+No lineage edge targets ambiguous “latest”.
 
-Minimum useful edge classes include:
-REFERENCE_FOR, GENERATED_FROM, EDITED_FROM, VIDEO_FROM_IMAGE,
-VARIANT_OF, INPUT_TO, OUTPUT_OF, REMIXED_FROM.
+Content hashes provide integrity/dedupe, not semantic identity.
 
-Use content hashes for integrity/deduplication but never treat hash equality alone as semantic identity.
+User/private media is private by default.
+Publication/rights state is separate from asset existence.
 
-## B10 — Audit vs telemetry
+## B13 — Audit vs telemetry
 
-AuditEvent is durable product/security history:
-who did what to which domain object and with what result.
+AuditEvent = durable product/security history.
+Telemetry/tracing = operational observability.
 
-Telemetry/tracing is operational:
-latency, spans, queue time, provider call timing, errors, resource usage.
+Use correlation IDs across:
+web/API/MCP command → application use case → job/run → attempt/node run → provider → resulting asset.
 
-Use one correlation/run ID across:
-web/API/MCP command → application use case → job → attempt → provider interaction → resulting asset.
+No raw provider secrets in either.
+Sensitive prompt/reference content is not emitted to telemetry by default.
 
-Do not put secrets or raw sensitive prompt/reference material into telemetry by default.
-
-## B11 — Export/import
+## B14 — Export/import
 
 ExportBundle is schema-versioned and immutable.
 
-It contains:
+Contains:
 - manifest version;
-- object IDs/revisions;
+- exact IDs/revisions;
 - referenced hashes;
 - lineage;
-- media inclusion/pointers according to export mode;
+- media inclusion/pointers per export mode;
 - provenance/rights/publication metadata where applicable.
 
-It excludes:
+Excludes:
 - provider secrets;
 - auth tokens;
 - ephemeral sessions.
 
 Import is two-phase:
-1. validate/plan with no mutation;
-2. transactional apply of metadata plus verified media handling.
+1. validate/plan without mutation;
+2. transactional apply plus verified media handling.
 
-Unknown future schema versions fail closed unless an explicit migrator exists.
+Unknown future schema fails closed without a migrator.
 
-## B12 — Browser candidate promotion
+## B15 — Current Web App migration constraints
 
-Never merge an entire browser candidate into the canonical product because it “looks best”.
+No big-bang rewrite.
+No indefinite permanent dual architecture.
+
+Current behavior that is product value must be preserved:
+Passport/Canon semantics, prompt compiler, engine rules, parser/trust gates,
+backup/import validity, provider-switch secret clearing, self-check, EN/RU and tested edge cases.
+
+Hosted architecture should become server-canonical for durable product objects after migration.
+
+Existing local provider keys must NEVER be silently uploaded.
+Reconnect/re-authorize explicitly.
+
+Local storage may remain for:
+- UI draft/cache;
+- migration bridge;
+- portability/export;
+but not as the only production canon after migration.
+
+Exact phase order is Astra A6.
+
+## B16 — Browser candidate promotion
+
+Never merge an entire browser candidate because it “looks best”.
 
 Promotion unit may be:
-- an accepted ADR;
-- a domain/application contract;
-- a tested pure module;
-- a design token/system;
-- a bounded UI component;
-- an interaction pattern;
+- accepted ADR;
+- domain/application contract;
+- tested pure module;
+- design system/token set;
+- bounded UI component;
+- interaction pattern;
 - selected copy/IA;
-- an audited provider-independent adapter.
+- audited provider-independent adapter.
 
-Every promoted implementation unit must pass:
-- source-behavior compatibility;
-- dependency-direction check;
-- security/secrets check;
-- test coverage appropriate to the boundary;
-- provenance/license check for media/assets;
-- migration impact review.
+Every promoted implementation unit passes:
+source-behavior compatibility, dependency-direction, security/secrets, tests, provenance/license and migration-impact review.
 
-## B13 — What not to generalize yet
+## B17 — Deferred product surfaces
+
+Community/social graph is not a current architecture driver.
+
+Do not let future community/profile/comment concepts distort the core before:
+ownership, publication state, assets, auth and workspace semantics are stable.
+
+## B18 — What not to generalize yet
 
 Do NOT add now:
 - microservice mesh;
 - generic enterprise event bus;
 - distributed saga framework;
 - arbitrary cyclic workflow language;
-- pluggable database abstraction for multiple SQL engines;
+- multi-database portability abstraction;
 - custom identity provider;
-- universal provider DSL that erases meaningful provider differences;
-- vector database/RAG layer without a demonstrated product need;
-- Kubernetes solely for architectural appearance;
-- CQRS/event sourcing for ordinary CRUD/versioned state.
-
-These are future options only if evidence creates a real need.
+- universal provider DSL erasing real model differences;
+- vector/RAG layer without demonstrated product need;
+- Kubernetes for appearance;
+- CQRS/event sourcing for ordinary versioned state.

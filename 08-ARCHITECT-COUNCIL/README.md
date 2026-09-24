@@ -1,66 +1,73 @@
 # 08 — Architecture Council Bridge
 
-Purpose: durable architectural handoff between the central ChatGPT architect, GPT-6 Astra in Codex, and later implementation/review agents.
+Purpose: durable architecture handoff between the central ChatGPT architect, GPT-6 Astra in Codex, and later lower-cost implementation/adversarial reviewers.
 
-This folder is NOT a replacement for product truth or founder decisions.
+This folder is NOT product truth and does not override founder decisions or verified source behavior.
 
 Authority:
-1. founder product decisions;
-2. current public project memory / governance;
-3. verified source behavior;
-4. accepted architecture ADRs;
-5. targeted architecture escalations;
-6. later reviewer recommendations.
+1. founder product intent/decisions;
+2. verified current source behavior;
+3. accepted ADR baseline;
+4. targeted Astra deltas;
+5. later implementation evidence.
 
 ## Current operating model — 2026-09-25
 
-GPT-6 Astra is NOT being used here as a broad independent reviewer.
+The central architect owns:
+- full context reconstruction;
+- routine architecture;
+- state maintenance;
+- experiment synthesis;
+- ADR ownership.
 
-Astra is the scarce, highest-capability architecture escalation path for the few technical decisions that remain genuinely difficult after the central architect has already reduced the problem.
+GPT-6 Astra is reserved for six fundamental decision knots where a wrong answer could force a conceptual rewrite, corrupt execution/provenance, expose secrets or make migration fail.
 
-Do not spend Astra context on:
-- rereading the entire repository;
-- visual design review;
-- media curation;
-- feature ideation;
-- OS23.6 count verification already encoded in contracts;
-- broad generic SaaS advice;
-- restating accepted product intent.
-
-The central architect owns routine synthesis, context maintenance and solvable architecture decisions.
-Astra is reserved for high-impact decision knots where a wrong answer could cause a conceptual rewrite, inconsistent execution semantics, security failure or irreversible migration cost.
+Astra does NOT broadly review:
+- design;
+- media;
+- GLM candidates;
+- marketing;
+- source counts;
+- the whole repository.
 
 ## Astra R001 read order
 
-For the targeted Astra escalation:
-
 1. `11-ASTRA-R001-FOCUS-PACKET.md`
 2. `10-CENTRAL-ARCHITECT-BASELINE-2026-09-25.md`
-3. `03-OPEN-ARCHITECTURE-QUESTIONS.md`
-4. only the specific supporting files named under the question being answered.
+3. `13-FOUNDER-ARCHITECTURE-GAP-MAP.md`
+4. `14-ASTRA-R001-EVIDENCE-MAP.md`
 
-Do NOT pre-read the whole repository.
+Then read only evidence required by A1–A6.
 
-Conditional supporting files:
-- topology/domain: `../01-BASE/PRODUCT-ARCHITECTURE-V3.md`, `../01-BASE/DOMAIN-MODEL-V1.md`
-- workflow: `../01-BASE/EXPERT-WORKFLOW-GRAPH-CONTRACT.md`
-- migration/current behavior: `../01-BASE/CURRENT-PRODUCT-BEHAVIOR-CONTRACT.md`
-- source mechanics only when a proposed decision would change inherited semantics: `../02-SOURCE-TRUTH/SOURCE-INDEX.md`
+## Six hard knots
 
-For implementation evidence, inspect only the exact private canonical files listed in the focus packet when they are available to Codex.
+A1 — one execution substrate across Studios / Workflow / API / MCP
 
-## Other reviewers
+A2 — creative draft/revision/pinning/staleness/rebase semantics
 
-A lower-cost independent reviewer may be run later for adversarial verification.
-That reviewer is separate from Astra R001 and should test the accepted decisions rather than repeat the same expensive architecture work.
+A3 — dynamic model/provider/adapter + research/eval/promotion lifecycle
+
+A4 — durable paid generation transaction/queue/failure/cost semantics
+
+A5 — web/API/MCP principal + BYOK/managed secret boundary
+
+A6 — reversible migration from the current local-first Web App
+
+## Reasoning
+
+Recommended first pass:
+GPT-6 Astra · XHIGH.
+
+Use MAX only as a narrow follow-up if one material decision remains unresolved after XHIGH.
 
 ## State-update rule
 
 The central architect updates this folder when:
-- a major architecture decision changes;
-- a blocker appears;
-- Astra resolves or invalidates a hard architecture assumption;
-- candidate evidence disproves an assumption.
+- founder intent changes architecture;
+- verified source contradicts an assumption;
+- a browser candidate exposes a real architecture failure;
+- Astra resolves or invalidates a hard assumption;
+- implementation evidence changes feasibility.
 
-This folder stores explicit decisions, evidence, uncertainties and rationale.
-It does not store hidden chain-of-thought.
+Store explicit decisions/evidence/uncertainty/rationale.
+Do not store or request hidden chain-of-thought.
