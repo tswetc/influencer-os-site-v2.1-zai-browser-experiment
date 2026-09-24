@@ -24,6 +24,11 @@ Transfer:
 Hard rule:
 do not turn the whole product into a node editor.
 
+Architecture V3 note:
+the product MUST still include the separate Expert Workflow Graph mode defined in
+`01-BASE/EXPERT-WORKFLOW-GRAPH-CONTRACT.md`.
+TouchDesigner informs authoring logic; Figma Weave remains the common node-workflow architecture benchmark.
+
 ## 2. LIVE PREVIEW / CONTROL-SURFACE ANCHOR — Fragment
 
 https://fragment.tools/
