@@ -8,8 +8,8 @@
   "counts": {
     "source_items": 161,
     "unique_source_paths": 160,
-    "local_materialization_allowed": 157,
-    "held_from_local_materialization": 3,
+    "local_materialization_allowed": 156,
+    "held_from_local_materialization": 4,
     "generated_or_demo": 22,
     "founder_media": 138,
     "public_use_approved_in_public_repo": 0
@@ -735,10 +735,10 @@
         "Studio BTS: photographer + white cyc"
       ],
       "source_identity_claim_from_m001": "founder_milena_ioanna",
-      "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
-      "materialize_local_allowed": true,
+      "publication_status": "REJECT_OTHER_IDENTITY",
+      "materialize_local_allowed": false,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder explicitly rejected media containing another identifiable person/identity; M001 rights review flagged this slot/group."
     },
     {
       "id": "zai-m001-g0030-s02",
