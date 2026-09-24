@@ -3,15 +3,16 @@
   "source_experiment": "ZAI-M001",
   "source_commit": "f707b443ab5779b47903cc556d4660599bf30349",
   "source_selection_path": "07-RESULTS/ZAI-M001/MASTER-SELECTION.json",
-  "identity_policy": "Opaque founder-main-01 is used until the founder explicitly confirms any public-facing identity/name.",
-  "public_use_policy": "No normalized item is approved for public use by this file. public_use_allowed=false for all records until founder confirmation.",
+  "identity_policy": "Use neutral opaque IDs only. Do not infer or publish a real-world identity/name from media evidence.",
+  "public_use_policy": "Product-use approvals are recorded below, but upload to the public GitHub experiment repo remains a separate publication decision. public_use_allowed=false until that repository-publication decision is explicit.",
   "counts": {
     "source_items": 161,
     "unique_source_paths": 160,
-    "local_materialization_allowed": 149,
-    "held_from_local_materialization": 11,
+    "local_materialization_allowed": 157,
+    "held_from_local_materialization": 3,
     "generated_or_demo": 22,
-    "founder_media": 138
+    "founder_media": 138,
+    "public_use_approved_in_public_repo": 0
   },
   "items": [
     {
@@ -1781,10 +1782,10 @@
         "VIDEO: mirror w/ child (CHILD-PRIVACY flag — hold)"
       ],
       "source_identity_claim_from_m001": "founder_milena_ioanna",
-      "publication_status": "HOLD_CHILD_PRIVACY",
+      "publication_status": "REJECT_CHILD_PRIVACY",
       "materialize_local_allowed": false,
       "public_use_allowed": false,
-      "rights_review_reason": "Selected video includes a child; explicit privacy hold from M001."
+      "rights_review_reason": "Founder explicitly rejected media containing a child for this product."
     },
     {
       "id": "zai-m001-g0064-s01",
@@ -2303,10 +2304,10 @@
         "Burgundy tweed + gold chains on coastal rocks (TRADEMARK flag)"
       ],
       "source_identity_claim_from_m001": "founder_milena_ioanna",
-      "publication_status": "HOLD_BRAND_REVIEW",
-      "materialize_local_allowed": false,
+      "publication_status": "FOUNDER_PRODUCT_USE_APPROVED_BRAND_CONTEXT",
+      "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Trademark/brand context flagged by M001 rights review."
+      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement."
     },
     {
       "id": "zai-m001-g0076-s02",
@@ -2332,10 +2333,10 @@
         "Wind-blown close-up, tweed + chains (TRADEMARK flag)"
       ],
       "source_identity_claim_from_m001": "founder_milena_ioanna",
-      "publication_status": "HOLD_BRAND_REVIEW",
-      "materialize_local_allowed": false,
+      "publication_status": "FOUNDER_PRODUCT_USE_APPROVED_BRAND_CONTEXT",
+      "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Trademark/brand context flagged by M001 rights review."
+      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement."
     },
     {
       "id": "zai-m001-g0077-s01",
@@ -2564,10 +2565,10 @@
         "B/W fur + vintage Rolls-Royce grille (TRADEMARK flag)"
       ],
       "source_identity_claim_from_m001": "founder_milena_ioanna",
-      "publication_status": "HOLD_BRAND_REVIEW",
-      "materialize_local_allowed": false,
+      "publication_status": "FOUNDER_PRODUCT_USE_APPROVED_BRAND_CONTEXT",
+      "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Trademark/brand context flagged by M001 rights review."
+      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement."
     },
     {
       "id": "zai-m001-g0083-s05",
@@ -2593,10 +2594,10 @@
         "Fur recline on RR hood, warm grade (TRADEMARK flag)"
       ],
       "source_identity_claim_from_m001": "founder_milena_ioanna",
-      "publication_status": "HOLD_BRAND_REVIEW",
-      "materialize_local_allowed": false,
+      "publication_status": "FOUNDER_PRODUCT_USE_APPROVED_BRAND_CONTEXT",
+      "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Trademark/brand context flagged by M001 rights review."
+      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement."
     },
     {
       "id": "zai-m001-g0084-s01",
@@ -2622,10 +2623,10 @@
         "Black corset + headscarf in rapeseed field (PUBLISHED — Bazaar)"
       ],
       "source_identity_claim_from_m001": "founder_milena_ioanna",
-      "publication_status": "HOLD_PUBLISHED_EDITORIAL",
-      "materialize_local_allowed": false,
+      "publication_status": "FOUNDER_PRODUCT_USE_APPROVED_EDITORIAL",
+      "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Published Harper's Bazaar shoot flagged for publication-rights review."
+      "rights_review_reason": "Founder explicitly approved editorial/exhibit-style use in the product; keep provenance/context clear."
     },
     {
       "id": "zai-m001-g0084-s05",
@@ -2651,10 +2652,10 @@
         "Field portrait, black corset (PUBLISHED — Bazaar)"
       ],
       "source_identity_claim_from_m001": "founder_milena_ioanna",
-      "publication_status": "HOLD_PUBLISHED_EDITORIAL",
-      "materialize_local_allowed": false,
+      "publication_status": "FOUNDER_PRODUCT_USE_APPROVED_EDITORIAL",
+      "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Published Harper's Bazaar shoot flagged for publication-rights review."
+      "rights_review_reason": "Founder explicitly approved editorial/exhibit-style use in the product; keep provenance/context clear."
     },
     {
       "id": "zai-m001-g0088-s02",
@@ -2680,10 +2681,10 @@
         "Sol de Janeiro jar in water — campaign still (BRAND flag)"
       ],
       "source_identity_claim_from_m001": "founder_milena_ioanna",
-      "publication_status": "HOLD_BRAND_REVIEW",
+      "publication_status": "HOLD_BRAND_CAMPAIGN_REVIEW",
       "materialize_local_allowed": false,
       "public_use_allowed": false,
-      "rights_review_reason": "Trademark/brand context flagged by M001 rights review."
+      "rights_review_reason": "Founder approved ordinary major-brand context, but this appears to be a specific branded campaign/product still; keep on hold pending explicit confirmation."
     },
     {
       "id": "zai-m001-g0090-s04",
@@ -3115,10 +3116,10 @@
         "Milan Duomo + palm street (GUCCI sign — TM flag)"
       ],
       "source_identity_claim_from_m001": "founder_milena_ioanna",
-      "publication_status": "HOLD_BRAND_REVIEW",
-      "materialize_local_allowed": false,
+      "publication_status": "FOUNDER_PRODUCT_USE_APPROVED_BRAND_CONTEXT",
+      "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Trademark/brand context flagged by M001 rights review."
+      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement."
     },
     {
       "id": "zai-m001-g0109-s04",
@@ -3144,10 +3145,10 @@
         "Milan square alternate"
       ],
       "source_identity_claim_from_m001": "founder_milena_ioanna",
-      "publication_status": "HOLD_BRAND_REVIEW",
-      "materialize_local_allowed": false,
+      "publication_status": "FOUNDER_PRODUCT_USE_APPROVED_BRAND_CONTEXT",
+      "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Trademark/brand context flagged by M001 rights review."
+      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement."
     },
     {
       "id": "zai-m001-g0111-s05",
@@ -3811,10 +3812,10 @@
         "VIDEO: couple piggyback beach (partner identity)"
       ],
       "source_identity_claim_from_m001": "founder_milena_ioanna",
-      "publication_status": "HOLD_THIRD_PARTY_IDENTITY",
+      "publication_status": "REJECT_OTHER_IDENTITY",
       "materialize_local_allowed": false,
       "public_use_allowed": false,
-      "rights_review_reason": "Selected video includes a partner/companion; consent not confirmed."
+      "rights_review_reason": "Founder explicitly rejected selected media containing another identifiable person/identity."
     },
     {
       "id": "zai-m001-g0156-s05",
@@ -4657,5 +4658,14 @@
       "public_use_allowed": false,
       "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
     }
-  ]
+  ],
+  "founder_decisions_2026_09_24": {
+    "neutral_identity_ids": true,
+    "reject_child_media": true,
+    "reject_other_identity_media": true,
+    "major_brand_or_incidental_brand_context": "allowed_for_product_use_with_no_endorsement_implication",
+    "specific_brand_campaign_media": "review_case_by_case",
+    "editorial_shoots": "allowed_for_product_use",
+    "exhibit_or_art_content": "allowed_for_product_use"
+  }
 }
