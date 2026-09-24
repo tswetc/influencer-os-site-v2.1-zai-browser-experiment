@@ -24,6 +24,7 @@ forbidden=re.compile(
 )
 errors=[]
 summary={}
+EXPECTED_COUNTS={"A":39,"B":42,"C":33,"D":36}
 
 def sha256(path):
     h=hashlib.sha256()
@@ -32,8 +33,18 @@ def sha256(path):
             h.update(chunk)
     return h.hexdigest()
 
-if not (root/"BUNDLE-MANIFEST.json").is_file():
+bundle_path=root/"BUNDLE-MANIFEST.json"
+bundle=None
+if not bundle_path.is_file():
     errors.append("missing BUNDLE-MANIFEST.json")
+else:
+    bundle=json.loads(bundle_path.read_text(encoding="utf-8"))
+    if bundle.get("bundle_id")!="wave01-public-v4":
+        errors.append("bundle_id mismatch")
+    if bundle.get("source_paths_included") is not False:
+        errors.append("bundle source_paths_included != false")
+    if bundle.get("metadata_stripped") is not True:
+        errors.append("bundle metadata_stripped != true")
 
 referenced=set()
 
@@ -49,6 +60,12 @@ for design in "ABCD":
     items=d.get("items",[])
     if not 30 <= len(items) <= 45:
         errors.append(f"{design}: item count {len(items)} outside 30-45")
+    if len(items) != EXPECTED_COUNTS[design]:
+        errors.append(
+            f"{design}: item count {len(items)} != frozen expected {EXPECTED_COUNTS[design]}"
+        )
+    if d.get("item_count") != len(items):
+        errors.append(f"{design}: manifest item_count field mismatch")
     if d.get("source_paths_included") is not False:
         errors.append(f"{design}: source_paths_included != false")
 
@@ -90,6 +107,23 @@ if assets.is_dir():
         errors.append(f"unreferenced transport assets: {extra[:12]}")
 else:
     errors.append("missing assets directory")
+
+if bundle is not None:
+    if bundle.get("asset_count") != len(referenced):
+        errors.append(
+            f"bundle asset_count {bundle.get('asset_count')} != referenced unique assets {len(referenced)}"
+        )
+    actual_bytes=sum(p.stat().st_size for p in referenced if p.is_file())
+    if bundle.get("asset_bytes") != actual_bytes:
+        errors.append(
+            f"bundle asset_bytes {bundle.get('asset_bytes')} != actual {actual_bytes}"
+        )
+    bp=bundle.get("packs",{})
+    for design in "ABCD":
+        if design not in bp:
+            errors.append(f"bundle packs missing {design}")
+        elif bp[design].get("items") != summary.get(design,{}).get("items"):
+            errors.append(f"bundle pack summary mismatch for {design}")
 
 print(json.dumps({"summary":summary,"errors":errors},ensure_ascii=False,indent=2))
 if errors:
