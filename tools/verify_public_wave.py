@@ -4,10 +4,11 @@
 Usage:
   python3 tools/verify_public_wave.py <repo_root>
 
-This verifier checks the self-contained public v3 atlas-derivative manifests:
-04-MEDIA/packs/wave01-{A,B,C,D}-public-v3.json
+Checks:
+  04-MEDIA/packs/wave01-{A,B,C,D}-public-v3.json
 
-It intentionally does not require the private/local master library.
+These packs intentionally reference commit-pinned atlas sheet + slot crops.
+They do not expose SSD source paths.
 """
 
 from __future__ import annotations
@@ -21,7 +22,11 @@ if len(sys.argv)!=2:
     raise SystemExit("usage: verify_public_wave.py <repo_root>")
 
 repo=Path(sys.argv[1]).expanduser().resolve()
-forbidden=re.compile(r"(founder_milena_ioanna|Milena\s+Ioanna|@milenaioanna|milenaioanna\.com|MILENA\s+MILANI\s+CAROL|/Users/|/Volumes/|source_path|ssd_relative)",re.I)
+
+forbidden_identity=re.compile(
+    r"(founder_milena_ioanna|Milena\s+Ioanna|@milenaioanna|milenaioanna\.com|MILENA\s+MILANI\s+CAROL|/Users/|/Volumes/|ssd_relative)",
+    re.I,
+)
 
 errors=[]
 summary={}
@@ -35,17 +40,24 @@ def git_blob_sha(path: Path):
 for design in "ABCD":
     manifest=repo/"04-MEDIA/packs"/f"wave01-{design}-public-v3.json"
     if not manifest.is_file():
-        errors.append(f"{design}: missing manifest {manifest}")
+        errors.append(f"{design}: missing manifest")
         continue
 
     raw=manifest.read_text(encoding="utf-8")
-    if forbidden.search(raw):
-        errors.append(f"{design}: forbidden identity/path token in manifest")
+    if forbidden_identity.search(raw):
+        errors.append(f"{design}: forbidden identity/private-path token")
+
+    # Exact source-path key is forbidden, but the boolean policy field
+    # source_paths_included=false is intentionally allowed.
+    if re.search(r'"source_path"\s*:',raw):
+        errors.append(f"{design}: source_path key leaked into public pack")
 
     d=json.loads(raw)
     items=d.get("items",[])
+
     if not (36 <= len(items) <= 42):
         errors.append(f"{design}: item count {len(items)} outside 36-42")
+
     if d.get("source_paths_included") is not False:
         errors.append(f"{design}: source_paths_included must be false")
 
