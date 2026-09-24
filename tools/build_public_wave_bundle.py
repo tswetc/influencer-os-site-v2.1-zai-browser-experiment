@@ -94,6 +94,7 @@ def public_item(item,asset_id,filename,file_sha,file_bytes):
     }
 
 # Preflight.
+PUBLIC_TRANSPORT_EXCLUDE={(27,1),(68,6),(111,5)}
 packs={}
 for design,p in PACK_FILES.items():
     if not p.is_file():
@@ -102,9 +103,10 @@ for design,p in PACK_FILES.items():
     items=d.get("items",[])
     if not 30 <= len(items) <= 45:
         raise SystemExit(f"{design}: expected 30-45 bounded items, got {len(items)}")
-    # Pixel-level identity-card exclusion must never enter transport.
-    if any((x.get("group_number"),x.get("slot"))==(27,1) for x in items):
-        raise SystemExit(f"{design}: forbidden G0027/s01 visible identity-card frame selected")
+    selected={(x.get("group_number"),x.get("slot")) for x in items}
+    forbidden=sorted(selected & PUBLIC_TRANSPORT_EXCLUDE)
+    if forbidden:
+        raise SystemExit(f"{design}: forbidden public transport items selected: {forbidden}")
     packs[design]=d
 
 if staging.exists():
@@ -170,6 +172,7 @@ for design in "ABCD":
         "item_count":len(public),
         "target_range":[30,45],
         "transport_mode":"SANITIZED_WEB_DERIVATIVES",
+        "curated_source_pack_id":packs[design].get("pack_id"),
         "identity_policy":"opaque IDs only",
         "source_paths_included":False,
         "metadata_stripped":True,
