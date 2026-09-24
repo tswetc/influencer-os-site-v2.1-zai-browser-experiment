@@ -1,0 +1,8 @@
+INFLUENCER_OS_ZAI_BRIDGE_TEST
+version=1
+date=2026-09-24
+expected_phrase=DIARY_RAW_STAGED
+world_a=Diary
+world_b=Raw
+world_c=Staged
+purpose=prove_raw_github_http_transport_into_chat_z_ai_sandbox
