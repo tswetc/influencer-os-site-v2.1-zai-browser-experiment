@@ -1,23 +1,29 @@
 # Architecture Council Synthesis Protocol
 
-Use after independent Astra + Codex reviews are ingested.
+Date: 2026-09-25
+Status: TARGETED_ASTRA_FIRST
 
-## Step 1 — Normalize conclusions
+Use after Astra R001 returns.
 
-For every material conclusion, classify:
-KEEP · CHANGE · SPLIT_LATER · REMOVE · NEEDS_FOUNDER_DECISION · NEEDS_SOURCE_EVIDENCE.
+## Step 1 — Preserve raw Astra output
 
-## Step 2 — Build contradiction matrix
+Ingest `ASTRA-R001-DECISIONS.md` unchanged.
+
+Do not rewrite the raw decision packet before comparison.
+
+## Step 2 — Build delta matrix only where needed
 
 Columns:
-- topic;
-- current ADR;
-- Astra;
-- Codex;
-- source/product constraints;
-- implementation evidence;
-- central architect resolution;
+- question / ADR;
+- central baseline;
+- Astra decision;
+- source/product invariant;
+- current implementation evidence;
+- accepted resolution;
+- migration impact;
 - founder decision required? yes/no.
+
+Do not create rows for architecture Astra did not challenge.
 
 ## Step 3 — Resolve by responsibility
 
@@ -27,9 +33,9 @@ Founder owns:
 - public/private decisions;
 - business priorities.
 
-Architecture council owns:
+Architecture owns:
 - persistence;
-- transaction boundaries;
+- transactions;
 - queues/retries;
 - provider adapter design;
 - workflow runtime;
@@ -40,38 +46,39 @@ Architecture council owns:
 - testing;
 - migration strategy.
 
-Source evidence owns:
-- OS23.6 inherited behavior semantics.
+Verified source evidence owns inherited OS23.6 semantics.
 
-## Step 4 — Cross-review only material disagreements
-
-Do not run a second debate for every detail.
-
-Cross-review only decisions that would cause:
-- conceptual rewrite;
-- schema incompatibility;
-- security boundary change;
-- provider/runtime instability;
-- workflow execution ambiguity;
-- service split;
-- irreversible migration cost.
-
-## Step 5 — Promote accepted ADRs
+## Step 4 — Promote accepted Astra deltas
 
 Update:
-- `08-ARCHITECT-COUNCIL/04-DECISION-REGISTER.md`;
-- relevant `01-BASE/*` architecture contracts;
-- current governance/readiness;
-- run specifications only when architecture affects the product-wave mission.
+- `04-DECISION-REGISTER.md`;
+- affected `01-BASE/*` architecture contracts;
+- governance/readiness;
+- future run contracts only where architecture changes product execution requirements.
+
+Do not mutate already-running P001–P004 inputs.
+
+## Step 5 — Run lower-cost adversarial implementation audit
+
+After promotion, run the secondary feasibility audit only if useful.
+
+Its job is to find:
+- implementation contradiction;
+- missing interface;
+- migration hazard;
+- test gap;
+- dependency violation.
+
+It is not a second expensive architecture brainstorm.
 
 ## Step 6 — New freeze
 
-Architecture review does not mutate already-running experiment SHAs.
-
-After promotion:
+After accepted architecture changes:
 - verify repository;
+- complete media/public-transport gates;
 - create one new immutable freeze SHA;
-- launch architecture-vetted E004-E011 from that SHA.
+- generate launch prompts from that exact SHA;
+- launch the architecture-vetted product wave.
 
 ## Acceptance principle
 

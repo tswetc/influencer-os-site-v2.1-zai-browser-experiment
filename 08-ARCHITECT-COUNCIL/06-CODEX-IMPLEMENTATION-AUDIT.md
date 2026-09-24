@@ -1,103 +1,83 @@
-# Codex Implementation Feasibility Audit
+# Secondary Implementation Feasibility Audit
 
-ROLE:
-staff/principal software engineer reviewing architecture against implementability.
+Status: DEFERRED_UNTIL_AFTER_ASTRA_R001
 
-MODE:
-READ-ONLY first pass.
+This file no longer defines a second symmetric high-cost architecture review.
 
-Do NOT redesign the product.
-Do NOT start a rewrite.
+GPT-6 Astra already runs inside Codex for R001 and is reserved for the five hardest decision knots.
+
+After Astra R001 is synthesized, a lower-cost model may run this implementation-feasibility audit as an adversarial verification pass.
+
+Recommended default:
+- GPT-5.6 Sol;
+- HIGH reasoning for material implementation review;
+- use a cheaper model only for mechanical checks.
 
 ## Mission
 
-Audit whether the current Influencer OS Architecture V3 can be implemented cleanly in a real codebase and identify:
-- hidden coupling;
-- impossible or ambiguous contracts;
-- dangerous abstractions;
-- missing interfaces;
-- migration hazards;
-- testing gaps;
-- repository/package boundary problems.
+Test the accepted post-Astra architecture against implementability in the real TypeScript/Next codebase.
 
-Astra is the architecture decision reviewer.
-Codex is the implementation/repository feasibility reviewer.
+Do NOT redesign product intent.
+Do NOT repeat Astra's broad reasoning.
+Do NOT reopen an accepted decision without a concrete implementation failure.
 
-## Read order
+## Evidence anchors
 
-1. `08-ARCHITECT-COUNCIL/README.md`
-2. `01-ARCHITECT-STATE.md`
-3. `02-NONNEGOTIABLES.md`
-4. `03-OPEN-ARCHITECTURE-QUESTIONS.md`
-5. `04-DECISION-REGISTER.md`
-6. full public source/architecture contract via `00-GOVERNANCE/START-HERE.md`
-7. relevant current-source files and tools.
+Architecture:
+- current `08-ARCHITECT-COUNCIL/04-DECISION-REGISTER.md`
+- Astra raw decision packet after ingestion
+- promoted architecture contracts
 
-## Required audit
+Canonical implementation:
+- `tswetc/influencer-os`
+- current audited head recorded in `01-ARCHITECT-STATE.md`
 
-Map architecture concepts to implementable packages/interfaces:
+Relevant source files should be selected narrowly rather than loading the whole repository.
 
-- domain entities/value objects;
+## Required checks
+
+Map accepted architecture to implementable:
+- domain/value types;
 - application commands/queries;
-- repositories;
-- transaction/unit-of-work boundary;
-- event interfaces;
-- queue jobs;
+- repository interfaces;
+- transaction/unit-of-work boundaries;
+- worker/queue interfaces;
 - provider adapters;
-- model registry;
-- workflow compiler/runtime;
-- object storage/media;
+- workflow runtime;
+- object storage/media interfaces;
 - API/MCP transports;
 - auth context;
 - audit/telemetry;
 - export/import.
 
-For every open decision:
-- state concrete TypeScript/API shape where useful;
-- identify runtime ownership;
-- identify persistence ownership;
-- identify dependency direction;
-- identify the smallest test proving the boundary.
-
-## Required red-team checks
-
-Find:
+Red-team:
 - circular dependencies;
-- UI business logic leakage;
-- provider-specific semantics leaking into domain;
+- UI business-logic leakage;
+- provider semantics leaking into domain;
 - MCP duplicating web logic;
 - retries overwriting history;
 - mutable revisions;
-- non-idempotent job creation;
+- non-idempotent dispatch;
 - impossible transaction scope;
-- localStorage masquerading as persistence;
+- localStorage masquerading as durable production state;
 - secret serialization;
-- graph execution without deterministic versioning;
-- asset lineage losing exact versions;
-- export bundles that cannot be re-imported safely.
+- workflow execution without exact version binding;
+- lineage pointing to mutable/latest state;
+- unsafe export/import.
 
-## Deliverables
+## Deliverable
 
-Create locally:
+One concise implementation audit is preferred over a large report tree.
 
-`CODEX-ARCH-AUDIT/`
-
-with:
-
-1. `IMPLEMENTABILITY-VERDICT.md`
-2. `PROPOSED-REPO-SHAPE.md`
-3. `DEPENDENCY-DIRECTION.md`
-4. `INTERFACE-SKETCHES.md`
-5. `PERSISTENCE-AND-QUEUE-FEASIBILITY.md`
-6. `WORKFLOW-RUNTIME-FEASIBILITY.md`
-7. `MCP-API-FEASIBILITY.md`
-8. `TESTABILITY-AUDIT.md`
-9. `MIGRATION-RISKS.md`
-10. `DISAGREEMENTS-WITH-CURRENT-ARCHITECTURE.md`
-11. `QUESTIONS-FOR-ASTRA.md`
-12. `REVIEW-MANIFEST.md`
+For every defect:
+1. affected ADR;
+2. exact code/interface boundary;
+3. failure;
+4. smallest safe correction;
+5. test proving the correction;
+6. confidence.
 
 Final status:
-CODEX_ARCHITECTURE_AUDIT_COMPLETE
+`SECONDARY_IMPLEMENTATION_AUDIT_COMPLETE`
 or
-CODEX_ARCHITECTURE_AUDIT_BLOCKED
+`SECONDARY_IMPLEMENTATION_AUDIT_BLOCKED`

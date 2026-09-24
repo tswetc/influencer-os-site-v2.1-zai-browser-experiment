@@ -1,6 +1,6 @@
-# Architecture Review Output Contract
+# Architecture Escalation / Review Output Contract
 
-Every reviewer conclusion must be classed as one of:
+Every conclusion must be classed as one of:
 
 - KEEP
 - CHANGE
@@ -12,7 +12,7 @@ Every reviewer conclusion must be classed as one of:
 For every CHANGE or REMOVE:
 
 1. current decision;
-2. problem;
+2. concrete problem/failure;
 3. evidence;
 4. proposed replacement;
 5. affected domain objects/use cases;
@@ -34,31 +34,37 @@ Bad:
 "use event-driven architecture."
 
 Good:
-"GenerationAttempt status transitions emit infrastructure events to a queue/outbox; CharacterRevision creation remains synchronous/transactional; do not introduce a general event bus for ordinary CRUD."
+"GenerationAttempt dispatch is written with a transactional outbox; worker delivery is at-least-once; provider webhook handling is deduplicated by external event/request identity. CharacterRevision creation remains an ordinary synchronous transaction."
 
 ## Founder questions
 
-Only ask the founder a question if two technically valid architectures depend on a product/UX/business choice.
+Only ask the founder if two technically valid architectures depend on a genuine product/UX/business choice.
 
 Do not ask the founder to choose:
-database isolation level;
-retry idempotency design;
-queue semantics;
-package dependency direction;
-schema migration strategy;
-provider adapter lifecycle.
+- database isolation level;
+- retry idempotency;
+- queue semantics;
+- package dependency direction;
+- schema migration strategy;
+- provider adapter lifecycle;
+- OAuth token plumbing.
 
 Those are architecture responsibilities.
 
-## Final synthesis input
+## Astra R001
 
-The central architect will compare:
-- Astra recommendation;
-- Codex feasibility audit;
-- current ADRs;
-- browser candidate evidence.
+Astra uses the more specific output contract in:
+`11-ASTRA-R001-FOCUS-PACKET.md`.
 
-Accepted changes are then promoted into:
-`00-GOVERNANCE/`
-`01-BASE/`
-and future run contracts.
+That specific contract wins for R001.
+
+## Later synthesis
+
+The central architect synthesizes:
+- current ADR baseline;
+- Astra R001 decisions;
+- implementation evidence;
+- optional lower-cost adversarial/feasibility audit;
+- browser-candidate evidence when relevant.
+
+Only accepted deltas are promoted into governance/architecture files.
