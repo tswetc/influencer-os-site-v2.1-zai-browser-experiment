@@ -14,6 +14,14 @@ Matched inputs with P002.
 GLM-5.3-Flash full-system integration pilot.
 Matched inputs with P001.
 
+### ZAI-P003
+GLM-5.2 full-system integration pilot using design-set-b.
+Matched inputs with P004.
+
+### ZAI-P004
+GLM-5.3-Flash full-system integration pilot using design-set-b.
+Matched inputs with P003.
+
 These pilots use provisional atlas derivatives and are not official Wave 01 candidates.
 
 ## Lane 2 — launch immediately after M001 media materialization + freeze
