@@ -36,7 +36,8 @@ Local rebuild evidence is founder terminal evidence. It is not evidence that pub
 - [ ] commit only bounded transport packs + manifests;
 - [ ] run `tools/verify_public_wave.py`;
 - [ ] create one immutable launch-freeze commit;
-- [ ] patch E004–E011 + Q001 with that exact INPUT_COMMIT;
+- [ ] record one immutable launch-freeze HEAD SHA;
+- [ ] generate launch prompts that pin every raw URL to that SHA;
 - [ ] launch.
 
 ## Launch decision
@@ -46,3 +47,17 @@ The founder has chosen to run full product-quality candidates in parallel as soo
 Q001 runs in parallel as a disposable qualification test rather than blocking the product-quality runs.
 
 If Q001 finds a shared-input defect, record that defect against every candidate that used the same freeze. Do not misattribute it to a model.
+
+
+## Freeze-SHA rule
+
+Do NOT try to write the commit's own SHA into a file inside the same commit.
+
+Run specs use:
+`INPUT_COMMIT: PROVIDED_BY_LAUNCH_PROMPT`
+
+The launch prompt pins:
+- the exact commit SHA;
+- the exact commit-pinned raw RUN.md URL.
+
+This avoids an impossible self-referential freeze.
