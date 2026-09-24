@@ -1,0 +1,704 @@
+{
+  "pack_id": "wave01-C-public-v3",
+  "version": 3,
+  "status": "READY_FOR_COMMIT_PINNED_BROWSER_FETCH",
+  "design_set": "design-set-c",
+  "item_count": 37,
+  "target_range": [
+    36,
+    42
+  ],
+  "selection_method": "audited_normalized_selection + explicit family caps + deterministic even sampling",
+  "selection_rationale": "Creator-workbench direction: live preview, capability proof, workflow/media causality, still-life and motion support.",
+  "identity_policy": "opaque IDs only; do not infer real-world identity",
+  "source_paths_included": false,
+  "transport_mode": "commit-pinned existing atlas sheet + slot crop",
+  "extraction_tool": "tools/fetch_public_atlas_pack.py",
+  "note": "These are bounded low-resolution development transport derivatives. They are not final publication masters.",
+  "selected_family_counts": {
+    "founder-character-01": 4,
+    "founder-editorial-colorlight-01": 2,
+    "founder-editorial-blue-01": 2,
+    "founder-editorial-apartment-01": 2,
+    "founder-editorial-pinkhair-01": 2,
+    "founder-editorial-tutu-01": 2,
+    "world-diary-01": 3,
+    "world-raw-01": 2,
+    "world-staged-01": 2,
+    "still-life-ai-01": 3,
+    "still-life-01": 2,
+    "capability-flora-01": 5,
+    "capability-bts-01": 2,
+    "motion-pack-01": 5
+  },
+  "items": [
+    {
+      "asset_id": "IOS-C-001",
+      "group_number": 6,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0006-b9f314b841cc4b.jpg",
+      "sheet_blob_sha": "4b70c572b17b65c75b530b1afeeddbbc755c6a5c",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "identity_reference"
+      ],
+      "family_ids": [
+        "founder-character-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-002",
+      "group_number": 9,
+      "slot": 5,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0009-eaf7738e389c18.jpg",
+      "sheet_blob_sha": "0690278d0f319e6151246d4a6b1d4ce7097e21d2",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "scene_reference"
+      ],
+      "family_ids": [
+        "world-diary-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-003",
+      "group_number": 25,
+      "slot": 6,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0025-a07759d8d2e8ab.jpg",
+      "sheet_blob_sha": "14ca260ca192f755b728fe5c09eb82d9eac3f630",
+      "media_type": "video",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "motion_reference"
+      ],
+      "family_ids": [
+        "motion-pack-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-004",
+      "group_number": 27,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0027-5685a1b20aecad.jpg",
+      "sheet_blob_sha": "eec86c33d30518dad6945fd7cf386fd0e7406d38",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "scene_reference"
+      ],
+      "family_ids": [
+        "capability-bts-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-005",
+      "group_number": 30,
+      "slot": 2,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0030-1b0285c500d67d.jpg",
+      "sheet_blob_sha": "8ae5a54ca2cb5e9ae1500cf57d49ca2ce15cbf79",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "identity_reference"
+      ],
+      "family_ids": [
+        "founder-character-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-006",
+      "group_number": 30,
+      "slot": 4,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0030-1b0285c500d67d.jpg",
+      "sheet_blob_sha": "8ae5a54ca2cb5e9ae1500cf57d49ca2ce15cbf79",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "identity_reference"
+      ],
+      "family_ids": [
+        "founder-character-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-007",
+      "group_number": 35,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0035-961ab7dc457400.jpg",
+      "sheet_blob_sha": "61f51aac26f4c829b59289be08129fb447e4e10a",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "editorial_example"
+      ],
+      "family_ids": [
+        "founder-editorial-colorlight-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-008",
+      "group_number": 35,
+      "slot": 4,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0035-961ab7dc457400.jpg",
+      "sheet_blob_sha": "61f51aac26f4c829b59289be08129fb447e4e10a",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "editorial_example"
+      ],
+      "family_ids": [
+        "founder-editorial-colorlight-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-009",
+      "group_number": 39,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0039-978099c71c04d1.jpg",
+      "sheet_blob_sha": "96ddb1376767ebdeb641fd1a6e6d4c8765f032f3",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "editorial_example"
+      ],
+      "family_ids": [
+        "founder-editorial-blue-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-010",
+      "group_number": 39,
+      "slot": 4,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0039-978099c71c04d1.jpg",
+      "sheet_blob_sha": "96ddb1376767ebdeb641fd1a6e6d4c8765f032f3",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "editorial_example"
+      ],
+      "family_ids": [
+        "founder-editorial-blue-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-011",
+      "group_number": 40,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0040-17eef59d9721df.jpg",
+      "sheet_blob_sha": "2f5c930662be32f5e7f32c1fdf90461010621809",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "editorial_example",
+        "product_reference"
+      ],
+      "family_ids": [
+        "founder-editorial-apartment-01",
+        "still-life-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-012",
+      "group_number": 43,
+      "slot": 2,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0043-038eb28be7a8e8.jpg",
+      "sheet_blob_sha": "4dfbfa15834b86f1dfdb805f751f003f21cf4dbf",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "editorial_example"
+      ],
+      "family_ids": [
+        "founder-editorial-apartment-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-013",
+      "group_number": 62,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0062-fd02c87aa93060.jpg",
+      "sheet_blob_sha": "9be46d21df8f4dc1827f21a3f4622126218496e8",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "scene_reference"
+      ],
+      "family_ids": [
+        "world-diary-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-014",
+      "group_number": 68,
+      "slot": 6,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0068-e0ed1c821dbde4.jpg",
+      "sheet_blob_sha": "dd56e21d903f9b1742f85a1e017bef24702844a0",
+      "media_type": "video",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "motion_reference"
+      ],
+      "family_ids": [
+        "motion-pack-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-015",
+      "group_number": 72,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0072-ebcb8d78a80a40.jpg",
+      "sheet_blob_sha": "aff3d91c579219ae52980210633fea2a2e319b13",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "editorial_example"
+      ],
+      "family_ids": [
+        "founder-editorial-pinkhair-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-016",
+      "group_number": 72,
+      "slot": 4,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0072-ebcb8d78a80a40.jpg",
+      "sheet_blob_sha": "aff3d91c579219ae52980210633fea2a2e319b13",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "editorial_example"
+      ],
+      "family_ids": [
+        "founder-editorial-pinkhair-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-017",
+      "group_number": 73,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0073-d4a15fc49b894a.jpg",
+      "sheet_blob_sha": "f73ee07bc3e23a51ddf70f3f10a4bea8ef0e3676",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "editorial_example"
+      ],
+      "family_ids": [
+        "founder-editorial-tutu-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-018",
+      "group_number": 73,
+      "slot": 5,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0073-d4a15fc49b894a.jpg",
+      "sheet_blob_sha": "f73ee07bc3e23a51ddf70f3f10a4bea8ef0e3676",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "editorial_example"
+      ],
+      "family_ids": [
+        "founder-editorial-tutu-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-019",
+      "group_number": 111,
+      "slot": 5,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0111-d8603c8c44f80c.jpg",
+      "sheet_blob_sha": "7d4d2a5c3407794c9a07be63462bc5e2522177be",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "scene_reference"
+      ],
+      "family_ids": [
+        "world-diary-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-020",
+      "group_number": 112,
+      "slot": 6,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0112-4b1a6dd3223504.jpg",
+      "sheet_blob_sha": "46c3e1cde076f75191b4380fc29c567fb1e14ef6",
+      "media_type": "video",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "motion_reference"
+      ],
+      "family_ids": [
+        "motion-pack-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-021",
+      "group_number": 116,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0116-64815f633c51dc.jpg",
+      "sheet_blob_sha": "3e7d9f695567f4c60b5395fdb13a34b22e568ae8",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "scene_reference"
+      ],
+      "family_ids": [
+        "world-raw-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-022",
+      "group_number": 116,
+      "slot": 4,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0116-64815f633c51dc.jpg",
+      "sheet_blob_sha": "3e7d9f695567f4c60b5395fdb13a34b22e568ae8",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "scene_reference"
+      ],
+      "family_ids": [
+        "world-raw-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-023",
+      "group_number": 117,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0117-9d4a020a377dff.jpg",
+      "sheet_blob_sha": "7415c50a53813391ea4cfc86775fd3ff484db2c4",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "scene_reference"
+      ],
+      "family_ids": [
+        "world-staged-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-024",
+      "group_number": 117,
+      "slot": 5,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0117-9d4a020a377dff.jpg",
+      "sheet_blob_sha": "7415c50a53813391ea4cfc86775fd3ff484db2c4",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "scene_reference"
+      ],
+      "family_ids": [
+        "world-staged-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-025",
+      "group_number": 130,
+      "slot": 3,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0130-ab89d67fb8a8c4.jpg",
+      "sheet_blob_sha": "f8570ac9ebda8b3f7b3416aff78ad0fafcede957",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "identity_reference"
+      ],
+      "family_ids": [
+        "founder-character-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-026",
+      "group_number": 134,
+      "slot": 5,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0134-b36045261c8ae0.jpg",
+      "sheet_blob_sha": "005af4e3d01abb1d516f0fc4362546abc87feb59",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "scene_reference"
+      ],
+      "family_ids": [
+        "capability-bts-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-027",
+      "group_number": 143,
+      "slot": 6,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0143-817a37a38dd79b.jpg",
+      "sheet_blob_sha": "10b95c8a6bdc7a206ce02b1833c1532b7982c837",
+      "media_type": "video",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "motion_reference"
+      ],
+      "family_ids": [
+        "motion-pack-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-028",
+      "group_number": 147,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0147-2431ced945c204.jpg",
+      "sheet_blob_sha": "56a806b75a95be612be6ed5aacb55d879879aaa7",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "background_texture"
+      ],
+      "family_ids": [
+        "still-life-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-029",
+      "group_number": 159,
+      "slot": 6,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0159-1012258f420b01.jpg",
+      "sheet_blob_sha": "0468804fafbf509986b8248c0200ca2b1e1ae4bd",
+      "media_type": "video",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "motion_reference"
+      ],
+      "family_ids": [
+        "motion-pack-01"
+      ],
+      "identity_id": "founder-main-01",
+      "provenance": "founder_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-030",
+      "group_number": 186,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0186-53b443dadf9b0b.jpg",
+      "sheet_blob_sha": "430cf8a82fe8f7e4dec0e3d8be113488481bcfb1",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "background_texture"
+      ],
+      "family_ids": [
+        "still-life-ai-01"
+      ],
+      "identity_id": "generated-demo-01",
+      "provenance": "generated_or_demo_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-031",
+      "group_number": 187,
+      "slot": 4,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0187-08a25b5dc99fd5.jpg",
+      "sheet_blob_sha": "0aba3db4e10b6f6734ce1d19626c7bb32aafcd9e",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "product_reference"
+      ],
+      "family_ids": [
+        "still-life-ai-01"
+      ],
+      "identity_id": "generated-demo-01",
+      "provenance": "generated_or_demo_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-032",
+      "group_number": 188,
+      "slot": 5,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0188-3d2eb3ef88a505.jpg",
+      "sheet_blob_sha": "074a31719fb59c98b06a9f3f9ec2814308cd6bd0",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "product_reference"
+      ],
+      "family_ids": [
+        "still-life-ai-01"
+      ],
+      "identity_id": "generated-demo-01",
+      "provenance": "generated_or_demo_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-033",
+      "group_number": 189,
+      "slot": 2,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0189-948f851353b15f.jpg",
+      "sheet_blob_sha": "5815e3d688686ed52103c1b3729b5de7570fcf71",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "output_example"
+      ],
+      "family_ids": [
+        "capability-flora-01"
+      ],
+      "identity_id": "generated-demo-01",
+      "provenance": "generated_or_demo_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-034",
+      "group_number": 192,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0192-93da89f4bdd090.jpg",
+      "sheet_blob_sha": "b4fd1b11507939f57d00204464f5490b26092381",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "output_example"
+      ],
+      "family_ids": [
+        "capability-flora-01"
+      ],
+      "identity_id": "generated-demo-01",
+      "provenance": "generated_or_demo_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-035",
+      "group_number": 193,
+      "slot": 3,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0193-a43639a1c77d09.jpg",
+      "sheet_blob_sha": "a6d1321af19c3f4171cf5c5f80e42efabc2aed1a",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "output_example"
+      ],
+      "family_ids": [
+        "capability-flora-01"
+      ],
+      "identity_id": "generated-demo-01",
+      "provenance": "generated_or_demo_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-036",
+      "group_number": 197,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0197-0128315532070e.jpg",
+      "sheet_blob_sha": "49ea071ef6eeb611f0d98003d37767436286223f",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "output_example"
+      ],
+      "family_ids": [
+        "capability-flora-01"
+      ],
+      "identity_id": "generated-demo-01",
+      "provenance": "generated_or_demo_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    },
+    {
+      "asset_id": "IOS-C-037",
+      "group_number": 198,
+      "slot": 5,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0198-e9c91f9345af46.jpg",
+      "sheet_blob_sha": "aac6338b3af78193101e38c03df7c3832c1c3322",
+      "media_type": "image",
+      "transport_derivative_type": "ATLAS_PREVIEW_DERIVATIVE",
+      "roles": [
+        "output_example"
+      ],
+      "family_ids": [
+        "capability-flora-01"
+      ],
+      "identity_id": "generated-demo-01",
+      "provenance": "generated_or_demo_media",
+      "publication_state": "PUBLIC_LAB_DEVELOPMENT_ONLY"
+    }
+  ]
+}
