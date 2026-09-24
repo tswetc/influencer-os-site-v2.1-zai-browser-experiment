@@ -27,11 +27,27 @@ Chat.Z.AI agents may:
 
 They should NOT write back to the shared lab repository.
 
-## Codex / ZCode / desktop agents
+## Codex / desktop agents
 
 Do not enter or modify this lab as part of ordinary production work.
-Only inspect it when the founder explicitly asks for experiment audit, comparison, ingestion or promotion.
+Only inspect it when the founder explicitly asks for experiment audit, architecture work, comparison, ingestion or promotion.
 
 Promotion must be deliberate:
 
 `candidate export → forensic audit → selected result → dedicated real branch → refinement → optional canonical integration`.
+
+## ASTRA-R001 special route
+
+When the explicit mission is `ASTRA-R001`:
+
+- use GPT-6 Astra as a targeted architecture escalation, not a broad repo reviewer;
+- start with `08-ARCHITECT-COUNCIL/11-ASTRA-R001-FOCUS-PACKET.md`;
+- then read `08-ARCHITECT-COUNCIL/10-CENTRAL-ARCHITECT-BASELINE-2026-09-25.md`;
+- use progressive disclosure and inspect only support files needed for A1–A5;
+- do not pre-read the whole repository;
+- remain READ-ONLY;
+- do not implement;
+- do not alter this lab or private canonical repositories;
+- produce only the decision artifact specified by the Astra mission.
+
+This special route exists to reduce context waste and keep Astra focused on the few architecture decisions that remain genuinely hard.

@@ -1,46 +1,66 @@
-# Architecture Council Review Status
+# Architecture Council Status
 
-Status: REVIEW_INPUT_READY
-Date: 2026-09-24
+Date: 2026-09-25
+Status: ASTRA_R001_TARGETED_ESCALATION_READY
 
-The current architecture-review packet is ready for independent read-only review.
+## Current strategy
 
-Recommended order:
+The prior plan for two symmetric independent high-cost architecture reviews is superseded.
 
-1. Astra review first-pass, independent.
-2. Codex implementation audit first-pass, independent.
-3. Ingest both outputs without editing them.
-4. Central architect produces a contradiction matrix.
-5. If material disagreement remains, run one cross-review round.
-6. Promote only accepted decisions into 00-GOVERNANCE / 01-BASE.
-7. Create a NEW product-wave freeze SHA after accepted architecture changes.
+Current sequence:
 
-## Independence rule
+1. central architect reconstructs and reduces the architecture;
+2. central architect closes routine/solvable decisions;
+3. GPT-6 Astra in Codex receives only the five remaining hard decision knots;
+4. central architect ingests Astra deltas into ADRs;
+5. a lower-cost independent reviewer may then adversarially test the resulting architecture;
+6. implementation feasibility is checked against the real private codebase;
+7. a new immutable product-wave freeze is created only after accepted architecture changes.
 
-Astra should not read the Codex review before producing its first architecture decision package.
+## Why
 
-Codex should not read the Astra review before producing its first feasibility audit.
+GPT-6 Astra is a scarce high-capability model.
+Its value is highest on the concentrated decisions most likely to cause:
+- conceptual rewrite;
+- transaction inconsistency;
+- incorrect workflow history;
+- under/over-versioning;
+- unsafe auth/secret boundaries;
+- failed migration from current behavior.
 
-This preserves independent evidence and reduces anchoring.
+It should not spend its context reconstructing the whole project.
 
-## Product-wave rule
+## Astra R001 inputs
 
-Existing P001-P004 experiments may continue.
+Primary:
+- `11-ASTRA-R001-FOCUS-PACKET.md`
+- `10-CENTRAL-ARCHITECT-BASELINE-2026-09-25.md`
+- `03-OPEN-ARCHITECTURE-QUESTIONS.md`
 
-For E004-E011:
-- preferred path: wait for the first architecture-council synthesis before making the final immutable product-wave freeze;
-- if the founder intentionally launches earlier, classify those runs as pre-review baseline candidates rather than the architecture-vetted wave.
+Conditional:
+- Product Architecture V3
+- Domain Model V1
+- Expert Workflow Graph Contract
+- Current Product Behavior Contract
+- selected exact files from the private canonical Web App when available.
 
-## Reviewer output storage
+## Output
 
-When returned, ingest unchanged into:
+One raw artifact:
 
-- `08-ARCHITECT-COUNCIL/reviews/ASTRA-R001/`
-- `08-ARCHITECT-COUNCIL/reviews/CODEX-R001/`
+`ASTRA-R001-DECISIONS.md`
 
-Then create:
+Preserve it unchanged when ingesting it.
 
-- `08-ARCHITECT-COUNCIL/SYNTHESIS-R001.md`
-- `08-ARCHITECT-COUNCIL/ADR-PROMOTION-R001.md`
+Then the central architect creates:
+- contradiction/delta matrix only where Astra changes the baseline;
+- ADR promotion patch;
+- updated freeze readiness.
 
-Do not overwrite the raw reviewer outputs.
+## Existing product runs
+
+P001–P004 continue unchanged on their pinned historical inputs.
+
+Do not mutate their historical run SHAs because of this architecture escalation.
+
+E004–E011 should use a new post-Astra freeze if the Astra decisions materially change run contracts or product architecture.

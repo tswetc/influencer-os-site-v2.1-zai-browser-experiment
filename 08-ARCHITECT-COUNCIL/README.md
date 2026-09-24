@@ -1,6 +1,6 @@
 # 08 — Architecture Council Bridge
 
-Purpose: durable architectural handoff between the central ChatGPT architect, GPT-6 Astra, Codex, and future reviewer agents.
+Purpose: durable architectural handoff between the central ChatGPT architect, GPT-6 Astra in Codex, and later implementation/review agents.
 
 This folder is NOT a replacement for product truth or founder decisions.
 
@@ -9,59 +9,58 @@ Authority:
 2. current public project memory / governance;
 3. verified source behavior;
 4. accepted architecture ADRs;
-5. reviewer recommendations.
+5. targeted architecture escalations;
+6. later reviewer recommendations.
 
-Reviewers may challenge architecture, but they do not redefine product intent.
+## Current operating model — 2026-09-25
 
-## Why this exists
+GPT-6 Astra is NOT being used here as a broad independent reviewer.
 
-The Influencer OS Site V2.1 browser project has grown beyond a landing page into a multi-surface product platform with:
-- Public/Product Experience;
-- Creator App;
-- OS Core/API/Generation Services;
-- MCP/Agent Surface;
-- versioned creative domain objects;
-- provider/model adapters;
-- asynchronous generation;
-- asset lineage;
-- guided Studios;
-- expert workflow graph;
-- export/import;
-- EN/RU;
-- public experimental browser builds.
+Astra is the scarce, highest-capability architecture escalation path for the few technical decisions that remain genuinely difficult after the central architect has already reduced the problem.
 
-The architecture now needs durable reasoning artifacts that survive any one chat.
+Do not spend Astra context on:
+- rereading the entire repository;
+- visual design review;
+- media curation;
+- feature ideation;
+- OS23.6 count verification already encoded in contracts;
+- broad generic SaaS advice;
+- restating accepted product intent.
 
-## Read order for an architecture reviewer
+The central architect owns routine synthesis, context maintenance and solvable architecture decisions.
+Astra is reserved for high-impact decision knots where a wrong answer could cause a conceptual rewrite, inconsistent execution semantics, security failure or irreversible migration cost.
 
-1. `01-ARCHITECT-STATE.md`
-2. `02-NONNEGOTIABLES.md`
+## Astra R001 read order
+
+For the targeted Astra escalation:
+
+1. `11-ASTRA-R001-FOCUS-PACKET.md`
+2. `10-CENTRAL-ARCHITECT-BASELINE-2026-09-25.md`
 3. `03-OPEN-ARCHITECTURE-QUESTIONS.md`
-4. `04-DECISION-REGISTER.md`
-5. reviewer-specific mission:
-   - `05-ASTRA-REVIEW-MISSION.md`
-   - `06-CODEX-IMPLEMENTATION-AUDIT.md`
-6. `07-REVIEW-OUTPUT-CONTRACT.md`
-7. then follow the repository authority/read order from `../00-GOVERNANCE/START-HERE.md`
+4. only the specific supporting files named under the question being answered.
 
-## Reviewer operating rule
+Do NOT pre-read the whole repository.
 
-First review is READ-ONLY.
+Conditional supporting files:
+- topology/domain: `../01-BASE/PRODUCT-ARCHITECTURE-V3.md`, `../01-BASE/DOMAIN-MODEL-V1.md`
+- workflow: `../01-BASE/EXPERT-WORKFLOW-GRAPH-CONTRACT.md`
+- migration/current behavior: `../01-BASE/CURRENT-PRODUCT-BEHAVIOR-CONTRACT.md`
+- source mechanics only when a proposed decision would change inherited semantics: `../02-SOURCE-TRUTH/SOURCE-INDEX.md`
 
-Do not edit implementation.
-Do not silently decide product requirements.
-Do not use sibling experiment implementations as canonical source truth.
+For implementation evidence, inspect only the exact private canonical files listed in the focus packet when they are available to Codex.
 
-The first deliverable is an architecture decision package.
-Only accepted decisions are later promoted into governance/architecture files.
+## Other reviewers
+
+A lower-cost independent reviewer may be run later for adversarial verification.
+That reviewer is separate from Astra R001 and should test the accepted decisions rather than repeat the same expensive architecture work.
 
 ## State-update rule
 
 The central architect updates this folder when:
 - a major architecture decision changes;
-- a new blocker appears;
-- an external reviewer resolves an open question;
-- a candidate audit disproves an assumption.
+- a blocker appears;
+- Astra resolves or invalidates a hard architecture assumption;
+- candidate evidence disproves an assumption.
 
 This folder stores explicit decisions, evidence, uncertainties and rationale.
 It does not store hidden chain-of-thought.

@@ -1,177 +1,109 @@
-# Open Architecture Questions
+# Open Architecture Questions — Astra R001 Reduced Set
 
-These are the questions that most need an independent high-capability review.
+Date: 2026-09-25
+Status: FIVE_HARD_QUESTIONS_REMAIN
 
-## Q1 — Deployment topology
+The earlier broad list has been reduced by the central architect.
 
-Current hypothesis:
-modular monolith first.
+Routine architecture choices are now recorded in:
+`10-CENTRAL-ARCHITECT-BASELINE-2026-09-25.md`
 
-Need decision:
-- one Next.js/Node application with route/package boundaries?
-- separate worker process for async generation from day one?
-- separate MCP server or transport adapter in same deployable?
-- when should any boundary become a real service?
+Astra should not spend time re-answering solved questions unless it finds a concrete failure in the baseline.
 
-Required output:
-recommended topology for browser candidate, beta and production.
+## Closed at central-architect level
 
-## Q2 — Persistence + transaction boundaries
+Closed baseline decisions include:
+- modular monolith first;
+- hosted beta shape = web/API/MCP process + async worker;
+- relational primary metadata store + object storage;
+- shared application command/query boundary;
+- immutable creative/execution history;
+- Job != Attempt;
+- at-least-once/idempotent execution semantics;
+- DAG-first workflow v1;
+- explicit provider fallback history;
+- auth / authorization / membership / entitlement separation;
+- typed AssetVersion lineage;
+- audit vs telemetry separation;
+- versioned fail-closed export/import;
+- selective browser-candidate promotion;
+- no premature microservices/event sourcing/Kubernetes/generalized provider DSL.
 
-Need exact durable model for:
-- Workspace/Project ownership;
-- CharacterRevision + CanonRevision;
-- PromptBuild;
-- GenerationJob + GenerationAttempt;
-- WorkflowRevision + WorkflowRun;
-- AssetVersion + Lineage;
-- AuditEvent.
+## A1 — Generation consistency boundary
 
-Need decision:
-database technology assumptions, transaction boundaries, optimistic concurrency, migration/version policy, repository interfaces.
-
-## Q3 — Async generation execution
-
-Need exact semantics for:
-- job queue;
-- provider request lifecycle;
-- retry/fallback;
-- timeout/cancel;
-- idempotency;
-- duplicate suppression;
-- progress events;
-- cost/usage accounting;
-- recovery after process restart.
-
-## Q4 — Workflow graph execution model
-
-Need decision:
-- DAG only or controlled cycles?
-- typed port schema;
-- validation;
-- compile phase vs execution phase;
-- partial rerun;
-- cache/reuse semantics;
-- manual approval gates;
-- subflows;
-- graph-to-guided-tool compilation.
-
-## Q5 — Prompt build + adapter versioning
-
-Need exact interface between:
-source-preserving prompt assembly
-→ ModelProfile
-→ EngineAdapterVersion
-→ provider request.
-
-Need version/evolution rules that reproduce old assets after model/provider updates.
-
-## Q6 — Provider architecture
-
-Need decision:
-- ProviderConnection secret boundary;
-- provider SDK wrapper shape;
-- capability negotiation;
-- model registry;
-- status transitions LIVE / SUPPORTED_NOT_TESTED / UI_ONLY / unavailable;
-- provider fallback without semantic drift.
-
-## Q7 — Web/API/MCP parity
-
-Need exact application boundary so:
-Creator App
-REST/HTTP API
-MCP tools
-future automations
-all invoke the same use cases.
+Exact unresolved decision:
+how DB transaction, durable scheduling, worker, provider dispatch, webhook/polling, cancellation, retry/fallback and crash recovery compose without duplicate paid executions or lost accepted provider requests.
 
 Need:
-schema ownership, auth context, error model, trace/correlation IDs and parity tests.
+- exact state machine;
+- transaction/outbox/inbox boundary;
+- idempotency and dedupe;
+- timeout/cancel races;
+- crash timelines;
+- initial queue recommendation and extraction trigger.
 
-## Q8 — Asset/media architecture
+## A2 — Workflow partial rerun / reuse semantics
 
-Need future production shape for:
-- originals;
-- generated files;
-- derivatives/thumbnails;
-- video;
-- object storage;
-- signed URLs;
-- metadata;
-- rights/publication state;
-- hashing/deduplication;
-- lineage;
-- CDN.
+Exact unresolved decision:
+how immutable WorkflowRun/WorkflowNodeRun objects represent downstream reruns, reused upstream outputs, deterministic cache hits, manual gates and subworkflow bindings without confusing history or lineage.
 
-Current browser-wave atlas derivatives are transport-only and do not answer this production question.
+Need one execution model.
 
-## Q9 — Auth / workspace / entitlement boundary
+## A3 — Minimal sufficient reproducibility/version model
 
-Need decision:
-- authentication vs authorization;
-- workspace memberships/roles;
-- provider credentials ownership;
-- project access;
-- entitlement enforcement;
-- MCP agent auth;
-- audit trail.
+Exact unresolved decision:
+which proposed revision/version objects must remain first-class versus embedded immutable snapshots/hashes.
 
-## Q10 — Eventing / observability
+Need the smallest schema that can forensically reconstruct:
+- effective OS rules;
+- exact prompt compilation;
+- selected model/provider capability assumptions;
+- exact provider request;
+- generation lineage.
 
-Need decide:
-- domain events vs infrastructure events;
-- audit log vs telemetry;
-- workflow/job events;
-- OpenTelemetry/tracing;
-- correlation IDs;
-- failure taxonomy;
-- debugging provider errors without leaking secrets.
+Avoid both under-versioning and version-object explosion.
 
-## Q11 — Export/import / portability
+## A4 — Migration sequence from current Web App
 
-Need a robust bundle format that can move project state without:
-- secrets;
-- broken revision references;
-- missing media provenance;
-- schema ambiguity.
+Exact unresolved decision:
+the safest reversible sequence from current local-first Web App behavior to server-backed Architecture V3.
 
-Need versioned export schema and migration rules.
+Need:
+- first seam;
+- compatibility layer;
+- data migration;
+- provider-secret transition;
+- Workspace/Project introduction;
+- worker/object storage introduction;
+- phase gates;
+- rewrite-vs-migrate boundaries.
 
-## Q12 — Browser-lab → canonical-product promotion
+## A5 — Remote MCP/web/API auth + provider-secret boundary
 
-Need exact promotion strategy:
-- what can be cherry-picked;
-- what must be reimplemented;
-- compatibility contract with private canonical source;
-- how to avoid browser-prototype architecture contaminating production;
-- migration acceptance tests.
+Exact unresolved decision:
+one security model for human browser sessions, HTTP API, remote MCP agents, workspace roles, entitlements, provider credentials, worker execution and audit.
 
-## Q13 — Testing architecture
+Need:
+- principal/token/session model;
+- scopes;
+- authorization context;
+- secret resolution;
+- revocation;
+- worker identity;
+- MCP parity without bypass.
 
-Need layered test strategy:
-domain invariants
-source parity
-prompt determinism
-provider adapter contracts
-job retry/idempotency
-workflow graph validation/execution
-MCP/core parity
-persistence migration
-export/import
-security boundaries
-end-to-end flagship journeys.
+## Questions explicitly NOT for Astra R001
 
-## Q14 — Scale / performance assumptions
+Do not spend Astra capacity deciding:
+- design direction;
+- site typography;
+- media selection;
+- which GLM run looks best;
+- marketing copy;
+- OS23.6 source counts;
+- whether the product should have Guided Studios or Expert Graph;
+- whether to use microservices now;
+- ordinary component structure;
+- generic test-framework selection.
 
-Need explicit non-premature but production-safe assumptions around:
-- concurrent generation jobs;
-- large media libraries;
-- workflow graph size;
-- event history;
-- multi-tenant isolation;
-- streaming progress;
-- video processing.
-
-## Q15 — What should NOT be generalized yet?
-
-Need a list of abstractions that would be architectural overengineering at the current stage.
+Those are already decided or belong to later implementation/review.
