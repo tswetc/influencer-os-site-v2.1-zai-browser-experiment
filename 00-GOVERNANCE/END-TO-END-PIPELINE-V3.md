@@ -2,170 +2,147 @@
 
 Status: CURRENT OPERATING PIPELINE
 
-## State 0 — Founder decisions
+The objective is high product quality with explicit failure attribution, reproducible inputs and no silent state drift.
+
+## State 0 — Founder decision contract
 
 Inputs:
-- product intent;
-- identity/publication decisions;
-- topology decisions;
-- model preference.
+product intent · identity/publication decisions · topology decisions · model preference.
 
 Output:
-one dated founder-decision contract.
+one dated current founder-decision contract.
 
 Gate:
-no older document silently overrides explicit current founder decisions.
+older/private/stale context cannot silently override an explicit current founder decision.
 
 ## State 1 — Source reconciliation
 
 Inputs:
-- verified canonical-product audit;
-- verified release artifact;
-- public source core.
+verified private canonical-product audit · verified release artifact · public source core.
 
 Outputs:
-- current behavior contract;
-- source index/hashes;
-- extension labels.
+current behavior contract · source hashes · extension labels.
 
 Gate:
 omitted private code is never interpreted as nonexistent behavior.
 
-## State 2 — Media curation
+## State 2 — Media curation / local master
 
 Inputs:
-- immutable SSD originals;
-- visual atlas;
-- rights/provenance decisions.
+immutable SSD originals · review atlas · rights/provenance decisions.
 
 Outputs:
-- normalized unique selection;
-- hard holds;
-- local master derivatives.
+normalized unique selection · hard holds · local web-ready master derivatives.
 
 Gate:
-no child/privacy/selected-other-identity violation;
-clean local rebuild when master derivatives are used.
+clean staging rebuild · exact filesystem/manifest match · no rejected child/other-identity media.
 
 ## State 3 — Run-pack curation
 
+Input:
+local master manifest.
+
 Output:
-bounded A/B/C/D selections, approximately 30–45 items.
+bounded A/B/C/D selections, target 30–45 items/design.
 
 Gate:
-- coherent families;
-- selection is deliberately smaller than available library;
-- no hard-held item;
-- neutral identity mapping.
+coherent families · meaningful role coverage · video where required · no hard hold · no visible-identity-card frame · no “available == selected” shortcut.
 
-## State 4 — Browser transport
+## State 4 — Full-quality public browser transport
 
-Two valid transport modes exist.
+Input:
+bounded local v2 manifests + local web-ready master derivatives.
 
-### Mode A — commit-pinned atlas derivative pack
-Used by the current E004–E011 browser wave.
+Output:
+one deduplicated Wave v4 bundle:
 
-Pack contains:
-- neutral asset ID;
-- atlas sheet path;
-- Git blob SHA;
-- slot;
-- role/family/provenance;
-- NO SSD source path.
+```text
+04-MEDIA/transport/wave01-v4/
+  assets/
+  packs/A.json
+  packs/B.json
+  packs/C.json
+  packs/D.json
+  BUNDLE-MANIFEST.json
+```
 
-Agent downloads only required commit-pinned sheets and extracts crops with:
-`tools/fetch_public_atlas_pack.py`.
+Transport requirements:
+- neutral asset IDs and filenames;
+- image metadata stripped;
+- video metadata/audio stripped;
+- bounded video transcode;
+- no SSD/source paths in public manifests;
+- exact SHA-256;
+- <100MB/file GitHub guard;
+- commit-pinned downloader.
 
-Truth label:
-`ATLAS_PREVIEW_DERIVATIVE`.
-
-### Mode B — sanitized master derivative pack
-Preferred for later high-resolution/publication-oriented waves.
-
-Pack contains:
-- neutral filenames;
-- stripped metadata;
-- SHA-256;
-- no private source paths.
-
-Gate:
-never silently describe Mode A as original-resolution publication media.
+The old atlas-preview v3 transport is pilot/deprecated and is NOT official Wave media.
 
 ## State 5 — Launch freeze
 
 Freeze:
-- project memory/current founder decisions;
-- architecture/domain contracts;
-- current product behavior/source core;
-- design recipes;
-- bounded media packs;
-- QA/export requirements;
-- run specs.
+current founder decisions · architecture/domain contracts · current behavior/source core · design recipes · Wave v4 transport · QA/export requirements · E/Q run specs.
 
 Rules:
-- one immutable commit SHA;
-- no `latest` references;
-- every launch message pins raw URLs to that SHA.
+- one immutable full commit SHA;
+- no `latest` inputs;
+- no self-referential SHA inside the freeze;
+- launch prompt supplies the freeze SHA;
+- after freeze, no changes to that input for the wave.
 
-## State 6 — Independent full product runs
+## State 6 — Parallel execution
 
-Each run:
-- fresh chat;
-- unique ID;
-- own sandbox/local Git;
-- GitHub read-only;
-- own export.
+Q001:
+disposable pipeline qualification from the same freeze.
 
-No cross-run implementation sharing.
+E004–E011:
+independent full PRODUCT_QUALITY runs.
+Prefer GLM-5.3; record actual runtime.
+
+Q001 may reveal shared-input defects after E runs have started. That is acceptable: classify and use the finding during audit rather than patching running sandboxes inconsistently.
 
 ## State 7 — Collection
 
-For every run:
-- preserve unique ZIP filename;
-- calculate SHA-256;
-- record actual runtime UI label;
-- preserve final message separately from artifact.
+Per run:
+preserve exact ZIP filename · calculate SHA-256 · record actual runtime UI label · preserve final self-report separately.
+
+Never rename multiple artifacts to `final.zip`.
 
 ## State 8 — Forensic audit
 
-Audit the actual artifact, not the self-report.
+Audit actual artifact, not self-report.
 
 Order:
-1. export integrity;
+1. export integrity/freshness;
 2. source/worklog chronology;
-3. architecture/domain conformance;
-4. P0 journey runtime;
-5. provider/persistence/MCP truth;
-6. workflow graph semantics;
-7. tests;
-8. media/provenance;
-9. visual/reference fidelity;
-10. responsive/EN-RU/a11y;
-11. export freshness.
+3. Architecture V3/domain conformance;
+4. P0 journeys;
+5. Job/Attempt and AssetVersion/Lineage semantics;
+6. provider/persistence/security truth;
+7. Expert Workflow Graph semantics;
+8. MCP/core parity;
+9. automated tests;
+10. media/provenance;
+11. reference/design fidelity;
+12. responsive/EN-RU/a11y.
 
-Classify findings as:
-shared-input defect · environment/harness defect · model/run execution defect · design choice · missing evidence.
+Classify every finding:
+`SHARED_INPUT` · `HARNESS_ENVIRONMENT` · `RUN_EXECUTION` · `DESIGN_DECISION` · `MISSING_EVIDENCE`.
 
 ## State 9 — Cross-run synthesis
 
 Do not merge code blindly.
 
-Extract the strongest:
-- public art direction;
-- Creator App architecture;
-- Prompt Lab;
-- expert workflow graph;
-- lineage/history;
-- MCP/core design;
-- responsive/mobile system.
+Extract strongest:
+public art direction · Creator App architecture · Prompt Lab · expert graph · lineage/history · MCP/core design · responsive/mobile system.
 
-Then design a synthesis architecture.
+Write one synthesis architecture before implementation.
 
 ## State 10 — Canonical promotion
 
-Separate mission.
+Separate private mission.
 
 Requires:
-private canonical source · migration plan · security review · rights/publication review · production persistence/auth · deployment/observability · regression suite.
+private canonical source · deliberate migration · security review · rights/publication review · production persistence/auth · deployment/observability · regression suite.
 
-The public browser lab is not production automatically.
+The public lab is never automatically production.
