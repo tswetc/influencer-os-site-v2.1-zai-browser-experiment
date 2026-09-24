@@ -1,66 +1,63 @@
-# Public Lab Risk Gate — 2026-09-24
+# Public Lab Operating Decision — 2026-09-24
 
-STATUS: P0 — NO NEW SENSITIVE MEDIA OR PRIVATE SOURCE
+Status: TEMPORARILY_PUBLIC_DEVELOPMENT_TRANSPORT
 
-The experiment repository is currently PUBLIC.
+The founder has explicitly chosen to keep this experiment repository PUBLIC during the current architecture/product-development phase because commit-pinned public GitHub transport is the reliable bridge into Chat.Z.AI browser sandboxes.
 
-## Existing exposure
+This is a temporary development architecture decision.
 
-The repository already contains:
-- founder media inventory metadata;
-- a 200-sheet visual review atlas;
-- source-derived / verbatim core code;
-- media-curation reports.
+## What public means here
 
-The M001 review identified categories inside the atlas that include privacy/rights-sensitive material, third-party social content, family/child content, an explicit-nudity group, brand/editorial material and private-context screenshots.
-
-Removing those items from a later production pack does NOT remove the fact that the atlas/history was public.
-
-## Immediate rule
-
-Until the repository-visibility architecture is changed:
-
-DO NOT add:
-- full-resolution founder media;
-- web-ready master media;
-- new unsanitized contact sheets;
-- raw SSD paths with private handles unless strictly necessary;
-- credentials;
-- customer/license data;
-- additional verbatim private product source.
-
-## Safe public content
-
-Allowed:
-- governance;
-- derived product behavior contracts;
-- source hashes and provenance;
+The public lab may contain:
+- governance and architecture;
+- source-derived behavior contracts;
+- source hashes and selected public source core;
 - run specifications;
-- sanitized reference-transfer notes;
-- media manifests using neutral IDs;
-- explicitly approved low-risk transport derivatives.
+- reference research;
+- experiment evidence;
+- sanitized, rights-reviewed, neutral-ID transport media required by runs.
 
-## Recommended architecture
+## What remains prohibited
 
-Use two planes:
+Do NOT publish:
+- API keys / credentials / secrets;
+- customer or license data;
+- complete private canonical repositories;
+- private deployment/account data;
+- a real-world founder identity inferred from media;
+- media explicitly rejected for child/privacy/other-identity reasons.
 
-### Private lab/canonical plane
-- complete media metadata;
-- rights/provenance registry;
-- full-resolution/web-ready founder assets;
-- private source;
-- candidate audit artifacts containing sensitive paths.
+## Identity rule
 
-### Sanitized transport plane
-- commit-pinned run contract;
-- derived product contract;
-- reference evidence packet;
-- small, rights-cleared media pack;
-- no private names/handles;
-- no confidential implementation source.
+Use opaque IDs only.
 
-## Existing-history note
+`founder_milena_ioanna` is retired.
+Use `founder-main-01` where an identity handle is needed.
 
-Changing a repository from public to private reduces future public access but cannot guarantee that previous public history was never cloned, cached or mirrored.
+Visible media evidence must not be converted into a public real-world identity assertion.
 
-Do not rewrite shared history while already-running pinned experiments depend on it without a separate migration plan.
+## Media rule
+
+The local 156-item master library is NOT the run pack.
+
+For product runs:
+- curate approximately 30–45 strong items;
+- sanitize filenames;
+- remove source paths/handles from transport manifests;
+- strip file metadata where practical;
+- include derivative hash + provenance/review state;
+- publish only the bounded transport pack required by that run/design set.
+
+The existing 200-sheet atlas remains historical experiment input. New official runs should consume bounded transport packs, not browse the entire atlas by default.
+
+## Public-history note
+
+Current-head sanitization does not erase old public Git history or third-party caches.
+
+Do not perform a destructive shared-history rewrite while already-running commit-pinned experiments depend on old SHAs.
+
+If a future privacy requirement demands true history removal, migrate to a clean repository/fresh history after active pinned runs finish.
+
+## Private sources
+
+Private project-memory and canonical product/site repositories remain private and are not modified by this public transport decision.
