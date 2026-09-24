@@ -24,20 +24,24 @@ This is the binding freeze gate for E004–E011 and ZAI-Q001.
 - [x] current public M001 text sanitized;
 - [x] clean local master rebuild reported: 156 files / 4 holds / 0 errors;
 - [x] stale rejected derivative absent;
-- [x] pixel-level visible identity-card frame G0027/s01 excluded from public transport selection.
+- [x] pixel-level visible identity-card frame G0027/s01 excluded from public transport selection;
+- [x] G0068/s06 excluded after visual review because the motion preview includes multiple visible bystanders;
+- [x] G0111/s05 excluded after visual review because it contains a foreground metro crowd / other identifiable people.
 
 ## Wave v4 pack curation
 
 - [x] target 30–45 items per design defined;
-- [x] deterministic family-cap selector implemented;
+- [x] explicit human-auditable group+slot selector implemented;
+- [x] runtime random/even media sampling removed from official pack construction;
 - [x] every design pack includes purposeful product-proof/media coverage;
-- [ ] local v2 bounded manifests regenerated after the latest exclusion/cap rules;
+- [x] exact curation recorded in `04-MEDIA/WAVE01-MEDIA-CURATION-V4.md`;
+- [ ] local v3-curated manifests regenerated after pulling current main;
 - [ ] expected counts verified:
   - A = 39
   - B = 42
   - C = 33
   - D = 36
-- [ ] no G0027/s01 in any v2 pack.
+- [ ] no G0027/s01, G0068/s06 or G0111/s05 in any curated pack.
 
 ## Public transport
 
@@ -83,16 +87,18 @@ This first product-quality Wave is NOT a perfectly controlled model benchmark be
 After Wave v4 files are pushed:
 
 1. run `python3 tools/verify_public_wave.py .`;
-2. run `python3 tools/audit_public_lab.py .`;
-3. inspect `git status --short` — must be empty;
-4. update E004–E011 and Q001 STATUS to `READY`;
-5. update this file's remaining checkboxes/status;
-6. commit those text-only readiness changes;
-7. push;
-8. record that resulting full 40-character HEAD SHA;
-9. make NO further change to that freeze for this wave;
-10. generate launch prompts using `tools/generate_launch_prompts.py <SHA> <output-dir>`;
-11. launch E004–E011 + Q001 from fresh chats using those generated prompts.
+2. build the actual-transport visual atlas with `tools/build_wave_review_atlas.py` and inspect every tile;
+3. run `python3 tools/validate_run_contracts.py .`;
+4. run `python3 tools/audit_public_lab.py .`;
+5. inspect `git status --short` — must be empty;
+6. update E004–E011 and Q001 STATUS to `READY`;
+7. update this file's remaining checkboxes/status;
+8. commit those text-only readiness changes;
+9. push;
+10. record that resulting full 40-character HEAD SHA;
+11. make NO further change to that freeze for this wave;
+12. generate launch prompts using `tools/generate_launch_prompts.py <SHA> <output-dir>`;
+13. launch E004–E011 + Q001 from fresh chats using those generated prompts.
 
 The launch prompt — not a file inside the freeze commit — supplies the commit's own SHA.
 
