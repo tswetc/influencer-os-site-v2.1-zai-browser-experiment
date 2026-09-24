@@ -84,3 +84,130 @@ Every behavior should be classed as one of:
 - `UNVERIFIED_EXTERNAL`
 
 A candidate may contain extensions. It may not present them as inherited source truth.
+
+
+## Additional verified current behaviors from canonical Web App audit
+
+These are behavior contracts, not copied private source.
+
+### Parser / language normalization
+
+- dedicated RU→EN scene parser exists;
+- final prompts are built in English regardless of UI language;
+- parser has normalization, aliases, ambiguity handling, fuzzy/transliteration support and engine word-budget behavior;
+- a future recomposition must not replace this with a generic free-text field and call it source-parity.
+
+### Vision / reference analysis
+
+- current Web App has multi-provider vision/reference analysis;
+- current implementation can call configured providers directly from the browser with BYOK;
+- the vision layer has explicit provider/model resolution and structured error classes;
+- image analysis results are parsed into Scene fields with confidence.
+
+Architecture V3 may move secret-bearing execution behind a safer provider service/connection boundary, but must preserve the user-visible capability and truthful BYOK/provider semantics.
+
+### Vision cache
+
+- vision analysis is content-addressed;
+- cache identity includes analysis kind + provider + model + image-content hash;
+- repeat analysis of the same pixels/provider/model reuses stored results to avoid unnecessary provider calls/credits;
+- heavy cache data uses IndexedDB.
+
+### Storage / backup / revision behavior
+
+Current implementation distinguishes small local settings from heavier IndexedDB data and includes:
+- character persistence;
+- Passport version snapshots;
+- history;
+- favorites;
+- presets;
+- saved scenes;
+- last draft;
+- backup reminders;
+- schema migration;
+- export/import validation;
+- merge/replace import behavior.
+
+Current tests specifically defend:
+- malformed collection/object rejection;
+- malformed nested element rejection;
+- unsupported future schema rejection;
+- provider/theme/language setting validation;
+- unknown engine IDs in imported objects;
+- no storage mutation on invalid import;
+- scene merge-by-id behavior;
+- active-Passport reset after replace;
+- API-key clearing when imported provider changes;
+- Passport nested-shape validation;
+- version-history cascade delete.
+
+Architecture V3 should generalize these into server/domain persistence without losing the semantics.
+
+### Provider switching
+
+Current tests verify provider-specific credentials/model fields are cleared or preserved deliberately when switching providers.
+
+Never carry a stale provider API key/model slug into another provider connection by accident.
+
+### License / entitlement behavior
+
+Current Web App has:
+- server-validated license behavior;
+- signed cached state;
+- grace/recheck semantics;
+- bounded use-state behavior.
+
+Architecture V3 should model product access as `Entitlement` + auth/license adapter rather than baking commercial gating into arbitrary UI components.
+
+Do not infer current public price/refund/availability from this code.
+
+### Remote canon manifest
+
+The current Web App can read a small versioned remote canon manifest defensively.
+
+Malformed remote data must fail closed rather than mutating local canon blindly.
+
+### Redaction / public prompt privacy
+
+Current implementation contains explicit redaction utilities and leak checks for hidden prompt text on public surfaces.
+
+A public proof surface must not accidentally reveal prompt sections that product design intends to redact.
+
+### Prompt Doctor
+
+Current implementation includes a deterministic Prompt Doctor/diagnostic layer over SceneSpec + Passport + built output.
+
+This is distinct from freeform chat assistance and should survive as inspectable OS intelligence if exposed in the next product.
+
+### Export / display consistency
+
+Current tests distinguish:
+- user-facing display labels in TXT/Markdown exports;
+- stable internal IDs in JSON exports;
+- human-readable filenames;
+- terminology consistency;
+- token-estimate wording rather than unsupported cost wording.
+
+Do not conflate internal IDs with public labels.
+
+### i18n
+
+Current tests require RU and EN coverage for every dictionary key and guard broken encoding.
+
+Full-product candidates need semantic EN/RU parity, not partial route translation.
+
+### Keyboard/modal interaction consistency
+
+Current tests guard global Studio shortcuts while an aria-modal is open.
+
+Keyboard systems/command palettes in new candidates must respect focus/modal state.
+
+## Migration rule
+
+When Architecture V3 changes implementation shape, classify the change:
+
+- current behavior preserved under new storage/API boundary;
+- deliberate product extension;
+- deliberately retired behavior.
+
+Do not silently lose current tested behavior during visual/product expansion.
