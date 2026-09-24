@@ -1,6 +1,6 @@
 # ZAI-E002
 
-STATUS: PLANNED
+STATUS: TRANSPORT_VALIDATION
 TYPE: MODEL_COMPARISON
 MODEL: GLM-5.3-Flash
 DESIGN_VARIANT: NEUTRAL
@@ -8,4 +8,4 @@ REFERENCE_SET: common
 MEDIA_SET: bootstrap
 SOURCE_COMMIT: TO_BE_PINNED_AFTER_TRANSPORT_VALIDATION
 
-Purpose: controlled GLM-5.3-Flash baseline under inputs equivalent to ZAI-E001.
+Purpose: controlled GLM-5.3-Flash baseline under inputs equivalent to ZAI-E001.\n\nTRANSPORT_STATUS: STAGE_1_2_PASS
