@@ -1,5 +1,5 @@
 # INFLUENCER OS — FULL BROWSER PRODUCT BUILD
-## One-shot autonomous mission for Z.ai Agent / GLM-5.2
+## One-shot autonomous mission for Chat.Z.AI browser agents
 ### SOURCE-GROUNDED EDITION · 2026-09-24
 
 **Read this entire message before changing code.**
@@ -10,7 +10,7 @@ The goal is not to make a disposable demo and not to reduce quality because the 
 
 **Treat this as a full product-development mission.**
 
-The browser environment is simply the current development environment. Build the most complete, coherent, high-quality Influencer OS product possible inside it, document any environment limits honestly, and leave a portable source project that can continue in Codex/ZCode later.
+The browser environment is simply the current development environment. Build the most complete, coherent, high-quality Influencer OS product possible inside it, document any environment limits honestly, and leave a portable source project that can be externally audited and, only if deliberately promoted, continued in the canonical Codex/ZCode workflow later.
 
 Public product name:
 
