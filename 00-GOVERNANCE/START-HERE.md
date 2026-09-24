@@ -1,13 +1,33 @@
 # Start Here
 
-This repository is the transport bridge and experiment registry for Chat.Z.AI browser-agent work on Influencer OS Site V2.1.
+This repository is the public transport bridge and experiment registry for Chat.Z.AI browser-agent work on Influencer OS.
 
-## Order of use
+## Mandatory read order for NEW full-product runs
 
-1. Read `EXPERIMENT-BOUNDARY.md`.
-2. Read `NAMING.md`.
-3. Read `EVALUATION-PROTOCOL.md`.
-4. Run `../05-TRANSPORT-TEST/` before any large transfer.
-5. For a real experiment, read the common mission/source truth plus the run-specific folder under `06-EXPERIMENTS/`.
+1. `EXPERIMENT-BOUNDARY.md`
+2. `FOUNDER-DECISIONS-2026-09-24-CURRENT.md`
+3. `PUBLIC-CANON-SUPERSESSION-2026-09-24.md`
+4. `SOURCE-AUTHORITY-2026-09-24.md`
+5. run-specific `06-EXPERIMENTS/<RUN_ID>/RUN.md`
+6. `../01-BASE/PRODUCT-ARCHITECTURE-V3.md`
+7. `../01-BASE/DOMAIN-MODEL-V1.md`
+8. `../01-BASE/EXPERT-WORKFLOW-GRAPH-CONTRACT.md`
+9. `../01-BASE/CURRENT-PRODUCT-BEHAVIOR-CONTRACT.md`
+10. `../02-SOURCE-TRUTH/SOURCE-INDEX.md`
+11. assigned design/reference packet
+12. assigned media transport manifest
+13. QA/export contracts
+14. `../01-BASE/MASTER-MISSION-FULL.md` as the exhaustive implementation/source appendix
 
-No run becomes canonical without external forensic audit and deliberate promotion.
+## Supersession rule
+
+Newer current founder/architecture contracts win where they explicitly conflict with older mission text or inaccessible private status.
+
+Do not reinterpret an omitted private implementation detail as proof that the behavior does not exist.
+
+## Isolation
+
+- GitHub is read-only input for browser runs.
+- One fresh chat = one unique run ID.
+- No run becomes canonical without external forensic audit and deliberate promotion.
+- Do not read sibling run folders for creative direction.
