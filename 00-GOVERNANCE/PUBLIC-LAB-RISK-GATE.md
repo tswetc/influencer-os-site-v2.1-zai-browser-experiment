@@ -39,8 +39,11 @@ A local 156-item eligible library is NOT a run pack.
 
 Each product run receives approximately 30–45 genuinely selected items with coherent family logic.
 
-The current full-product development wave uses bounded commit-pinned atlas-preview derivative packs.
-They are development transport assets, not final publication masters.
+The current full-product development wave uses bounded, sanitized web-ready derivatives built from the audited local master library.
+
+They are temporary PUBLIC development-transport assets, not canonical publication masters.
+
+The review-atlas previews remain useful as historical/curation evidence but are deprecated as the media source for the full product-quality Wave v4.
 
 ## Public-history note
 
