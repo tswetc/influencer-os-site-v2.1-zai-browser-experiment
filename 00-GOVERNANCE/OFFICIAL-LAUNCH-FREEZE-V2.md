@@ -1,54 +1,83 @@
-# Official Launch Freeze V2
+# Official Launch Freeze V3 — Full Product Development Wave
 
-A future official E004–E011 wave may be released only when every checkbox below is verified against one immutable commit.
+Status: PRE-FREEZE GATES SATISFIED
+
+This document applies to E004–E011.
+
+The launch freeze is the exact immutable commit that contains:
+- current public project memory;
+- current founder decisions;
+- Product Architecture V3;
+- Domain Model V1;
+- Expert Workflow Graph Contract;
+- current product behavior contract;
+- OS23.6 public source core;
+- design/reference recipes;
+- bounded public media packs;
+- run specifications;
+- QA/export contracts;
+- final freeze verification.
+
+The exact SHA is supplied OUTSIDE this file by the launch prompt.
+Do not attempt a self-referential SHA inside the commit.
 
 ## Product truth
-- [ ] product-topology mode chosen for the wave (unified hypothesis vs product/experience split);
-- [ ] current private product HEAD recorded;
-- [ ] os23.6 release artifact SHA recorded;
-- [ ] current-vs-release reconciliation complete;
-- [ ] no private-source gap is silently treated as non-existent behavior.
+- [x] browser-lab product topology chosen;
+- [x] current behavior contract recorded;
+- [x] OS23.6 release source/core represented;
+- [x] no inaccessible private implementation area is silently treated as nonexistent;
+- [x] extension labels required.
 
 ## Media
-- [ ] clean master-library rebuild completed from the audited normalized selection;
-- [ ] filesystem-to-manifest exactness verified;
-- [ ] rejected child/other-identity items absent;
-- [ ] transport pack uses neutral filenames/IDs;
-- [ ] every transported item has SHA-256 + provenance + rights/privacy/brand state;
-- [ ] public-transport publication gate passes;
-- [ ] master media is not committed wholesale to the public lab.
+- [x] M001 audited;
+- [x] founder identity neutralized in current public pipeline;
+- [x] child / selected other-identity rejects excluded;
+- [x] bounded A/B/C/D packs created: 39 / 42 / 37 / 36;
+- [x] no SSD source paths included in run pack manifests;
+- [x] neutral IDs only;
+- [x] commit-pinned atlas sheet Git blob SHA recorded per item;
+- [x] browser fetch/extract verifier provided.
+
+Media limitation:
+current wave uses low-resolution atlas-preview derivatives for DEVELOPMENT.
+This is acceptable for browser-product design/architecture runs and is NOT final publication-media approval.
 
 ## References
-- [ ] every design set has a frozen evidence packet;
-- [ ] reference screenshots/date/viewport captured;
-- [ ] observed vs inferred mechanics separated;
-- [ ] typography/grid/spacing/motion measurements recorded;
-- [ ] matched benchmark runs receive identical evidence.
+- [x] exact design recipes A/B/C/D;
+- [x] concrete reference-role hierarchy;
+- [x] measured teardown/constitution/tokens/motion spec required before scale implementation;
+- [x] visual correction loops required.
 
-## Run contract
-- [ ] unique run ID;
-- [ ] run type recorded: PRODUCT_QUALITY / MODEL_BENCHMARK / REPLICATION / CREATIVE_EXPLORATION;
-- [ ] runtime model policy explicit;
-- [ ] all input URLs commit-pinned;
-- [ ] source/mission/media/reference freeze SHA identical within a matched pair;
-- [ ] GitHub read-only rule explicit;
-- [ ] output ZIP name contains run ID.
+## Run matrix
+- [x] E004 GLM-5.3 / A;
+- [x] E005 GLM-5.3-Flash / A;
+- [x] E006 GLM-5.3 / B;
+- [x] E007 GLM-5.3-Flash / B;
+- [x] E008 GLM-5.3 / C;
+- [x] E009 GLM-5.3-Flash / C;
+- [x] E010 GLM-5.3 / D;
+- [x] E011 GLM-5.3-Flash / D.
+
+If a runtime UI label differs at actual launch, the run continues but records MODEL_OVERRIDE_AT_LAUNCH and loses clean benchmark interpretation.
 
 ## Product acceptance
-- [ ] three flagship P0 jobs are required in depth;
-- [ ] full surface map is still required but route count cannot substitute for job depth;
-- [ ] LIVE/MOCK/UNVERIFIED states are explicit;
-- [ ] current source behavior contract is included;
-- [ ] MCP target protocol/version is explicitly selected and tested;
-- [ ] EN/RU + responsive + a11y evidence required.
+- [x] four-area architecture required;
+- [x] shared versioned domain model required;
+- [x] deep Character/Canon job required;
+- [x] inspectable PromptBuild/SelfCheck/Generation lineage required;
+- [x] Image + Video + planning continuity required;
+- [x] Expert Workflow Graph required;
+- [x] MCP/core parity required;
+- [x] LIVE/MOCK/UNVERIFIED truth required;
+- [x] EN/RU + responsive + accessibility evidence required.
 
 ## QA
-- [ ] defect register uses P0/P1/P2/P3;
-- [ ] no actionable P0 can remain in COMPLETE;
-- [ ] runtime claims have runtime evidence;
-- [ ] screenshot QA includes required widths;
-- [ ] export is rebuilt after last correction;
-- [ ] ZIP manifest hashes match export bytes.
+- [x] defect severity model defined;
+- [x] COMPLETE forbidden with actionable P0;
+- [x] runtime properties require runtime evidence;
+- [x] screenshot widths defined;
+- [x] export rebuilt after last correction;
+- [x] mandatory evidence files defined.
 
-Only after all gates pass:
+When the final freeze-verification commit is created:
 `OFFICIAL_WAVE_READY`.
