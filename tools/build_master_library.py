@@ -1,36 +1,29 @@
 #!/usr/bin/env python3
-"""Materialize a ZAI-M001 MASTER-SELECTION.json into a web-ready master library.
+"""Materialize the centrally normalized M001 selection into web-ready local media.
 
-Expected selected item fields:
-- source_path
-- media_type
-- proposed_role
-- family_id
-- identity_or_subject
-- product_use
-- design_set_affinity
-- rights_status
+This tool is conservative:
+- originals are never modified;
+- records with materialize_local_allowed=false are skipped;
+- public_use_allowed is preserved exactly and defaults to false;
+- this script does NOT push anything to GitHub.
 
 Usage:
   python3 tools/build_master_library.py \
     "/Volumes/F/INFLUENCER-OS-ZAI-LAB/originals" \
-    "04-MEDIA/selections/MASTER-SELECTION.json" \
+    "04-MEDIA/selections/MASTER-SELECTION-NORMALIZED.json" \
     "04-MEDIA/library/master-v1" \
     "04-MEDIA/packs/master-v1.json"
 
 Images:
 - converted to JPEG
-- auto-oriented by sips
-- max long edge 2600px
+- max long edge 2600 px
 - JPEG quality 88
 
 Videos:
 - H.264 MP4
-- max 1920px width
+- max width 1920
 - audio removed
 - faststart
-
-Originals are never modified.
 """
 
 from __future__ import annotations
@@ -87,9 +80,17 @@ def build_video(src: Path,dst: Path):
     ])
     return dst
 
+def repo_relative(path: Path) -> str:
+    cwd=Path.cwd().resolve()
+    p=path.resolve()
+    try:
+        return p.relative_to(cwd).as_posix()
+    except ValueError:
+        return p.as_posix()
+
 def main():
     if len(sys.argv)!=5:
-        raise SystemExit("usage: build_master_library.py <originals_dir> <selection_json> <output_dir> <manifest_json>")
+        raise SystemExit("usage: build_master_library.py <originals_dir> <normalized_selection_json> <output_dir> <manifest_json>")
 
     originals=Path(sys.argv[1]).expanduser().resolve()
     selection_path=Path(sys.argv[2]).expanduser().resolve()
@@ -97,31 +98,36 @@ def main():
     manifest_path=Path(sys.argv[4]).expanduser().resolve()
 
     data=json.loads(selection_path.read_text(encoding="utf-8"))
-    selected=data.get("items",data if isinstance(data,list) else None)
+    selected=data.get("items")
     if not isinstance(selected,list):
-        raise SystemExit("MASTER-SELECTION must be a JSON array or an object with an items array")
+        raise SystemExit("normalized selection must contain an items array")
 
     out.mkdir(parents=True,exist_ok=True)
     manifest=[]
     errors=[]
+    skipped=[]
 
-    for i,item in enumerate(selected,1):
+    allowed=[x for x in selected if x.get("materialize_local_allowed",False)]
+
+    for i,item in enumerate(allowed,1):
         rel=Path(item["source_path"])
         src=originals/rel
+
         if not src.is_file():
             errors.append({"source_path":rel.as_posix(),"error":"missing_source"})
             continue
 
         ext=src.suffix.lower()
-        family=slug(str(item.get("family_id") or "shared"))
-        base=f"{i:04d}-{slug(src.stem)}"
-        dst_base=out/family/base
+        family=(item.get("family_ids") or ["shared"])[0]
+        family_slug=slug(str(family))
+        base=f"{i:04d}-g{int(item.get('group_number',0)):04d}-s{int(item.get('slot',0)):02d}-{slug(src.stem)}"
+        dst_base=out/family_slug/base
 
         try:
-            if ext in IMAGE_EXTS or item.get("media_type")=="image":
+            if item.get("media_type")=="image" or ext in IMAGE_EXTS:
                 dst=build_image(src,dst_base)
                 media_type="image"
-            elif ext in VIDEO_EXTS or item.get("media_type")=="video":
+            elif item.get("media_type")=="video" or ext in VIDEO_EXTS:
                 dst=build_video(src,dst_base)
                 media_type="video"
             else:
@@ -131,39 +137,45 @@ def main():
             errors.append({"source_path":rel.as_posix(),"error":str(e)})
             continue
 
-        manifest.append({
+        row=dict(item)
+        row.update({
             "id":f"master-v1-{i:04d}",
-            "path":dst.relative_to(Path.cwd()).as_posix() if dst.is_relative_to(Path.cwd()) else dst.as_posix(),
+            "path":repo_relative(dst),
             "source_path":rel.as_posix(),
             "media_type":media_type,
-            "bytes":dst.stat().st_size,
+            "materialized_bytes":dst.stat().st_size,
             "sha256":sha256(dst),
-            "proposed_role":item.get("proposed_role"),
-            "family_id":item.get("family_id"),
-            "identity_or_subject":item.get("identity_or_subject"),
-            "product_use":item.get("product_use"),
-            "design_set_affinity":item.get("design_set_affinity",["shared"]),
-            "rights_status":item.get("rights_status","review"),
-            "visual_reason":item.get("visual_reason"),
-            "confidence":item.get("confidence")
         })
-        print(f"OK {i}/{len(selected)} {rel} -> {dst}")
+        manifest.append(row)
+        print(f"OK {i}/{len(allowed)} {rel} -> {dst}")
+
+    for item in selected:
+        if not item.get("materialize_local_allowed",False):
+            skipped.append({
+                "source_path":item.get("source_path"),
+                "publication_status":item.get("publication_status"),
+                "rights_review_reason":item.get("rights_review_reason")
+            })
 
     payload={
-        "pack_id":"master-v1",
+        "pack_id":"master-v1-local-materialized",
         "version":1,
-        "selection_source":selection_path.as_posix(),
+        "selection_source":repo_relative(selection_path),
+        "public_release_status":"NOT_APPROVED",
         "items":manifest,
+        "skipped_holds":skipped,
         "errors":errors
     }
     manifest_path.parent.mkdir(parents=True,exist_ok=True)
     manifest_path.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf-8")
 
     print(json.dumps({
-        "selected_input":len(selected),
+        "normalized_input":len(selected),
+        "eligible_local_materialization":len(allowed),
         "materialized":len(manifest),
+        "skipped_holds":len(skipped),
         "errors":len(errors),
-        "manifest":manifest_path.as_posix()
+        "manifest":repo_relative(manifest_path)
     },ensure_ascii=False,indent=2))
 
 if __name__=="__main__":
