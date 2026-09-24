@@ -42,6 +42,10 @@ IDENTITY_PATTERNS=[
 ]
 
 STALE=[
+    "wave01-A-public-v3",
+    "wave01-B-public-v3",
+    "wave01-C-public-v3",
+    "wave01-D-public-v3",
     "WAVE01-A-V1-PENDING",
     "WAVE01-B-V1-PENDING",
     "WAVE01-C-V1-PENDING",
