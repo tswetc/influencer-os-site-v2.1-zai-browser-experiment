@@ -1,58 +1,77 @@
-# Product Launch Queue — Frozen Full Product Wave
+# Product Launch Queue — Wave v4
 
 ## Existing runs
 
 - ZAI-M001 — media curation — COMPLETE / centrally audited.
-- ZAI-P001 — GLM-5.2 — integration pilot A — historical/running evidence.
-- ZAI-P002 — GLM-5.3-Flash — integration pilot A — historical/running evidence.
-- ZAI-P003 — GLM-5.3 — integration pilot B — model override at launch.
-- ZAI-P004 — GLM-5.3 — integration pilot B — model override at launch.
+- ZAI-P001 — GLM-5.2 — integration pilot A — running/historical evidence.
+- ZAI-P002 — GLM-5.3-Flash — integration pilot A — running/historical evidence.
+- ZAI-P003 — GLM-5.3 — integration pilot B — running/historical evidence.
+- ZAI-P004 — GLM-5.3 — integration pilot B — running/historical evidence.
 
-Do not restart P001–P004 merely because the full wave is ready.
+Do not restart P001–P004 merely because the next wave is prepared.
 
-## Full product-development wave
+## Full product-quality wave
 
-All eight runs consume the SAME immutable freeze commit.
-Within each design pair, source/product/reference/media bytes are identical.
+All E runs are PRODUCT_QUALITY.
 
-| Run | Expected model | Lane | Design set | Media pack |
-|---|---|---|---|---|
-| ZAI-E004 | GLM-5.3 | PRODUCT_QUALITY | A | wave01-A-public-v3 |
-| ZAI-E005 | GLM-5.3-Flash | MODEL_COMPARISON | A | wave01-A-public-v3 |
-| ZAI-E006 | GLM-5.3 | PRODUCT_QUALITY | B | wave01-B-public-v3 |
-| ZAI-E007 | GLM-5.3-Flash | MODEL_COMPARISON | B | wave01-B-public-v3 |
-| ZAI-E008 | GLM-5.3 | PRODUCT_QUALITY | C | wave01-C-public-v3 |
-| ZAI-E009 | GLM-5.3-Flash | MODEL_COMPARISON | C | wave01-C-public-v3 |
-| ZAI-E010 | GLM-5.3 | PRODUCT_QUALITY | D | wave01-D-public-v3 |
-| ZAI-E011 | GLM-5.3-Flash | MODEL_COMPARISON | D | wave01-D-public-v3 |
+Preferred runtime for every E run:
+`GLM-5.3`
 
-If the actual UI runtime differs from the expected model:
-- continue the product mission;
-- record `MODEL_OVERRIDE_AT_LAUNCH`;
-- do NOT interpret that pair as a clean model comparison.
+Fallback:
+`GLM-5.3-Flash`
 
-## Suggested launch priority when GLM-5.3 capacity is scarce
+If GLM-5.3 capacity is available, use it even for the second run in a design pair. Two same-model runs then provide repeatability/variance evidence.
 
-1. E008 — strongest architecture/workflow stress test.
-2. E004 — strongest public/product art-direction stress test.
-3. E006 — strongest media-first/cinematic stress test.
-4. E010 — strongest spatial/gallery interaction stress test.
-5. Flash partners E009 / E005 / E007 / E011.
+| Run | Design | Full-quality pack | Status before transport push |
+|---|---|---|---|
+| ZAI-E004 | A | wave01-A-public-v4 | WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE |
+| ZAI-E005 | A | wave01-A-public-v4 | WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE |
+| ZAI-E006 | B | wave01-B-public-v4 | WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE |
+| ZAI-E007 | B | wave01-B-public-v4 | WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE |
+| ZAI-E008 | C | wave01-C-public-v4 | WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE |
+| ZAI-E009 | C | wave01-C-public-v4 | WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE |
+| ZAI-E010 | D | wave01-D-public-v4 | WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE |
+| ZAI-E011 | D | wave01-D-public-v4 | WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE |
 
-If capacity permits, launch all eight independently.
+## Disposable qualification
+
+ZAI-Q001:
+- uses the SAME final freeze;
+- uses Wave v4 C;
+- GLM-5.3-Flash preferred for throughput;
+- runs in parallel;
+- diagnoses shared pipeline/architecture failures;
+- is not a product candidate.
+
+## Launch capacity priority
+
+If GLM-5.3 slots are scarce:
+1. E008 — deepest authoring/workflow stress test;
+2. E004 — controlled graphic/public-product stress test;
+3. E006 — photographic/cinematic stress test;
+4. E010 — spatial/continuity stress test;
+5. second runs in each design pair;
+6. Q001 can use Flash.
+
+If capacity permits, launch E004–E011 + Q001 independently.
 
 ## Isolation
 
 Every run:
-- unique run ID;
+- unique ID;
 - fresh Chat.Z.AI chat;
-- own sandbox and local Git;
+- own sandbox/local Git;
 - GitHub read-only;
 - unique final ZIP;
-- no sibling-run creative-direction reading.
+- no sibling-run implementation or creative-direction reading.
 
 ## Freeze rule
 
-Launch messages must carry ONE exact 40-char INPUT COMMIT.
+Every launch prompt carries the same exact full 40-character freeze SHA.
 
-Never use `main`, `latest`, or an unpinned raw URL as a substitute.
+Never use:
+- `main`;
+- `latest`;
+- an unpinned raw URL.
+
+The actual runtime label is evidence and must be recorded in the run manifest.
