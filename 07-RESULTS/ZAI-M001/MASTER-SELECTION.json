@@ -11,8 +11,8 @@
     "preview_slots_reviewed": 978
   },
   "identity_policy": {
-    "main_identity": "Milena Ioanna (founder) — evidenced by Bazaar contact name (G0084/s03), @milenaioanna watermark (G0131/s03), milenaioanna.com collage (G0154/s03), comp card 'MILENA MILANI CAROL' (G0027/s01)",
-    "rule": "No identity mixing inside a narrative family; companion/partner slots are labeled and separated.",
+    "main_identity": "founder-main-01 — opaque public-lab identity ID; real-world identity intentionally not published",
+    "rule": "Use opaque IDs only. Do not infer, publish, or propagate real-world identity names from media evidence.",
     "generated_media": "FLORA outputs and предметка/ai+ stills are labeled provenance=generated_or_demo_media and isolated in their own packs."
   },
   "counts": {
@@ -37,7 +37,7 @@
       "duration_sec": null,
       "role": "identity_reference",
       "family_or_pack": "founder-character-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Gym mirror selfie, city view — candid identity anchor"
     },
@@ -55,7 +55,7 @@
       "duration_sec": null,
       "role": "identity_reference",
       "family_or_pack": "founder-character-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Second gym anchor frame"
     },
@@ -73,7 +73,7 @@
       "duration_sec": null,
       "role": "identity_reference",
       "family_or_pack": "founder-character-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Beauty close-up, hair across face — clean facial reference"
     },
@@ -91,7 +91,7 @@
       "duration_sec": null,
       "role": "identity_reference",
       "family_or_pack": "founder-character-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Beauty close-up, centered gaze"
     },
@@ -109,7 +109,7 @@
       "duration_sec": null,
       "role": "identity_reference",
       "family_or_pack": "founder-character-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Beauty close-up, soft window light"
     },
@@ -127,7 +127,7 @@
       "duration_sec": null,
       "role": "identity_reference",
       "family_or_pack": "founder-character-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Golden-hour freckled portrait — high facial detail"
     },
@@ -145,7 +145,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-colorlight-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Pearls on face, red gel light — avant-garde beauty"
     },
@@ -163,7 +163,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-colorlight-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Blue paint profile, red/blue split light"
     },
@@ -181,7 +181,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-colorlight-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Green sequin dress, red/purple wash"
     },
@@ -199,7 +199,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-blue-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Baby-blue tights, legs + heels framing"
     },
@@ -217,7 +217,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-blue-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Blue tights chair pose, white room"
     },
@@ -235,7 +235,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-blue-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Window backlight, blue tights + lace body"
     },
@@ -253,7 +253,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-blue-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "B/W mirror variant of same story"
     },
@@ -271,7 +271,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-apartment-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Lying on sideboard, blue skirt + yellow gloves — quirky set"
     },
@@ -289,7 +289,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-apartment-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Red skirt + sheer blouse at china cabinet"
     },
@@ -307,7 +307,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-apartment-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Suitcase wardrobe flat-lay — still-life interlude"
     },
@@ -325,7 +325,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-apartment-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "B/W levitation cross-leg pose"
     },
@@ -343,7 +343,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-red-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Red halter dress + green tights, curtain set"
     },
@@ -361,7 +361,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-red-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Red lace body inside LV trunk — creative prop"
     },
@@ -379,7 +379,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-red-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Red dress full length, curtains"
     },
@@ -397,7 +397,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-sand-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Brown bandeau + slit skirt on sand set, beige drape"
     },
@@ -415,7 +415,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-sand-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Same set, alternate angle"
     },
@@ -433,7 +433,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-dresses-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Black lace asymmetrical dress, studio white"
     },
@@ -451,7 +451,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-dresses-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Blue puff-sleeve dress in motion"
     },
@@ -469,7 +469,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-dresses-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "White slip dress back view"
     },
@@ -487,7 +487,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-street-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Teal gown street twirl, red heels"
     },
@@ -505,7 +505,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-street-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Teal gown walking past teal building"
     },
@@ -523,7 +523,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-street-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Teal gown mirror flash"
     },
@@ -541,7 +541,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-blackgown-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Black halter gown reclining on embankment stone"
     },
@@ -559,7 +559,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-blackgown-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Black gown against granite wall w/ pigeon"
     },
@@ -577,7 +577,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-blackgown-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Close crop, hands over eyes"
     },
@@ -595,7 +595,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-pinkhair-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Pink hair, white dress in lotus field — fantasy"
     },
@@ -613,7 +613,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-pinkhair-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Pink hair close-up w/ lotus petal"
     },
@@ -631,7 +631,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-pinkhair-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Pink hair beauty close-up, green bokeh"
     },
@@ -649,7 +649,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-tutu-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Pink feathered hat + tutu on metro escalator"
     },
@@ -667,7 +667,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-tutu-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Tutu set on leather sofa"
     },
@@ -685,7 +685,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-chanel-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Burgundy tweed + gold chains on coastal rocks (TRADEMARK flag)"
     },
@@ -703,7 +703,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-chanel-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Wind-blown close-up, tweed + chains (TRADEMARK flag)"
     },
@@ -721,7 +721,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-pinkknit-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Pale-pink knit dress sleeping on river rock"
     },
@@ -739,7 +739,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-pinkknit-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Pink knit crouch on mossy boulders"
     },
@@ -757,7 +757,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-pinkknit-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Pink knit seated above rushing river"
     },
@@ -775,7 +775,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-cape-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Grey corset bodysuit + huge cape, arms raised"
     },
@@ -793,7 +793,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-cape-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Grey corset against green brick + window"
     },
@@ -811,7 +811,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-bazaar-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Black corset + headscarf in rapeseed field (PUBLISHED — Bazaar)"
     },
@@ -829,7 +829,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-bazaar-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Field portrait, black corset (PUBLISHED — Bazaar)"
     },
@@ -847,7 +847,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-cliffwind-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "White mini dress, wind-blown hair on rocky coast"
     },
@@ -865,7 +865,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-cliffwind-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Full-length walk between rocks"
     },
@@ -883,7 +883,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-ruin-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Post-apocalyptic white gown + helmet at ruined pool"
     },
@@ -901,7 +901,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-ruin-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Top-down, gown by derelict pool mosaic"
     },
@@ -919,7 +919,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-pirate-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Pirate-core bikini + headscarf under storm sky"
     },
@@ -937,7 +937,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-pirate-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Butterfly-motif hut interior"
     },
@@ -955,7 +955,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-trench-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Trench coat through city arch"
     },
@@ -973,7 +973,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-trench-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Trench walk, black skirt, street smile"
     },
@@ -991,7 +991,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-museum-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Fashion in palace museum hall"
     },
@@ -1009,7 +1009,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-museum-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Red-room portrait, museum"
     },
@@ -1027,7 +1027,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-golf-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Black blazer + denim shorts + boots on golf course"
     },
@@ -1045,7 +1045,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-golf-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Full pose w/ club under storm sky"
     },
@@ -1063,7 +1063,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-golf-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Golf-cart wind, laughing"
     },
@@ -1081,7 +1081,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-golf-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Aerial yoga red hammock, jungle"
     },
@@ -1099,7 +1099,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-yoga-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Cobra pose in park, mint set (mat brand visible)"
     },
@@ -1117,7 +1117,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-satin-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Blue satin shirt + red coat, dim hall"
     },
@@ -1135,7 +1135,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-showroom-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Fur stole + backless body in showroom"
     },
@@ -1153,7 +1153,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-showroom-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Black slip dress on leather sofa"
     },
@@ -1171,7 +1171,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-spiral-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Spiral-print mesh top, hands framing face"
     },
@@ -1189,7 +1189,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-spiral-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Spiral earring macro"
     },
@@ -1207,7 +1207,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-poppy-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "White tank + hand-painted poppy skirt on green counter"
     },
@@ -1225,7 +1225,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-poppy-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Poppy on satin + red watch — still-life interlude"
     },
@@ -1243,7 +1243,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-metro-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "White corset set in metro car"
     },
@@ -1261,7 +1261,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-metro-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Metro, laughing w/ arm raised"
     },
@@ -1279,7 +1279,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-balconygown-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Black gown recline on tropical balcony"
     },
@@ -1297,7 +1297,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-seacave-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Sea-cave light beam, pink bikini"
     },
@@ -1315,7 +1315,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-seacave-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Sea-cave arm-raised silhouette"
     },
@@ -1333,7 +1333,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-sunsetgown-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Pink ombré gown at sunset infinity pool"
     },
@@ -1351,7 +1351,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-sunsetgown-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Yellow knit set, beach close"
     },
@@ -1369,7 +1369,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-dining-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Blue cutout dress at restaurant table"
     },
@@ -1387,7 +1387,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-dining-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Blue dress, arm-up motion at table"
     },
@@ -1405,7 +1405,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-palace-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "White gown + opera gloves against stone"
     },
@@ -1423,7 +1423,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-palace-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "White gown on palace terrace at golden hour"
     },
@@ -1441,7 +1441,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-rolls-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "B/W fur + vintage Rolls-Royce grille (TRADEMARK flag)"
     },
@@ -1459,7 +1459,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-rolls-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Fur recline on RR hood, warm grade (TRADEMARK flag)"
     },
@@ -1477,7 +1477,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-turquoise-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Turquoise chiffon gown by willow lake"
     },
@@ -1495,7 +1495,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-gallerywalk-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Rain street look-up, pale-blue mini"
     },
@@ -1513,7 +1513,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-nightwhite-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "White fishnet top, night beach dinner"
     },
@@ -1531,7 +1531,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-nightblack-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Black lace crouch on sand w/ train"
     },
@@ -1549,7 +1549,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-nightblack-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Rose held to cheek, night light"
     },
@@ -1567,7 +1567,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-cave-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Cave headlamp + turquoise dress, red-lit stalactites"
     },
@@ -1585,7 +1585,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-cave-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Cave standing pose, headlamp"
     },
@@ -1603,7 +1603,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-whiteruffle-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "White ruffle hood, sunlight bedroom"
     },
@@ -1621,7 +1621,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-whiteruffle-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "White ruffle kneeling on bed"
     },
@@ -1639,7 +1639,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-blackseries-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Black dress + garter on steel chairs"
     },
@@ -1657,7 +1657,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-blackseries-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Hussar-braid jacket on grass"
     },
@@ -1675,7 +1675,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-goldenroad-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Lens-flare white top on rural road"
     },
@@ -1693,7 +1693,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-goldenroad-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Car-door sunset silhouette by water"
     },
@@ -1711,7 +1711,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-river-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Hair-flip splash in rocky river"
     },
@@ -1729,7 +1729,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-river-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Black lace dress kneeling on river rocks"
     },
@@ -1747,7 +1747,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-sea-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Wet-hair sun-flare beach selfie"
     },
@@ -1765,7 +1765,7 @@
       "duration_sec": null,
       "role": "editorial_example",
       "family_or_pack": "founder-editorial-sea-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "White bikini beach pose"
     },
@@ -1783,7 +1783,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-diary-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Ship + rainbow over sea — no-people ambience"
     },
@@ -1801,7 +1801,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-diary-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Infinity-pool silhouette at sunset, skyline"
     },
@@ -1819,7 +1819,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-diary-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Coffee + ice-cream table still"
     },
@@ -1837,7 +1837,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-raw-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Storm beach + concrete debris — raw"
     },
@@ -1855,7 +1855,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-raw-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Giant tree vs tiny figure — scale"
     },
@@ -1873,7 +1873,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-raw-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Jungle temple house — staged nature"
     },
@@ -1891,7 +1891,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-staged-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Mossy sculpture garden climb"
     },
@@ -1909,7 +1909,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-staged-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Mossy fantasy figures, standing"
     },
@@ -1927,7 +1927,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-staged-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Jungle treehouse"
     },
@@ -1945,7 +1945,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-diary-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Turquoise villa lounge"
     },
@@ -1963,7 +1963,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-diary-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Round mirror seaside reflection"
     },
@@ -1981,7 +1981,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-diary-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "White-tile bathroom mirror diary"
     },
@@ -1999,7 +1999,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-diary-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Bathroom doorway w/ pink bag"
     },
@@ -2017,7 +2017,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-diary-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Milan Duomo + palm street (GUCCI sign — TM flag)"
     },
@@ -2035,7 +2035,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-diary-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Metro crowd mirror moment"
     },
@@ -2053,7 +2053,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-diary-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Milan square alternate"
     },
@@ -2071,7 +2071,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-diary-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Night infinity-pool reading, city lights"
     },
@@ -2089,7 +2089,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-diary-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Beach piglets encounter"
     },
@@ -2107,7 +2107,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-diary-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Flower-bowl still at resort"
     },
@@ -2125,7 +2125,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-diary-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Mirror-hall multiplicity, black top + blue tights"
     },
@@ -2143,7 +2143,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-diary-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Tatami room black-lace lounge"
     },
@@ -2161,7 +2161,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "world-diary-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Oval mirror window reflection"
     },
@@ -2341,7 +2341,7 @@
       "duration_sec": null,
       "role": "background_texture",
       "family_or_pack": "still-life-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Coffee-foam macro texture"
     },
@@ -2359,7 +2359,7 @@
       "duration_sec": null,
       "role": "product_reference",
       "family_or_pack": "still-life-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Pink trunk + iced coffee airport flat-lay"
     },
@@ -2377,7 +2377,7 @@
       "duration_sec": null,
       "role": "product_reference",
       "family_or_pack": "still-life-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Pink tote 'ML' monogram + cherry charm detail"
     },
@@ -2395,7 +2395,7 @@
       "duration_sec": null,
       "role": "product_reference",
       "family_or_pack": "still-life-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Suitcase wardrobe flat-lay (also editorial)"
     },
@@ -2431,7 +2431,7 @@
       "duration_sec": null,
       "role": "product_reference",
       "family_or_pack": "campaign-soldejaneiro-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Sol de Janeiro jar in water — campaign still (BRAND flag)"
     },
@@ -2665,7 +2665,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "capability-bts-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Founder comp card on makeup-room table — real workflow evidence"
     },
@@ -2683,7 +2683,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "capability-bts-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Studio BTS: photographer + white cyc"
     },
@@ -2701,7 +2701,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "capability-bts-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "Painting process, brush on canvas — creator workflow"
     },
@@ -2719,7 +2719,7 @@
       "duration_sec": null,
       "role": "scene_reference",
       "family_or_pack": "capability-bts-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "'One of my latest art works' — bedroom studio BTS"
     },
@@ -2737,7 +2737,7 @@
       "duration_sec": 12.5,
       "role": "motion_reference",
       "family_or_pack": "motion-pack-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "VIDEO: white dress wind-hair on rocks — cinematic motion"
     },
@@ -2755,7 +2755,7 @@
       "duration_sec": 7.367,
       "role": "motion_reference",
       "family_or_pack": "motion-pack-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "VIDEO: black gown back + sun flare on embankment"
     },
@@ -2773,7 +2773,7 @@
       "duration_sec": 11.2,
       "role": "motion_reference",
       "family_or_pack": "motion-pack-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "VIDEO: mint dress walk on lake deck"
     },
@@ -2788,10 +2788,10 @@
       "bytes": 469999,
       "width": 960,
       "height": 720,
-      "duration_sec": 9.0,
+      "duration_sec": 9,
       "role": "motion_reference",
       "family_or_pack": "motion-pack-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "VIDEO: beach walk w/ coconut, bright wash"
     },
@@ -2806,10 +2806,10 @@
       "bytes": 2129253,
       "width": 720,
       "height": 1280,
-      "duration_sec": 9.0,
+      "duration_sec": 9,
       "role": "motion_reference",
       "family_or_pack": "motion-pack-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "VIDEO: boxing-gym training w/ caption overlay"
     },
@@ -2827,7 +2827,7 @@
       "duration_sec": 6.3,
       "role": "motion_reference",
       "family_or_pack": "motion-pack-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "VIDEO: painting process motion"
     },
@@ -2845,7 +2845,7 @@
       "duration_sec": 7.867,
       "role": "motion_reference",
       "family_or_pack": "motion-pack-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "VIDEO: golf course walk, hair wind"
     },
@@ -2863,7 +2863,7 @@
       "duration_sec": 7.867,
       "role": "motion_reference",
       "family_or_pack": "motion-pack-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "VIDEO: golf-cart joy ride"
     },
@@ -2881,7 +2881,7 @@
       "duration_sec": 14.767,
       "role": "motion_reference",
       "family_or_pack": "motion-pack-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "VIDEO: metro ride diary close-up"
     },
@@ -2899,7 +2899,7 @@
       "duration_sec": 8.567,
       "role": "motion_reference",
       "family_or_pack": "motion-pack-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "VIDEO: couple piggyback beach (partner identity)"
     },
@@ -2914,10 +2914,10 @@
       "bytes": 1866370,
       "width": 720,
       "height": 960,
-      "duration_sec": 12.0,
+      "duration_sec": 12,
       "role": "motion_reference",
       "family_or_pack": "motion-pack-01",
-      "identity": "founder_milena_ioanna",
+      "identity": "founder-main-01",
       "provenance": "founder_media",
       "notes": "VIDEO: mirror w/ child (CHILD-PRIVACY flag — hold)"
     }
