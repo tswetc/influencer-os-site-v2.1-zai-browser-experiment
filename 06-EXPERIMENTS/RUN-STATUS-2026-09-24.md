@@ -6,7 +6,7 @@ This file is operational tracking only. Running chats remain pinned to their ori
 
 TYPE: MEDIA_CURATION  
 RUNTIME: GLM-5.3-Flash  
-STATUS: REPORTED_COMPLETE_PENDING_ARTIFACT_AUDIT  
+STATUS: CURATION_DATA_INTEGRITY_PASS_WITH_RIGHTS_HOLDS  
 REPORTED_FINAL_STATUS: MEDIA_CURATION_COMPLETE_WITH_RIGHTS_REVIEW
 
 Founder-reported summary:
@@ -18,9 +18,16 @@ Founder-reported summary:
 - 52 families;
 - rights/privacy/trademark review produced.
 
-Important:
-the central coordinator has NOT yet inspected the five output artifacts.
-Do not materialize/publish the selected originals until artifact audit passes.
+Central artifact audit completed.
+
+Verified:
+- 161 source selection rows;
+- 160 unique source paths after merging one duplicate;
+- 161/161 atlas slot/path references resolve;
+- GROUP 0001–0200 coverage table present;
+- 149 unique items allowed for LOCAL materialization by conservative lab policy;
+- 11 items held from local materialization for child/privacy, third-party identity, trademark/brand, or published-editorial review;
+- public_use_allowed remains false for every normalized item until founder confirmation.
 
 ## ZAI-P001
 
