@@ -1,79 +1,70 @@
-# Design Recipe B — Cinematic Fashion System
+# Design Recipe B — People Look at Art × Gionatan Nese × IVRESS
 
-## Priority chain
+Exactly **3 run-specific visual references**.
 
-### 1. PRIMARY ANCHOR — IVRESS / Spin a Tale
-https://brand.ivress.co.jp/en/
+Common product architecture still comes from OS23.6 + Higgsfield + Figma Weave + existing V2.
 
-Research deeply:
-- sequence/chapter construction;
-- image choreography;
-- texture overlays;
-- pacing;
-- text/image entrances;
-- transition state changes;
-- how still and motion media coexist.
+## 1. PRIMARY VISUAL / PHOTOGRAPHY ANCHOR — People Look at Art or Art Looks at People
 
-Transfer to IOS:
-- Home opening sequence;
-- Character reveal;
-- generated-result reveal;
-- Image → Video handoff;
-- selected rare WOW states.
+https://space.repponen.com/peoplelookatart/
 
-Do not copy the brand, imagery or exact compositions.
+Role:
+- photography remains primary;
+- quiet but memorable interaction;
+- archival/analog typographic tone;
+- browser responds without distracting from subject.
 
-### 2. PHOTOGRAPHIC / MATERIAL ANCHOR — Gionatan Nese
-https://www.gionatannese.com/
+Required research:
+- image scale/crop;
+- typography;
+- navigation;
+- scroll behavior;
+- interaction timing;
+- mobile behavior.
 
-Research:
-- large image framing;
-- negative space;
-- light/material;
-- minimal navigation over photography.
-
-Transfer to IOS:
+Transfer:
+- Home;
 - Character;
 - Examples;
 - Assets;
-- generated media detail.
+- generated-output detail.
 
-### 3. TYPOGRAPHIC COUNTERWEIGHT — Studio K95
-https://www.k95.it/
+## 2. MATERIAL / SPACING ANCHOR — Gionatan Nese
 
-Use to stop the cinematic layer becoming soft/luxury-generic:
-- harder editorial type;
-- graphic labels;
-- confident system UI.
+https://www.gionatannese.com/
 
-### 4. TRANSITION PHYSICS — Maria Vasilyeva
-https://www.mariavasilyeva.com/
+Role:
+- photographic scale;
+- light/material;
+- negative space;
+- minimal UI around media.
 
-Founder-specific interest:
-- gallery scrolling mechanism/physics.
+Transfer:
+- Character identity views;
+- result presentation;
+- editorial project states.
 
-Research exact behavior rather than copying appearance.
+## 3. CINEMATIC / SEQUENCING ANCHOR — IVRESS / Spin a Tale
 
-Transfer to IOS:
-- media browsing;
-- compare/result strip;
-- reference galleries;
-- project asset navigation.
+https://brand.ivress.co.jp/en/
 
-### 5. CREATOR SURFACE — Fragment
-https://fragment.tools/
+Role:
+- sequencing;
+- texture;
+- image choreography;
+- pacing;
+- rare state-changing moments.
 
-Use:
-- constant live preview;
-- flexible control surfaces;
-- controls do not obscure media.
+Transfer:
+- opening sequence;
+- Character reveal;
+- major generated-result reveal;
+- Image → Video handoff.
 
-## Required synthesis
+## Design synthesis rule
 
-IVRESS leads cinematic sequencing.
-Gionatan leads photographic restraint.
-K95 protects typographic authority.
-Maria supplies gallery physics.
-Fragment supplies creator ergonomics.
+People Look at Art decides the default photographic interaction language.
+Gionatan decides space/light/material.
+IVRESS is reserved for selected cinematic transitions and rare WOW moments.
 
-No generic “luxury AI” interpretation is acceptable.
+Do not make every screen cinematic.
