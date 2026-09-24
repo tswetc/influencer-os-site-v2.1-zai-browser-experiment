@@ -1,59 +1,71 @@
-# Product Launch Queue
+# Product Launch Queue — Current
 
-## Lane 1 — run now
-
-### ZAI-M001
-Media curation.
-Already running independently.
+## Already running
 
 ### ZAI-P001
-GLM-5.2 full-system integration pilot.
-Matched inputs with P002.
+Runtime: GLM-5.2  
+Design: A / Controlled Graphic Editorial  
+Type: integration pilot  
+Input: provisional atlas derivatives
 
 ### ZAI-P002
-GLM-5.3-Flash full-system integration pilot.
-Matched inputs with P001.
+Runtime: GLM-5.3-Flash  
+Design: A / Controlled Graphic Editorial  
+Type: integration pilot  
+Input: provisional atlas derivatives
 
 ### ZAI-P003
-GLM-5.2 full-system integration pilot using design-set-b.
-Matched inputs with P004.
+Runtime: GLM-5.3  
+Design: B / Quiet Photographic Cinema  
+Type: integration pilot with launch-time model override  
+Input: provisional atlas derivatives
 
 ### ZAI-P004
-GLM-5.3-Flash full-system integration pilot using design-set-b.
-Matched inputs with P003.
+Runtime: GLM-5.3  
+Design: B / Quiet Photographic Cinema  
+Type: integration pilot with launch-time model override  
+Input: provisional atlas derivatives
 
-These pilots use provisional atlas derivatives and are not official Wave 01 candidates.
+### ZAI-M001
+Status: complete + centrally audited.
 
-## Lane 2 — launch immediately after M001 media materialization + freeze
+## Next immediate wave — after sanitized transport commit
 
-Pair A:
-- ZAI-E004 — GLM-5.2
-- ZAI-E005 — GLM-5.3-Flash
+Launch all independently from ONE freeze commit:
 
-Pair B:
-- ZAI-E006 — GLM-5.2
-- ZAI-E007 — GLM-5.3-Flash
+- ZAI-E004 — design A — strongest available runtime, GLM-5.3 preferred
+- ZAI-E005 — design A — strongest available runtime, GLM-5.3 preferred
+- ZAI-E006 — design B — strongest available runtime, GLM-5.3 preferred
+- ZAI-E007 — design B — strongest available runtime, GLM-5.3 preferred
+- ZAI-E008 — design C — strongest available runtime, GLM-5.3 preferred
+- ZAI-E009 — design C — strongest available runtime, GLM-5.3 preferred
+- ZAI-E010 — design D — strongest available runtime, GLM-5.3 preferred
+- ZAI-E011 — design D — strongest available runtime, GLM-5.3 preferred
 
-## Lane 3 — launch after the same freeze as soon as concurrency/resources allow
+Also launch:
 
-Pair C:
-- ZAI-E008 — GLM-5.2
-- ZAI-E009 — GLM-5.3-Flash
+- ZAI-Q001 — disposable launch qualification — GLM-5.3-Flash preferred for throughput.
 
-Pair D:
-- ZAI-E010 — GLM-5.2
-- ZAI-E011 — GLM-5.3-Flash
+## Interpretation
+
+E004–E011 are PRODUCT_QUALITY runs.
+
+They are not a clean model benchmark when actual runtimes differ.
+
+If two runs happen to use the same runtime + same design + same freeze, they become useful repeatability evidence.
+
+## Isolation
+
+Every run:
+- unique ID;
+- separate fresh chat;
+- own sandbox/local Git;
+- GitHub read-only;
+- unique export ZIP;
+- no sibling creative-direction reading.
 
 ## Freeze rule
 
-E004–E011 must all use the same launch-freeze commit unless an experiment explicitly tests a different input.
+All E004–E011 and Q001 should consume the same immutable freeze commit.
 
-## No shared implementation
-
-Every chat has:
-- unique RUN_ID;
-- own sandbox;
-- own local Git;
-- own export.
-
-GitHub remains read-only input.
+No prompt may say “latest main”.
