@@ -1,0 +1,414 @@
+{
+  "pack_id": "pilot-atlas-pack-v1",
+  "status": "PROVISIONAL_ATLAS_DERIVATIVES_ONLY",
+  "purpose": "Integration runs P001/P002 only; not official Wave 01 media",
+  "input_atlas_commit": "5b558a80b90f5ddd16868046a6fc76dc67c7286e",
+  "note": "Extract slots from contact sheets locally. These are low-resolution atlas derivatives, not final web media.",
+  "items": [
+    {
+      "group_number": 8,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0008-b0be755b18efa8.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/City/419497073_1551135795426575_6779619098372888533_n.jpeg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 8,
+      "slot": 2,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0008-b0be755b18efa8.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/City/523599858_18307273678168786_8758540743444489235_n.jpeg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 8,
+      "slot": 3,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0008-b0be755b18efa8.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/City/541523451_18310871335168786_8335152088360183155_n.jpeg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 8,
+      "slot": 4,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0008-b0be755b18efa8.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/City/image73.jpg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 8,
+      "slot": 5,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0008-b0be755b18efa8.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/City/image83.jpg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 10,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0010-d3e4328c308df0.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Home & Interior/502867709_18302264935168786_6586910182334568955_n.jpeg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 10,
+      "slot": 2,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0010-d3e4328c308df0.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Home & Interior/520289095_18306188980168786_5642986865950639461_n.jpeg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 10,
+      "slot": 3,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0010-d3e4328c308df0.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Home & Interior/image199.jpg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 10,
+      "slot": 4,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0010-d3e4328c308df0.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Home & Interior/image202.jpg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 10,
+      "slot": 5,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0010-d3e4328c308df0.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Home & Interior/image42.jpg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 15,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0015-79a64295c04c5b.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Nature/501459201_18301856710168786_3140033812384123638_n.jpeg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 15,
+      "slot": 2,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0015-79a64295c04c5b.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Nature/528322876_18308122339168786_2304778962749436172_n.jpeg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 15,
+      "slot": 3,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0015-79a64295c04c5b.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Nature/602387407_18324473290168786_5924122360279625600_n.jpeg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 15,
+      "slot": 4,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0015-79a64295c04c5b.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Nature/image191.jpg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 15,
+      "slot": 5,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0015-79a64295c04c5b.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Nature/image91.jpg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 18,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0018-88f524c2be81f9.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Sea & Beach/501015895_18301690105168786_7526113017228112707_n.jpeg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 18,
+      "slot": 2,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0018-88f524c2be81f9.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Sea & Beach/621529002_18327610543168786_1469198167562468477_n.jpeg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 18,
+      "slot": 3,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0018-88f524c2be81f9.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Sea & Beach/624796167_18065695949246665_4413254210760129562_n.jpeg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 18,
+      "slot": 4,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0018-88f524c2be81f9.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Sea & Beach/image211.jpg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 18,
+      "slot": 5,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0018-88f524c2be81f9.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Sea & Beach/image62.jpg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 20,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0020-caf3785e0e33cd.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Studio/Студия и павильон/421878014_2376923562695712_1027397855868118805_n (1).jpeg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 20,
+      "slot": 2,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0020-caf3785e0e33cd.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Studio/Студия и павильон/457742621_1990077828107676_8622792310872254194_n.jpeg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 20,
+      "slot": 3,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0020-caf3785e0e33cd.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Studio/Студия и павильон/590384328_18324691543168786_4966054478167842188_n.jpeg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 20,
+      "slot": 4,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0020-caf3785e0e33cd.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Studio/Студия и павильон/image208.jpg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 20,
+      "slot": 5,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0020-caf3785e0e33cd.jpg",
+      "source_path": "3/01_MAIN_CHARACTER/Studio/Студия и павильон/image59.jpg",
+      "media_type": "image",
+      "provisional_role": "main_character_editorial",
+      "family_id": "main-character"
+    },
+    {
+      "group_number": 52,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0052-5d03766c10e4b7.jpg",
+      "source_path": "4/03 Мода и образы/Галерея — голубое платье — осмотр картин/3631787399040308591_3631787372591054346.jpg",
+      "media_type": "image",
+      "provisional_role": "secondary_editorial_case",
+      "family_id": "editorial-case-01"
+    },
+    {
+      "group_number": 52,
+      "slot": 2,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0052-5d03766c10e4b7.jpg",
+      "source_path": "4/03 Мода и образы/Галерея — голубое платье — осмотр картин/3631787399040308591_3631787372599368058.jpg",
+      "media_type": "image",
+      "provisional_role": "secondary_editorial_case",
+      "family_id": "editorial-case-01"
+    },
+    {
+      "group_number": 52,
+      "slot": 3,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0052-5d03766c10e4b7.jpg",
+      "source_path": "4/03 Мода и образы/Галерея — голубое платье — осмотр картин/3631787399040308591_3631787372599470926.jpg",
+      "media_type": "image",
+      "provisional_role": "secondary_editorial_case",
+      "family_id": "editorial-case-01"
+    },
+    {
+      "group_number": 52,
+      "slot": 4,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0052-5d03766c10e4b7.jpg",
+      "source_path": "4/03 Мода и образы/Галерея — голубое платье — осмотр картин/image357.jpg",
+      "media_type": "image",
+      "provisional_role": "secondary_editorial_case",
+      "family_id": "editorial-case-01"
+    },
+    {
+      "group_number": 52,
+      "slot": 5,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0052-5d03766c10e4b7.jpg",
+      "source_path": "4/03 Мода и образы/Галерея — голубое платье — осмотр картин/image404.jpg",
+      "media_type": "image",
+      "provisional_role": "secondary_editorial_case",
+      "family_id": "editorial-case-01"
+    },
+    {
+      "group_number": 185,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0185-369beafd450958.jpg",
+      "source_path": "предметка/04f04afc465dba8e56a691e223eb06ce.jpg",
+      "media_type": "image",
+      "provisional_role": "product_still_life",
+      "family_id": "product-still-life"
+    },
+    {
+      "group_number": 185,
+      "slot": 2,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0185-369beafd450958.jpg",
+      "source_path": "предметка/4140ecd01afd7747b31f80d9819aa180.jpg",
+      "media_type": "image",
+      "provisional_role": "product_still_life",
+      "family_id": "product-still-life"
+    },
+    {
+      "group_number": 185,
+      "slot": 3,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0185-369beafd450958.jpg",
+      "source_path": "предметка/873478dae0fc018e3a6d04fdd07cf0fa.jpg",
+      "media_type": "image",
+      "provisional_role": "product_still_life",
+      "family_id": "product-still-life"
+    },
+    {
+      "group_number": 185,
+      "slot": 4,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0185-369beafd450958.jpg",
+      "source_path": "предметка/bf1f77eea97113ae282cf246024297db.jpg",
+      "media_type": "image",
+      "provisional_role": "product_still_life",
+      "family_id": "product-still-life"
+    },
+    {
+      "group_number": 185,
+      "slot": 5,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0185-369beafd450958.jpg",
+      "source_path": "предметка/ff98b90dad39dd0d625a57cb88a881d0.jpg",
+      "media_type": "image",
+      "provisional_role": "product_still_life",
+      "family_id": "product-still-life"
+    },
+    {
+      "group_number": 189,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0189-948f851353b15f.jpg",
+      "source_path": "схемы что умеет делать/Character Lock — 6 Angles from 1 Image _ FLORA/0374e6da-bce7-43e6-919b-b1122c576830_FPpLJwzfx.png",
+      "media_type": "image",
+      "provisional_role": "capability_character_lock",
+      "family_id": "character-lock"
+    },
+    {
+      "group_number": 189,
+      "slot": 2,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0189-948f851353b15f.jpg",
+      "source_path": "схемы что умеет делать/Character Lock — 6 Angles from 1 Image _ FLORA/5eb96fd4-050e-4964-adb5-9854a446d4c0_kwDl7QB_M.png",
+      "media_type": "image",
+      "provisional_role": "capability_character_lock",
+      "family_id": "character-lock"
+    },
+    {
+      "group_number": 189,
+      "slot": 3,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0189-948f851353b15f.jpg",
+      "source_path": "схемы что умеет делать/Character Lock — 6 Angles from 1 Image _ FLORA/b2f07aa7-3ec5-424e-9f49-233ef73de65c_6DI1iHhB-a.png",
+      "media_type": "image",
+      "provisional_role": "capability_character_lock",
+      "family_id": "character-lock"
+    },
+    {
+      "group_number": 189,
+      "slot": 4,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0189-948f851353b15f.jpg",
+      "source_path": "схемы что умеет делать/Character Lock — 6 Angles from 1 Image _ FLORA/d12ce1a8-5ae0-4639-b00a-adf7275d057e_Pk1_FNs2L (1).png",
+      "media_type": "image",
+      "provisional_role": "capability_character_lock",
+      "family_id": "character-lock"
+    },
+    {
+      "group_number": 189,
+      "slot": 5,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0189-948f851353b15f.jpg",
+      "source_path": "схемы что умеет делать/Character Lock — 6 Angles from 1 Image _ FLORA/f48f5643-cd9b-4901-a403-58a2798fd733_W0IywrVj-5.png",
+      "media_type": "image",
+      "provisional_role": "capability_character_lock",
+      "family_id": "character-lock"
+    },
+    {
+      "group_number": 190,
+      "slot": 1,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0190-2e92537ca7b87b.jpg",
+      "source_path": "схемы что умеет делать/Cinematic Photography Generator _ FLORA - Movie Stills/35d7450d-a6ed-49de-a5ef-df952e903545_fWULTEsMj.png",
+      "media_type": "image",
+      "provisional_role": "capability_cinematic",
+      "family_id": "cinematic-capability"
+    },
+    {
+      "group_number": 190,
+      "slot": 2,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0190-2e92537ca7b87b.jpg",
+      "source_path": "схемы что умеет делать/Cinematic Photography Generator _ FLORA - Movie Stills/3c598996-ef56-486e-bbeb-e05797126e6c_PrchcahLK.png",
+      "media_type": "image",
+      "provisional_role": "capability_cinematic",
+      "family_id": "cinematic-capability"
+    },
+    {
+      "group_number": 190,
+      "slot": 3,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0190-2e92537ca7b87b.jpg",
+      "source_path": "схемы что умеет делать/Cinematic Photography Generator _ FLORA - Movie Stills/7c4b3f5a-950e-4bb0-9432-883eb2a83465_-uKgPsLl6.png",
+      "media_type": "image",
+      "provisional_role": "capability_cinematic",
+      "family_id": "cinematic-capability"
+    },
+    {
+      "group_number": 190,
+      "slot": 4,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0190-2e92537ca7b87b.jpg",
+      "source_path": "схемы что умеет делать/Cinematic Photography Generator _ FLORA - Movie Stills/85b94b92-52ea-4388-adbf-1f704401d8c2_4XxhnKA9U.png",
+      "media_type": "image",
+      "provisional_role": "capability_cinematic",
+      "family_id": "cinematic-capability"
+    },
+    {
+      "group_number": 190,
+      "slot": 5,
+      "sheet_path": "04-MEDIA/review-atlas/sheets/0190-2e92537ca7b87b.jpg",
+      "source_path": "схемы что умеет делать/Cinematic Photography Generator _ FLORA - Movie Stills/f0128ada-3124-4000-b48a-da6e33b43bb0_gmudg_Rfq.png",
+      "media_type": "image",
+      "provisional_role": "capability_cinematic",
+      "family_id": "cinematic-capability"
+    }
+  ]
+}
