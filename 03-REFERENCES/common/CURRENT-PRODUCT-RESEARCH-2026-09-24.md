@@ -1,41 +1,81 @@
 # Current External Product Research Update — 2026-09-24
 
-This note is RESEARCH_ONLY. It does not override Influencer OS source truth.
+Status: RESEARCH_ONLY
 
-## Higgsfield
+External products are architecture/UX/interaction references. They do not override Influencer OS semantics.
 
-Current official documentation presents a broad suite with distinct jobs including AI Influencer, Cinema Studio, Marketing Studio, Canvas, Supercomputer and MCP/CLI surfaces.
+## Figma Weave — current official evidence
 
-Transfer questions for Influencer OS:
-- make job selection obvious without flattening everything into one generator;
-- keep a reusable character/identity object available across generation tasks;
-- connect developer/agent access to the same product surface.
+Official research used:
+- https://www.figma.com/blog/five-figma-weave-workflows/
+- https://www.figma.com/blog/connecting-figma-and-weave/
+- https://www.figma.com/blog/config-2026-recap/
+- https://www.figma.com/release-notes/
 
-Do not copy Higgsfield character-builder semantics or consistency claims.
+Observed current mechanics:
+- node-based generative workflow canvas;
+- models/assets/transformations connected into inspectable pipelines;
+- branching/remixing/comparing/refining across models;
+- reusable workflows/templates;
+- complex workflows packaged as simpler tools;
+- Figma frames can participate as workflow nodes;
+- current Figma-node behavior exposes selected text/image layers as inputs while preserving design structure.
 
-## Figma Weave
+Influencer OS transfer:
+- Expert Workflow Graph is a first-class professional mode;
+- Character/Canon/Scene/Prompt/Generation/Asset objects become typed workflow inputs/outputs;
+- intermediate outputs remain inspectable;
+- downstream reruns preserve upstream lineage;
+- a validated workflow can become a bounded reusable Studio tool.
 
-Current official material emphasizes:
-- visible node-based pipelines;
-- model swapping inside a workflow;
-- professional editing inside the pipeline;
-- reusable workflows;
-- exposing a complex workflow as a simpler reusable tool.
+Do NOT:
+- copy Figma/Weave chrome, branding or visual skin;
+- force the node graph onto every creator;
+- use graph visuals without real typed data/execution semantics.
 
-High-value Influencer OS translation:
-- the expert Canvas may expose the OS pipeline;
-- a successful workflow may become a bounded reusable Studio action/preset;
-- the default product should NOT force every user into a node graph.
+Detailed product contract:
+`01-BASE/EXPERT-WORKFLOW-GRAPH-CONTRACT.md`.
 
-## MCP
+## Higgsfield — current official evidence
 
-The current MCP specification has advanced beyond early Streamable-HTTP-only assumptions. Future official runs must pin a target spec/SDK version instead of implementing an unspecified 'current MCP'.
+Official research used:
+- https://higgsfield.ai/
+- https://higgsfield.ai/creator-hub/help-center/tools/which-higgsfield-tool-should-i-use
+- https://higgsfield.ai/creator-hub/help-center/getting-started/official-higgsfield-platforms
+- https://higgsfield.ai/creator-hub/help-center/integrations/what-is-higgsfield-mcp
+- https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api
 
-Research targets for the next MCP hardening pass:
-- modern/stateless HTTP behavior;
-- OAuth/OIDC-aligned authorization;
-- long-running task workflows where useful;
-- explicit protocol-version compatibility;
-- deterministic tool listing and tracing where supported.
+Observed current product architecture:
+- a broad website/creator suite with distinct Studios/jobs;
+- AI Influencer as a dedicated character job;
+- Canvas for chained model workflows and reusable templates;
+- MCP/CLI as agent-facing access;
+- API as a developer/product-integration surface with its own operational/billing boundary;
+- creations/assets remain part of the wider product experience.
 
-Do not claim protocol-current conformance until tests target the selected version.
+Influencer OS transfer:
+- expose clear job-based Studios without collapsing the product into one generator;
+- keep one reusable Character/Canon system across jobs;
+- Creator App, API/generation core and MCP should share the same domain model;
+- MCP is a true agent surface, not a separate marketing demo;
+- public/product explanation and creator execution may be different logical domains while remaining one product experience.
+
+Do NOT:
+- copy Higgsfield visual skin;
+- copy their game-style character semantics into Character Passport;
+- copy model/consistency claims;
+- assume their billing/deployment architecture is right for Influencer OS.
+
+## Research conclusion
+
+The useful pattern is NOT “one giant frontend.”
+
+It is:
+- one coherent product;
+- multiple purpose-built interaction surfaces;
+- shared durable creative objects;
+- a first-class expert workflow graph;
+- API/generation infrastructure beneath the UI;
+- MCP/agent access through the same core.
+
+This directly supports the current four-domain Influencer OS architecture.
