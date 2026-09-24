@@ -67,16 +67,24 @@ Study:
 - balance of approachability and power.
 
 Transfer to Influencer OS:
-- Canvas;
+- an explicit Expert Workflow Graph mode;
 - Image → Edit → Video chains;
-- model/provider nodes as an optional expert surface;
+- typed model/provider/asset/context nodes;
+- branching, comparison and downstream reruns;
 - reusable workflow logic;
-- visible state/output relationships;
+- packaging validated workflows into simpler reusable Studio tools;
+- visible state/output/lineage relationships;
 - human control after generation.
+
+The expert graph is REQUIRED for professional use, while guided Studios remain the default for common jobs.
+
+See:
+`01-BASE/EXPERT-WORKFLOW-GRAPH-CONTRACT.md`.
 
 Do NOT:
 - turn every surface into a node graph;
-- hide the OS core behind generic canvas abstractions.
+- hide the OS core behind generic canvas abstractions;
+- copy Figma/Weave visual skin.
 
 ## 4. Existing Influencer OS V2 — ancestry
 
