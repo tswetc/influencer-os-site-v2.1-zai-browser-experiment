@@ -1,20 +1,15 @@
 #!/usr/bin/env python3
-"""Fail-closed verification for public Wave media pack manifests.
+"""Verify committed/public Wave v4 bundle before freeze.
 
 Usage:
   python3 tools/verify_public_wave.py <repo_root>
-
-Checks:
-  04-MEDIA/packs/wave01-{A,B,C,D}-public-v3.json
-
-These packs intentionally reference commit-pinned atlas sheet + slot crops.
-They do not expose SSD source paths.
 """
 
 from __future__ import annotations
+
+import hashlib
 import json
 import re
-import subprocess
 import sys
 from pathlib import Path
 
@@ -22,84 +17,81 @@ if len(sys.argv)!=2:
     raise SystemExit("usage: verify_public_wave.py <repo_root>")
 
 repo=Path(sys.argv[1]).expanduser().resolve()
-
-forbidden_identity=re.compile(
-    r"(founder_milena_ioanna|Milena\s+Ioanna|@milenaioanna|milenaioanna\.com|MILENA\s+MILANI\s+CAROL|/Users/|/Volumes/|ssd_relative)",
+root=repo/"04-MEDIA/transport/wave01-v4"
+forbidden=re.compile(
+    r"(founder_milena_ioanna|milena\s+ioanna|@milenaioanna|milenaioanna\.com|milena\s+milani\s+carol|/Users/|/Volumes/|ssd_relative_source_path|source_path)",
     re.I,
 )
-
 errors=[]
 summary={}
 
-def git_blob_sha(path: Path):
-    p=subprocess.run(["git","hash-object",str(path)],capture_output=True,text=True,cwd=repo)
-    if p.returncode!=0:
-        return None
-    return p.stdout.strip()
+def sha256(path):
+    h=hashlib.sha256()
+    with path.open("rb") as f:
+        for chunk in iter(lambda:f.read(1024*1024),b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+if not (root/"BUNDLE-MANIFEST.json").is_file():
+    errors.append("missing BUNDLE-MANIFEST.json")
+
+referenced=set()
 
 for design in "ABCD":
-    manifest=repo/"04-MEDIA/packs"/f"wave01-{design}-public-v3.json"
-    if not manifest.is_file():
-        errors.append(f"{design}: missing manifest")
+    p=root/"packs"/f"{design}.json"
+    if not p.is_file():
+        errors.append(f"{design}: missing pack manifest")
         continue
-
-    raw=manifest.read_text(encoding="utf-8")
-    if forbidden_identity.search(raw):
-        errors.append(f"{design}: forbidden identity/private-path token")
-
-    # Exact source-path key is forbidden, but the boolean policy field
-    # source_paths_included=false is intentionally allowed.
-    if re.search(r'"source_path"\s*:',raw):
-        errors.append(f"{design}: source_path key leaked into public pack")
-
+    raw=p.read_text(encoding="utf-8")
+    if forbidden.search(raw):
+        errors.append(f"{design}: forbidden identity/path token in manifest")
     d=json.loads(raw)
     items=d.get("items",[])
-
-    if not (36 <= len(items) <= 42):
-        errors.append(f"{design}: item count {len(items)} outside 36-42")
-
+    if not 30 <= len(items) <= 45:
+        errors.append(f"{design}: item count {len(items)} outside 30-45")
     if d.get("source_paths_included") is not False:
-        errors.append(f"{design}: source_paths_included must be false")
+        errors.append(f"{design}: source_paths_included != false")
 
-    seen_ids=set()
+    ids=set()
     types={}
-    sheets=set()
-
+    total=0
     for item in items:
-        aid=item.get("asset_id","")
-        if aid in seen_ids:
+        aid=item.get("asset_id")
+        if aid in ids:
             errors.append(f"{design}: duplicate asset_id {aid}")
-        seen_ids.add(aid)
-
-        if item.get("identity_id") not in {"founder-main-01","generated-demo-01","neutral-subject"}:
-            errors.append(f"{design}: non-neutral identity_id {item.get('identity_id')}")
-
-        slot=item.get("slot")
-        if not isinstance(slot,int) or not (1 <= slot <= 6):
-            errors.append(f"{design}: invalid slot {slot}")
-
-        rel=item.get("sheet_path","")
-        p=repo/rel
-        if not p.is_file():
-            errors.append(f"{design}: missing sheet {rel}")
-        else:
-            got=git_blob_sha(p)
-            exp=item.get("sheet_blob_sha")
-            if got and exp and got!=exp:
-                errors.append(f"{design}: sheet blob mismatch {rel}")
-
-        sheets.add(rel)
+        ids.add(aid)
+        if not re.fullmatch(r"IOS-W01-[A-F0-9]{16}",aid or ""):
+            errors.append(f"{design}: invalid neutral asset_id {aid}")
+        rel=item.get("download_path","")
+        if not rel.startswith("04-MEDIA/transport/wave01-v4/assets/"):
+            errors.append(f"{design}: invalid download_path {rel}")
+            continue
+        f=repo/rel
+        if not f.is_file():
+            errors.append(f"{design}: missing {rel}")
+            continue
+        referenced.add(f.resolve())
+        got=sha256(f)
+        if got!=item.get("sha256"):
+            errors.append(f"{design}: hash mismatch {rel}")
+        if f.stat().st_size>=100*1024*1024:
+            errors.append(f"{design}: GitHub 100MB gate {rel}")
+        total+=f.stat().st_size
         t=item.get("media_type","unknown")
         types[t]=types.get(t,0)+1
 
-    summary[design]={
-        "pack_id":d.get("pack_id"),
-        "items":len(items),
-        "media_type":types,
-        "unique_sheets":len(sheets),
-    }
+    summary[design]={"items":len(items),"types":types,"bytes":total}
+
+assets=root/"assets"
+if assets.is_dir():
+    all_assets={p.resolve() for p in assets.iterdir() if p.is_file()}
+    extra=sorted(p.name for p in all_assets-referenced)
+    if extra:
+        errors.append(f"unreferenced transport assets: {extra[:12]}")
+else:
+    errors.append("missing assets directory")
 
 print(json.dumps({"summary":summary,"errors":errors},ensure_ascii=False,indent=2))
 if errors:
     raise SystemExit(2)
-print("PUBLIC_WAVE_MANIFESTS_VERIFIED")
+print("PUBLIC_WAVE_V4_VERIFIED")
