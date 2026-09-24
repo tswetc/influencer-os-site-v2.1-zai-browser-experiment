@@ -31,6 +31,19 @@ data = json.loads(src.read_text(encoding="utf-8"))
 items = data["items"]
 out.mkdir(parents=True, exist_ok=True)
 
+# Pixel-level public-transport exclusion verified from the review atlas.
+# G0027/s01 contains a visible real-world identity card. The local master may
+# retain it for private review, but no public Wave transport pack may select it.
+PUBLIC_TRANSPORT_EXCLUDE = {(27, 1)}
+
+def transport_eligible(item):
+    return (
+        (item.get("group_number"), item.get("slot")) not in PUBLIC_TRANSPORT_EXCLUDE
+        and item.get("public_transport_allowed", True) is not False
+    )
+
+items = [item for item in items if transport_eligible(item)]
+
 TARGET_MIN = 30
 TARGET_MAX = 45
 
