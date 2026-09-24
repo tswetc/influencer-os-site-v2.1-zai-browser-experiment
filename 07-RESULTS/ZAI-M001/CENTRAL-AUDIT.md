@@ -1,14 +1,30 @@
 # ZAI-M001 Central Forensic Audit
 
-Input result commit: `f707b443ab5779b47903cc556d4660599bf30349`
+Original ingest commit:
+`f707b443ab5779b47903cc556d4660599bf30349`
 
 ## Verdict
 
-`M001_CURATION_DATA_INTEGRITY_PASS_WITH_NORMALIZATION_AND_RIGHTS_HOLDS`
+`M001_CURATION_DATA_INTEGRITY_PASS_WITH_NORMALIZATION`
 
-The curation is usable as a selection source, but it must not be copied directly into the public full-resolution media layer without normalization and founder rights confirmation.
+The curation is a valid selection source after central normalization and subsequent founder decisions.
 
-## Mechanically verified
+## Original artifact integrity
+
+At ingest, the five M001 artifacts were independently re-hashed against the package-provided checksum file.
+
+Result:
+**5 / 5 exact SHA-256 matches.**
+
+The original package hashes are preserved in:
+`ORIGINAL-PACKAGE-SHA256SUMS.md`
+
+The current public text artifacts were later intentionally sanitized to remove an inferred real-world identity. Current hashes therefore differ and are recorded in:
+`SHA256SUMS.txt`
+
+This is an intentional derived-public-text change, not unexplained artifact drift.
+
+## Mechanically verified original selection
 
 - source selection rows: **161**
 - declared images: **150**
@@ -18,28 +34,14 @@ The curation is usable as a selection source, but it must not be copied directly
 - SSD-relative paths match pinned atlas catalog: **161 / 161**
 - sheet paths match atlas catalog: **161 / 161**
 - missing slot references: **0**
-- CURATION-PROGRESS coverage table resolves GROUP 0001–0200: **200 / 200**
+- CURATION-PROGRESS coverage resolves GROUP 0001–0200: **200 / 200**
 - duplicate source paths: **1 exact duplicate row**
 
-The duplicate source is:
-`4/02 Интерьер — постановочная съёмка/Квартира — домашние образы — съёмка/3699743922267958354_3699743911069120421.jpg`
-
-It appears once as `editorial_example` and once as `product_reference`. The normalized selection merges this into one media record with two roles.
+The duplicate source was merged into one normalized media record with multiple roles.
 
 ## Schema reconciliation
 
-M001 did not use the exact canonical field names anticipated by the lab tooling.
-
-M001 emitted:
-- `atlas_group`
-- `atlas_slot`
-- `ssd_relative_source_path`
-- `role`
-- `family_or_pack`
-- `identity`
-- `provenance`
-
-The central normalized schema uses:
+M001 emitted its own field names. The central normalized schema maps them into:
 - `group_number`
 - `slot`
 - `source_path`
@@ -48,62 +50,59 @@ The central normalized schema uses:
 - `identity_or_subject`
 - `provenance`
 
-This is a tooling/schema mismatch, not a curation-content failure.
+This was a tooling/schema mismatch, not a curation-content failure.
 
-## Identity claim
+## Identity correction
 
-M001 inferred a public identity/name from visible atlas evidence.
+M001 inferred a real-world identity/name from visible atlas evidence.
 
-That inference is NOT promoted into product truth.
+The founder explicitly rejected that as public product identity.
 
-Normalized media uses:
-`founder-main-01`
+Current public contract:
+- opaque identity ID only: `founder-main-01`;
+- do not infer/reconstruct/publish a real-world founder identity;
+- current public M001 text artifacts were sanitized accordingly.
 
-until the founder explicitly confirms a public-facing identity/name.
+One selected frame, G0027/s01, visibly contains a real-world identity card in the pixels. It remains available for local/private review but is explicitly excluded from new PUBLIC browser transport packs.
 
-## Rights / publication holds
+## Rights decisions after central audit
 
-Normalized status counts:
+The initial conservative filter held more material than the founder ultimately required.
 
-- `FOUNDER_CONFIRMATION_REQUIRED`: **127**
-- `HOLD_CHILD_PRIVACY`: **1**
-- `HOLD_BRAND_REVIEW`: **7**
-- `HOLD_PUBLISHED_EDITORIAL`: **2**
-- `HOLD_THIRD_PARTY_IDENTITY`: **1**
-- `DEMO_PROVENANCE_REQUIRED`: **22**
+Binding subsequent founder decisions:
+- child/privacy media: reject;
+- selected other-identifiable-person media: reject;
+- ordinary major-brand/incidental brand context: allowed for product use without implying endorsement;
+- editorial imagery: allowed for product use;
+- exhibit/gallery/art context: allowed for product use;
+- specific brand campaign imagery: case-by-case.
 
-Hard/explicit holds include:
-- child/privacy video: G0063/s06
-- partner/companion video: G0151/s06
-- trademark/brand contexts: G0076, G0083, G0088, G0109
-- published editorial/Bazaar shoot: G0084
+Current normalized state:
+- **160** unique source paths;
+- **156** eligible for local materialization;
+- **4** held;
+- public browser transport receives the additional pixel-level exclusion for G0027/s01.
 
-Generated/demo material remains usable only with visible provenance and remains unapproved for public redistribution by this audit.
+## Local materialization evidence
+
+Founder terminal evidence from the clean staging-based rebuild reported:
+- normalized input: **160**
+- eligible local materialization: **156**
+- materialized: **156**
+- skipped holds: **4**
+- errors: **0**
+- filesystem files: **156**
+- unique manifest paths: **156**
+- unique source paths: **156**
+- stale G0028/s01 derivative: **0**
+- staging directory after success: absent
+
+The local master library is a source for bounded run packs, not a public pack by itself.
 
 ## Result
 
-A normalized metadata selection has been created at:
-
+Use:
 `04-MEDIA/selections/MASTER-SELECTION-NORMALIZED.json`
 
-It contains **160 unique source paths**.
-
-- local materialization allowed by conservative lab filter: **149**
-- held from local materialization: **11**
-- public-use approvals granted by this audit: **0**
-
-The next safe step is local SSD materialization. Public GitHub upload of full-resolution/web derivatives requires a founder publication decision.
-
-
-## Package checksum verification
-
-The five ingested M001 artifacts were independently re-hashed from the GitHub commit and compared with `SHA256SUMS.txt`.
-
-Verified exact SHA-256 match for:
-- `CURATION-PROGRESS.md`
-- `MASTER-SELECTION.json`
-- `MEDIA-CURATION-REPORT.md`
-- `PACK-PROPOSALS.md`
-- `RIGHTS-REVIEW.md`
-
-Result: **5 / 5 exact matches**.
+Next media stage:
+bounded 30–45 item design packs → sanitized full-quality public transport derivatives → transport SHA verification → immutable launch freeze.
