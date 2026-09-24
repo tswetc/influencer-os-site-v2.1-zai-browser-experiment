@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Generate exact commit-pinned launch prompts for E004-E011 and Q001.
+"""Generate exact commit-pinned launch prompts for E004-E011.
 
 Usage:
   python3 tools/generate_launch_prompts.py <freeze_sha> <output_dir>
 
-The generator does not modify Git or the repository.
+The generator never modifies Git.
 """
 
 from __future__ import annotations
@@ -25,51 +25,70 @@ repo="tswetc/influencer-os-site-v2.1-zai-browser-experiment"
 base=f"https://raw.githubusercontent.com/{repo}/{sha}"
 
 runs={
-    "ZAI-E004":"GLM-5.3 preferred",
-    "ZAI-E005":"GLM-5.3 preferred",
-    "ZAI-E006":"GLM-5.3 preferred",
-    "ZAI-E007":"GLM-5.3 preferred",
-    "ZAI-E008":"GLM-5.3 preferred",
-    "ZAI-E009":"GLM-5.3 preferred",
-    "ZAI-E010":"GLM-5.3 preferred",
-    "ZAI-E011":"GLM-5.3 preferred",
-    "ZAI-Q001":"GLM-5.3-Flash preferred",
+    "ZAI-E004":"GLM-5.3",
+    "ZAI-E005":"GLM-5.3-Flash",
+    "ZAI-E006":"GLM-5.3",
+    "ZAI-E007":"GLM-5.3-Flash",
+    "ZAI-E008":"GLM-5.3",
+    "ZAI-E009":"GLM-5.3-Flash",
+    "ZAI-E010":"GLM-5.3",
+    "ZAI-E011":"GLM-5.3-Flash",
 }
 
 for run_id,model in runs.items():
     prompt=f"""EXPERIMENT ID: {run_id}
+EXPECTED Z.AI UI MODEL: {model}
 INPUT COMMIT: {sha}
-MODEL POLICY: {model}
 
-Use ONLY the exact commit-pinned public lab input below.
+This is a full autonomous Influencer OS Site V2.1 browser-product development run.
 
-Repository:
-https://github.com/{repo}
+GitHub is READ-ONLY input.
+Work only inside this fresh Chat.Z.AI sandbox.
 
-First read:
+First download and read:
+{base}/00-GOVERNANCE/START-HERE.md
+
+Then download and read:
 {base}/06-EXPERIMENTS/{run_id}/RUN.md
 
-Then execute that RUN.md completely.
+Follow the complete reading order in those files.
+Every repository read and raw URL must stay pinned to INPUT COMMIT {sha}.
 
-Binding rules:
-- GitHub is READ-ONLY input.
-- Every repository file must come from INPUT COMMIT {sha}; never use latest/main as a substitute.
-- Read 00-GOVERNANCE/START-HERE.md from the same commit and follow its authority order.
-- Record the exact visible runtime model label in RUN-MANIFEST.md.
-- Work only in this fresh Chat.Z.AI sandbox.
-- Keep local Git history.
-- Do not push implementation to the shared lab.
-- Do not read sibling experiment folders for creative direction.
-- Verify assigned media manifest and every downloaded media SHA-256 before implementation.
-- Build the complete mission; do not stop at a homepage/dashboard shell.
-- Architecture V3, Domain Model V1 and the Expert Workflow Graph are P0.
-- Do not use a future cron round to finish P0 work.
-- Complete mandatory screenshot/reference/functional/security/export review loops.
-- Export the exact unique ZIP named by RUN.md.
+Record the exact visible runtime model label in RUN-MANIFEST.md.
+If it differs from {model}, continue but record MODEL_OVERRIDE_AT_LAUNCH.
 
-If a shared input is broken, document it precisely. Do not silently replace the frozen input with different material.
+Build the COMPLETE product mission, not a landing page and not a reduced prototype.
 
-Begin now.
+Required architecture:
+Public/Product Experience + Creator App + OS Core/API/Generation Services + MCP/Agent Surface over one shared domain model.
+
+Required interaction modes:
+guided/direct Studios + Expert Workflow node graph.
+
+Use ONLY the exact bounded media pack assigned by RUN.md.
+Use neutral identity founder-main-01.
+Do not infer or publish a real-world founder identity.
+
+Before major implementation:
+source reconciliation → exact reference research → measured design constitution/tokens/motion spec → representative slice → critique/fix loops.
+
+Use P0 → P1 → P2 discipline.
+Use bounded materially different retries.
+If one subsystem remains blocked, log it, continue independent work, revisit later, and keep status truthful.
+
+Never invent source truth.
+Never call MOCK / UI_ONLY / UNVERIFIED_EXTERNAL systems LIVE.
+
+Before final export run:
+SOURCE/TRUTH review;
+FUNCTIONAL/SECURITY review;
+UX/VISUAL + responsive + EN/RU + accessibility review;
+PACKAGING/PORTABILITY review;
+integrated regression.
+
+Export the exact ZIP required by RUN.md.
+
+Continue autonomously until COMPLETE, COMPLETE_WITH_DEGRADED_SUBSYSTEMS, or honestly INCOMPLETE.
 """
     (out/f"{run_id}-LAUNCH.txt").write_text(prompt,encoding="utf-8")
 
