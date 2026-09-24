@@ -1,51 +1,48 @@
-# Full Product Run Readiness
+# Full Product Run Readiness — Current
 
-This document prevents premature Wave 01 launches.
+Status: TRANSPORT_PACK_BUILD_PENDING
 
-## Readiness gates
-
-A full product run may launch only when ALL are true:
+## Proven
 
 - [x] public GitHub raw transport proven;
 - [x] large-text transport proven;
-- [x] authoritative OS23.6 source published;
-- [x] common master mission published;
-- [x] product-backbone references defined;
-- [x] exact run-specific design recipes defined;
-- [x] visual reference-fidelity loop defined;
-- [x] founder media inventory published;
-- [x] founder visual review atlas published and visually readable;
-- [ ] ZAI-M001 curation completed and audited;
-- [ ] selected full/web-ready media materialized from SSD originals;
-- [ ] run-specific media pack manifests committed;
-- [ ] E004–E011 RUN.md files updated with exact media-pack IDs;
-- [ ] one final launch-freeze commit created;
-- [ ] every official run points to that exact immutable commit.
+- [x] image transport/readability proven;
+- [x] authoritative OS23.6 core published;
+- [x] current private product behavior contract derived;
+- [x] current founder decisions recorded publicly;
+- [x] four-domain architecture selected;
+- [x] versioned domain model defined;
+- [x] expert workflow graph contract defined;
+- [x] full-product run contract V3 defined;
+- [x] design-set recipes defined;
+- [x] reference-fidelity/QA loops defined;
+- [x] M001 curation completed and centrally audited;
+- [x] founder identity normalized to opaque IDs in current public HEAD;
+- [x] clean local master-library rebuild reported: 156 materialized / 4 held / 0 errors;
+- [x] clean local filesystem/manifest exactness reported: 156 files / 156 unique paths / 156 unique sources;
+- [x] rejected G0028/s01 stale derivative absent in clean rebuild;
+- [x] E004–E011 updated for Architecture V3 and bounded v2 media IDs;
+- [x] disposable Q001 qualification run defined.
 
-## Current decision
+Local rebuild evidence is founder terminal evidence. It is not evidence that public transport packs have been published yet.
 
-Official Wave 01 product runs E004–E011 are **NOT launch-ready yet**.
+## Still required before final freeze
 
-Reason:
-the current repository contains a review atlas, not the final individual founder media assets intended for production-quality product rendering.
+- [ ] rerun bounded `wave01-*-v2` pack builder;
+- [ ] confirm A/B/C/D each contain 30–45 items;
+- [ ] build sanitized public transport packs;
+- [ ] verify metadata/path/name sanitization;
+- [ ] verify every transport SHA-256;
+- [ ] commit only bounded transport packs + manifests;
+- [ ] run `tools/verify_public_wave.py`;
+- [ ] create one immutable launch-freeze commit;
+- [ ] patch E004–E011 + Q001 with that exact INPUT_COMMIT;
+- [ ] launch.
 
-Using contact sheets as final product media would invalidate the visual-quality goal and distort model comparison.
+## Launch decision
 
-## What may run now
+The founder has chosen to run full product-quality candidates in parallel as soon as the transport freeze exists.
 
-- ZAI-M001 media curation;
-- transport tests;
-- explicitly labelled disposable integration/pipeline tests.
+Q001 runs in parallel as a disposable qualification test rather than blocking the product-quality runs.
 
-Do not treat a product build started before the media freeze as an official Wave 01 candidate.
-
-## Fast path after M001
-
-1. receive and audit MASTER-SELECTION.json;
-2. materialize selected SSD originals into web-ready derivatives;
-3. generate shared + A/B/C/D pack manifests;
-4. commit media;
-5. run integrity check;
-6. create LAUNCH-FREEZE commit;
-7. update E004–E011 to READY at that exact commit;
-8. launch matched model pairs.
+If Q001 finds a shared-input defect, record that defect against every candidate that used the same freeze. Do not misattribute it to a model.
