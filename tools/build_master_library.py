@@ -97,12 +97,19 @@ def main():
     out=Path(sys.argv[3]).expanduser().resolve()
     manifest_path=Path(sys.argv[4]).expanduser().resolve()
 
+    # Always build into a fresh sibling staging directory. This prevents stale
+    # files from an earlier selection/materialization run from surviving when
+    # the allowed set or row numbering changes.
+    staging=out.with_name(out.name + ".__staging__")
+    if staging.exists():
+        shutil.rmtree(staging)
+    staging.mkdir(parents=True,exist_ok=True)
+
     data=json.loads(selection_path.read_text(encoding="utf-8"))
     selected=data.get("items")
     if not isinstance(selected,list):
         raise SystemExit("normalized selection must contain an items array")
 
-    out.mkdir(parents=True,exist_ok=True)
     manifest=[]
     errors=[]
     skipped=[]
@@ -121,7 +128,7 @@ def main():
         family=(item.get("family_ids") or ["shared"])[0]
         family_slug=slug(str(family))
         base=f"{i:04d}-g{int(item.get('group_number',0)):04d}-s{int(item.get('slot',0)):02d}-{slug(src.stem)}"
-        dst_base=out/family_slug/base
+        dst_base=staging/family_slug/base
 
         try:
             if item.get("media_type")=="image" or ext in IMAGE_EXTS:
@@ -138,9 +145,10 @@ def main():
             continue
 
         row=dict(item)
+        final_dst=out/dst.relative_to(staging)
         row.update({
             "id":f"master-v1-{i:04d}",
-            "path":repo_relative(dst),
+            "path":repo_relative(final_dst),
             "source_path":rel.as_posix(),
             "media_type":media_type,
             "materialized_bytes":dst.stat().st_size,
@@ -166,6 +174,24 @@ def main():
         "skipped_holds":skipped,
         "errors":errors
     }
+
+    if errors:
+        print(json.dumps({
+            "normalized_input":len(selected),
+            "eligible_local_materialization":len(allowed),
+            "materialized":len(manifest),
+            "skipped_holds":len(skipped),
+            "errors":len(errors),
+            "staging":repo_relative(staging),
+            "status":"FAILED_STAGING_PRESERVED"
+        },ensure_ascii=False,indent=2))
+        raise SystemExit(2)
+
+    # Replace the prior generated tree only after the fresh build completed.
+    if out.exists():
+        shutil.rmtree(out)
+    staging.replace(out)
+
     manifest_path.parent.mkdir(parents=True,exist_ok=True)
     manifest_path.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding="utf-8")
 
@@ -175,7 +201,8 @@ def main():
         "materialized":len(manifest),
         "skipped_holds":len(skipped),
         "errors":len(errors),
-        "manifest":repo_relative(manifest_path)
+        "manifest":repo_relative(manifest_path),
+        "status":"CLEAN_REBUILD_COMPLETE"
     },ensure_ascii=False,indent=2))
 
 if __name__=="__main__":
