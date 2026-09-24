@@ -1,52 +1,37 @@
-# Product Topology Decision Gate
+# Product Topology Decision — Resolved 2026-09-24
 
-Status: FOUNDER DECISION REQUIRED BEFORE CANONICAL PROMOTION
+Status: FOUNDER DECISION RECORDED
 
-## Existing durable canon
+The earlier topology gate is resolved for the browser-product architecture.
 
-Current project-memory and the canonical product repository describe Influencer OS as a **product family** with distinct forms:
-- Web App;
-- Claude Artifact;
-- Prompt Studio CLOUD/OFFLINE;
-- Photo Studio.
+## Selected direction
 
-Those forms may share ontology, engine knowledge and workflows, but the current canon explicitly does not silently merge them into one deployable.
+Influencer OS is explored as one coherent product experience with four explicit logical domains sharing one domain model:
 
-## What the Z.ai lab is exploring
+1. Public / Product Experience
+2. Creator App
+3. OS Core / API / Generation Services
+4. MCP / Agent Surface
 
-The browser lab intentionally explores a broader, more coherent **Influencer OS product experience**:
-- public product/site surfaces;
-- Character;
-- Image;
-- Video;
-- Scene/Shot;
-- Series/Shoot/Feed;
-- Prompt Lab;
-- Canvas/Workflow;
-- Models;
-- Projects/Assets/Compare;
-- MCP;
-- Docs/Pricing/Auth/Settings.
+This is NOT a requirement to create four microservices.
 
-This is a valid next-generation product hypothesis. It is not automatically the canonical topology.
+The default engineering shape is a modular monolith / monorepo-compatible architecture with strict boundaries and shared contracts.
 
-## Promotion gate
+Detailed contract:
+- `01-BASE/PRODUCT-ARCHITECTURE-V3.md`
+- `01-BASE/DOMAIN-MODEL-V1.md`
+- `01-BASE/EXPERT-WORKFLOW-GRAPH-CONTRACT.md`
 
-Before a Z.ai candidate is promoted, the founder must choose one of:
+## Relationship to older private product-family canon
 
-### A. Unified product supersession
-Influencer OS intentionally becomes one unified platform. Update project-memory first, then evolve the canonical product repository accordingly.
+Private project-memory is not modified by this public-lab decision.
 
-### B. Product + experience split
-Keep the Web App/product family boundaries. Promote:
-- canonical product mechanics/workflows into `tswetc/influencer-os`;
-- public site, interactive proof, examples, docs and bounded demonstrators into `tswetc/influencer-os-site`.
+For PUBLIC browser runs, the current founder decision and public architecture files supersede older inaccessible/stale topology assumptions.
 
-### C. Hybrid shell
-A public/product shell links to distinct product forms while sharing one identity/canon contract.
+Canonical promotion later requires a deliberate private-repository migration plan. It does not require browser agents to preserve old private topology during exploration.
 
-## Prohibition
+## Promotion principle
 
-Do not merge an entire Z.ai candidate wholesale into the canonical site or canonical Web App until this topology decision is explicit.
+Promote concepts and validated implementation deliberately.
 
-The browser experiment is a product-design laboratory, not automatic architecture authority.
+Do not merge an entire Z.ai candidate wholesale merely because it uses the selected topology.
