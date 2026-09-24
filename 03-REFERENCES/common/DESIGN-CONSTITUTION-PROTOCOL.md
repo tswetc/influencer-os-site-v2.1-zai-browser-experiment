@@ -101,14 +101,22 @@ Specify exactly which Influencer OS surfaces inherit each mechanic:
 - Assets/Projects;
 - Settings/Auth.
 
-## Anchor/reference roles
+## Reference-role coverage
 
-Each run gets:
-- ONE **anchor reference** for composition/type temperament;
-- ONE **media reference**;
-- ONE **motion/transition reference**;
-- ONE **creator/workbench reference**;
-- optional supporting references for specific mechanics.
+Each run still follows `REFERENCE-COUNT-RULE.md`: default **3 run-specific visual references**.
+
+Those three references must collectively cover:
+- composition/type temperament;
+- media/narrative;
+- motion/interaction.
+
+Creator/workbench behavior may be supplied by:
+- one of the three assigned references; OR
+- the COMMON product-architecture references (Figma Weave / TouchDesigner-style authoring principles where assigned).
+
+Do NOT silently add a fourth equal-weight visual reference merely to fill a role.
+
+One reference may carry more than one non-conflicting role.
 
 Do not average all references into generic “nice design”.
 
