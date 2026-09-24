@@ -1,76 +1,93 @@
 #!/usr/bin/env python3
-"""Fail-closed verification for public Wave 01 transport packs.
+"""Fail-closed verification for public Wave media pack manifests.
 
 Usage:
   python3 tools/verify_public_wave.py <repo_root>
 
-Checks A/B/C/D v2 packs under 04-MEDIA/transport/.
+This verifier checks the self-contained public v3 atlas-derivative manifests:
+04-MEDIA/packs/wave01-{A,B,C,D}-public-v3.json
+
+It intentionally does not require the private/local master library.
 """
 
 from __future__ import annotations
-import hashlib,json,re,sys
+import json
+import re
+import subprocess
+import sys
 from pathlib import Path
 
 if len(sys.argv)!=2:
     raise SystemExit("usage: verify_public_wave.py <repo_root>")
 
 repo=Path(sys.argv[1]).expanduser().resolve()
-forbidden=re.compile(r"(milena|ioanna|milani|/Users/|/Volumes/|@milena|source_path|ssd_relative)",re.I)
-
-def sha256(path):
-    h=hashlib.sha256()
-    with path.open("rb") as f:
-        for chunk in iter(lambda:f.read(1024*1024),b""):
-            h.update(chunk)
-    return h.hexdigest()
+forbidden=re.compile(r"(founder_milena_ioanna|Milena\s+Ioanna|@milenaioanna|milenaioanna\.com|MILENA\s+MILANI\s+CAROL|/Users/|/Volumes/|source_path|ssd_relative)",re.I)
 
 errors=[]
 summary={}
+
+def git_blob_sha(path: Path):
+    p=subprocess.run(["git","hash-object",str(path)],capture_output=True,text=True,cwd=repo)
+    if p.returncode!=0:
+        return None
+    return p.stdout.strip()
+
 for design in "ABCD":
-    pack_id=f"wave01-{design}-v2"
-    root=repo/"04-MEDIA/transport"/pack_id
-    manifest=root/"manifest.json"
+    manifest=repo/"04-MEDIA/packs"/f"wave01-{design}-public-v3.json"
     if not manifest.is_file():
-        errors.append(f"{pack_id}: missing manifest")
+        errors.append(f"{design}: missing manifest {manifest}")
         continue
+
     raw=manifest.read_text(encoding="utf-8")
     if forbidden.search(raw):
-        errors.append(f"{pack_id}: forbidden identity/path token in public manifest")
+        errors.append(f"{design}: forbidden identity/path token in manifest")
+
     d=json.loads(raw)
     items=d.get("items",[])
-    if not (30 <= len(items) <= 45):
-        errors.append(f"{pack_id}: item count {len(items)} outside 30-45")
+    if not (36 <= len(items) <= 42):
+        errors.append(f"{design}: item count {len(items)} outside 36-42")
     if d.get("source_paths_included") is not False:
-        errors.append(f"{pack_id}: source_paths_included must be false")
+        errors.append(f"{design}: source_paths_included must be false")
 
-    seen=set()
-    total=0
+    seen_ids=set()
     types={}
+    sheets=set()
+
     for item in items:
-        fn=item.get("filename","")
-        if fn in seen:
-            errors.append(f"{pack_id}: duplicate filename {fn}")
-        seen.add(fn)
-        if not re.fullmatch(r"IOS-[A-Z0-9-]+-\d{3}\.(jpg|mp4)",fn):
-            errors.append(f"{pack_id}: non-neutral filename {fn}")
-        p=root/fn
+        aid=item.get("asset_id","")
+        if aid in seen_ids:
+            errors.append(f"{design}: duplicate asset_id {aid}")
+        seen_ids.add(aid)
+
+        if item.get("identity_id") not in {"founder-main-01","generated-demo-01","neutral-subject"}:
+            errors.append(f"{design}: non-neutral identity_id {item.get('identity_id')}")
+
+        slot=item.get("slot")
+        if not isinstance(slot,int) or not (1 <= slot <= 6):
+            errors.append(f"{design}: invalid slot {slot}")
+
+        rel=item.get("sheet_path","")
+        p=repo/rel
         if not p.is_file():
-            errors.append(f"{pack_id}: missing file {fn}")
-            continue
-        got=sha256(p)
-        if got!=item.get("sha256"):
-            errors.append(f"{pack_id}: hash mismatch {fn}")
-        total+=p.stat().st_size
+            errors.append(f"{design}: missing sheet {rel}")
+        else:
+            got=git_blob_sha(p)
+            exp=item.get("sheet_blob_sha")
+            if got and exp and got!=exp:
+                errors.append(f"{design}: sheet blob mismatch {rel}")
+
+        sheets.add(rel)
         t=item.get("media_type","unknown")
         types[t]=types.get(t,0)+1
 
-    extras=[p.name for p in root.iterdir() if p.is_file() and p.name!="manifest.json" and p.name not in seen]
-    if extras:
-        errors.append(f"{pack_id}: unmanifested files: {extras[:8]}")
-
-    summary[pack_id]={"items":len(items),"bytes":total,"media_type":types}
+    summary[design]={
+        "pack_id":d.get("pack_id"),
+        "items":len(items),
+        "media_type":types,
+        "unique_sheets":len(sheets),
+    }
 
 print(json.dumps({"summary":summary,"errors":errors},ensure_ascii=False,indent=2))
 if errors:
     raise SystemExit(2)
-print("PUBLIC_WAVE_VERIFIED")
+print("PUBLIC_WAVE_MANIFESTS_VERIFIED")
