@@ -28,7 +28,7 @@ Public-lab content may include:
 
 ## 2. Identity
 
-The inferred label `founder_milena_ioanna` is retired.
+The earlier real-name-derived founder label is retired and must not appear in current public lab text.
 
 Use only opaque IDs:
 - `founder-main-01` for the main founder-media identity where needed;
