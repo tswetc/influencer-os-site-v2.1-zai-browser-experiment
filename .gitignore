@@ -1,0 +1,13 @@
+# Never commit local/private working material
+.env
+.env.*
+!.env.example
+
+# Founder RAW/original media stays on SSD
+04-MEDIA/_local-originals/
+04-MEDIA/_staging/
+04-MEDIA/_tmp/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
