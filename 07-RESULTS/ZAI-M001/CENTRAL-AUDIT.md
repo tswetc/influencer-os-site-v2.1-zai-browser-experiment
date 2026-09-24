@@ -93,3 +93,17 @@ It contains **160 unique source paths**.
 - public-use approvals granted by this audit: **0**
 
 The next safe step is local SSD materialization. Public GitHub upload of full-resolution/web derivatives requires a founder publication decision.
+
+
+## Package checksum verification
+
+The five ingested M001 artifacts were independently re-hashed from the GitHub commit and compared with `SHA256SUMS.txt`.
+
+Verified exact SHA-256 match for:
+- `CURATION-PROGRESS.md`
+- `MASTER-SELECTION.json`
+- `MEDIA-CURATION-REPORT.md`
+- `PACK-PROPOSALS.md`
+- `RIGHTS-REVIEW.md`
+
+Result: **5 / 5 exact matches**.
