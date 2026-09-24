@@ -40,8 +40,22 @@ out=repo/"04-MEDIA/transport/wave01-v4"
 staging=out.with_name(out.name+".__staging__")
 
 PACK_FILES={d:repo/f"04-MEDIA/packs/wave01-{d}-v3-curated.json" for d in "ABCD"}
+retired_id="founder_"+"milena_"+"ioanna"
+retired_name="Milena"+" "+"Ioanna"
+retired_handle="@"+"milena"+"ioanna"
+retired_domain="milena"+"ioanna.com"
+retired_card="MILENA"+" "+"MILANI"+" "+"CAROL"
 FORBIDDEN=re.compile(
-    r"(founder_milena_ioanna|milena\s+ioanna|@milenaioanna|milenaioanna\.com|milena\s+milani\s+carol|/Users/|/Volumes/|ssd_relative_source_path)",
+    "("+"|".join([
+        re.escape(retired_id),
+        re.escape(retired_name),
+        re.escape(retired_handle),
+        re.escape(retired_domain),
+        re.escape(retired_card),
+        r"/Users/",
+        r"/Volumes/",
+        r"ssd_relative_source_path",
+    ])+")",
     re.I,
 )
 MAX_FILE_BYTES=95*1024*1024
