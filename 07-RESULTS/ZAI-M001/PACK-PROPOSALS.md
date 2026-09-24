@@ -10,7 +10,7 @@ Pack sizing follows `04-MEDIA/PACKS.md` (10–40 items, clear product role, iden
 ## P1. `founder-character-01` — identity/character (7 items)
 
 **Role:** canonical identity anchors for Character/Canon objects; prompt-lock references for nano_pro image chains.
-**Identity:** Milena Ioanna only. Chosen for clean facial detail across lighting conditions and hair states.
+**Identity:** founder-main-01 only. Chosen for clean facial detail across lighting conditions and hair states.
 
 | Item | Why |
 |---|---|
@@ -18,7 +18,7 @@ Pack sizing follows `04-MEDIA/PACKS.md` (10–40 items, clear product role, iden
 | G0030/s02, s04 | Studio beauty close-ups, wind hair — best facial fidelity |
 | G0033/s04 | Soft window-light beauty variant |
 | G0130/s03 | Golden-hour freckles, pastel paisley — texture-rich skin reference |
-| G0027/s01 (alt/add) | Comp card "MILENA MILANI CAROL" context — optional workflow anchor (also in P5) |
+| G0027/s01 (alt/add) | Comp card "[REDACTED_NAME]" context — optional workflow anchor (also in P5) |
 
 ---
 
