@@ -6,5 +6,6 @@ References are organized by role and experiment.
 - `design-set-a/` — first art-direction variant
 - `design-set-b/` — second art-direction variant
 - `design-set-c/` — third art-direction variant
+- `design-set-d/` — fourth art-direction variant
 
 References influence UX/art direction only. They never override Influencer OS source truth.
