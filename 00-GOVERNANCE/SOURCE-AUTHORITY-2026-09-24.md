@@ -12,22 +12,26 @@ A browser run must not infer that the 23 published source files represent every 
 
 ## Authority layers
 
-When two sources conflict, reconcile them in this order:
+For central architectural reconciliation, use:
 
 1. **Explicit current founder decision**
    - product direction, publication/identity decisions, strategic supersession.
-2. **Durable product-family canon**
-   - `tswetc/project-memory`, after it has been updated for the current decision.
+2. **Current public-lab supersession/architecture contract**
+   - required for browser agents that cannot access private sources.
 3. **Current canonical Web App implementation**
    - private `tswetc/influencer-os` default branch.
    - current verified audit head at the time this document was written:
      `1158007fdaefd823e24d7a38d4fa7258814b541c`.
-4. **Verified release artifact baseline**
+4. **Private durable product-family canon**
+   - useful historical/durable context when current;
+   - currently NOT a required input for public browser agents;
+   - do not let stale private status override the current founder decision.
+5. **Verified release artifact baseline**
    - `os23.6.zip`
    - SHA-256 `8fd6f6a9e5bf8fc4e83cf04f26973b241a5319652a355017ef0c36e897233a84`.
-5. **Canonical site ancestry**
+6. **Canonical site ancestry**
    - private `tswetc/influencer-os-site` V2/V2.1.
-6. **External reference products/sites**
+7. **External reference products/sites**
    - architecture, UX, interaction and visual research only.
    - never override Influencer OS semantics.
 
@@ -62,3 +66,11 @@ Use:
 - explicit reconciliation notes.
 
 Promotion into a private canonical branch may read the complete private source directly.
+
+
+## Public-run rule
+
+Public Chat.Z.AI runs consume the public authority stack in:
+`00-GOVERNANCE/PUBLIC-CANON-SUPERSESSION-2026-09-24.md`.
+
+They must not block on inaccessible project-memory and must not guess private implementation details.
