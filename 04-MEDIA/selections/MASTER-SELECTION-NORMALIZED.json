@@ -12,7 +12,8 @@
     "held_from_local_materialization": 4,
     "generated_or_demo": 22,
     "founder_media": 138,
-    "public_use_approved_in_public_repo": 0
+    "public_use_approved_in_public_repo": 0,
+    "public_transport_allowed": 155
   },
   "items": [
     {
@@ -41,7 +42,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0006-s02",
@@ -69,7 +71,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0009-s05",
@@ -97,7 +100,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0010-s01",
@@ -125,7 +129,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0010-s04",
@@ -153,7 +158,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0011-s02",
@@ -181,7 +187,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0011-s04",
@@ -209,7 +216,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0014-s02",
@@ -237,7 +245,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0014-s04",
@@ -265,7 +274,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0017-s01",
@@ -293,7 +303,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0017-s03",
@@ -321,7 +332,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0018-s02",
@@ -349,7 +361,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0018-s03",
@@ -377,7 +390,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0019-s01",
@@ -405,7 +419,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0019-s02",
@@ -433,7 +448,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0021-s02",
@@ -461,7 +477,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0021-s04",
@@ -489,7 +506,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0024-s01",
@@ -517,7 +535,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0024-s02",
@@ -545,7 +564,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0024-s03",
@@ -573,7 +593,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0025-s06",
@@ -601,7 +622,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0026-s01",
@@ -629,7 +651,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0026-s02",
@@ -657,7 +680,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0027-s01",
@@ -685,7 +709,9 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": false,
+      "public_transport_reason": "Visible comp-card text exposes a real-world identity in the pixels. Keep local only; exclude from public browser transport."
     },
     {
       "id": "zai-m001-g0028-s01",
@@ -713,7 +739,8 @@
       "publication_status": "REJECT_OTHER_IDENTITY",
       "materialize_local_allowed": false,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder explicitly rejected media containing another identifiable person/identity; M001 rights review flagged this slot/group."
+      "rights_review_reason": "Founder explicitly rejected media containing another identifiable person/identity; M001 rights review flagged this slot/group.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0030-s02",
@@ -741,7 +768,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0030-s04",
@@ -769,7 +797,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0031-s01",
@@ -797,7 +826,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0031-s04",
@@ -825,7 +855,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0032-s01",
@@ -853,7 +884,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0032-s02",
@@ -881,7 +913,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0032-s03",
@@ -909,7 +942,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0033-s04",
@@ -937,7 +971,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0035-s01",
@@ -965,7 +1000,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0035-s02",
@@ -993,7 +1029,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0035-s04",
@@ -1021,7 +1058,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0036-s01",
@@ -1049,7 +1087,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0036-s02",
@@ -1077,7 +1116,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0039-s01",
@@ -1105,7 +1145,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0039-s02",
@@ -1133,7 +1174,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0039-s03",
@@ -1161,7 +1203,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0039-s04",
@@ -1189,7 +1232,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0040-s01",
@@ -1220,7 +1264,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0040-s02",
@@ -1248,7 +1293,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0040-s03",
@@ -1276,7 +1322,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0043-s02",
@@ -1304,7 +1351,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0047-s02",
@@ -1332,7 +1380,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0049-s01",
@@ -1360,7 +1409,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0050-s01",
@@ -1388,7 +1438,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0052-s02",
@@ -1416,7 +1467,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0053-s01",
@@ -1444,7 +1496,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0053-s02",
@@ -1472,7 +1525,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0053-s04",
@@ -1500,7 +1554,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0055-s02",
@@ -1528,7 +1583,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0055-s03",
@@ -1556,7 +1612,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0057-s02",
@@ -1584,7 +1641,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0057-s03",
@@ -1612,7 +1670,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0057-s05",
@@ -1640,7 +1699,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0062-s01",
@@ -1668,7 +1728,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0062-s03",
@@ -1696,7 +1757,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0063-s06",
@@ -1724,7 +1786,8 @@
       "publication_status": "REJECT_CHILD_PRIVACY",
       "materialize_local_allowed": false,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder explicitly rejected media containing a child for this product."
+      "rights_review_reason": "Founder explicitly rejected media containing a child for this product.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0064-s01",
@@ -1752,7 +1815,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0064-s04",
@@ -1780,7 +1844,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0065-s01",
@@ -1808,7 +1873,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0065-s03",
@@ -1836,7 +1902,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0065-s05",
@@ -1864,7 +1931,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0065-s06",
@@ -1892,7 +1960,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0066-s01",
@@ -1920,7 +1989,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0067-s01",
@@ -1948,7 +2018,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0067-s02",
@@ -1976,7 +2047,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0068-s06",
@@ -2004,7 +2076,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0069-s01",
@@ -2032,7 +2105,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0069-s02",
@@ -2060,7 +2134,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0072-s01",
@@ -2088,7 +2163,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0072-s02",
@@ -2116,7 +2192,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0072-s04",
@@ -2144,7 +2221,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0073-s01",
@@ -2172,7 +2250,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0073-s05",
@@ -2200,7 +2279,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0076-s01",
@@ -2228,7 +2308,8 @@
       "publication_status": "FOUNDER_PRODUCT_USE_APPROVED_BRAND_CONTEXT",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement."
+      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0076-s02",
@@ -2256,7 +2337,8 @@
       "publication_status": "FOUNDER_PRODUCT_USE_APPROVED_BRAND_CONTEXT",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement."
+      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0077-s01",
@@ -2284,7 +2366,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0077-s02",
@@ -2312,7 +2395,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0077-s04",
@@ -2340,7 +2424,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0079-s02",
@@ -2368,7 +2453,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0079-s03",
@@ -2396,7 +2482,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0081-s02",
@@ -2424,7 +2511,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0081-s05",
@@ -2452,7 +2540,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0083-s02",
@@ -2480,7 +2569,8 @@
       "publication_status": "FOUNDER_PRODUCT_USE_APPROVED_BRAND_CONTEXT",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement."
+      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0083-s05",
@@ -2508,7 +2598,8 @@
       "publication_status": "FOUNDER_PRODUCT_USE_APPROVED_BRAND_CONTEXT",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement."
+      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0084-s01",
@@ -2536,7 +2627,8 @@
       "publication_status": "FOUNDER_PRODUCT_USE_APPROVED_EDITORIAL",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder explicitly approved editorial/exhibit-style use in the product; keep provenance/context clear."
+      "rights_review_reason": "Founder explicitly approved editorial/exhibit-style use in the product; keep provenance/context clear.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0084-s05",
@@ -2564,7 +2656,8 @@
       "publication_status": "FOUNDER_PRODUCT_USE_APPROVED_EDITORIAL",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder explicitly approved editorial/exhibit-style use in the product; keep provenance/context clear."
+      "rights_review_reason": "Founder explicitly approved editorial/exhibit-style use in the product; keep provenance/context clear.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0088-s02",
@@ -2592,7 +2685,8 @@
       "publication_status": "HOLD_BRAND_CAMPAIGN_REVIEW",
       "materialize_local_allowed": false,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder approved ordinary major-brand context, but this appears to be a specific branded campaign/product still; keep on hold pending explicit confirmation."
+      "rights_review_reason": "Founder approved ordinary major-brand context, but this appears to be a specific branded campaign/product still; keep on hold pending explicit confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0090-s04",
@@ -2620,7 +2714,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0093-s02",
@@ -2648,7 +2743,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0093-s05",
@@ -2676,7 +2772,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0094-s02",
@@ -2704,7 +2801,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0094-s04",
@@ -2732,7 +2830,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0100-s01",
@@ -2760,7 +2859,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0100-s04",
@@ -2788,7 +2888,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0100-s06",
@@ -2816,7 +2917,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0101-s01",
@@ -2844,7 +2946,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0101-s05",
@@ -2872,7 +2975,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0104-s01",
@@ -2900,7 +3004,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0104-s03",
@@ -2928,7 +3033,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0108-s01",
@@ -2956,7 +3062,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0108-s03",
@@ -2984,7 +3091,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0109-s01",
@@ -3012,7 +3120,8 @@
       "publication_status": "FOUNDER_PRODUCT_USE_APPROVED_BRAND_CONTEXT",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement."
+      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0109-s04",
@@ -3040,7 +3149,8 @@
       "publication_status": "FOUNDER_PRODUCT_USE_APPROVED_BRAND_CONTEXT",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement."
+      "rights_review_reason": "Founder explicitly approved ordinary use of major-brand/incidental brand context in the product; avoid implying endorsement.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0111-s05",
@@ -3068,7 +3178,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0112-s06",
@@ -3096,7 +3207,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0115-s03",
@@ -3124,7 +3236,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0115-s04",
@@ -3152,7 +3265,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0116-s01",
@@ -3180,7 +3294,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0116-s02",
@@ -3208,7 +3323,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0116-s04",
@@ -3236,7 +3352,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0117-s01",
@@ -3264,7 +3381,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0117-s04",
@@ -3292,7 +3410,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0117-s05",
@@ -3320,7 +3439,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0124-s03",
@@ -3348,7 +3468,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0125-s01",
@@ -3376,7 +3497,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0130-s03",
@@ -3404,7 +3526,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0131-s02",
@@ -3432,7 +3555,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0131-s06",
@@ -3460,7 +3584,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0134-s05",
@@ -3488,7 +3613,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0137-s03",
@@ -3516,7 +3642,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0137-s05",
@@ -3544,7 +3671,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0143-s06",
@@ -3572,7 +3700,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0145-s01",
@@ -3600,7 +3729,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0145-s05",
@@ -3628,7 +3758,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0147-s01",
@@ -3656,7 +3787,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0151-s06",
@@ -3684,7 +3816,8 @@
       "publication_status": "REJECT_OTHER_IDENTITY",
       "materialize_local_allowed": false,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder explicitly rejected selected media containing another identifiable person/identity."
+      "rights_review_reason": "Founder explicitly rejected selected media containing another identifiable person/identity.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0156-s05",
@@ -3712,7 +3845,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0156-s06",
@@ -3740,7 +3874,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0158-s02",
@@ -3768,7 +3903,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0159-s01",
@@ -3796,7 +3932,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0159-s02",
@@ -3824,7 +3961,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0159-s03",
@@ -3852,7 +3990,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0159-s06",
@@ -3880,7 +4019,8 @@
       "publication_status": "FOUNDER_CONFIRMATION_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation."
+      "rights_review_reason": "Founder-media candidate; local experiment materialization allowed, public publication still requires founder confirmation.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0186-s01",
@@ -3908,7 +4048,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0186-s02",
@@ -3936,7 +4077,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0186-s05",
@@ -3964,7 +4106,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0187-s01",
@@ -3992,7 +4135,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0187-s04",
@@ -4020,7 +4164,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0187-s05",
@@ -4048,7 +4193,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0188-s01",
@@ -4076,7 +4222,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0188-s02",
@@ -4104,7 +4251,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0188-s05",
@@ -4132,7 +4280,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0189-s02",
@@ -4160,7 +4309,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0189-s03",
@@ -4188,7 +4338,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0190-s01",
@@ -4216,7 +4367,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0192-s01",
@@ -4244,7 +4396,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0192-s04",
@@ -4272,7 +4425,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0193-s01",
@@ -4300,7 +4454,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0193-s03",
@@ -4328,7 +4483,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0195-s02",
@@ -4356,7 +4512,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0195-s03",
@@ -4384,7 +4541,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0197-s01",
@@ -4412,7 +4570,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0197-s02",
@@ -4440,7 +4599,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0198-s02",
@@ -4468,7 +4628,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     },
     {
       "id": "zai-m001-g0198-s05",
@@ -4496,7 +4657,8 @@
       "publication_status": "DEMO_PROVENANCE_REQUIRED",
       "materialize_local_allowed": true,
       "public_use_allowed": false,
-      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible."
+      "rights_review_reason": "May be materialized locally for product/demo testing; public reuse remains unapproved and provenance must stay visible.",
+      "public_transport_allowed": true
     }
   ],
   "founder_decisions_2026_09_24": {
