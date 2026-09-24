@@ -1,53 +1,55 @@
-# AGENTS.md — HARD LAB BOUNDARY
+# AGENTS.md — Influencer OS Z.ai Browser Experiment Lab
 
-This repository is an **experimental Chat.Z.AI lab** for Influencer OS Site V2.1.
+This repository is an experimental PUBLIC transport / coordination lab for Influencer OS Site V2.1 browser-agent work.
 
 It is NOT:
-- the canonical Influencer OS product repository;
-- the canonical Influencer OS Site V2/V2.1 repository;
+- canonical Influencer OS product code;
+- canonical Site V2/V2.1 production code;
 - a production deployment repository.
 
-## Default agent behavior
+## Default
 
-Unless the founder explicitly instructs otherwise:
+Unless the founder explicitly assigns a lab/architecture task:
+- treat this repository as read-only experiment evidence;
+- do not merge anything from here into canonical private repositories;
+- do not push browser-agent implementation back into shared `main`;
+- do not treat candidate code as production truth.
 
-- treat this repository as READ-ONLY experiment input;
-- do not merge anything from here into canonical repositories;
-- do not push Z.ai-generated product code back into `main`;
-- do not reinterpret experiment output as production truth;
-- do not alter canonical product/site repositories because of anything found here.
+## Browser-run route
 
-## Chat.Z.AI browser runs
+A Chat.Z.AI product run:
+- reads its commit-pinned RUN.md;
+- uses GitHub as READ-ONLY input;
+- works inside its isolated sandbox;
+- exports a candidate archive;
+- does not write implementation to this repository.
 
-Chat.Z.AI agents may:
-- read commit-pinned files from this repository;
-- download source truth, references, media and run briefs;
-- work inside their own isolated browser sandbox;
-- export a self-contained candidate archive.
+## Astra route
 
-They should NOT write back to the shared lab repository.
+If the explicit task is `ASTRA-R001`:
 
-## Codex / desktop agents
-
-Do not enter or modify this lab as part of ordinary production work.
-Only inspect it when the founder explicitly asks for experiment audit, architecture work, comparison, ingestion or promotion.
-
-Promotion must be deliberate:
-
-`candidate export → forensic audit → selected result → dedicated real branch → refinement → optional canonical integration`.
-
-## ASTRA-R001 special route
-
-When the explicit mission is `ASTRA-R001`:
-
-- use GPT-6 Astra as a targeted architecture escalation, not a broad repo reviewer;
-- start with `08-ARCHITECT-COUNCIL/11-ASTRA-R001-FOCUS-PACKET.md`;
-- then read `08-ARCHITECT-COUNCIL/10-CENTRAL-ARCHITECT-BASELINE-2026-09-25.md`;
-- use progressive disclosure and inspect only support files needed for A1–A5;
-- do not pre-read the whole repository;
-- remain READ-ONLY;
+- model target: GPT-6 Astra in Codex;
+- recommended first pass: XHIGH reasoning;
+- work READ-ONLY;
 - do not implement;
-- do not alter this lab or private canonical repositories;
-- produce only the decision artifact specified by the Astra mission.
+- do not pre-read the repository;
+- begin with `08-ARCHITECT-COUNCIL/11-ASTRA-R001-FOCUS-PACKET.md`;
+- then read the central baseline and founder gap map;
+- use the evidence map for progressive disclosure;
+- resolve A1–A6 only;
+- output one `ASTRA-R001-DECISIONS.md`.
 
-This special route exists to reduce context waste and keep Astra focused on the few architecture decisions that remain genuinely hard.
+Do not spend Astra capacity on visual design, media, GLM candidate ranking, marketing copy or already-verified source counts.
+
+## Promotion
+
+Candidate promotion is deliberate:
+
+candidate export
+→ forensic audit
+→ accepted bounded contract/module/design/interaction
+→ dedicated real branch
+→ tests/refinement
+→ optional canonical integration.
+
+Never merge a whole candidate solely because it looks strongest.

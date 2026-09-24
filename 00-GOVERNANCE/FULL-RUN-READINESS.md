@@ -1,94 +1,94 @@
-# Full Product Run Readiness — Wave v4 Pre-Freeze
+# Full Product Run Readiness — Post-Architecture Pre-Freeze
 
-Status: WAITING_FOR_LOCAL_WAVE_V4_BUILD_AND_PUSH
+Date: 2026-09-25
+Status: WAITING_FOR_ARCHITECTURE_AND_WAVE_V4_FREEZE
 
 ## Proven
 
-### Transport / source
-- [x] public GitHub raw transport proven;
-- [x] large-text transport proven;
-- [x] image transport/readability proven;
+### Transport/source
+- [x] public raw GitHub text transport;
+- [x] large-context transport;
+- [x] image transport/readability;
 - [x] authoritative OS23.6 core published;
-- [x] current private product behavior contract derived;
-- [x] current founder decisions recorded publicly;
-- [x] public browser authority/supersession order recorded;
-- [x] real-world founder identity inference removed from current active public text;
-- [x] neutral identity ID = `founder-main-01`.
+- [x] private-current behavior summarized into public contract;
+- [x] current founder decisions recorded;
+- [x] neutral identity IDs in active text.
 
-### Product architecture
-- [x] four logical areas selected;
-- [x] shared versioned domain model defined;
-- [x] Expert Workflow Graph required as professional mode;
-- [x] guided Studios and expert graph share core/domain objects;
-- [x] full-product run contract V3 defined;
-- [x] source/current-behavior reconciliation rules defined.
+### Product direction
+- [x] one product / four logical areas;
+- [x] guided Studios;
+- [x] Expert Workflow Graph;
+- [x] real image/video generation is a target capability;
+- [x] MCP is a real agent surface;
+- [x] continuously evolving model/provider ecosystem is an explicit product requirement;
+- [x] browser candidates are experimental promotion inputs, not production canon.
 
-### M001 / local media master
+### Central architecture baseline
+- [x] modular monolith first;
+- [x] relational durable metadata + object storage;
+- [x] shared application/core use cases;
+- [x] immutable historical generation/asset state;
+- [x] Job != Attempt;
+- [x] DAG-first workflow v1;
+- [x] auth / authorization / membership / entitlement separation;
+- [x] selective candidate promotion;
+- [x] six Astra R001 decision knots isolated.
+
+### Astra R001
+- [x] focus packet created;
+- [x] founder→architecture gap map created;
+- [x] per-question evidence map created;
+- [x] XHIGH reasoning selected;
+- [x] one-output contract defined;
+- [ ] Astra R001 launched from immutable pinned SHA;
+- [ ] raw decision artifact ingested;
+- [ ] accepted deltas promoted into ADRs/contracts;
+- [ ] optional lower-cost implementation audit completed if needed.
+
+### M001 / media
 - [x] M001 completed + centrally audited;
 - [x] 161 source rows normalized to 160 unique sources;
-- [x] current local materialization state = 156 allowed / 4 held;
-- [x] clean staging-based rebuild reported: 156 files / 0 errors;
-- [x] stale rejected G0028/s01 derivative absent;
-- [x] G0027/s01 visible identity-card frame excluded from public Wave selection.
-
-### Bounded design packs
-- [x] target = 30–45 items/design;
-- [x] current deterministic caps defined;
-- [x] expected latest pack counts:
-  - A = 39 (36 image / 3 video)
-  - B = 42 (37 image / 5 video)
-  - C = 33 (28 image / 5 video)
-  - D = 36 (31 image / 5 video)
-- [x] pack builder fails closed outside target range.
-
-### Full-quality public transport
-- [x] deduplicated Wave v4 bundle builder implemented;
-- [x] neutral asset IDs;
-- [x] image metadata stripping;
-- [x] video metadata/audio stripping and bounded transcode;
-- [x] source-path-free manifests;
-- [x] per-file GitHub size guard;
-- [x] commit-pinned downloader + SHA verifier;
-- [x] local/public bundle verifier;
+- [x] clean local materialization reported: 156 allowed / 4 held;
+- [x] clean rebuild: 156 files / 0 errors;
+- [x] rejected stale G0028/s01 absent;
+- [x] bounded target = ~30–45 media/design;
+- [x] current pack target A39/B42/C33/D36;
+- [ ] current bounded packs regenerated with latest builder after pull;
+- [ ] pixel-privacy visual review of actual transport files;
 - [ ] local Wave v4 bundle generated;
 - [ ] local verifier PASS;
-- [ ] public-lab audit PASS;
-- [ ] Wave v4 transport committed/pushed.
+- [ ] public sanitized transport committed.
 
-The older `wave01-*-public-v3` atlas-preview manifests are retained only as deprecated pilot evidence and MUST NOT be used by E004–E011/Q001.
+### Existing runs
+- [x] P001–P004 launched on historical immutable inputs.
+- [x] do not mutate their pinned inputs.
+- [ ] ingest/export/audit P001–P004 when complete.
 
-### References/design
-- [x] A/B/C/D recipes defined;
-- [x] 3-reference governance reconciled;
-- [x] current Figma Weave expert-workflow research integrated;
-- [x] current Higgsfield architecture research integrated;
-- [x] measured live reference teardown + design constitution required inside each run.
+## Public-history privacy gate
 
-### Runs
-- [x] E004–E011 = PRODUCT_QUALITY;
-- [x] GLM-5.3 preferred for all E runs;
-- [x] GLM-5.3-Flash fallback;
-- [x] Q001 disposable qualification defined;
-- [x] all E/Q run specs bind to Wave v4 paths;
-- [x] unique output names;
-- [x] actual runtime label must be recorded;
-- [x] GitHub read-only and isolated sandbox rules explicit.
+Current active tree is neutral-ID only.
 
-## Remaining freeze actions
+Older public Git history may contain obsolete inferred identity text.
 
-1. generate current bounded v2 manifests locally;
-2. build Wave v4 public bundle from the 209 MB local master library;
-3. run both current audit tools;
-4. inspect generated bundle and `git status`;
-5. commit/push only the bounded v4 transport + required manifests;
-6. set E004–E011 + Q001 status to READY;
-7. run audits again from the exact clean tree;
-8. commit/push the text-only ready/freeze note;
-9. record resulting full 40-character HEAD SHA;
-10. make no further change to that frozen input;
-11. generate exact commit-pinned launch prompts;
-12. launch E004–E011 + Q001.
+Do NOT rewrite while current pinned experiments require those commits.
 
-Q001 runs in parallel; it does not block the product-quality builds after launch.
+Before the official long-lived public Wave:
+- [ ] finish/retrieve current pinned experiment artifacts;
+- [ ] create sanitized clean-history bridge/root or equivalent safe transport;
+- [ ] verify no obsolete identity strings in reachable official bridge history.
 
-If Q001 finds a shared-input defect, mark that defect against every candidate using the same freeze rather than misattributing it to a model.
+## Official E004–E011 freeze gate
+
+Do not declare final official freeze until:
+
+1. Astra accepted deltas are known;
+2. any architecture changes affecting run contracts are incorporated;
+3. current bounded packs are regenerated;
+4. pixel privacy review passes;
+5. Wave v4 public transport passes local/public verifier;
+6. official bridge/privacy state is acceptable;
+7. run specs point only to current files;
+8. one clean immutable full SHA is recorded;
+9. no further mutation occurs after freeze.
+
+P001–P004 are allowed to finish in parallel and inform later refinement.

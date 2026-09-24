@@ -1,70 +1,45 @@
 # Influencer OS Site V2.1 — Public Lab Project Memory
-Date: 2026-09-24
-Status: ACTIVE_PUBLIC_BROWSER_PRODUCT_LAB
 
-This file is the first operational memory for NEW Chat.Z.AI browser runs.
+Date: 2026-09-25
+Status: ACTIVE_PUBLIC_BROWSER_PRODUCT_LAB_WITH_ARCHITECTURE_ESCALATION
+
+This is the first operational memory for NEW Chat.Z.AI browser runs.
 
 ## Repository role
 
-This repository is a temporary PUBLIC transport / coordination / experiment lab for Influencer OS Site V2.1 browser-agent development.
+Temporary PUBLIC transport / coordination / experiment lab for Influencer OS Site V2.1 browser-agent development.
 
-Public visibility is deliberate during this development phase because commit-pinned public GitHub transport is the reliable bridge into Chat.Z.AI sandboxes.
+Public visibility is deliberate during this development phase because commit-pinned raw GitHub transport is currently the reliable bridge into Chat.Z.AI sandboxes.
 
 Treat every committed byte as public.
 
-## What is outside this lab
-
 This repository is NOT:
-- the canonical private Influencer OS product repository;
-- the canonical private Influencer OS Site V2.1 repository;
-- a place for credentials, provider secrets, customer/license data or hidden private-source material.
+- the canonical private Influencer OS implementation repository;
+- the canonical private Influencer OS Site repository;
+- a production deployment repository;
+- a place for provider secrets, credentials, customer/license data or hidden private source.
 
-Browser agents must not modify or depend on private repositories that are not deliberately represented here.
+## Product we are building
 
-## Current product architecture
-
-Influencer OS is explored as ONE coherent platform with FOUR logical product areas over ONE shared domain model:
+Influencer OS is one coherent platform with four logical areas over one shared domain/application model:
 
 1. Public / Product Experience
 2. Creator App
 3. OS Core / API / Generation Services
 4. MCP / Agent Surface
 
-These are logical boundaries, not a requirement for four microservices.
+These are logical boundaries, not four required microservices.
 
-Default implementation target: modular monolith / monorepo-compatible boundaries with shared contracts.
+Default target:
+modular monolith / monorepo-compatible boundaries first.
 
-## Shared domain spine
+Creator App supports both:
+- guided/task-oriented Studios;
+- Expert Workflow Graph.
 
-Workspace
-→ Project
-→ Character
-→ CharacterRevision
-→ CanonRevision
-→ Scene
-→ Plan / Shot
-→ PromptBuild
-→ SelfCheckReport
-→ GenerationJob
-→ GenerationAttempt
-→ Asset
-→ AssetVersion
-→ Lineage
+Both use the same application/core behavior.
 
-Supporting objects:
-ProviderConnection · ModelProfile · EngineAdapterVersion · Workflow · WorkflowRevision · WorkflowRun · ExportBundle · AuditEvent · Entitlement.
-
-## Interaction modes
-
-The Creator App must support both:
-- guided / direct task-oriented Studios;
-- expert node-graph Workflow mode.
-
-They use the SAME domain objects and OS Core.
-
-A validated expert WorkflowRevision may be exposed as a simpler reusable Studio Tool/action without duplicating logic.
-
-## Source truth
+## Source behavior
 
 Where published source defines behavior, OS23.6 remains authoritative:
 - Worlds A=Diary, B=Raw, C=Staged;
@@ -72,64 +47,90 @@ Where published source defines behavior, OS23.6 remains authoritative:
 - 18 scene packs;
 - 92 explicit scenes;
 - 164 source self-check assertions;
+- Character Passport / Canon;
 - engine-specific prompt adaptation;
-- Character/Canon logic;
 - Frame / Series / Shoot / Feed and related planning mechanics.
 
-Extensions must be labeled as extensions, not inherited source truth.
+Extensions are labeled as extensions.
+
+## Architecture state
+
+The central architect has reduced the remaining foundational architecture work to six decision knots:
+
+1. one execution substrate across Studios / Workflow / API / MCP;
+2. creative revision / pin / stale / rebase semantics;
+3. dynamic model/provider/adapter + evaluation/promotion lifecycle;
+4. durable paid-generation failure/cost semantics;
+5. web/API/MCP auth + BYOK/managed secret boundary;
+6. reversible migration from current local-first Web App.
+
+These are being escalated through GPT-6 Astra in Codex using:
+`08-ARCHITECT-COUNCIL/`
+
+Browser product agents do NOT need to read that architecture-council folder unless their run contract explicitly says so.
+
+## Current private implementation evidence
+
+Canonical private Web App remains outside this public lab.
+
+Public behavior contracts summarize only deliberately exported facts.
+
+Important current gap:
+the private Web App is local-first/browser-persistent and hardcodes current EngineId/prompt logic, while the target platform is server-durable, multi-surface and continuously evolves model/provider integrations.
+
+Do not solve that by inventing private source behavior.
 
 ## Media policy
 
-- use neutral identity IDs only;
-- main founder-media identity = `founder-main-01`;
-- do not infer or publish a real-world identity/name from media;
-- child/privacy-rejected and selected other-identity media are excluded;
-- editorial, exhibit/art and ordinary major-brand context may be used when provenance is honest and no endorsement/partnership is implied;
-- each design run receives a bounded, curated ~30–45 item media pack rather than the entire available library;
-- current public development packs use commit-pinned atlas-preview derivatives and are DEVELOPMENT transport, not final publication masters.
+- neutral identity IDs only;
+- main approved neutral media identity = `founder-main-01`;
+- do not infer/publish a real-world identity name;
+- child/privacy-rejected and selected other-identity media excluded;
+- editorial, exhibit/art and ordinary major-brand context may be used under recorded provenance rules;
+- run packs are curated ~30–45 items, not maximal libraries;
+- public development transport is not production media storage.
 
-## Parallel-run rule
+Founder-reported current clean local master:
+- 160 normalized sources;
+- 156 materialized;
+- 4 holds;
+- zero clean-rebuild errors.
 
-GitHub is READ-ONLY input for every Chat.Z.AI run.
-Each chat works in its own sandbox.
-No chat writes implementation to shared main.
-No chat reads sibling run folders for creative direction.
+Current bounded pack target:
+A 39 · B 42 · C 33 · D 36.
 
-## Current run strategy
+## Run isolation
 
-P001–P004 are already-running / historical integration pilots.
+GitHub is READ-ONLY input for every Chat.Z.AI browser run.
+Each run uses:
+- unique run ID;
+- isolated sandbox;
+- commit-pinned inputs;
+- unique export.
 
-The full product-development wave is E004–E011:
-- A: E004 GLM-5.3 / E005 GLM-5.3-Flash
-- B: E006 GLM-5.3 / E007 GLM-5.3-Flash
-- C: E008 GLM-5.3 / E009 GLM-5.3-Flash
-- D: E010 GLM-5.3 / E011 GLM-5.3-Flash
+No browser run writes implementation to shared `main`.
 
-Within each pair, product/source/reference/media inputs are identical.
-If the actual UI model differs at launch, record MODEL_OVERRIDE_AT_LAUNCH and do not pretend the pair is a controlled model comparison.
+## Current run state
 
-## Design evidence rule
+Historical/already-running pilots:
+- P001 GLM-5.2 / design A
+- P002 GLM-5.3-Flash / design A
+- P003 GLM-5.3 / design B
+- P004 GLM-5.3 / design B
 
-A run receives concrete reference roles rather than vague adjectives:
-- composition / typography anchor;
-- media / narrative anchor;
-- motion / transition or creator-workbench anchor;
-- common product-architecture references: Higgsfield + Figma Weave + existing V2.
+They continue on their immutable historical inputs.
 
-The agent must:
-research → measure → write a design constitution → implement → capture screenshots → compare → fix → repeat.
+They are useful product evidence but are not automatically a perfectly controlled model benchmark.
+
+Official E004–E011 should use a new post-architecture freeze if architecture decisions materially affect run contracts.
 
 ## Failure protocol
 
-One blocked subsystem does NOT terminate the mission.
+A blocked subsystem does not end the mission.
 
 Use bounded retries with materially different approaches.
-If still blocked:
-1. record the failure;
-2. preserve truthful LIVE/MOCK/UNVERIFIED state;
-3. continue all independent work;
-4. revisit later;
-5. finish as COMPLETE, COMPLETE_WITH_DEGRADED_SUBSYSTEMS or honestly INCOMPLETE.
+Then record:
+LIVE / MOCK / UNVERIFIED / BLOCKED_SUBSYSTEM / DEFERRED_WITH_REASON.
 
 Never loop indefinitely.
 
@@ -137,4 +138,16 @@ Never loop indefinitely.
 
 No browser candidate becomes canonical automatically.
 
-Every candidate is exported, preserved and audited centrally before concepts or code are promoted into private canonical products.
+Promotion path:
+candidate export → forensic audit → selected contract/design/module → dedicated real branch → tests/refinement → deliberate canonical integration.
+
+Never merge a whole browser candidate solely because it looks strongest.
+
+## Privacy/history note
+
+Current active public text uses neutral IDs.
+
+Older historical public commits may still contain obsolete inferred identity strings.
+Do not rewrite those commits while pinned runs depend on them.
+
+Before a long-lived official public transport bridge, create a sanitized clean-history bridge/root or equivalent privacy-safe transport.
