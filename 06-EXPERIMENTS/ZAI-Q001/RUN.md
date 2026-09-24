@@ -1,10 +1,10 @@
 # ZAI-Q001 — Disposable Launch Qualification
 
-STATUS: WAITING_FOR_PUBLIC_TRANSPORT_FREEZE
+STATUS: WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE
 TYPE: DISPOSABLE_PIPELINE_QUALIFICATION
 MODEL_POLICY: GLM-5.3-Flash preferred for throughput
 INPUT_COMMIT: PROVIDED_BY_LAUNCH_PROMPT
-MEDIA_SET: wave01-C-v2
+MEDIA_SET: wave01-C-public-v4
 REFERENCE_SET: design-set-c
 GITHUB_MODE: READ_ONLY_INPUT
 
@@ -17,7 +17,7 @@ This run is disposable. It does not compete as a product candidate.
 ## Test chain
 
 1. fetch exact pinned governance/architecture/source inputs;
-2. fetch and SHA-verify the assigned public media pack;
+2. fetch and SHA-verify the assigned full-quality public Wave v4 media pack;
 3. inspect at least 10 media files visually;
 4. research/capture the assigned design references;
 5. instantiate the Architecture V3 source/module skeleton;
@@ -65,3 +65,14 @@ Final line:
 `QUALIFICATION_PASS`
 or
 `QUALIFICATION_FAIL`
+
+
+## Wave v4 media fetch
+
+Use:
+`04-MEDIA/transport/wave01-v4/packs/C.json`
+
+Fetch/verify with:
+`tools/fetch_public_wave_pack.py`
+
+Do not substitute the deprecated atlas-preview v3 pack.
