@@ -89,7 +89,7 @@ Evidence:
 
 # G2 — Central architecture closure
 
-State: IN_PROGRESS
+State: COMPLETE
 
 ## G2.1 Execution substrate
 
@@ -145,11 +145,11 @@ Acceptance:
 - [x] one rollback rule;
 - [x] exact historical pinning fields;
 - [x] alias drift behavior;
-- [ ] no fake universal provider DSL.
+- [x] no fake universal provider DSL.
 
 ## G2.4 Paid generation durability
 
-State: IN_PROGRESS — ONLY K2 BILLING/EXPOSURE EDGE REMAINS
+State: COMPLETE FOR CURRENT BYOK-FIRST MILESTONE
 
 Accepted:
 - Job vs Attempt;
@@ -161,13 +161,15 @@ Accepted:
 - SUBMISSION_UNKNOWN for irreducible submit ambiguity;
 - no automatic retry/fallback from SUBMISSION_UNKNOWN;
 - provider success distinct from output materialization;
-- durable BudgetReservation + CostExposure.
-
-Remaining:
-exact platform-managed billing settlement invariant after a prolonged unresolved CostExposure.
+- durable BudgetReservation + CostExposure;
+- route submission-safety classes;
+- BYOK-first milestone;
+- PLATFORM_MANAGED execution forbidden on NON_RECONCILABLE_SUBMIT routes;
+- separate future financial-ledger ADR before managed user credits.
 
 Evidence:
-`K2-AMBIGUOUS-SUBMISSION-ANALYSIS.md`.
+`K2-AMBIGUOUS-SUBMISSION-ANALYSIS.md`
+`K2-BILLING-SAFETY-DECISION.md`.
 
 Acceptance:
 - [x] state machine written;
@@ -177,8 +179,7 @@ Acceptance:
 - [x] cancel/late-result behavior specified;
 - [x] fallback blocked while previous billing/execution is uncertain;
 - [x] output retrieval failure is distinct from provider failure;
-- [ ] cost reservation/finalization is durable.
-
+- [x] current milestone cost/billing safety boundary is explicit.
 ## G2.5 Auth / MCP / provider secret boundary
 
 State: COMPLETE
@@ -230,7 +231,7 @@ Acceptance:
 - [x] rollback/kill-switch exists at every phase;
 - [x] current tests define parity gates.
 
-Gate G2 passes only when remaining Astra questions are reduced to genuinely irreducible choices.
+Gate G2: PASS. No unresolved routine/core architecture decision remains for the stated milestone. Astra will later be used for adversarial falsification, not greenfield completion.
 
 ---
 
@@ -418,7 +419,7 @@ State: BLOCKED
 Target:
 GPT-6 Astra / XHIGH.
 
-Astra resolves only final irreducible architecture choices.
+Astra performs targeted adversarial review of the accepted architecture. It tries to falsify invariants with concrete failure cases and proposes deltas only where a real contradiction or materially safer/simpler design exists.
 It does not design UI, curate media, rank GLM candidates or implement the product.
 
 ---

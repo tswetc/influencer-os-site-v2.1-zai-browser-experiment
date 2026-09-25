@@ -25,15 +25,24 @@ Read:
 
 ASTRA-R001 is NOT launched until the plan reaches PRE_ASTRA_READY.
 
-## C. ASTRA-R001 targeted architecture escalation
+## C. ASTRA-R001 targeted architecture review
 
-Only after PRE_ASTRA_READY:
-1. `../08-ARCHITECT-COUNCIL/11-ASTRA-R001-FOCUS-PACKET.md`
-2. `../08-ARCHITECT-COUNCIL/10-CENTRAL-ARCHITECT-BASELINE-2026-09-25.md`
-3. final founder→architecture gap map
+Only after PRE_ASTRA_READY and after a fresh final Astra packet replaces the historical drafts:
+1. final Astra focus packet;
+2. `../08-ARCHITECT-COUNCIL/10-CENTRAL-ARCHITECT-BASELINE-2026-09-25.md`;
+3. final architecture delta/challenge map;
 4. final pre-Astra evidence router.
 
-Astra is READ-ONLY and resolves only the final irreducible architecture knots.
+Astra is READ-ONLY and performs adversarial falsification of the accepted architecture. It must propose changes only when it can demonstrate a concrete invariant failure, missing requirement, or materially safer/simpler design.
+
+## D. Fresh ChatGPT Project / central chat
+
+Project setup files:
+- `../09-CHATGPT-PROJECT/PROJECT-INSTRUCTIONS.md`
+- `../09-CHATGPT-PROJECT/CURRENT-CONTEXT-HANDOFF-2026-09-25.md`
+- `../09-CHATGPT-PROJECT/NEW-CHAT-BOOTSTRAP.md`
+
+A fresh central chat must verify current remote HEAD first, then follow this router and the active workboard. The dated handoff is a bootstrap snapshot, not authority over newer repository state.
 
 ## Authority
 

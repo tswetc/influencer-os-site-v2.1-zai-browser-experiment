@@ -46,12 +46,12 @@ Already closed:
 - A6 staged migration;
 - persistence/lineage/export/audit baselines.
 
-Provisional residual:
-- K1 model/profile/provider-deployment identity boundary;
-- K2 non-idempotent ambiguous paid-submit behavior.
+Now closed centrally:
+- K1/A3 model/profile/provider-route identity and lifecycle;
+- K2/A4 ambiguous paid-submit behavior for the BYOK-first milestone.
 
 Output:
-minimized open-knot set.
+accepted central architecture baseline with zero unresolved core knots.
 
 ## Stage 2 — Wave v4 media/transport preparation
 
@@ -92,7 +92,7 @@ As pilots finish:
 Output:
 P00X forensic audits + combined architecture evidence.
 
-Do not wait indefinitely for a pilot that cannot materially affect K1/K2.
+Do not wait indefinitely for a pilot unless its evidence can materially falsify an accepted A1–A6/K1/K2 invariant.
 
 ## Stage 4 — public-history privacy strategy
 
@@ -135,7 +135,7 @@ Create one immutable full 40-char SHA.
 Then:
 GPT-6 Astra / XHIGH / READ_ONLY.
 
-Astra resolves only final irreducible knots.
+Astra performs targeted adversarial falsification of the accepted baseline and proposes changes only for demonstrated failures.
 
 Preserve raw output unchanged.
 
@@ -242,7 +242,7 @@ public experiment evidence
 
 ## Current state
 
-Stages 0–1: advanced; A1/A2/A5/A6 closed.
+Stages 0–1: central architecture closed for current BYOK-first milestone.
 Stage 2: requires local SSD execution.
 Stage 3: waiting on P001–P004 outputs.
 Stages 4–6: pending.

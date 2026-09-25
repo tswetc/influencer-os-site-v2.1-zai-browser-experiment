@@ -1,6 +1,6 @@
 # AGENTS.md — Influencer OS Z.ai Browser Experiment Lab
 
-This repository is an experimental PUBLIC transport / coordination lab for Influencer OS browser-agent work.
+This repository is an experimental PUBLIC transport / coordination / evidence lab for Influencer OS browser-agent work.
 
 It is NOT:
 - canonical Influencer OS product code;
@@ -17,15 +17,18 @@ Unless the founder explicitly assigns a lab/architecture task:
 
 ## Current pre-Astra state
 
-Binding plan:
-`08-ARCHITECT-COUNCIL/19-PRE-ASTRA-EXECUTION-PLAN-V2.md`
+Binding workboard:
+`08-ARCHITECT-COUNCIL/21-PRE-ASTRA-WORKBOARD.md`
+
+Current architecture state:
+`08-ARCHITECT-COUNCIL/01-ARCHITECT-STATE.md`
 
 ASTRA-R001 is NOT launched yet.
 
 Official E004–E011 and Q001 are PAUSED until:
-pre-Astra finalization → Astra → accepted Architecture V4 → new immutable official freeze.
+pre-Astra verification → Astra adversarial review → accepted Architecture V4 → new immutable official freeze.
 
-Already-running P001–P004 remain pinned to their historical inputs and may continue.
+Already-running P001–P004 remain pinned to historical inputs and may continue.
 
 ## Browser-run route
 
@@ -36,36 +39,43 @@ A Chat.Z.AI product run:
 - exports a unique candidate archive;
 - does not write implementation to this repository.
 
-No new official E/Q run may start from `main` or from an unpinned URL.
+Never launch a new official E/Q run from `main`, `latest`, or an unpinned URL.
 
 ## Central architecture route
 
-For current central architecture work:
+For current central work:
 1. read `00-GOVERNANCE/START-HERE.md`;
-2. read `08-ARCHITECT-COUNCIL/19-PRE-ASTRA-EXECUTION-PLAN-V2.md`;
+2. read `08-ARCHITECT-COUNCIL/21-PRE-ASTRA-WORKBOARD.md`;
 3. read `08-ARCHITECT-COUNCIL/01-ARCHITECT-STATE.md`;
-4. read only evidence required by the active gate.
+4. read only evidence required by the active workboard item.
 
-Do not re-open settled decisions without a concrete contradiction.
+Do not re-open a settled architecture decision without:
+- verified source contradiction;
+- pilot/candidate forensic evidence;
+- explicit founder scope change;
+- or a concrete adversarial failure case.
+
+## Architecture status
+
+A1–A6/K1/K2 are centrally closed for the current BYOK-first milestone.
+
+Key evidence:
+- `PRE-ASTRA-CENTRAL-DECISIONS-R2.md`
+- `PRE-ASTRA-CENTRAL-DECISIONS-R3.md`
+- `K1-MODEL-ROUTE-DECISION.md`
+- `K2-BILLING-SAFETY-DECISION.md`
 
 ## Astra route
 
 Only after status is `PRE_ASTRA_READY` and an immutable SHA is recorded:
-
-- model target: GPT-6 Astra in Codex;
-- first pass: XHIGH reasoning;
+- target: GPT-6 Astra in Codex;
+- reasoning: XHIGH first pass;
 - READ-ONLY;
-- no implementation;
+- no product implementation;
 - no visual-design/media work;
 - no whole-repository pre-read.
 
-Astra should receive only the FINAL irreducible knots.
-
-Current provisional reduced scope:
-- K1 model/provider/profile/deployment identity boundary under provider/gateway drift;
-- K2 ambiguous paid provider submission when no idempotency or reliable lookup exists.
-
-Do not spend Astra capacity on A1/A2/A5/A6 unless later evidence disproves the central decisions.
+Astra's job is to falsify/challenge the accepted architecture using concrete failure cases, not to redesign from scratch.
 
 ## Local media safety
 
@@ -76,11 +86,9 @@ Never commit:
 - local v3-curated manifests;
 - SSD/local source paths.
 
-Only sanitized reviewed Wave transport under `04-MEDIA/transport/` may become public.
+Only sanitized, reviewed Wave transport under `04-MEDIA/transport/` may become public.
 
 ## Promotion
-
-Candidate promotion is deliberate:
 
 candidate export
 → forensic audit
