@@ -1,73 +1,74 @@
 # 08 — Architecture Council Bridge
 
-Purpose: durable architecture handoff between the central ChatGPT architect, GPT-6 Astra in Codex, and later lower-cost implementation/adversarial reviewers.
+Purpose: durable architecture handoff between the central architect, GPT-6 Astra in Codex, and later implementation/adversarial reviewers.
 
-This folder is NOT product truth and does not override founder decisions or verified source behavior.
+This folder does not override current founder decisions or verified source behavior.
 
-Authority:
-1. founder product intent/decisions;
-2. verified current source behavior;
-3. accepted ADR baseline;
-4. targeted Astra deltas;
-5. later implementation evidence.
+## Current state — 2026-09-25
 
-## Current operating model — 2026-09-25
+Binding execution plan:
+`19-PRE-ASTRA-EXECUTION-PLAN-V2.md`
 
-The central architect owns:
-- full context reconstruction;
-- routine architecture;
-- state maintenance;
-- experiment synthesis;
-- ADR ownership.
+Astra is NOT launched.
 
-GPT-6 Astra is reserved for six fundamental decision knots where a wrong answer could force a conceptual rewrite, corrupt execution/provenance, expose secrets or make migration fail.
+Central work already closed:
+- A1 execution substrate;
+- A2 creative draft/revision semantics;
+- A5 web/API/MCP/provider-secret boundary;
+- A6 local-first → server-canonical migration sequence.
 
-Astra does NOT broadly review:
-- design;
-- media;
-- GLM candidates;
-- marketing;
-- source counts;
-- the whole repository.
+Provisional remaining knots:
+- K1 model/profile/provider-deployment identity boundary;
+- K2 ambiguous paid submission without provider idempotency/lookup.
 
-## Astra R001 read order
+See:
+- `PRE-ASTRA-CENTRAL-DECISIONS-R2.md`
+- `PRE-ASTRA-CENTRAL-DECISIONS-R3.md`
+- `03-OPEN-ARCHITECTURE-QUESTIONS.md`
 
-1. `11-ASTRA-R001-FOCUS-PACKET.md`
-2. `10-CENTRAL-ARCHITECT-BASELINE-2026-09-25.md`
-3. `13-FOUNDER-ARCHITECTURE-GAP-MAP.md`
-4. `14-ASTRA-R001-EVIDENCE-MAP.md`
+## Old Astra packet warning
 
-Then read only evidence required by A1–A6.
+The existing numbered Astra R001 files 11/12/14/15 are historical PRE-ASTRA DRAFTS and are explicitly marked superseded.
 
-## Six hard knots
+Do NOT launch Astra from them.
 
-A1 — one execution substrate across Studios / Workflow / API / MCP
+A fresh final focus packet, evidence router, precheck and launch prompt will be generated only after:
+- Wave v4 transport preparation;
+- material P001–P004 evidence or explicit non-blocking decision;
+- public-history privacy decision;
+- final architecture challenge;
+- structural audit PASS;
+- semantic/adversarial audit PASS;
+- immutable PRE_ASTRA_READY SHA.
 
-A2 — creative draft/revision/pinning/staleness/rebase semantics
+## Authority
 
-A3 — dynamic model/provider/adapter + research/eval/promotion lifecycle
+1. current founder decisions;
+2. current public supersession/architecture contracts;
+3. verified current private product behavior;
+4. verified OS23.6 source;
+5. accepted ADR baseline;
+6. targeted Astra deltas after final launch.
 
-A4 — durable paid generation transaction/queue/failure/cost semantics
+## Astra role later
 
-A5 — web/API/MCP principal + BYOK/managed secret boundary
+GPT-6 Astra / XHIGH is reserved for only the final irreducible decisions.
 
-A6 — reversible migration from the current local-first Web App
-
-## Reasoning
-
-Recommended first pass:
-GPT-6 Astra · XHIGH.
-
-Use MAX only as a narrow follow-up if one material decision remains unresolved after XHIGH.
+It does not:
+- design UI;
+- curate media;
+- rank GLM candidates;
+- implement product code;
+- re-read the entire repository.
 
 ## State-update rule
 
-The central architect updates this folder when:
+Update this folder when:
 - founder intent changes architecture;
 - verified source contradicts an assumption;
-- a browser candidate exposes a real architecture failure;
-- Astra resolves or invalidates a hard assumption;
-- implementation evidence changes feasibility.
+- pilot/candidate evidence exposes a real architecture failure;
+- a central decision is closed;
+- Astra resolves or invalidates a hard assumption.
 
-Store explicit decisions/evidence/uncertainty/rationale.
-Do not store or request hidden chain-of-thought.
+Store decisions, evidence, uncertainty and rationale.
+Do not store hidden chain-of-thought.

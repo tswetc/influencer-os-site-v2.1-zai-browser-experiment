@@ -1,4 +1,7 @@
-# Product Launch Queue — Wave v4
+# Product Launch Queue — Pre-Astra
+
+Date: 2026-09-25
+Status: OFFICIAL_E_WAVE_PAUSED_PRE_ASTRA
 
 ## Existing runs
 
@@ -8,70 +11,76 @@
 - ZAI-P003 — GLM-5.3 — integration pilot B — running/historical evidence.
 - ZAI-P004 — GLM-5.3 — integration pilot B — running/historical evidence.
 
-Do not restart P001–P004 merely because the next wave is prepared.
+Do not restart or mutate P001–P004.
+Ingest them as evidence when complete.
 
-## Full product-quality wave
+## Official full product-quality wave
 
-All E runs are PRODUCT_QUALITY.
+E004–E011 are NOT launchable yet.
 
-Preferred runtime for every E run:
-`GLM-5.3`
+Current status for all:
+`PAUSED_PRE_ASTRA`
+
+Launch gate:
+`POST_ASTRA_ARCHITECTURE_V4_FREEZE`
+
+| Run | Design | Future Wave v4 pack | Current status |
+|---|---|---|---|
+| ZAI-E004 | A | wave01-A-public-v4 | PAUSED_PRE_ASTRA |
+| ZAI-E005 | A | wave01-A-public-v4 | PAUSED_PRE_ASTRA |
+| ZAI-E006 | B | wave01-B-public-v4 | PAUSED_PRE_ASTRA |
+| ZAI-E007 | B | wave01-B-public-v4 | PAUSED_PRE_ASTRA |
+| ZAI-E008 | C | wave01-C-public-v4 | PAUSED_PRE_ASTRA |
+| ZAI-E009 | C | wave01-C-public-v4 | PAUSED_PRE_ASTRA |
+| ZAI-E010 | D | wave01-D-public-v4 | PAUSED_PRE_ASTRA |
+| ZAI-E011 | D | wave01-D-public-v4 | PAUSED_PRE_ASTRA |
+
+Preferred future runtime:
+GLM-5.3.
 
 Fallback:
-`GLM-5.3-Flash`
+GLM-5.3-Flash.
 
-If GLM-5.3 capacity is available, use it even for the second run in a design pair. Two same-model runs then provide repeatability/variance evidence.
+Actual runtime label must always be recorded.
 
-| Run | Design | Full-quality pack | Status before transport push |
-|---|---|---|---|
-| ZAI-E004 | A | wave01-A-public-v4 | WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE |
-| ZAI-E005 | A | wave01-A-public-v4 | WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE |
-| ZAI-E006 | B | wave01-B-public-v4 | WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE |
-| ZAI-E007 | B | wave01-B-public-v4 | WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE |
-| ZAI-E008 | C | wave01-C-public-v4 | WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE |
-| ZAI-E009 | C | wave01-C-public-v4 | WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE |
-| ZAI-E010 | D | wave01-D-public-v4 | WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE |
-| ZAI-E011 | D | wave01-D-public-v4 | WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE |
+## ZAI-Q001
 
-## Disposable qualification
+Current status:
+`PAUSED_PRE_ASTRA`
 
-ZAI-Q001:
-- uses the SAME final freeze;
-- uses Wave v4 C;
-- GLM-5.3-Flash preferred for throughput;
-- runs in parallel;
-- diagnoses shared pipeline/architecture failures;
-- is not a product candidate.
+It will qualify the SAME future post-Astra freeze.
+It is disposable and not a product candidate.
 
-## Launch capacity priority
+## Required sequence before any E/Q launch
 
-If GLM-5.3 slots are scarce:
-1. E008 — deepest authoring/workflow stress test;
-2. E004 — controlled graphic/public-product stress test;
-3. E006 — photographic/cinematic stress test;
-4. E010 — spatial/continuity stress test;
-5. second runs in each design pair;
-6. Q001 can use Flash.
-
-If capacity permits, launch E004–E011 + Q001 independently.
+1. finish Pre-Astra Execution Plan V2;
+2. finish Wave v4 sanitized transport + visual QA;
+3. ingest material P001–P004 evidence;
+4. pass structural + semantic pre-Astra audits;
+5. freeze immutable Astra SHA;
+6. run Astra R001;
+7. reconcile accepted decisions into Architecture V4;
+8. update E/Q run contracts to Architecture V4;
+9. validate all run contracts;
+10. create one immutable official E/Q freeze SHA;
+11. generate commit-pinned prompts;
+12. launch isolated chats.
 
 ## Isolation
 
-Every run:
-- unique ID;
+Every eventual run:
+- unique run ID;
 - fresh Chat.Z.AI chat;
-- own sandbox/local Git;
+- isolated sandbox;
 - GitHub read-only;
-- unique final ZIP;
-- no sibling-run implementation or creative-direction reading.
+- unique export;
+- no sibling-run implementation import.
 
 ## Freeze rule
 
-Every launch prompt carries the same exact full 40-character freeze SHA.
-
-Never use:
+Never launch from:
 - `main`;
 - `latest`;
 - an unpinned raw URL.
 
-The actual runtime label is evidence and must be recorded in the run manifest.
+Every eventual launch prompt carries the same exact 40-character Architecture V4 + media freeze SHA.

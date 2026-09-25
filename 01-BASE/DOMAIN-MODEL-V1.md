@@ -1,10 +1,27 @@
 # Influencer OS Domain Model V1
 
-Status: REQUIRED SEMANTIC CONTRACT FOR NEW FULL-PRODUCT RUNS
+Status: PRE_ASTRA_SEMANTIC_BASELINE
+
+This file is a V1 baseline.
+Current pre-Astra supplements in PRE-ASTRA-CENTRAL-DECISIONS-R2/R3 take precedence where more specific.
+Official E/Q runs will receive a post-Astra Architecture V4 domain contract before launch.
 
 The goal is reproducibility, identity continuity, explicit lineage and safe multi-provider execution.
 
 ## Identity + ownership
+
+### Principal
+Authenticated actor identity.
+
+Kinds:
+- HUMAN
+- SERVICE_CLIENT
+- WORKER
+
+Authentication does not imply Workspace authorization or Entitlement.
+
+### WorkspaceMembership
+Binds Principal to Workspace role/permissions.
 
 ### Workspace
 Top-level collaboration/ownership boundary.
@@ -66,7 +83,10 @@ CharacterRevision and CanonRevision are separate so identity correction does not
 ## Scene + planning
 
 ### Scene
-Semantic intent independent from a specific provider payload.
+Stable reusable scene container.
+
+### SceneRevision
+Immutable semantic scene intent independent from a specific provider payload.
 
 Includes:
 - world;
@@ -79,7 +99,10 @@ Includes:
 - language/text intent where applicable.
 
 ### Plan
-A durable planning container for Series / Shoot / Feed / multi-output work.
+Stable planning container for Series / Shoot / Feed / multi-output work.
+
+### PlanRevision
+Immutable saved plan definition.
 
 Recommended types:
 - SERIES
@@ -89,15 +112,17 @@ Recommended types:
 - SEASON
 
 ### Shot
-An atomic planned capture/output unit.
+An atomic planned capture/output unit owned by an immutable PlanRevision (or immutable standalone execution input where applicable).
 
-Links:
-- Scene
-- CharacterRevision
-- CanonRevision
-- Plan when applicable
+Links exact:
+- SceneRevision;
+- CharacterRevision;
+- CanonRevision;
+- PlanRevision when applicable.
 
 Shot is not the generated file.
+
+No separate ShotRevision is required in v1; changing saved shot content creates a new PlanRevision.
 
 ## Prompt compilation
 
@@ -107,10 +132,11 @@ Immutable compiled OS artifact.
 Inputs must include IDs/hashes for:
 - CharacterRevision;
 - CanonRevision;
-- Scene/Shot;
+- SceneRevision/Shot;
 - format;
-- ModelProfile;
-- EngineAdapterVersion.
+- ModelProfileRevision/effective model semantic snapshot;
+- EngineAdapterVersion;
+- OS ruleset/compiler version.
 
 Stores inspectable layers:
 1. Identity
@@ -150,22 +176,75 @@ Stores rule IDs, pass/fail/warn, evidence and rule-set version.
 ### ProviderConnection
 Credential/configuration binding.
 
+Stores metadata + secret_ref only.
+
+Credential modes:
+- USER_BYOK_HOSTED;
+- WORKSPACE_BYOK_HOSTED;
+- PLATFORM_MANAGED;
+- LEGACY_LOCAL_DIRECT (migration only).
+
 Rules:
-- secret value never serialized into normal domain exports/logs;
-- workspace/user-scoped;
-- provider switch must not leak stale provider-specific credentials or model slugs.
+- raw secret never serialized into normal domain rows/exports/logs/MCP payloads;
+- hosted secret lives in encrypted secret storage;
+- provider switch must not leak stale provider-specific credentials/model identifiers;
+- revocation blocks new attempts without rewriting history.
+
+### CapabilityDefinition
+Influencer OS semantic task contract.
+
+Examples:
+image.generate, image.edit, image_to_video, video.extend.
+
+Defines typed input/output requirements independent of a specific provider.
+
+### Provider
+External vendor/gateway identity.
+
+### ModelFamily
+Conceptual external model/family identity when the vendor/provider exposes one meaningfully.
+
+### ProviderDeployment
+One provider-addressable route/model slug/deployment/alias.
+
+A mutable provider alias is NOT treated as an immutable model version.
 
 ### ModelProfile
-Stable model capability record plus versioned/snapshotted effective settings.
+Stable Influencer OS product-facing model/profile identity.
+
+### ModelProfileRevision
+Immutable approved semantic/configuration revision.
 
 Carries:
-- provider family;
-- model slug/display;
-- image/video modes;
-- reference capabilities;
-- duration/resolution/aspect constraints;
-- audio support;
-- status: LIVE / SUPPORTED_NOT_TESTED / UI_ONLY / UNAVAILABLE / DEPRECATED.
+- supported CapabilityDefinition IDs;
+- defaults/constraints;
+- EngineAdapterVersion;
+- research/evaluation evidence references;
+- release state.
+
+Release state is separate from operational health.
+
+### EngineAdapterVersion
+Immutable Influencer OS semantic/prompt transformation behavior.
+
+### ProviderAdapterVersion
+Immutable transport/protocol adapter behavior:
+auth, request serialization, polling/webhook normalization, error/cost normalization.
+
+### ModelDeploymentSnapshot
+Immutable execution-time provider/deployment observation pinned by GenerationAttempt.
+
+Stores, where available:
+- provider;
+- requested deployment/alias;
+- returned model/version identifier;
+- observed capability metadata;
+- verified_at;
+- reproducibility limitation if provider exposes no immutable model version.
+
+### ResearchEvidence / EvalSuiteVersion / EvalRun / PromotionDecision
+Durable evidence and release-governance objects supporting:
+discovery → research → integration verification → eval → canary/beta → LIVE → rollback/deprecation.
 
 ### GenerationJob
 One logical user request.
@@ -183,16 +262,20 @@ One actual execution attempt.
 Contains:
 - job ID;
 - provider connection reference;
-- ModelProfile snapshot;
+- ModelProfileRevision reference;
+- ProviderAdapterVersion;
+- ModelDeploymentSnapshot;
 - request payload hash;
 - provider request/response IDs where safe;
-- status;
+- lifecycle/provider/materialization status;
 - timings;
 - error class;
 - retry/fallback reason;
-- cost metadata when available.
+- cost metadata.
 
 Retries always create another GenerationAttempt.
+
+A SUBMISSION_UNKNOWN attempt never triggers automatic retry/fallback when duplicate billing/execution cannot be excluded.
 
 ## Assets + lineage
 
@@ -234,6 +317,21 @@ Example edge types:
 - REMIXED_FROM
 
 Lineage must support a graph, not only one parent pointer.
+
+## Generation durability support
+
+### BudgetReservation
+Durable estimated-cost/budget hold for managed billing or workspace budget policy.
+
+Finalizes/releases only when provider cost state is sufficiently known.
+
+### DispatchOutbox
+Durable dispatch intent created transactionally with GenerationJob/Attempt.
+
+### ProviderEventInbox
+Deduplicated normalized provider webhook/poll event intake.
+
+These are supporting persistence/runtime objects; they do not replace GenerationJob/Attempt history.
 
 ## Workflows
 
@@ -277,7 +375,14 @@ Do not log secrets.
 ### Entitlement
 What the user/workspace is allowed to access.
 
-Keep separate from identity/authentication and from pricing copy.
+Keep separate from authentication, WorkspaceMembership and pricing copy.
+
+### MigrationRecord
+Records one fail-closed local→server project migration:
+source backup hash, dry-run plan, ID map, verification result, cutover time and source/target authority.
+
+A Project is either LOCAL_CANONICAL or SERVER_CANONICAL during migration.
+Never dual-write as a permanent architecture.
 
 ## ID policy
 
@@ -297,5 +402,9 @@ Never derive canonical IDs from:
 4. Public/UI/MCP operations share the same core use cases.
 5. Every generated AssetVersion has lineage back to its PromptBuild and GenerationAttempt.
 6. PromptBuild records adapter/model snapshots needed for reproduction.
-7. Provider secrets never enter export bundles, audit logs or client persistence.
-8. LIVE is runtime evidence, not a UI label chosen by design.
+7. Hosted provider secrets never enter export bundles, audit logs, MCP payloads or ordinary browser persistence.
+8. LIVE is evidence-backed release state, not a UI label chosen by design.
+9. Workflow execution and direct Studios use the same application commands; ordinary Studio actions do not imply WorkflowRun.
+10. Historical execution never depends on ambiguous latest/current revisions.
+11. Provider alias/model drift never rewrites historical PromptBuild or GenerationAttempt meaning.
+12. A project has one canonical authority at a time during migration.

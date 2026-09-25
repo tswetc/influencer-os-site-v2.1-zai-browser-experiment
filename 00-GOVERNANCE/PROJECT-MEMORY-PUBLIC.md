@@ -36,9 +36,15 @@ the private Web App is local-first/browser-persistent and hardcodes current Engi
 ASTRA-R001 is NOT launched.
 
 Binding plan:
-`08-ARCHITECT-COUNCIL/17-PRE-ASTRA-FINALIZATION-PLAN.md`
+`08-ARCHITECT-COUNCIL/19-PRE-ASTRA-EXECUTION-PLAN-V2.md`
 
-Central work must first finish source/product audit, close all centrally-solvable decisions, ingest material P001–P004 evidence, finish transport/privacy infrastructure, synthesize a minimal evidence packet and pass two final audits.
+Central work has completed the source/product audit and closed A1/A2/A5/A6.
+
+Two provisional high-risk knots remain:
+- K1 model/profile/provider-deployment identity boundary;
+- K2 ambiguous paid provider submission without idempotency/lookup.
+
+Finish those challenges, ingest material P001–P004 evidence, finish transport/privacy infrastructure, synthesize the minimal evidence packet and pass structural + adversarial audits.
 
 Only then freeze Astra input and run GPT-6 Astra / XHIGH.
 

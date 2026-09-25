@@ -3,15 +3,12 @@
 Date: 2026-09-25
 Status: PRE_ASTRA_FINALIZATION_IN_PROGRESS
 
-Binding plan:
-`17-PRE-ASTRA-FINALIZATION-PLAN.md`
-
-Progress:
-`18-PRE-ASTRA-PROGRESS.md`
+Binding execution plan:
+`19-PRE-ASTRA-EXECUTION-PLAN-V2.md`
 
 ## Product
 
-One coherent Influencer OS platform with four logical areas:
+Influencer OS is one coherent platform with four logical areas:
 1. Public / Product Experience
 2. Creator App
 3. OS Core / API / Generation Services
@@ -23,48 +20,84 @@ Guided Studios + Expert Workflow Graph are both first-class.
 ## Verified source anchors
 
 Private Influencer OS:
-`1158007fdaefd823e24d7a38d4fa7258814b541c`
+`tswetc/influencer-os@1158007fdaefd823e24d7a38d4fa7258814b541c`
 
 Frozen Site V2:
-`672f5722e0316beb7139526be93a5a60b9f4a8a4`
+`tswetc/influencer-os-site@672f5722e0316beb7139526be93a5a60b9f4a8a4`
 
 Private Site V2.1 observed:
-`8973b3df689eeb6c72367a806e103602239a4036`
+`tswetc/influencer-os-site@8973b3df689eeb6c72367a806e103602239a4036`
 
-## Completed pre-Astra work
+## Central decisions already closed
 
-- authority lock;
-- current founder/supersession routing;
-- source behavior matrix;
-- A1 closed: application commands are primitive; Workflow is orchestration; no implicit WorkflowRun for ordinary Studio action;
-- A2 closed: mutable draft + immutable explicit/execution checkpoint revisions; exact execution bindings; no historical rebase.
+- modular monolith first;
+- relational durable metadata + object storage;
+- shared application/use-case layer;
+- Job != Attempt;
+- immutable historical execution/assets;
+- DAG-first workflow;
+- typed AssetVersion lineage;
+- audit != telemetry;
+- versioned fail-closed export/import;
+- no whole browser-candidate merge;
+- no premature microservices/event sourcing/Kubernetes;
+- A1 execution substrate:
+  application commands are primitive; Workflow is orchestration;
+- A2 creative state:
+  mutable drafts + immutable explicit/execution checkpoint revisions;
+- A5 auth/MCP/secrets:
+  standards-based principal model; OAuth/OIDC; MCP protected resource; secret refs only;
+- A6 migration:
+  staged per-project LOCAL_CANONICAL → SERVER_CANONICAL cutover; no dual-write.
 
-Decision evidence:
-`PRE-ASTRA-CENTRAL-DECISIONS-R2.md`
+Evidence:
+- PRE-ASTRA-CENTRAL-DECISIONS-R2.md
+- PRE-ASTRA-CENTRAL-DECISIONS-R3.md
+- PRE-ASTRA-SOURCE-BEHAVIOR-MATRIX.md
 
-## Remaining provisional Astra-class knots
+## Remaining provisional Astra-class questions
 
-A3 model/provider/adapter + eval/promotion lifecycle
-A4 paid generation durability/failure/cost
-A5 auth/MCP/BYOK/managed secrets
-A6 migration from local-first Web App
+Only two high-risk choices remain provisionally:
 
-These may shrink further before Astra.
+K1 — exact ModelProfileRevision ↔ ProviderDeployment identity boundary under direct-provider/gateway/model-alias drift.
+
+K2 — exact durable policy for ambiguous paid submission when provider supports neither idempotency nor reliable lookup.
+
+Central preferences are already documented.
+They stay in Astra scope only if the final Phase-2 challenge cannot close them safely.
 
 ## Browser pilots
 
-P001–P004 continue unchanged on pinned historical inputs.
-Completed outputs will be audited for architecture evidence.
+P001–P004 continue unchanged on historical pinned inputs.
+Ingest completed outputs as evidence.
 
-Official E004–E011/Q001 remain paused until post-Astra Architecture V4.
+Official E004–E011/Q001:
+`PAUSED_PRE_ASTRA`
+
+They do not launch until accepted Architecture V4.
 
 ## Media
 
 M001 complete + audited.
-Wave v4 target counts: A39 · B42 · C33 · D36.
-Transport still needs regeneration, pixel/privacy review, verifier pass and sanitized commit.
+
+Local founder master reported:
+160 normalized sources / 156 materialized / 4 holds / 0 clean-rebuild errors.
+
+Wave v4 target:
+A39 · B42 · C33 · D36.
+
+Local master/library remains private and uncommitted.
+Only sanitized reviewed Wave v4 transport may be committed.
 
 ## Astra
 
 NOT LAUNCHED.
-Launch only after PRE_ASTRA_READY and two final audits PASS.
+
+Astra input is frozen only after:
+- remaining central architecture challenge;
+- Wave transport infrastructure;
+- material P001–P004 evidence or explicit non-blocking decision;
+- public-history privacy decision;
+- synthesis packet;
+- structural audit PASS;
+- semantic/adversarial audit PASS.

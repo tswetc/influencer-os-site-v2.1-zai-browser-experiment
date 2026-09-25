@@ -8,6 +8,19 @@
 04-MEDIA/_staging/
 04-MEDIA/_tmp/
 
+# Local curated/master media working state — source paths/private derivatives.
+# Public sanitized transport lives under 04-MEDIA/transport/ and is NOT ignored.
+04-MEDIA/library/
+04-MEDIA/packs/master-v1.json
+04-MEDIA/packs/wave01-A-v1.json
+04-MEDIA/packs/wave01-B-v1.json
+04-MEDIA/packs/wave01-C-v1.json
+04-MEDIA/packs/wave01-D-v1.json
+04-MEDIA/packs/wave01-shared-v1.json
+04-MEDIA/packs/wave01-*-v3-curated.json
+04-MEDIA/_wave-v4-review/
+04-MEDIA/wave-v4-review/
+
 # OS/editor noise
 .DS_Store
 Thumbs.db

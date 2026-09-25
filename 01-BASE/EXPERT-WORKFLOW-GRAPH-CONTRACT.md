@@ -74,11 +74,19 @@ Invalid connections should be prevented or shown as explicit errors.
 Graph editing and graph execution are distinct states.
 
 Execution must:
-- create WorkflowRun;
+- create WorkflowRun only for actual workflow execution;
 - preserve per-node status;
 - preserve produced object IDs;
-- allow rerunning a downstream branch without pretending upstream changed;
-- keep lineage.
+- keep exact WorkflowRevision binding;
+- keep lineage;
+- keep correlation to shared application commands.
+
+Selected/downstream rerun creates a NEW WorkflowRun with parentRunId + rerun scope.
+Unchanged upstream outputs are referenced explicitly from the parent run.
+Paid/non-deterministic generation nodes create new GenerationJob/GenerationAttempt history and are never silently memoized.
+Pure deterministic nodes may record content-addressed cache hits.
+Manual approval gates suspend/resume the same run with approval evidence.
+Saved subworkflow nodes pin exact WorkflowRevision by default; intentional follow-current binding resolves to an exact revision at run start.
 
 ## UX requirements
 
@@ -109,6 +117,10 @@ A validated WorkflowRevision may be published internally as a simpler reusable t
 
 This allows:
 expert authoring → repeatable simple Studio action.
+
+Important:
+ordinary Studio actions are not implicit workflows.
+Only a Studio/tool explicitly backed by a published WorkflowRevision creates WorkflowRun.
 
 ## Do not copy
 

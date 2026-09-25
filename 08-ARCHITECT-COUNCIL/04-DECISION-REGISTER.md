@@ -101,31 +101,57 @@ Status: ACCEPTED
 Postgres-class relational store + object storage.
 
 ## ADR-010 — Async worker boundary
-Status: PROVISIONAL
+Status: PROVISIONAL / NARROW OPEN K2
 
 Hosted production-capable shape uses an async worker for long generation.
 
-Accepted constraints:
-at-least-once/idempotent execution, Job/Attempt history, explicit fallback.
+Accepted:
+- durable DB create transaction + DispatchOutbox;
+- idempotent/leased worker execution;
+- provider-native idempotency where available;
+- ProviderEventInbox/reducer for webhook + polling;
+- cancellation and late-success are recorded truthfully;
+- provider success is distinct from output materialization success;
+- budget/cost reservation is durable;
+- no automatic fallback from ambiguous prior execution.
 
-OPEN SUB-DECISION:
-transaction/outbox/inbox/queue/cancel/crash/cost semantics.
-Owner: Astra A4.
+Remaining narrow K2:
+non-idempotent/no-lookup crash-after-submit ambiguity.
+
+Central preference:
+SUBMISSION_UNKNOWN + no automatic retry/fallback + pending cost reconciliation.
 
 ## ADR-011 — Model/provider/adapter lifecycle
-Status: PROVISIONAL / MAJOR OPEN SUB-DECISION
+Status: PROVISIONAL / NARROW OPEN K1
 
 Current hardcoded EngineId and per-engine compiler are source behavior, not sufficient future extensibility.
 
-Accepted constraints:
-- provider/model differences remain explicit;
-- historical builds never inherit future model/adapter semantics;
-- LIVE requires runtime/evaluation evidence;
-- model research must pass promotion gates.
+Accepted separation:
+- CapabilityDefinition;
+- Provider;
+- ModelFamily;
+- ProviderDeployment;
+- ModelProfile;
+- ModelProfileRevision;
+- EngineAdapterVersion;
+- ProviderAdapterVersion;
+- ModelDeploymentSnapshot;
+- ResearchEvidence;
+- EvalSuiteVersion/EvalRun;
+- PromotionDecision.
 
-OPEN:
-exact task/provider/deployment/profile/version/adapter/eval/rollout architecture.
-Owner: Astra A3.
+Release lifecycle and operational health are separate axes.
+
+Historical PromptBuild pins ModelProfileRevision + EngineAdapterVersion.
+GenerationAttempt pins ProviderAdapterVersion + ModelDeploymentSnapshot.
+
+Mutable aliases are never claimed as immutable versions.
+
+Remaining narrow K1:
+whether one ModelProfileRevision binds one primary deployment or a deployment set.
+
+Central preference:
+one primary deployment; fallback strategy outside profile.
 
 ## ADR-012 — Production asset/media storage
 Status: ACCEPTED
@@ -136,13 +162,32 @@ Public Wave transport is development-only.
 ## ADR-013 — Authentication / authorization / entitlement separation
 Status: ACCEPTED
 
-Principal, workspace authorization, membership role and Entitlement are distinct.
+Principal, WorkspaceMembership/role, object authorization and Entitlement are distinct.
 
-Provider secrets are server-side/encrypted and never ordinary export/log data.
+Use mature external OIDC/OAuth infrastructure; do not build a custom IdP.
 
-OPEN:
-web/API/MCP token/session/scope, BYOK/managed connection modes and worker identity.
-Owner: Astra A5.
+Browser human session:
+secure HttpOnly server-managed/BFF session; no long-lived bearer token in localStorage.
+
+HTTP API:
+audience-restricted OAuth access tokens + coarse scopes + object-level authorization.
+
+Remote MCP:
+OAuth protected resource/resource server using current MCP authorization discovery/Protected Resource Metadata; transport auth never replaces application authorization.
+
+ProviderConnection stores metadata + secret_ref only.
+Hosted provider secrets live in encrypted secret storage and are never returned into MCP/export/audit/telemetry.
+
+Credential modes:
+USER_BYOK_HOSTED · WORKSPACE_BYOK_HOSTED · PLATFORM_MANAGED · LEGACY_LOCAL_DIRECT(migration-only).
+
+Workers use service identity and resolve only the secret reference authorized for the Attempt.
+They never persist/replay the human user's bearer token.
+
+Legacy local browser keys are never silently uploaded.
+
+Decision evidence:
+`PRE-ASTRA-CENTRAL-DECISIONS-R3.md`.
 
 ## ADR-014 — Browser candidate promotion
 Status: ACCEPTED
@@ -180,15 +225,33 @@ Two-phase import.
 No provider secrets/tokens in normal exports.
 
 ## ADR-018 — Current Web App migration incremental
-Status: ACCEPTED PRINCIPLE / OPEN SEQUENCE
+Status: ACCEPTED
 
 No big-bang rewrite.
-No permanent dual local/cloud architecture.
+No indefinite dual-write.
 No silent upload of legacy provider keys.
 
-OPEN:
-exact reversible seams and phase gates.
-Owner: Astra A6.
+Migration sequence:
+M0 behavior/test/export freeze
+→ M1 application/repository seam using local adapters
+→ M2 local domain normalization + versioned migration format
+→ M3 auth/workspace/server substrate behind flags
+→ M4 dry-run fail-closed MigrationPlan
+→ M5 verified per-project cutover to SERVER_CANONICAL
+→ M6 explicit provider reconnect
+→ M7 durable server GenerationJob/Attempt + worker
+→ M8 dynamic model layer / legacy EngineId compatibility mapping
+→ M9 graph/API/MCP expansion
+→ M10 local-canonical retirement after parity/support gates.
+
+Exactly one project authority at a time:
+LOCAL_CANONICAL or SERVER_CANONICAL.
+
+Failed migration leaves local source untouched.
+No bidirectional local/server replication.
+
+Decision evidence:
+`PRE-ASTRA-CENTRAL-DECISIONS-R3.md`.
 
 ## ADR-019 — User-upload/generated media private by default
 Status: ACCEPTED

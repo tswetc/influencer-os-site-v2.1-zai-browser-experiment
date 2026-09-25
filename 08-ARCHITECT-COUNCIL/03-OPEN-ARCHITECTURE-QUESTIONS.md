@@ -1,102 +1,76 @@
 # Open Architecture Questions — Pre-Astra Reduced Set
 
 Date: 2026-09-25
-Status: FOUR_FUNDAMENTAL_KNOTS_REMAIN_PROVISIONALLY
+Status: TWO_IRREDUCIBLE_KNOTS_REMAIN_PROVISIONALLY
 
-A1 and A2 were closed centrally in:
-`PRE-ASTRA-CENTRAL-DECISIONS-R2.md`.
+Closed centrally:
+- A1 execution substrate;
+- A2 creative revision/staleness/rebase;
+- A5 auth/MCP/BYOK/provider secret boundary;
+- A6 local-first → server-canonical migration sequence.
 
-Everything below remains open only because a wrong answer could materially compromise provider evolution, paid generation durability, security, or migration.
+See:
+- PRE-ASTRA-CENTRAL-DECISIONS-R2.md
+- PRE-ASTRA-CENTRAL-DECISIONS-R3.md
 
-## A3 — Dynamic model/provider/adapter + evaluation lifecycle
+## K1 — Model identity/version boundary under provider/gateway drift
 
-Unresolved:
-how to evolve from hardcoded EngineId/per-engine code to a continuously updated model ecosystem while preserving provider-specific semantics and historical reproducibility.
+Central baseline already separates:
+CapabilityDefinition, Provider, ModelFamily, ProviderDeployment, ModelProfile, ModelProfileRevision, EngineAdapterVersion, ProviderAdapterVersion, ModelDeploymentSnapshot, ResearchEvidence, EvalSuiteVersion/EvalRun and PromotionDecision.
 
-Need exact separation among:
-product capability/task,
-provider,
-external model/deployment/alias,
-stable ModelProfile,
-version/effective snapshot,
-EngineAdapterVersion,
-research evidence,
-evaluation evidence,
-promotion status and rollback/deprecation.
+Remaining exact choice:
 
-Need exact code-vs-config boundary and a real research→eval→LIVE promotion pipeline.
+Should one immutable ModelProfileRevision bind exactly ONE primary ProviderDeployment, with fallback/portfolio strategy owned by GenerationStrategy/GenerationJob,
 
-## A4 — Paid generation durable state machine
+OR
 
-Unresolved:
-exact transaction/outbox/queue/idempotency/cancel/webhook/polling/crash/cost semantics.
+should one ModelProfileRevision own a set of deployments?
 
-Must survive:
-- duplicate worker delivery;
-- crash after provider acceptance;
-- webhook/poll race;
-- ambiguous timeout;
-- cancel/late-success race;
-- fallback after uncertain provider state;
-- cost reservation/finalization.
+Must hold under:
+- one external model available direct and through gateways;
+- provider aliases that can change backing model;
+- different provider-side capabilities;
+- different pricing/latency;
+- rollback;
+- historical PromptBuild semantics;
+- GenerationAttempt provenance.
 
-Need a failure-safe state machine for expensive external generation.
+Central preference:
+one profile revision = one primary deployment.
+Fallback/portfolio strategy belongs to job/strategy, not profile.
 
-## A5 — Web/API/MCP principal + BYOK/managed secret boundary
+## K2 — Ambiguous paid submission without provider idempotency
 
-Unresolved:
-one standards-based auth/authorization/token/secret model for:
-browser humans,
-HTTP API clients,
-remote MCP agents,
-workers,
-Workspaces/Memberships,
-Entitlements,
-BYOK ProviderConnections,
-platform-managed provider credentials.
+Central baseline:
+- DB create transaction + durable outbox;
+- at-most-one automatic billable submission per Attempt;
+- provider-native idempotency when available;
+- reconciliation by client correlation when available;
+- no automatic fallback while previous execution/billing is uncertain.
 
-Need exact scope, revocation, worker identity and secret-resolution rules without exposing raw provider secrets to agents.
+Remaining exact choice:
 
-## A6 — Migration from current local-first Web App
+When a provider offers neither idempotency nor reliable client-request lookup and the worker crashes after request transmission but before provider job identity is durably recorded, choose exact behavior for:
+- Attempt state;
+- user-visible state;
+- budget reservation;
+- reconciliation duration;
+- explicit retry;
+- late orphan output;
+- cost finalization.
 
-Unresolved:
-exact reversible sequence from tested IndexedDB/localStorage/direct-BYOK Web App behavior to server-canonical platform architecture without big-bang rewrite or permanent dual architecture.
+Central preference:
+SUBMISSION_UNKNOWN;
+freeze automatic retry/fallback;
+hold cost/budget in pending reconciliation;
+require explicit new Attempt for risk-bearing retry.
 
-Need:
-- anti-corruption seam;
-- local-data import mapping;
-- authentication boundary;
-- server-canonical transition;
-- legacy-key treatment;
-- object-storage/worker introduction;
-- dynamic model-system migration;
-- rollback gates;
-- browser-candidate promotion seam.
+## Criteria for keeping either question for Astra
 
-## Explicitly closed / not Astra
+Keep only if all are true:
+1. wrong choice can cause cost/data/security/reproducibility damage;
+2. current verified source + accepted architecture do not uniquely determine the answer;
+3. it changes durable schema/semantics, not merely library choice;
+4. central architect cannot close it without material uncertainty.
 
-- one product / four logical areas;
-- modular monolith first;
-- Postgres-class metadata + object storage;
-- shared application/core behavior;
-- direct Studios do not require implicit WorkflowRun;
-- Workflow is orchestration over the same commands;
-- WorkflowRun/NodeRun rerun/reuse baseline;
-- mutable draft + immutable execution checkpoint/revision;
-- FOLLOW_ACTIVE/PINNED resolution semantics;
-- no in-place rebase of historical revisions;
-- manual prompt edit creates a derived PromptBuild;
-- CharacterRevision/CanonRevision separation;
-- Job != Attempt;
-- immutable historical outputs;
-- DAG-first workflow v1;
-- asset-version lineage;
-- audit != telemetry;
-- versioned export/import;
-- no whole-candidate browser merge;
-- no premature microservices/Kubernetes/event sourcing;
-- design direction;
-- media selection;
-- GLM candidate ranking;
-- EN/RU copy;
-- current OS23.6 source counts.
+Everything else is not Astra work.

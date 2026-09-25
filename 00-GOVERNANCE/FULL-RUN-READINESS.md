@@ -4,64 +4,76 @@ Date: 2026-09-25
 Status: PRE_ASTRA_FINALIZATION_IN_PROGRESS
 
 Binding plan:
-`08-ARCHITECT-COUNCIL/17-PRE-ASTRA-FINALIZATION-PLAN.md`
+`08-ARCHITECT-COUNCIL/19-PRE-ASTRA-EXECUTION-PLAN-V2.md`
 
-## Completed
+## Architecture/source complete
 
-- [x] public raw GitHub text transport;
-- [x] large-context transport;
-- [x] image transport/readability;
-- [x] authoritative OS23.6 core published;
-- [x] private-current behavior contract;
-- [x] 2026-09-25 founder decisions;
-- [x] 2026-09-25 public authority routing;
-- [x] neutral identity IDs in active text;
+- [x] current authority lock;
+- [x] current source behavior matrix;
 - [x] one product / four logical areas;
-- [x] guided Studios + Expert Workflow Graph;
-- [x] modular monolith baseline;
-- [x] relational metadata + object storage;
-- [x] shared application/core use cases;
+- [x] modular monolith;
+- [x] Postgres-class durable metadata + object storage;
+- [x] shared application/use-case layer;
+- [x] direct Studios do not require implicit WorkflowRun;
+- [x] mutable draft + immutable execution checkpoint/revision;
 - [x] Job != Attempt;
-- [x] immutable historical asset/execution state;
 - [x] DAG-first workflow;
-- [x] auth/authorization/membership/entitlement separation;
-- [x] selective candidate promotion;
-- [x] Phase 0 authority snapshot;
-- [x] Phase 1 source behavior matrix;
-- [x] A1 execution-substrate semantics closed centrally;
-- [x] A2 creative revision semantics closed centrally.
+- [x] AssetVersion lineage;
+- [x] audit != telemetry;
+- [x] versioned fail-closed export/import;
+- [x] A5 standards-based web/API/MCP principal + secret boundary;
+- [x] A6 per-project staged migration/no dual-write.
 
-## Remaining pre-Astra
+## Provisional hard architecture questions
 
-- [ ] finish Phase 2 challenge for A3–A6;
-- [ ] finalize minimized open-knot packet;
-- [ ] regenerate bounded A/B/C/D media manifests;
-- [ ] build sanitized Wave v4 derivatives;
-- [ ] pixel/privacy review actual transport;
-- [ ] public Wave verifier PASS;
-- [ ] public sanitized transport committed;
-- [ ] ingest/audit material P001–P004 outputs;
-- [ ] choose privacy-safe long-lived public bridge strategy;
-- [ ] synthesize final Astra evidence router;
-- [ ] structural audit PASS;
-- [ ] semantic/adversarial audit PASS;
-- [ ] immutable Astra SHA recorded;
-- [ ] Astra R001 launched.
+- [ ] K1 model/profile/provider-deployment identity boundary.
+- [ ] K2 non-idempotent ambiguous paid-submit window.
 
-## Current remaining Astra-class knots
+## Media/transport
 
-- A3 model/provider/adapter + eval/promotion/rollback;
-- A4 paid generation durability/failure/cost;
-- A5 web/API/MCP + BYOK/managed secret boundary;
-- A6 migration from local-first Web App.
+- [x] M001 audited;
+- [x] target A39/B42/C33/D36;
+- [x] explicit selection builder;
+- [x] sanitized Wave bundle builder;
+- [x] actual-transport atlas builder;
+- [x] local/private Git ignore boundary;
+- [x] local execution runbook;
+- [ ] regenerate current v3-curated manifests locally;
+- [ ] build Wave v4 locally;
+- [ ] verify Wave v4;
+- [ ] visually review every actual transport tile/poster;
+- [ ] commit sanitized transport only.
 
 ## Existing pilots
 
-P001–P004 continue unchanged on historical pinned inputs.
+- [x] P001–P004 preserved on historical pinned inputs;
+- [ ] ingest/audit completed outputs;
+- [ ] combined architecture evidence extract.
 
-## Official E-wave
+## Privacy/history
 
-E004–E011 + Q001 are PAUSED until post-Astra Architecture V4.
+- [ ] choose privacy-safe long-lived public bridge strategy;
+- [ ] preserve historical pinned pilot accessibility;
+- [ ] keep obsolete identity inference out of future official bridge history.
+
+## Astra packet
+
+- [ ] K1/K2 final challenge;
+- [ ] executive snapshot;
+- [ ] architecture delta map;
+- [ ] final open-knot file;
+- [ ] evidence router;
+- [ ] structural audit PASS;
+- [ ] semantic/adversarial audit PASS;
+- [ ] immutable Astra SHA.
+
+## Official E/Q wave
+
+Current:
+`PAUSED_PRE_ASTRA`
+
+Launch only after:
+Astra → accepted Architecture V4 → new immutable Architecture V4 + Wave v4 freeze.
 
 Until then:
 `OFFICIAL_E_WAVE_NOT_READY`

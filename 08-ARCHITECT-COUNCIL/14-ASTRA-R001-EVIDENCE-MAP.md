@@ -1,5 +1,10 @@
 # Astra R001 — Progressive Evidence Map
 
+> **SUPERSEDED PRE-ASTRA DRAFT — DO NOT LAUNCH FROM THIS FILE**
+>
+> Current binding plan: `19-PRE-ASTRA-EXECUTION-PLAN-V2.md`.
+> A1/A2/A5/A6 have since been closed centrally. The final Astra packet will be regenerated only after PRE_ASTRA_READY and must contain only the remaining irreducible knots.
+
 Purpose: answer A1–A6 without repository-wide context waste.
 
 ## Always read

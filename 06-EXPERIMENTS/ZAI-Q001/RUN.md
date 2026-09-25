@@ -1,6 +1,7 @@
 # ZAI-Q001 — Disposable Launch Qualification
 
-STATUS: WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE
+STATUS: PAUSED_PRE_ASTRA
+LAUNCH_GATE: POST_ASTRA_ARCHITECTURE_V4_FREEZE
 TYPE: DISPOSABLE_PIPELINE_QUALIFICATION
 MODEL_POLICY: GLM-5.3-Flash preferred for throughput
 INPUT_COMMIT: PROVIDED_BY_LAUNCH_PROMPT
@@ -10,7 +11,7 @@ GITHUB_MODE: READ_ONLY_INPUT
 
 ## Purpose
 
-Qualify the SAME frozen input chain used by the product-quality wave while E004–E011 may run in parallel.
+Qualify the SAME frozen input chain used by the product-quality wave for the same future frozen input chain as E004–E011 after Architecture V4. This qualification run is currently paused with them.
 
 This run is disposable. It does not compete as a product candidate.
 

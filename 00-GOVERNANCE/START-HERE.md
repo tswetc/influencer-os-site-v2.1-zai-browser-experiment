@@ -18,7 +18,7 @@ Do not pre-read the whole repository.
 ## B. Pre-Astra central architecture work
 
 Read:
-1. `../08-ARCHITECT-COUNCIL/17-PRE-ASTRA-FINALIZATION-PLAN.md`
+1. `../08-ARCHITECT-COUNCIL/19-PRE-ASTRA-EXECUTION-PLAN-V2.md`
 2. `../08-ARCHITECT-COUNCIL/01-ARCHITECT-STATE.md`
 3. `../08-ARCHITECT-COUNCIL/PRE-ASTRA-AUTHORITY-SNAPSHOT.md`
 4. only the evidence required by the current pre-Astra phase.

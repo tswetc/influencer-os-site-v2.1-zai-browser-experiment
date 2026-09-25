@@ -1,6 +1,6 @@
 # AGENTS.md — Influencer OS Z.ai Browser Experiment Lab
 
-This repository is an experimental PUBLIC transport / coordination lab for Influencer OS Site V2.1 browser-agent work.
+This repository is an experimental PUBLIC transport / coordination lab for Influencer OS browser-agent work.
 
 It is NOT:
 - canonical Influencer OS product code;
@@ -15,31 +15,68 @@ Unless the founder explicitly assigns a lab/architecture task:
 - do not push browser-agent implementation back into shared `main`;
 - do not treat candidate code as production truth.
 
+## Current pre-Astra state
+
+Binding plan:
+`08-ARCHITECT-COUNCIL/19-PRE-ASTRA-EXECUTION-PLAN-V2.md`
+
+ASTRA-R001 is NOT launched yet.
+
+Official E004–E011 and Q001 are PAUSED until:
+pre-Astra finalization → Astra → accepted Architecture V4 → new immutable official freeze.
+
+Already-running P001–P004 remain pinned to their historical inputs and may continue.
+
 ## Browser-run route
 
 A Chat.Z.AI product run:
 - reads its commit-pinned RUN.md;
 - uses GitHub as READ-ONLY input;
 - works inside its isolated sandbox;
-- exports a candidate archive;
+- exports a unique candidate archive;
 - does not write implementation to this repository.
+
+No new official E/Q run may start from `main` or from an unpinned URL.
+
+## Central architecture route
+
+For current central architecture work:
+1. read `00-GOVERNANCE/START-HERE.md`;
+2. read `08-ARCHITECT-COUNCIL/19-PRE-ASTRA-EXECUTION-PLAN-V2.md`;
+3. read `08-ARCHITECT-COUNCIL/01-ARCHITECT-STATE.md`;
+4. read only evidence required by the active gate.
+
+Do not re-open settled decisions without a concrete contradiction.
 
 ## Astra route
 
-If the explicit task is `ASTRA-R001`:
+Only after status is `PRE_ASTRA_READY` and an immutable SHA is recorded:
 
 - model target: GPT-6 Astra in Codex;
-- recommended first pass: XHIGH reasoning;
-- work READ-ONLY;
-- do not implement;
-- do not pre-read the repository;
-- begin with `08-ARCHITECT-COUNCIL/11-ASTRA-R001-FOCUS-PACKET.md`;
-- then read the central baseline and founder gap map;
-- use the evidence map for progressive disclosure;
-- resolve A1–A6 only;
-- output one `ASTRA-R001-DECISIONS.md`.
+- first pass: XHIGH reasoning;
+- READ-ONLY;
+- no implementation;
+- no visual-design/media work;
+- no whole-repository pre-read.
 
-Do not spend Astra capacity on visual design, media, GLM candidate ranking, marketing copy or already-verified source counts.
+Astra should receive only the FINAL irreducible knots.
+
+Current provisional reduced scope:
+- K1 model/provider/profile/deployment identity boundary under provider/gateway drift;
+- K2 ambiguous paid provider submission when no idempotency or reliable lookup exists.
+
+Do not spend Astra capacity on A1/A2/A5/A6 unless later evidence disproves the central decisions.
+
+## Local media safety
+
+Never commit:
+- `04-MEDIA/library/`;
+- `04-MEDIA/packs/master-v1.json`;
+- local v1 manifests;
+- local v3-curated manifests;
+- SSD/local source paths.
+
+Only sanitized reviewed Wave transport under `04-MEDIA/transport/` may become public.
 
 ## Promotion
 

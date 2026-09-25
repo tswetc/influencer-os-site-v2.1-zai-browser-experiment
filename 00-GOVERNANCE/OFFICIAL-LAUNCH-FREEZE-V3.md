@@ -1,113 +1,70 @@
-# Official Launch Freeze V3
+# Official Launch Freeze V3 — Historical Pre-Astra Preparation Gate
 
-Status: WAITING_FOR_FULL_QUALITY_WAVE_V4_TRANSPORT
+Status: SUPERSEDED_AS_LAUNCH_GATE__TRANSPORT_PREPARATION_ONLY
 
-This is the binding freeze gate for E004–E011 and ZAI-Q001.
+V3 is NOT permission to launch E004–E011 or ZAI-Q001.
 
-## Architecture / product truth
+Current launch ordering is:
+pre-Astra finalization
+→ Astra R001
+→ accepted Architecture V4
+→ new official Architecture V4 + Wave v4 freeze
+→ E004–E011/Q001 launch.
+
+This file remains useful only as a transport/readiness checklist.
+
+## Architecture/product truth already proven
 
 - [x] current founder decisions recorded;
-- [x] public-run authority order recorded;
-- [x] current private canonical product HEAD recorded in the derived behavior contract;
-- [x] OS23.6 archive SHA recorded;
-- [x] four logical product domains selected;
-- [x] shared versioned domain model defined;
-- [x] guided Studios + Expert Workflow Graph both required;
-- [x] current canonical behavior outside the public 23-file source pack derived into a public behavior contract;
-- [x] private repositories remain untouched.
+- [x] public authority order recorded;
+- [x] current private canonical product HEAD recorded;
+- [x] OS23.6 release/source evidence recorded;
+- [x] one product / four logical areas;
+- [x] shared domain/application model;
+- [x] guided Studios + Expert Workflow Graph;
+- [x] derived current private behavior contract;
+- [x] private canonical repositories remain separate.
 
-## Identity / media source
+## Identity/media
 
 - [x] M001 centrally audited;
-- [x] raw 161 rows normalized to 160 unique source paths;
-- [x] current founder identity uses opaque public ID only;
-- [x] current public M001 text sanitized;
-- [x] clean local master rebuild reported: 156 files / 4 holds / 0 errors;
-- [x] stale rejected derivative absent;
-- [x] pixel-level visible identity-card frame G0027/s01 excluded from public transport selection;
-- [x] G0068/s06 excluded after visual review because the motion preview includes multiple visible bystanders;
-- [x] G0111/s05 excluded after visual review because it contains a foreground metro crowd / other identifiable people.
+- [x] neutral identity ID policy;
+- [x] clean local master reported;
+- [x] G0027/s01 excluded;
+- [x] G0068/s06 excluded;
+- [x] G0111/s05 excluded.
 
-## Wave v4 pack curation
+## Wave v4 transport preparation
 
-- [x] target 30–45 items per design defined;
-- [x] explicit human-auditable group+slot selector implemented;
-- [x] runtime random/even media sampling removed from official pack construction;
-- [x] every design pack includes purposeful product-proof/media coverage;
-- [x] exact curation recorded in `04-MEDIA/WAVE01-MEDIA-CURATION-V4.md`;
-- [ ] local v3-curated manifests regenerated after pulling current main;
-- [ ] expected counts verified:
-  - A = 39
-  - B = 42
-  - C = 33
-  - D = 36
-- [ ] no G0027/s01, G0068/s06 or G0111/s05 in any curated pack.
-
-## Public transport
-
-- [x] deduplicated Wave v4 bundle builder implemented;
-- [x] neutral asset-ID scheme defined;
-- [x] image metadata stripping implemented;
-- [x] video metadata/audio stripping + bounded transport transcode implemented;
-- [x] per-file GitHub 100MB safety gate implemented;
-- [x] source-path-free public manifest schema implemented;
-- [x] commit-pinned fetch + SHA verification client implemented;
-- [ ] Wave v4 bundle built locally;
-- [ ] Wave v4 verifier passes;
-- [ ] public-lab audit passes;
-- [ ] bounded transport bundle committed/pushed.
-
-## References / design
-
-- [x] design recipes A/B/C/D defined;
-- [x] 3-reference governance conflict reconciled;
-- [x] current Figma Weave expert-mode research recorded;
-- [x] current Higgsfield architecture research recorded;
-- [x] reference fidelity loop required;
-- [x] every run must research/capture assigned live reference evidence before implementation.
-
-This first product-quality Wave is NOT a perfectly controlled model benchmark because reference research is live and runtime availability may vary.
+- [x] exact 30–45 target;
+- [x] explicit group/slot curation;
+- [x] current targets A39 / B42 / C33 / D36;
+- [x] sanitized bundle builder;
+- [x] metadata/source-path stripping;
+- [x] video bounded transcode;
+- [x] GitHub file-size gate;
+- [x] actual-transport review-atlas builder;
+- [ ] regenerate local v3-curated manifests after latest pull;
+- [ ] verify A39/B42/C33/D36 locally;
+- [ ] build Wave v4 sanitized bundle;
+- [ ] verify public Wave;
+- [ ] visually inspect every actual transported tile/poster;
+- [ ] public-lab audit PASS;
+- [ ] sanitized transport committed.
 
 ## Run contracts
 
-- [x] E004–E011 are PRODUCT_QUALITY;
-- [x] GLM-5.3 preferred for every E run;
-- [x] GLM-5.3-Flash fallback recorded;
-- [x] Q001 disposable qualification run defined;
-- [x] all E runs bound to Wave v4 paths;
-- [x] Q001 bound to Wave v4 C path;
-- [x] GitHub read-only rule;
-- [x] unique export names;
-- [x] Architecture V3 / Domain Model / Expert Graph are P0;
-- [x] exact runtime UI label must be recorded;
-- [x] no self-referential commit SHA in run files.
+Current E004–E011 and Q001 must remain:
+`PAUSED_PRE_ASTRA`
 
-## Final freeze procedure
+They must NOT become READY under Architecture V3.
 
-After Wave v4 files are pushed:
+After Astra:
+- accepted decisions become Architecture V4;
+- run contracts are updated;
+- validator is updated for Architecture V4;
+- a NEW official freeze record is created.
 
-1. run `python3 tools/verify_public_wave.py .`;
-2. build the actual-transport visual atlas with `tools/build_wave_review_atlas.py` and inspect every tile;
-3. run `python3 tools/validate_run_contracts.py .`;
-4. run `python3 tools/audit_public_lab.py .`;
-5. inspect `git status --short` — must be empty;
-6. update E004–E011 and Q001 STATUS to `READY`;
-7. update this file's remaining checkboxes/status;
-8. commit those text-only readiness changes;
-9. push;
-10. record that resulting full 40-character HEAD SHA;
-11. make NO further change to that freeze for this wave;
-12. generate launch prompts using `tools/generate_launch_prompts.py <SHA> <output-dir>`;
-13. launch E004–E011 + Q001 from fresh chats using those generated prompts.
+## Current release state
 
-The launch prompt — not a file inside the freeze commit — supplies the commit's own SHA.
-
-## Release state
-
-Until every unchecked box above passes:
-
-`OFFICIAL_WAVE_NOT_FROZEN`
-
-After the final procedure:
-
-`OFFICIAL_WAVE_READY`
+`OFFICIAL_E_WAVE_PAUSED_PRE_ASTRA`

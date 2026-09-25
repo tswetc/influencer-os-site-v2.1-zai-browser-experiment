@@ -49,7 +49,9 @@ Current target counts remain A39 / B42 / C33 / D36.
 Do NOT launch ASTRA-R001 yet.
 Do NOT launch official E004–E011 or Q001 yet.
 
-First complete `08-ARCHITECT-COUNCIL/17-PRE-ASTRA-FINALIZATION-PLAN.md`.
+First complete `08-ARCHITECT-COUNCIL/19-PRE-ASTRA-EXECUTION-PLAN-V2.md`.
+
+Current central progress has already closed A1, A2, A5 and A6. Only final genuinely irreducible knots should survive into Astra input.
 
 Existing P001–P004 continue unchanged on their historical pinned inputs and should be ingested/audited as evidence when complete.
 

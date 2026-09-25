@@ -1,37 +1,45 @@
 # Pre-Astra Progress
 
 Date: 2026-09-25
-Status: PHASES_0_1_COMPLETE__PHASE_2_ADVANCED
+Status: PHASES_0_1_COMPLETE__PHASE_2_NEAR_FINAL
 
 ## Complete
 
-- Phase 0 authority lock complete.
-- Current founder decision updated to 2026-09-25.
-- Current public supersession updated to 2026-09-25.
-- Public lab routing updated.
-- Private/public/site heads verified.
-- Phase 1 source/product audit complete.
-- Source behavior matrix recorded.
-- A1 execution-substrate question closed centrally.
-- A2 creative draft/revision/staleness/rebase question closed centrally.
+- [x] Phase 0 authority lock.
+- [x] Current 2026-09-25 founder/supersession routing.
+- [x] Phase 1 source/product behavior matrix.
+- [x] A1 execution substrate closed.
+- [x] A2 creative revision semantics closed.
+- [x] A5 auth/MCP/secret boundary closed.
+- [x] A6 migration sequence closed.
+- [x] Official E/Q runs moved to PAUSED_PRE_ASTRA.
+- [x] Launch generator redesigned to fail closed before Architecture V4.
+- [x] Local/private media Git ignore boundary defined.
+- [x] Exact Wave v4 local runbook prepared.
 
-## Current remaining Astra-class knots
+## Provisional remaining architecture knots
 
-1. A3 — model/provider/adapter + research/eval/promotion/rollback lifecycle.
-2. A4 — durable paid-generation transaction/queue/idempotency/cancel/crash/cost semantics.
-3. A5 — web/API/MCP principal + Workspace/Entitlement + BYOK/managed secret boundary.
-4. A6 — reversible migration from current local-first Web App.
+1. K1 — one ModelProfileRevision ↔ one primary ProviderDeployment versus profile-owned deployment set.
+2. K2 — SUBMISSION_UNKNOWN semantics/budget handling for non-idempotent provider crash window.
 
-These remain provisional until Phase 2 final challenge.
+Central preferences are documented in PRE-ASTRA-CENTRAL-DECISIONS-R3.md.
 
-## Next
+## External/local work remaining
 
-1. finish Phase 2 challenge against A3–A6;
-2. complete Wave v4 transport infrastructure;
-3. ingest/audit P001–P004 as results become available;
-4. decide privacy-safe long-lived public bridge;
-5. synthesize final pre-Astra packet;
-6. run structural + adversarial audits;
-7. freeze immutable Astra input.
+- [ ] founder runs current local Wave v4 runbook on SSD;
+- [ ] A39/B42/C33/D36 verified;
+- [ ] sanitized Wave v4 generated;
+- [ ] actual transport visually reviewed;
+- [ ] public Wave verification passes;
+- [ ] P001–P004 outputs ingested/audited as available.
+
+## Central work remaining
+
+- [ ] final challenge of K1/K2;
+- [ ] public-history privacy strategy;
+- [ ] pre-Astra executive/delta/evidence-router packet;
+- [ ] structural audit PASS;
+- [ ] semantic/adversarial audit PASS;
+- [ ] immutable Astra SHA.
 
 ASTRA-R001 remains NOT LAUNCHED.

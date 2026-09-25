@@ -1,6 +1,10 @@
 # Full Product Run Contract V3
 
-Status: REQUIRED FOR E004–E011 AND LATER PRODUCT-QUALITY RUNS
+Status: PRE_ASTRA_PREPARATION_ONLY
+
+E004–E011/Q001 are PAUSED_PRE_ASTRA.
+This V3 contract is not a launch contract.
+A post-Astra Architecture V4 run contract must supersede it before official launch.
 
 ## Mission
 

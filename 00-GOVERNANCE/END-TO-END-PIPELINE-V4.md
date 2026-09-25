@@ -1,7 +1,14 @@
 # End-to-End Product Development Pipeline V4
 
-Status: CURRENT OPERATING PIPELINE FOR NEW BROWSER WAVES  
-Supersedes older pipeline text where this file is more specific.
+Status: SUPERSEDED_BY_V5
+
+Do NOT use V4 as launch ordering for new work.
+
+Current pipeline:
+`00-GOVERNANCE/END-TO-END-PIPELINE-V5.md`
+
+Historical note:
+V4 allowed the E/Q wave to launch before Astra reconciliation. The founder later changed this order. For new work, pre-Astra finalization + Astra + Architecture V4 must happen before official E/Q launch.
 
 ## Principle
 

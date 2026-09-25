@@ -1,6 +1,11 @@
 # Central Architect Baseline — 2026-09-25
 
-Status: SETTLED_BASELINE_UNLESS_ASTRA_FINDS_A_CONCRETE_FAILURE
+Status: SETTLED_BASELINE_WITH_R2_R3_SUPPLEMENTS
+
+Current specific decisions in PRE-ASTRA-CENTRAL-DECISIONS-R2.md and PRE-ASTRA-CENTRAL-DECISIONS-R3.md supersede older OPEN wording below where they conflict.
+
+A1/A2/A5/A6 are now centrally closed.
+Only K1/K2 remain provisionally open.
 
 Purpose: remove already-solvable architecture work from Astra R001 so scarce high-capability reasoning is spent only on the remaining dangerous decision knots.
 
@@ -144,7 +149,8 @@ Never overwrite:
 Provider fallback must be explicit.
 Automatic fallback requires proven semantic/capability compatibility; otherwise explicit user/workflow approval.
 
-Exact durable dispatch/cancel/crash semantics are Astra A4.
+R3 establishes the durable outbox/inbox/idempotency/cancel/materialization/cost baseline.
+Only K2 remains open: the non-idempotent/no-lookup ambiguous-submit window.
 
 ## B8 — Idempotency constraints
 
@@ -197,11 +203,10 @@ A model/provider change must never silently rewrite historical PromptBuild seman
 
 Founder-required model research must pass through an evidence/evaluation/promotion path before LIVE status.
 
-Astra A3 decides:
-- task/capability vs provider/model/profile/adapter separation;
-- code/config boundary;
-- model/profile version semantics;
-- rollout/eval/rollback lifecycle.
+R3 establishes the provisional model lifecycle:
+CapabilityDefinition, Provider, ModelFamily, ProviderDeployment, ModelProfile/Revision, EngineAdapterVersion, ProviderAdapterVersion, ModelDeploymentSnapshot, ResearchEvidence, EvalRun and PromotionDecision.
+
+Only K1 remains open on whether one immutable ModelProfileRevision binds one primary deployment or a deployment set.
 
 ## B11 — Auth / authorization / entitlement separation
 
@@ -223,7 +228,15 @@ BYOK and platform-managed credentials may both exist but must be explicit owners
 
 Anonymous demo is transient and must not become a hidden long-lived workspace.
 
-Exact web/API/MCP/worker token model is Astra A5.
+Resolved by R3:
+external mature OIDC/OAuth;
+secure server-managed browser session;
+audience-restricted API tokens;
+MCP as OAuth protected resource;
+object-level application authorization;
+secret_ref-only ProviderConnection;
+service-principal workers;
+no silent legacy-key upload.
 
 ## B12 — Asset and lineage model
 
@@ -294,7 +307,10 @@ Local storage may remain for:
 - portability/export;
 but not as the only production canon after migration.
 
-Exact phase order is Astra A6.
+Resolved by R3:
+M0 behavior freeze → M1 application seam → M2 local domain normalization → M3 account/server substrate → M4 dry-run MigrationPlan → M5 verified per-project SERVER_CANONICAL cutover → M6 provider reconnect → M7 durable generation → M8 dynamic model layer → M9 graph/API/MCP → M10 local-canonical retirement.
+
+No permanent dual-write.
 
 ## B16 — Browser candidate promotion
 

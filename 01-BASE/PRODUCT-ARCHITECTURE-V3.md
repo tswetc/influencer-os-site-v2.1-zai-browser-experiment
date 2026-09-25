@@ -1,6 +1,9 @@
 # Influencer OS Product Architecture V3
 
-Status: CURRENT PRODUCT-QUALITY TARGET
+Status: PRE_ASTRA_ARCHITECTURE_V3_PREPARATION
+
+This file is a preparation baseline only.
+Official E004–E011/Q001 will not launch until a post-Astra Architecture V4 supersedes it.
 
 ## Architectural objective
 
@@ -193,9 +196,28 @@ Node graph for:
 - controlled reruns;
 - publishing a complex graph as a simpler reusable action.
 
-A guided action MAY compile into a workflow internally.
-A workflow MAY be packaged as a guided tool/preset.
+Ordinary guided Studio actions call application use cases directly and do NOT create an implicit WorkflowRun.
+
+A validated WorkflowRevision MAY be explicitly published as a guided tool/preset. In that case the guided tool intentionally executes that pinned workflow and creates a WorkflowRun.
+
+Both paths still use the same application commands and domain objects.
 
 ## Promotion rule
 
 Browser candidates may approximate backend infrastructure, but must preserve these boundaries in source structure and data contracts so a selected candidate can be promoted without a full conceptual rewrite.
+
+
+## Pre-Astra central decision supplements
+
+Current binding architecture details are also defined in:
+- `08-ARCHITECT-COUNCIL/PRE-ASTRA-CENTRAL-DECISIONS-R2.md`
+- `08-ARCHITECT-COUNCIL/PRE-ASTRA-CENTRAL-DECISIONS-R3.md`
+
+Key additions:
+- mutable drafts + immutable execution checkpoints/revisions;
+- no historical rebase;
+- remote MCP uses standards-based OAuth protected-resource semantics;
+- hosted provider secrets are secret references only;
+- migration is per-project LOCAL_CANONICAL → SERVER_CANONICAL with no dual-write;
+- model semantics and provider transport adapters are separate concerns;
+- paid provider submission uncertainty is never hidden as a normal retry.
