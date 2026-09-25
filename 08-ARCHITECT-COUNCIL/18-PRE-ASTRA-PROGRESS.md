@@ -18,7 +18,10 @@ Status: CENTRAL_ARCHITECTURE_CLOSED__EXTERNAL_EVIDENCE_AND_VERIFICATION_REMAIN
 - [x] official E/Q runs paused until post-Astra Architecture V4;
 - [x] local/private media ignore boundary;
 - [x] Wave v4 local runbook prepared;
-- [x] ChatGPT Project transfer package drafted.
+- [x] ChatGPT Project transfer package drafted;
+- [x] active architecture docs reconciled after K2 closure;
+- [x] central adversarial A1–A6 review PASS_WITH_HARDENING;
+- [x] R4 hardening invariants accepted.
 
 ## Central architecture status
 
@@ -44,8 +47,6 @@ K2 is closed by:
 
 ## Central work remaining
 
-- [ ] reconcile active docs/ADR baseline after K2 closure;
-- [ ] one central adversarial review against all A1–A6 decisions;
 - [ ] pre-Astra executive/delta/evidence-router packet;
 - [ ] structural audit PASS;
 - [ ] semantic/adversarial audit PASS;

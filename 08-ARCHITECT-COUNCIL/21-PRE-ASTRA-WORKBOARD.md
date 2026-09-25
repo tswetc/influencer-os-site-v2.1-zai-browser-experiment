@@ -39,10 +39,10 @@ Exit criterion: every architecture decision can distinguish CURRENT behavior fro
 - [x] A4/K2 paid-submit ambiguity baseline + BYOK-first route safety gate;
 - [x] A5 web/API/MCP auth + secret boundary;
 - [x] A6 staged local→server migration;
-- [ ] reconcile all active ADR/baseline/problem-register files to reflect zero unresolved architecture decisions;
-- [ ] run one adversarial central pass against A1–A6 and record concrete counterexamples or PASS.
+- [x] reconcile all active ADR/baseline/problem-register files to reflect zero unresolved architecture decisions;
+- [x] run one adversarial central pass against A1–A6 and record concrete counterexamples or PASS.
 
-Exit criterion: no routine or currently required architecture decision remains open.
+Exit criterion: no routine or currently required architecture decision remains open. PASS.
 
 ## W3 — Wave v4 media transport
 
