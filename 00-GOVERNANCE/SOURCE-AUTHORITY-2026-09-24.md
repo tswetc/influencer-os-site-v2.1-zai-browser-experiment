@@ -1,76 +1,36 @@
 # Source Authority and Reconciliation — 2026-09-24
 
-Status: BINDING FOR FUTURE LAUNCH FREEZES
+Status: BINDING SOURCE-LAYER CONTRACT
 
-This document corrects an ambiguity in the lab.
+This document defines source precedence. Current launch sequencing is governed by the newer 2026-09-25 founder decisions.
 
-## The problem
+## Authority layers for central reconciliation
 
-The lab currently treats the founder-supplied `os23.6.zip` source pack as the semantic authority. That archive is a verified release artifact and remains essential, but the private canonical product repository now has a newer verified release-sync commit and contains implementation surfaces that are not copied into this public experiment repository.
-
-A browser run must not infer that the 23 published source files represent every current product behavior.
-
-## Authority layers
-
-For central architectural reconciliation, use:
-
-1. **Explicit current founder decision**
-   - product direction, publication/identity decisions, strategic supersession.
-2. **Current public-lab supersession/architecture contract**
-   - required for browser agents that cannot access private sources.
-3. **Current canonical Web App implementation**
-   - private `tswetc/influencer-os` default branch.
-   - current verified audit head at the time this document was written:
-     `1158007fdaefd823e24d7a38d4fa7258814b541c`.
-4. **Private durable product-family canon**
-   - useful historical/durable context when current;
-   - currently NOT a required input for public browser agents;
-   - do not let stale private status override the current founder decision.
-5. **Verified release artifact baseline**
-   - `os23.6.zip`
-   - SHA-256 `8fd6f6a9e5bf8fc4e83cf04f26973b241a5319652a355017ef0c36e897233a84`.
-6. **Canonical site ancestry**
-   - private `tswetc/influencer-os-site` V2/V2.1.
-7. **External reference products/sites**
-   - architecture, UX, interaction and visual research only.
-   - never override Influencer OS semantics.
+1. Explicit current founder decision.
+2. Current public-lab supersession/architecture contract.
+3. Current canonical private Web App implementation.
+   Verified audit head: `1158007fdaefd823e24d7a38d4fa7258814b541c`.
+4. Private durable product-family canon when current.
+5. Verified release artifact baseline:
+   `os23.6.zip` SHA-256 `8fd6f6a9e5bf8fc4e83cf04f26973b241a5319652a355017ef0c36e897233a84`.
+6. Canonical site ancestry: private `tswetc/influencer-os-site` V2/V2.1.
+7. External products/sites: research only; never override Influencer OS semantics.
 
 ## Important distinction
 
-The public lab publishes a **selected source core**, not the complete private product repository.
+The public lab publishes a selected source core, not the complete private product repository.
+The published source core is authoritative for mechanics it actually contains; omission is not evidence that current private behavior does not exist.
 
-The published 23-file source pack is sufficient for the core prompt/canon mechanics that it contains. It is NOT evidence that omitted product behavior does not exist.
-
-Examples of current private implementation domains outside the 23-file public pack include:
-- parsing;
-- vision/reference analysis and cache;
-- license behavior;
-- backup/import validation;
-- IndexedDB/storage migration behavior;
-- display-label consistency;
-- manifest/share/export behavior;
-- product consistency edge cases;
-- current UI wiring and release tests.
-
-Future full-product runs must receive a derived behavior contract for these domains rather than a verbatim copy of the complete private source.
+Known private-current behavior outside the selected public core includes parsing, vision/cache, license behavior, backup/import validation, IndexedDB migration, display-label/product consistency, export/share behavior, UI wiring and release tests.
 
 ## No public-source expansion
 
-Do NOT solve the gap by copying the entire private product repository into this public lab.
-
-Use:
-- behavior contracts;
-- exact private source HEAD;
-- release artifact hashes;
-- derived acceptance tests;
-- explicit reconciliation notes.
-
-Promotion into a private canonical branch may read the complete private source directly.
-
+Do not copy the entire private product repository into the public lab.
+Use behavior contracts, exact private source HEADs, release hashes, derived acceptance tests and reconciliation notes.
 
 ## Public-run rule
 
-Public Chat.Z.AI runs consume the public authority stack in:
-`00-GOVERNANCE/PUBLIC-CANON-SUPERSESSION-2026-09-24.md`.
+New public browser runs use:
+`00-GOVERNANCE/PUBLIC-CANON-SUPERSESSION-2026-09-25.md`.
 
-They must not block on inaccessible project-memory and must not guess private implementation details.
+Historical pinned runs keep their historical authority input.
