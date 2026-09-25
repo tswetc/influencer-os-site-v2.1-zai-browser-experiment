@@ -1,9 +1,12 @@
 # Full Product Run Readiness — Pre-Astra Finalization
 
 Date: 2026-09-25
-Status: PRE_ASTRA_FINALIZATION_IN_PROGRESS
+Status: CENTRAL_ARCHITECTURE_CLOSED__PRE_ASTRA_VERIFICATION_IN_PROGRESS
 
-Binding plan:
+Binding workboard:
+`08-ARCHITECT-COUNCIL/21-PRE-ASTRA-WORKBOARD.md`
+
+Binding gate plan:
 `08-ARCHITECT-COUNCIL/19-PRE-ASTRA-EXECUTION-PLAN-V2.md`
 
 ## Architecture/source complete
@@ -24,10 +27,11 @@ Binding plan:
 - [x] A5 standards-based web/API/MCP principal + secret boundary;
 - [x] A6 per-project staged migration/no dual-write.
 
-## Provisional hard architecture questions
+## Hard architecture questions
 
-- [x] K1 model/profile/provider-deployment identity boundary — CLOSED centrally with ModelRoute.
-- [ ] K2 platform-managed CostExposure settlement after non-idempotent ambiguous paid submit.
+- [x] K1/A3 model/profile/provider-deployment identity boundary — CLOSED centrally with ModelRoute.
+- [x] K2/A4 ambiguous paid submit — CLOSED for the current BYOK-first milestone with SUBMISSION_UNKNOWN, route submission-safety classes, no automatic retry/fallback from uncertain billable execution, and no PLATFORM_MANAGED execution on NON_RECONCILABLE_SUBMIT routes.
+- [x] central A1–A6 adversarial review completed with accepted R4 hardening invariants.
 
 ## Media/transport
 
@@ -58,11 +62,11 @@ Binding plan:
 
 ## Astra packet
 
-- [ ] K2 final challenge;
 - [ ] executive snapshot;
 - [ ] architecture delta map;
-- [ ] final open-knot file;
+- [ ] zero-open / challenge-only architecture list;
 - [ ] evidence router;
+- [ ] ADR/nonnegotiables/project-memory reconciliation confirmed;
 - [ ] structural audit PASS;
 - [ ] semantic/adversarial audit PASS;
 - [ ] immutable Astra SHA.

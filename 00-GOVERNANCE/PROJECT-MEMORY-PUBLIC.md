@@ -1,7 +1,7 @@
 # Influencer OS Site V2.1 — Public Lab Project Memory
 
 Date: 2026-09-25
-Status: PRE_ASTRA_FINALIZATION_IN_PROGRESS
+Status: CENTRAL_ARCHITECTURE_CLOSED__PRE_ASTRA_VERIFICATION_IN_PROGRESS
 
 This is the first operational memory for NEW work in the public Z.ai browser lab.
 
@@ -35,18 +35,24 @@ the private Web App is local-first/browser-persistent and hardcodes current Engi
 
 ASTRA-R001 is NOT launched.
 
-Binding plan:
+Binding operational workboard:
+`08-ARCHITECT-COUNCIL/21-PRE-ASTRA-WORKBOARD.md`
+
+Binding gate plan:
 `08-ARCHITECT-COUNCIL/19-PRE-ASTRA-EXECUTION-PLAN-V2.md`
 
-Central work has completed the source/product audit and closed A1/A2/A5/A6.
+Central architecture has completed the source/product audit and closed A1–A6/K1/K2 for the current BYOK-first production milestone.
 
-Two provisional high-risk knots remain:
-- K1 model/profile/provider-deployment identity boundary;
-- K2 ambiguous paid provider submission without idempotency/lookup.
+There are currently zero unresolved core architecture knots. The accepted baseline also includes the R4 adversarial hardening invariants for execution-checkpoint concurrency, ModelRoute verification evidence, idempotency-window qualification, output materialization truth, dispatch-time security rechecks, migration anti-race/staging, and deterministic cache provenance.
 
-Finish those challenges, ingest material P001–P004 evidence, finish transport/privacy infrastructure, synthesize the minimal evidence packet and pass structural + adversarial audits.
+Remaining pre-Astra work is evidence and verification:
+- local Wave v4 transport/privacy QA;
+- P001–P004 forensic evidence as available;
+- compact pre-Astra synthesis;
+- final structural + semantic/adversarial audits;
+- one immutable Astra input SHA.
 
-Only then freeze Astra input and run GPT-6 Astra / XHIGH.
+Astra is then used as a high-tier falsification pass over the accepted baseline, not as a greenfield architecture author.
 
 ## Current run state
 

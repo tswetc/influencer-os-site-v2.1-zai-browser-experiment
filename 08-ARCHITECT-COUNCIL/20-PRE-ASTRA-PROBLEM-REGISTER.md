@@ -80,12 +80,12 @@ Evidence:
 
 Class: CENTRAL_VERIFICATION
 Severity: P0
-State: IN_PROGRESS
+State: COMPLETE
 
-Need:
-- remove stale K1/K2-open wording from active routing;
-- update ADR/baseline/current state;
-- keep historical analysis files as evidence without making them current authority.
+Completed:
+- active Architecture Council ADR/baseline/state reconciled after K1/K2 closure;
+- top-level current project memory/readiness reconciled to zero unresolved core architecture knots;
+- historical analysis remains preserved as evidence without becoming current authority.
 
 ## P7 — Pre-Astra synthesis packet
 

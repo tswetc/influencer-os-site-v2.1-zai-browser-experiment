@@ -104,10 +104,10 @@ Exit criterion before official E wave: clean bridge usable without legacy histor
 - [x] universal Project instruction drafted;
 - [x] current-context handoff drafted;
 - [x] new-chat bootstrap drafted;
-- [ ] founder creates ChatGPT Project;
-- [ ] founder pastes Project instruction;
-- [ ] founder adds current-context handoff as Project file or first message;
-- [ ] first new chat performs context preflight and reports exact current HEAD/authority before doing work.
+- [x] founder creates ChatGPT Project;
+- [x] founder pastes Project instruction;
+- [x] founder adds full/current context handoff to the new Project/chat;
+- [x] first new chat performs context preflight and verifies exact current HEAD/authority before continuing.
 
 Exit criterion: a fresh ChatGPT chat can recover the project without this legacy conversation.
 
@@ -120,7 +120,7 @@ Exit criterion: a fresh ChatGPT chat can recover the project without this legacy
 - [ ] evidence router;
 - [ ] ADR register reconciled;
 - [ ] nonnegotiables reconciled;
-- [ ] project memory reconciled.
+- [x] project memory reconciled.
 
 Exit criterion: Astra needs no long chat transcript and no full-repo pre-read.
 
@@ -187,9 +187,8 @@ Exit criterion: raw Astra decision/review artifact preserved unchanged.
 
 ## Current next actions
 
-1. reconcile active architecture docs after K2 closure;
-2. build ChatGPT Project transfer package;
-3. founder runs local Wave v4 runbook;
-4. ingest P001–P004 as they finish;
-5. complete W7/W8;
-6. freeze Astra input.
+1. founder runs the local Wave v4 runbook on SSD and returns the verification output;
+2. ingest/audit P001–P004 as each result becomes available;
+3. central architect continues W7 synthesis/reconciliation in parallel, but does not finalize evidence-dependent claims prematurely;
+4. complete W8 structural + semantic/adversarial audits after material evidence is incorporated or explicitly classified non-blocking;
+5. freeze one immutable Astra input and only then launch Astra.
