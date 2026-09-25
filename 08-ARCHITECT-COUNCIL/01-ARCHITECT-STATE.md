@@ -1,11 +1,14 @@
 # Central Architect State — Influencer OS
 
 Date: 2026-09-25
-Status: FUNDAMENTAL_ASTRA_R001_READY_AFTER_FREEZE
+Status: PRE_ASTRA_FINALIZATION_IN_PROGRESS
+
+Binding plan:
+`17-PRE-ASTRA-FINALIZATION-PLAN.md`
 
 ## Product
 
-Influencer OS is now treated architecturally as one product platform, not a landing page.
+Influencer OS is treated architecturally as one product platform, not a landing page.
 
 Four logical areas:
 1. Public / Product Experience
@@ -23,30 +26,19 @@ Guided Studios + Expert Workflow Graph are both first-class interaction modes.
 audited main:
 `1158007fdaefd823e24d7a38d4fa7258814b541c`
 
-Current source facts relevant to migration:
+Verified migration-relevant facts include:
 - Next.js Web App;
-- CharacterPassport and SceneSpec are current core browser types;
+- CharacterPassport and SceneSpec current browser types;
 - hardcoded six-route EngineId union;
-- engine-specific compiler logic lives in code;
+- engine-specific compiler logic in code;
 - Settings contains provider/apiKey/model/customEndpoint;
-- heavy browser state uses IndexedDB, small state uses localStorage;
+- heavy browser state uses IndexedDB and smaller state uses localStorage;
 - PassportVersion snapshots exist;
 - validated backup/import exists;
 - provider switching clears stale provider keys/model;
 - tested product consistency/edge cases exist.
 
 These are current behavior constraints, not the target hosted architecture.
-
-## Public lab
-
-This repository remains an intentionally temporary PUBLIC transport/experiment lab.
-
-No secrets/private customer data.
-Neutral identity IDs only.
-
-Current architecture-preparation lineage:
-- pre-Astra architecture prep reached `e21cd0c488cadb8dba1a4ccf9749f2b6aa24c7e0`;
-- final Astra packet will be pinned at the later freeze commit recorded after precheck.
 
 ## Historical site anchors
 
@@ -58,7 +50,7 @@ Private Site V2.1 observed head:
 
 Private V2.1 status predates current public-lab architecture and does not override current founder decisions.
 
-## Browser product runs
+## Browser pilots
 
 Already-running historical pilots:
 - P001 GLM-5.2 design A
@@ -67,8 +59,9 @@ Already-running historical pilots:
 - P004 GLM-5.3 design B
 
 Do not mutate their pinned inputs.
+Ingest and audit completed outputs before Astra when material.
 
-Official E004–E011 should use a new post-Astra/product-freeze if Astra materially changes contracts.
+Official E004–E011/Q001 are now intentionally paused until post-Astra Architecture V4.
 
 ## Media
 
@@ -81,28 +74,26 @@ Current founder-reported clean local master:
 - 156 filesystem files;
 - 0 errors.
 
-Official bounded packs target 30–45 assets/design.
-Current v4 target counts:
-A 39 · B 42 · C 33 · D 36.
+Official bounded pack targets:
+A39 · B42 · C33 · D36.
 
-Wave v4 still requires public-transport freeze and visual pixel-privacy review before official launches.
+Wave v4 transport still requires regeneration, actual-transport visual privacy QA, verification and sanitized commit.
 
 ## Public-history privacy debt
 
 Current active text uses neutral IDs.
 Older historical public commits may still contain obsolete inferred identity strings.
 
-Do not rewrite history while already-running pinned experiments need it.
+Do not rewrite history while pinned pilots depend on it.
 
-Before official long-lived public transport:
-create a sanitized clean bridge/root or otherwise remove historical privacy debt without breaking current evidence.
+A long-lived official public bridge must use a privacy-safe history strategy before the official E wave.
 
-## Central architect settled baseline
+## Central architect baseline
 
 See:
 `10-CENTRAL-ARCHITECT-BASELINE-2026-09-25.md`
 
-## Astra R001 remaining hard decisions
+## Provisional Astra R001 hard decisions
 
 1. one execution substrate across Studios / Workflow / API / MCP;
 2. creative revision / staleness / rebase semantics;
@@ -111,4 +102,7 @@ See:
 5. web/API/MCP auth + BYOK/managed secret boundary;
 6. reversible migration from current local-first Web App.
 
-Everything else should be solved later at lower cost unless one of these decisions exposes a new foundational contradiction.
+These are NOT frozen yet.
+The central architect must try to close or narrow them further before Astra launch.
+
+Astra is launched only after the pre-Astra finalization plan and two final audits pass.

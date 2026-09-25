@@ -1,7 +1,10 @@
-# Full Product Run Readiness — Post-Architecture Pre-Freeze
+# Full Product Run Readiness — Pre-Astra Finalization
 
 Date: 2026-09-25
-Status: WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE
+Status: PRE_ASTRA_FINALIZATION_IN_PROGRESS
+
+Binding plan:
+`08-ARCHITECT-COUNCIL/17-PRE-ASTRA-FINALIZATION-PLAN.md`
 
 ## Proven
 
@@ -32,22 +35,30 @@ Status: WAITING_FOR_WAVE_V4_TRANSPORT_FREEZE
 - [x] DAG-first workflow v1;
 - [x] auth / authorization / membership / entitlement separation;
 - [x] selective candidate promotion;
-- [x] six Astra R001 decision knots isolated.
+- [x] six Astra R001 decision knots isolated provisionally.
 
-### Astra R001 — parallel architecture hardening, NOT a blocker for this exploration wave
-- [x] focus packet created;
-- [x] founder→architecture gap map created;
-- [x] per-question evidence map created;
+### Astra R001
+- [x] focus packet exists;
+- [x] founder→architecture gap map exists;
+- [x] per-question evidence map exists;
 - [x] XHIGH reasoning selected;
 - [x] one-output contract defined;
-- [ ] Astra R001 launched from immutable pinned SHA;
-- [ ] raw decision artifact ingested;
-- [ ] accepted deltas promoted into ADRs/contracts for the NEXT post-review wave;
-- [ ] optional lower-cost implementation audit completed if needed.
+- [ ] pre-Astra authority snapshot complete;
+- [ ] central source/product audit complete;
+- [ ] all centrally-solvable architecture questions closed;
+- [ ] final open-knot set minimized;
+- [ ] material P001–P004 evidence ingested;
+- [ ] public-history privacy strategy decided;
+- [ ] pre-Astra synthesis packet complete;
+- [ ] structural audit PASS;
+- [ ] semantic/adversarial audit PASS;
+- [ ] immutable Astra input SHA recorded;
+- [ ] Astra R001 launched.
 
 Founder decision:
-E004–E011 + Q001 may launch on the current Architecture V3 freeze once Wave v4 transport/audits pass.
-Do not mutate already-running/frozen runs if Astra later proposes a better A1–A6 contract; record the delta and apply it to a new run ID/wave.
+Do NOT launch ASTRA-R001 yet.
+Do NOT launch official E004–E011/Q001 yet.
+Finish the pre-Astra plan first, then run Astra, reconcile Architecture V4, and only then create the official E-wave freeze.
 
 ### M001 / media
 - [x] M001 completed + centrally audited;
@@ -63,38 +74,33 @@ Do not mutate already-running/frozen runs if Astra later proposes a better A1–
 - [ ] local verifier PASS;
 - [ ] public sanitized transport committed.
 
-### Existing runs
-- [x] P001–P004 launched on historical immutable inputs.
-- [x] do not mutate their pinned inputs.
-- [ ] ingest/export/audit P001–P004 when complete.
+### Existing pilots
+- [x] P001–P004 launched on historical immutable inputs;
+- [x] do not mutate their pinned inputs;
+- [ ] ingest/export/audit each completed run;
+- [ ] produce combined architecture evidence extract.
 
 ## Public-history privacy gate
 
 Current active tree is neutral-ID only.
+Older public history may contain obsolete inferred identity text.
 
-Older public Git history may contain obsolete inferred identity text.
+Do NOT rewrite commits still required by pinned pilots.
 
-Do NOT rewrite while current pinned experiments require those commits.
+Before the official long-lived E-wave bridge:
+- [ ] choose sanitized clean-history bridge/root or equivalent;
+- [ ] verify obsolete identity strings are not reachable through the official long-lived bridge.
 
-Before the official long-lived public Wave:
-- [ ] finish/retrieve current pinned experiment artifacts;
-- [ ] create sanitized clean-history bridge/root or equivalent safe transport;
-- [ ] verify no obsolete identity strings in reachable official bridge history.
+## Official E004–E011 + Q001 gate
 
-## E004–E011 + Q001 exploration freeze gate
+PAUSED until:
 
-This is a product-quality exploration wave, not the final canonical architecture freeze.
+1. pre-Astra plan complete;
+2. Astra R001 complete;
+3. raw Astra result reconciled;
+4. accepted deltas promoted into Architecture V4;
+5. Wave v4 sanitized media transport passes visual/privacy/technical checks;
+6. one new immutable Architecture V4 + media freeze SHA exists.
 
-Launch when:
-
-1. exact curated packs are regenerated from the clean local master;
-2. actual sanitized Wave v4 transport files receive pixel-level visual QA;
-3. Wave v4 verifier passes;
-4. public-lab text/run-contract audits pass;
-5. run specs point only to current Wave v4/current architecture files;
-6. one clean immutable full SHA is recorded;
-7. no further mutation occurs to that wave's frozen input.
-
-Astra R001 and P001–P004 may continue in parallel.
-Their later findings must not be silently backported into already-running E/Q sandboxes.
-Any foundational delta creates a new post-review freeze/run ID.
+Until then:
+`OFFICIAL_E_WAVE_NOT_READY`
