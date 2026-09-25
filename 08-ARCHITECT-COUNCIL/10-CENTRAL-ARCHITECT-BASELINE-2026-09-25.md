@@ -67,8 +67,14 @@ Creator UI, HTTP API and MCP call the same application services.
 
 No transport-specific prompt/generation semantics.
 
-Open question delegated to Astra A1:
-whether simple direct executions also create implicit WorkflowRuns, or Workflow is only an orchestration layer over the same commands.
+Direct/guided Studio actions do NOT create implicit WorkflowRuns by default.
+
+Workflow is an orchestration layer over the same application commands.
+
+Every command carries a shared ExecutionContext/correlation envelope with surface/origin and optional WorkflowRun/WorkflowNodeRun identifiers.
+
+Direct MCP/API tools map to the same application commands.
+Explicit workflow execution creates WorkflowRun/WorkflowNodeRun.
 
 ## B5 — Durable object/version model
 
@@ -83,24 +89,43 @@ SelfCheckReport, EngineAdapterVersion, ModelProfileVersion/effective snapshot,
 OSRulesetVersion, WorkflowRevision, WorkflowRun, WorkflowNodeRun,
 GenerationJob, GenerationAttempt, AssetVersion.
 
-Astra A2/A3 may reduce this set where snapshots/hashes are sufficient.
+Creative-side revision policy is now accepted centrally.
+
+Keep first-class:
+CharacterRevision, CanonRevision, SceneRevision, PlanRevision, WorkflowRevision.
+
+Do not add ShotRevision initially; immutable Shot definitions belong to a PlanRevision or immutable Shot records owned by that revision.
+
+Astra A3 may still refine model/profile/adapter version anchors.
 
 Reproducibility means reconstructing exact effective inputs/request/lineage.
 It does not promise identical future pixels from a stochastic external model.
 
 ## B6 — Draft vs historical truth
 
-Accepted constraints:
-- uncommitted UI editing state is not historical canon;
-- generation may never depend on an ambiguous moving “latest” at execution time;
-- before PromptBuild/GenerationJob, effective creative dependencies become immutable IDs/snapshots;
-- historical PromptBuilds/Runs/Assets never rebase;
-- upstream edits must not silently mutate already-executed downstream meaning.
+Creators edit mutable drafts with a baseRevisionId and optimistic-concurrency/version token.
 
-Open to Astra A2:
-- exact commit/revision boundaries;
-- staleness/rebase UX and semantics;
-- which objects need first-class revisions versus embedded snapshots.
+Autosave updates the draft; it does not create revision spam.
+
+An immutable revision is created when:
+- the user explicitly saves/checkpoints/publishes; OR
+- an operation requires durable history and the draft is dirty.
+
+The second case is a transparent EXECUTION_CHECKPOINT.
+
+Draft dependency mode may be FOLLOW_ACTIVE or PINNED.
+
+Before PromptBuild/Workflow execution, FOLLOW_ACTIVE resolves to exact immutable revision IDs/snapshots and those bindings are stored.
+
+No historical revision/build/run/asset ever rebases in place.
+
+“Update to current” operates only on a mutable draft and produces a new revision.
+
+Derived previews/builds may be marked OUTDATED_VS_CURRENT when input hashes differ, but historical outputs remain valid history.
+
+Manual prompt editing creates a new PromptBuild derived from the original and reruns SelfCheck.
+
+CharacterRevision and CanonRevision remain separate histories.
 
 ## B7 — Generation history
 
@@ -145,11 +170,20 @@ Batch/Map, Variant, retry policy, reusable Subworkflow.
 Editing and execution are distinct.
 Manual gates may suspend and resume a run.
 
-Pure deterministic nodes may use content-addressed cache.
+Pure deterministic nodes may use content-addressed cache with a visible cache-hit record.
 Paid/non-deterministic generation output is never silently memoized as a “new” generation.
-Reuse must be explicit and visible in lineage.
+Reuse is explicit and visible in lineage.
 
-Astra A1 decides exact execution/rerun/reuse semantics and relationship to direct Studios/MCP.
+Each selected/downstream rerun creates a new WorkflowRun referencing the parent run and rerun scope.
+
+Unchanged upstream outputs are referenced from the parent run.
+
+Rerunning a generation node creates a new GenerationJob/Attempt history.
+
+Manual approval gates suspend/resume the same run with approval evidence.
+
+Saved subworkflows pin an exact WorkflowRevision by default.
+An intentional follow-current subworkflow reference resolves to an exact revision at run start.
 
 ## B10 — Model ecosystem constraints
 

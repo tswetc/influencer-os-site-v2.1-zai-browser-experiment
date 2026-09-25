@@ -28,18 +28,36 @@ Status: ACCEPTED
 
 Web, HTTP API and MCP invoke the same application use cases.
 
-OPEN SUB-DECISION:
-whether direct Studio operations also instantiate an implicit WorkflowRun, or Workflow remains composition/orchestration over the same commands.
-Owner: Astra A1.
+Direct/guided Studio commands do NOT instantiate an implicit WorkflowRun by default.
+
+Workflow is an orchestration layer over those same commands.
+
+Every command carries a common ExecutionContext/correlation envelope; direct MCP/API calls map to ordinary commands, while explicit workflow execution creates WorkflowRun/WorkflowNodeRun.
+
+Decision evidence:
+`PRE-ASTRA-CENTRAL-DECISIONS-R2.md`.
 
 ## ADR-004 — Immutable historical creative/execution state
 Status: ACCEPTED
 
-Executed historical revisions/builds/runs/attempts/assets are immutable.
+Creators edit mutable drafts.
 
-OPEN SUB-DECISION:
-draft/commit/stale/rebase and minimum first-class revision semantics.
-Owner: Astra A2.
+Immutable revisions are created on explicit checkpoint/save OR transparently before an execution that requires durable history when the draft is dirty.
+
+FOLLOW_ACTIVE dependencies resolve to exact immutable revisions at execution.
+PINNED dependencies stay pinned.
+
+Historical revisions/builds/runs/attempts/assets never rebase or mutate.
+
+Manual prompt edits create a derived PromptBuild rather than mutating the original.
+
+First-class creative revisions in v1:
+CharacterRevision · CanonRevision · SceneRevision · PlanRevision · WorkflowRevision.
+
+No ShotRevision initially.
+
+Decision evidence:
+`PRE-ASTRA-CENTRAL-DECISIONS-R2.md`.
 
 ## ADR-005 — GenerationJob != GenerationAttempt
 Status: ACCEPTED
@@ -62,9 +80,20 @@ Status: ACCEPTED
 
 No arbitrary cycles.
 
-OPEN SUB-DECISION:
-WorkflowRun/NodeRun, partial rerun, cache/reuse, manual gates, subworkflow binding and direct-Studio relationship.
-Owner: Astra A1.
+WorkflowRun exists only for actual workflow execution.
+
+Downstream/selected rerun creates a new WorkflowRun referencing the parent run and explicit reused upstream outputs.
+
+Deterministic pure nodes may produce recorded cache hits.
+
+Paid/non-deterministic generation is never silently memoized as a new generation.
+
+Manual approval suspends/resumes the same run.
+
+Saved subworkflows pin an exact WorkflowRevision by default; intentional follow-current binding resolves to an exact revision at run start.
+
+Decision evidence:
+`PRE-ASTRA-CENTRAL-DECISIONS-R2.md`.
 
 ## ADR-009 — Production metadata persistence
 Status: ACCEPTED
@@ -125,11 +154,18 @@ Promote only audited contracts/modules/components/design/interaction units.
 ## ADR-015 — Source/compiler/version provenance
 Status: PROVISIONAL
 
-PromptBuild must persist enough exact state to reconstruct effective provider request.
+PromptBuild must persist enough exact state to reconstruct the effective provider request.
 
-OPEN:
-minimum first-class revision set vs immutable snapshots/hashes, including model/provider drift.
-Owners: Astra A2 + A3.
+Creative-side first-class revision policy is now accepted:
+CharacterRevision · CanonRevision · SceneRevision · PlanRevision · WorkflowRevision.
+
+Execution resolves any FOLLOW_ACTIVE draft dependency to exact immutable revision IDs before PromptBuild/WorkflowRun.
+
+Historical objects never depend on ambiguous latest/current.
+
+Remaining OPEN:
+model/provider/adapter version and effective snapshot semantics.
+Owner: Astra A3.
 
 ## ADR-016 — Audit and telemetry separate
 Status: ACCEPTED
