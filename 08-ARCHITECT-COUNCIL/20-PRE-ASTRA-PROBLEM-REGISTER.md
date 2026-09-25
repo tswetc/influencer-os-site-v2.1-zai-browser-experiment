@@ -3,123 +3,117 @@
 Date: 2026-09-25
 Status: ACTIVE
 
-This separates unresolved ARCHITECTURE questions from OPERATIONAL work that is merely not executed yet.
+This separates CLOSED architecture decisions from work that is operational/external/verification.
 
-## P1 — Model identity and provider routing
+## P1 — Model identity/provider routing
 
 Class: ARCHITECTURE
-Severity: P0
-Current state: CENTRAL_DECISION_NOW_AVAILABLE
+State: COMPLETE
 
-Problem:
-The same conceptual model may be available through direct vendor APIs and gateways, while provider aliases can drift. Prompt semantics belong to the model/OS layer; transport semantics belong to provider routes. A single overloaded ModelProfile would corrupt reproducibility.
+Decision:
+ModelProfileRevision is semantic/provider-route independent.
+Immutable ModelRoute binds semantic profile to ProviderDeployment + ProviderAdapterVersion.
+GenerationAttempt pins exact route + ModelDeploymentSnapshot.
+Alias drift creates new evidence/reverification; history is immutable.
 
-Required safe answer:
-separate semantic model profile from provider route and pin exact route at GenerationAttempt.
-
-Decision document:
-`K1-MODEL-ROUTE-DECISION.md`
-
-Completion:
-- [x] semantic profile separated from provider route;
-- [x] many compatible routes supported without embedding fallback into profile;
-- [x] historical PromptBuild pins semantic profile/EngineAdapter;
-- [x] GenerationAttempt pins exact route/provider adapter/deployment snapshot;
-- [x] mutable alias drift has quarantine/re-eval behavior;
-- [x] code-vs-config boundary defined.
-
-Result:
-P1 can leave Astra scope unless later evidence exposes a contradiction.
+Evidence:
+`K1-MODEL-ROUTE-DECISION.md`.
 
 ## P2 — Ambiguous paid provider submission
 
 Class: ARCHITECTURE / DISTRIBUTED SYSTEMS
-Severity: P0
-Current state: ONE NARROW POLICY EDGE REMAINS
+State: COMPLETE_FOR_CURRENT_MILESTONE
 
-Problem:
-If a provider has no idempotency and no reliable request lookup, a worker can crash after sending a paid request but before recording provider job identity. Local DB correctness cannot prove whether money/work was already committed externally.
-
-Central safe baseline:
-- durable outbox;
-- one automatic submission per Attempt;
-- provider idempotency when available;
+Decision:
+- durable outbox + idempotent/leased worker;
+- one automatic billable submission per Attempt;
 - reconciliation first;
 - SUBMISSION_UNKNOWN when certainty is impossible;
 - no automatic retry/fallback from SUBMISSION_UNKNOWN;
-- explicit new Attempt for risk-bearing retry.
+- explicit risk-bearing new Attempt only;
+- provider success distinct from output materialization;
+- route submission-safety capability;
+- BYOK-first milestone;
+- PLATFORM_MANAGED is forbidden on NON_RECONCILABLE_SUBMIT routes;
+- managed user credits require a separate future financial-ledger ADR.
 
-Remaining narrow question:
-exact budget/cost exposure settlement policy after a prolonged unresolved SUBMISSION_UNKNOWN for platform-managed billing.
-
-This is the only architecture question currently likely to deserve Astra after final challenge.
+Evidence:
+`K2-AMBIGUOUS-SUBMISSION-ANALYSIS.md`
+`K2-BILLING-SAFETY-DECISION.md`.
 
 ## P3 — Wave v4 media transport not executed locally
 
 Class: OPERATIONAL_EXTERNAL
-Severity: P0 FOR FUTURE E-WAVE
-Current state: BLOCKED_ON_FOUNDER_LOCAL_SSD
+Severity: P0 BEFORE PRE-ASTRA FREEZE / FUTURE E-WAVE
+State: BLOCKED_ON_FOUNDER_LOCAL_SSD
 
-Not an architecture question.
-
-Required founder/local execution:
-`04-MEDIA/WAVE-V4-LOCAL-RUNBOOK.md`
+Required:
+`04-MEDIA/WAVE-V4-LOCAL-RUNBOOK.md`.
 
 Completion:
-A39/B42/C33/D36 + sanitized bundle + machine verifier + full visual atlas QA.
+A39/B42/C33/D36 + sanitized bundle + machine verification + full actual-transport visual QA.
 
-## P4 — P001–P004 outputs not yet ingested
+## P4 — P001–P004 outputs not yet fully ingested
 
 Class: EXTERNAL_EVIDENCE
 Severity: P1 PRE-ASTRA
+State: WAITING_FOR_RESULTS
 
-GitHub currently contains no P001–P004 result packages.
+Need per available run:
+ZIP + checksum + runtime label + source/build/test/security/architecture forensic audit.
 
-Need:
-ZIP + checksum + runtime label + forensic source audit.
+Do not block indefinitely if a still-running pilot cannot materially falsify the accepted architecture.
 
-Do not block indefinitely if remaining architecture is independent of their outputs.
-
-## P5 — Long-lived public bridge not created
+## P5 — Long-lived public bridge
 
 Class: OPERATIONAL_GOVERNANCE
-Severity: P0 BEFORE OFFICIAL E-WAVE
 Decision: COMPLETE
-Execution: DEFERRED UNTIL POST-ASTRA
+Execution: DEFERRED_UNTIL_POST_ASTRA
 
 Use a NEW clean-history public bridge repository.
-Do not copy legacy Git history.
+Do not import legacy Git history.
 
-Decision:
-`00-GOVERNANCE/PUBLIC-BRIDGE-PRIVACY-DECISION.md`
+Evidence:
+`00-GOVERNANCE/PUBLIC-BRIDGE-PRIVACY-DECISION.md`.
 
-## P6 — Pre-Astra synthesis packet not finalized
+## P6 — Active-document reconciliation
+
+Class: CENTRAL_VERIFICATION
+Severity: P0
+State: IN_PROGRESS
+
+Need:
+- remove stale K1/K2-open wording from active routing;
+- update ADR/baseline/current state;
+- keep historical analysis files as evidence without making them current authority.
+
+## P7 — Pre-Astra synthesis packet
 
 Class: CENTRAL_ARCHITECTURE
-Severity: P0 BEFORE ASTRA
-State: TODO AFTER P1/P2 FINALIZATION + MATERIAL PILOT EVIDENCE
+Severity: P0
+State: TODO
 
-Must create:
-executive snapshot, delta map, final open knot, evidence router.
+Need:
+executive snapshot, architecture delta map, final challenge list, evidence router, reconciled ADR/nonnegotiables/project memory.
 
-## P7 — Structural + semantic audits not yet final
+## P8 — Structural + semantic audits
 
 Class: VERIFICATION
-Severity: P0 BEFORE ASTRA
+Severity: P0
+State: TODO
 
-Structural script exists:
-`tools/audit_pre_astra.py`
+Structural audit must verify paths/SHAs/authority/launch guards/local-media boundary.
 
-Final PASS waits until current intended evidence and local Wave transport state are settled.
+Semantic adversarial audit must attack:
+model drift, duplicate paid submit, webhook/poll races, cancel/late success, MCP authorization, secret leakage, migration divergence, provenance corruption and candidate-promotion contamination.
 
-Semantic/adversarial review waits until P2 is fully decided or explicitly isolated.
-
-## P8 — Astra input not frozen
+## P9 — Astra input freeze
 
 Class: EXPECTED BLOCK
 Severity: P0
+State: NOT_READY
 
-Correct current state:
-ASTRA_R001_NOT_LAUNCHED.
+Correct state:
+`ASTRA_R001_NOT_LAUNCHED`.
 
-Do not create final launch packet until P6/P7 pass.
+Freeze only after external material evidence is either ingested or explicitly non-blocking and both final audits pass.

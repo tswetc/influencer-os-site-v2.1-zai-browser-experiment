@@ -101,7 +101,7 @@ Status: ACCEPTED
 Postgres-class relational store + object storage.
 
 ## ADR-010 — Async worker boundary
-Status: PROVISIONAL / NARROW OPEN K2
+Status: ACCEPTED
 
 Hosted production-capable shape uses an async worker for long generation.
 
@@ -115,11 +115,15 @@ Accepted:
 - budget/cost reservation is durable;
 - no automatic fallback from ambiguous prior execution.
 
-Remaining narrow K2:
-non-idempotent/no-lookup crash-after-submit ambiguity.
+Current milestone decision:
+- classify route submission safety as IDEMPOTENT_SUBMIT / RECONCILABLE_SUBMIT / NON_RECONCILABLE_SUBMIT;
+- SUBMISSION_UNKNOWN + no automatic retry/fallback for irreducible ambiguity;
+- BYOK-first user-funded generation;
+- PLATFORM_MANAGED execution is forbidden on NON_RECONCILABLE_SUBMIT routes;
+- managed user credits require a separate financial-ledger ADR before enablement.
 
-Central preference:
-SUBMISSION_UNKNOWN + no automatic retry/fallback + pending cost reconciliation.
+Decision evidence:
+`K2-BILLING-SAFETY-DECISION.md`.
 
 ## ADR-011 — Model/provider/adapter lifecycle
 Status: ACCEPTED

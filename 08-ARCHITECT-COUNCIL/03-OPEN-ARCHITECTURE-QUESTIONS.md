@@ -1,66 +1,87 @@
-# Open Architecture Questions — Pre-Astra Reduced Set
+# Open Architecture Questions — Pre-Astra Status
 
 Date: 2026-09-25
-Status: ONE_IRREDUCIBLE_KNOT_REMAINS_PROVISIONALLY
+Status: ZERO_UNRESOLVED_CORE_ARCHITECTURE_KNOTS
 
-Closed centrally:
-- A1 execution substrate;
-- A2 creative revision/staleness/rebase;
-- A5 auth/MCP/BYOK/provider secret boundary;
-- A6 local-first → server-canonical migration sequence;
-- K1 model/profile/provider-deployment identity boundary.
+The central architect has now closed the previously isolated A1–A6/K1/K2 questions for the current BYOK-first production milestone.
 
-See:
+## Closed centrally
+
+### A1 — execution substrate
+Application commands/use cases are primitive.
+Workflow is orchestration over the same commands.
+Ordinary Studio/API/MCP operations do not require an implicit WorkflowRun.
+
+### A2 — creative state/history
+Mutable drafts + immutable explicit/execution-checkpoint revisions.
+FOLLOW_ACTIVE resolves to exact revisions at execution.
+Historical revisions/builds/runs/assets never rebase in place.
+
+### A3 / K1 — model/provider/adapter lifecycle
+Semantic ModelProfileRevision is provider-route independent.
+Immutable ModelRoute binds it to ProviderDeployment + ProviderAdapterVersion.
+GenerationAttempt pins exact route + deployment snapshot.
+Alias drift creates new evidence/reverification and never rewrites history.
+
+### A4 / K2 — paid generation durability
+Job != Attempt.
+Durable outbox/inbox/idempotent worker.
+SUBMISSION_UNKNOWN represents irreducible external uncertainty.
+No automatic retry/fallback from uncertain billable execution.
+
+Current milestone is BYOK-first.
+Platform-managed execution is allowed only on routes whose submission is idempotent or reliably reconcilable.
+NON_RECONCILABLE_SUBMIT routes are BYOK-only until a separate managed-billing/ledger ADR is accepted.
+
+### A5 — auth/MCP/secrets
+Standards-based OIDC/OAuth.
+Secure browser session.
+Audience/scoped API tokens + object authorization.
+MCP as OAuth protected resource plus the same application authorization.
+Provider secrets are referenced, not exposed.
+Workers use service identity.
+Legacy local keys are never silently uploaded.
+
+### A6 — migration
+No big-bang rewrite.
+Application seam first.
+Local normalization.
+Server substrate behind flags.
+Dry-run migration.
+Per-project verified cutover with exactly one canonical authority.
+Explicit provider reconnect.
+Durable generation/model layer/graph+MCP only after server-canonical cutover.
+No permanent dual-write.
+
+## Evidence
+
 - PRE-ASTRA-CENTRAL-DECISIONS-R2.md
 - PRE-ASTRA-CENTRAL-DECISIONS-R3.md
 - K1-MODEL-ROUTE-DECISION.md
+- K2-BILLING-SAFETY-DECISION.md
+- 10-CENTRAL-ARCHITECT-BASELINE-2026-09-25.md
 
-## K2 — Ambiguous paid submission without provider idempotency
+## What remains before Astra
 
-Accepted architecture:
-- GenerationJob != GenerationAttempt;
-- one DB transaction creates Job + Attempt + BudgetReservation + DispatchOutbox;
-- workers assume at-least-once delivery and use leases/idempotent local transitions;
-- provider-native idempotency is used when available;
-- reliable client-correlation lookup is used before retry when available;
-- webhook/poll events enter one deduplicated ProviderEventInbox/reducer;
-- provider success and output materialization are separate states;
-- no automatic fallback while a previous paid execution may still exist;
-- SUBMISSION_UNKNOWN represents irreducible external uncertainty.
+There is no ordinary design decision for Astra to make now.
 
-The remaining narrow policy edge:
+Astra's later job is adversarial falsification of the accepted architecture, especially:
 
-When a PLATFORM_MANAGED provider offers neither idempotency nor reliable client-correlation lookup and the worker crashes after request transmission but before provider job identity is durably known, what is the strongest durable settlement invariant for:
+1. provider/model identity under alias drift and gateway indirection;
+2. ambiguous paid submission / external side effects;
+3. MCP confused-deputy / object-level authorization boundaries;
+4. legacy local-first → server-canonical migration failure modes;
+5. provenance integrity across revisions, PromptBuild, Workflow, GenerationAttempt and AssetVersion.
 
-- user-facing BudgetReservation;
-- internal CostExposure/liability;
-- reconciliation horizon;
-- later provider usage/invoice evidence;
-- explicit risk-bearing retry;
-- possible late orphan output;
-- whether/when spendable user budget may be released without pretending external cost is impossible?
+Astra should propose architecture changes only when it can show a concrete invariant failure or a materially safer/simpler design.
 
-Central recommendation:
-- Attempt = SUBMISSION_UNKNOWN;
-- automatic retry/fallback prohibited;
-- BudgetReservation = HELD_UNCERTAIN during bounded active reconciliation;
-- durable CostExposure persists independently;
-- after the bounded reconciliation horizon, user spendable budget may be released by BillingPolicy while CostExposure remains open;
-- later provider evidence settles CostExposure without rewriting Attempt history;
-- a new risk-bearing Attempt requires explicit user/policy authorization;
-- for USER/WORKSPACE BYOK, duplicate-cost risk is primarily provider-account risk rather than platform financial settlement.
+## Re-open rule
 
-See:
-`K2-AMBIGUOUS-SUBMISSION-ANALYSIS.md`.
+A closed decision may be reopened only by:
+- verified current-source contradiction;
+- P001–P004 forensic evidence;
+- a concrete adversarial failure case;
+- explicit founder product-scope change;
+- later provider/standards evidence that invalidates an assumption.
 
-## Criteria for keeping K2 for Astra
-
-Keep it only if ALL are true:
-1. platform-managed billing/credits are in the near-term product scope;
-2. the exact hold/release/liability invariant changes durable schema or financial correctness;
-3. current evidence does not make one policy clearly safe;
-4. a wrong answer can create hidden double-spend or unfair user billing.
-
-If platform-managed billing is explicitly deferred beyond the first production milestone, K2 does not need to block the core BYOK-first architecture.
-
-Everything else is not Astra work.
+ASTRA_SCOPE = CHALLENGE_ACCEPTED_BASELINE, not INVENT_ARCHITECTURE_FROM_SCRATCH.

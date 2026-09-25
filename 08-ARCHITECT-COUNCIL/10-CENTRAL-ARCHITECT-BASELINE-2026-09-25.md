@@ -5,8 +5,10 @@ Status: SETTLED_BASELINE_WITH_R2_R3_SUPPLEMENTS
 Current specific decisions in PRE-ASTRA-CENTRAL-DECISIONS-R2.md and PRE-ASTRA-CENTRAL-DECISIONS-R3.md supersede older OPEN wording below where they conflict.
 
 A1/A2/A5/A6 are centrally closed.
-K1 is also closed by `K1-MODEL-ROUTE-DECISION.md`.
-Only K2 remains provisionally open.
+K1/A3 is closed by `K1-MODEL-ROUTE-DECISION.md`.
+K2/A4 is closed for the current BYOK-first milestone by `K2-BILLING-SAFETY-DECISION.md`.
+
+There are currently zero unresolved core architecture knots; remaining work is evidence, verification and adversarial review.
 
 Purpose: remove already-solvable architecture work from Astra R001 so scarce high-capability reasoning is spent only on the remaining dangerous decision knots.
 
@@ -151,7 +153,9 @@ Provider fallback must be explicit.
 Automatic fallback requires proven semantic/capability compatibility; otherwise explicit user/workflow approval.
 
 R3 establishes the durable outbox/inbox/idempotency/cancel/materialization/cost baseline.
-Only K2 remains open: the non-idempotent/no-lookup ambiguous-submit window.
+
+K2 is closed for the current milestone:
+route submission safety is explicit; SUBMISSION_UNKNOWN blocks automatic retry/fallback; the hosted launch is BYOK-first; PLATFORM_MANAGED execution is not allowed on NON_RECONCILABLE_SUBMIT routes. Managed user credits require a later dedicated financial-ledger ADR.
 
 ## B8 — Idempotency constraints
 
@@ -163,7 +167,7 @@ Provider-native idempotency is used when supported.
 
 Webhook/event handling deduplicates by stable provider identifiers when available.
 
-These are constraints, not the complete A4 state machine.
+Together with R3 and K2-BILLING-SAFETY-DECISION.md, these are the accepted A4 state-machine constraints for the current milestone.
 
 ## B9 — Workflow v1 constraints
 
@@ -204,10 +208,10 @@ A model/provider change must never silently rewrite historical PromptBuild seman
 
 Founder-required model research must pass through an evidence/evaluation/promotion path before LIVE status.
 
-R3 establishes the provisional model lifecycle:
-CapabilityDefinition, Provider, ModelFamily, ProviderDeployment, ModelProfile/Revision, EngineAdapterVersion, ProviderAdapterVersion, ModelDeploymentSnapshot, ResearchEvidence, EvalRun and PromotionDecision.
+R3 plus K1 establish the accepted model lifecycle:
+CapabilityDefinition, Provider, ModelFamily, ProviderDeployment, ModelProfile/Revision, EngineAdapterVersion, ProviderAdapterVersion, immutable ModelRoute, GenerationStrategy, ModelDeploymentSnapshot, ResearchEvidence, EvalRun and PromotionDecision.
 
-Only K1 remains open on whether one immutable ModelProfileRevision binds one primary deployment or a deployment set.
+ModelProfileRevision is provider-route independent. ModelRoute is the immutable provider compatibility binding; GenerationStrategy owns routing/fallback. GenerationAttempt pins the exact route and observed deployment snapshot.
 
 ## B11 — Auth / authorization / entitlement separation
 
