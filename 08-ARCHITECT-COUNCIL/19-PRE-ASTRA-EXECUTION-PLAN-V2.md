@@ -124,59 +124,64 @@ Acceptance:
 
 ## G2.3 Model/provider/adapter lifecycle
 
-State: IN_PROGRESS
+State: COMPLETE
 
-Must decide exactly:
-- semantic capability identity;
-- external model identity;
-- provider deployment identity;
-- ModelProfile stable identity;
-- immutable profile/effective snapshot;
-- EngineAdapterVersion vs ProviderAdapterVersion;
-- research/eval/promotion/rollback records;
-- LIVE/BETA/DEPRECATED vs health status separation;
-- mutable provider alias drift handling;
-- historical reproducibility limits.
+Decision:
+separate semantic model/profile identity from provider transport routing.
+
+ModelProfileRevision is provider-route independent.
+ProviderDeployment + ProviderAdapterVersion are joined to it by immutable ModelRoute.
+GenerationStrategy selects routes.
+GenerationAttempt pins exact ModelRoute + ModelDeploymentSnapshot.
+Mutable alias drift creates new verification/evidence and never rewrites history.
+
+Evidence:
+`K1-MODEL-ROUTE-DECISION.md`.
 
 Acceptance:
-- [ ] one diagram/object map with no overloaded entity;
-- [ ] code-vs-config boundary specified;
-- [ ] one promotion state machine;
-- [ ] one rollback rule;
-- [ ] exact historical pinning fields;
-- [ ] alias drift behavior;
+- [x] one diagram/object map with no overloaded entity;
+- [x] code-vs-config boundary specified;
+- [x] one promotion state machine;
+- [x] one rollback rule;
+- [x] exact historical pinning fields;
+- [x] alias drift behavior;
 - [ ] no fake universal provider DSL.
 
 ## G2.4 Paid generation durability
 
-State: IN_PROGRESS
+State: IN_PROGRESS — ONLY K2 BILLING/EXPOSURE EDGE REMAINS
 
-Must decide exactly:
-- Job vs Attempt state;
-- DB transaction + outbox boundary;
-- worker claim/lease semantics;
-- provider idempotency capability;
-- crash after submission;
-- webhook + polling dedupe;
-- cancellation + late success;
-- timeout vs unknown provider state;
-- output materialization failure;
-- budget/cost reservation and finalization;
-- fallback rules.
+Accepted:
+- Job vs Attempt;
+- DB transaction + DispatchOutbox;
+- leased/idempotent worker;
+- provider idempotency/lookup where available;
+- ProviderEventInbox reducer for webhook/poll races;
+- cancellation/late success truth;
+- SUBMISSION_UNKNOWN for irreducible submit ambiguity;
+- no automatic retry/fallback from SUBMISSION_UNKNOWN;
+- provider success distinct from output materialization;
+- durable BudgetReservation + CostExposure.
+
+Remaining:
+exact platform-managed billing settlement invariant after a prolonged unresolved CostExposure.
+
+Evidence:
+`K2-AMBIGUOUS-SUBMISSION-ANALYSIS.md`.
 
 Acceptance:
-- [ ] state machine written;
-- [ ] every transition has idempotency rule;
-- [ ] ambiguous submission has explicit policy;
-- [ ] no automatic duplicate-cost path;
-- [ ] cancel/late-result behavior specified;
-- [ ] fallback blocked while previous billing/execution is uncertain;
-- [ ] output retrieval failure is distinct from provider failure;
+- [x] state machine written;
+- [x] every transition has idempotency rule;
+- [x] ambiguous submission has explicit policy;
+- [x] no automatic duplicate-cost path;
+- [x] cancel/late-result behavior specified;
+- [x] fallback blocked while previous billing/execution is uncertain;
+- [x] output retrieval failure is distinct from provider failure;
 - [ ] cost reservation/finalization is durable.
 
 ## G2.5 Auth / MCP / provider secret boundary
 
-State: IN_PROGRESS
+State: COMPLETE
 
 Must decide:
 - human browser auth;
@@ -190,18 +195,18 @@ Must decide:
 - legacy direct-BYOK compatibility.
 
 Acceptance:
-- [ ] no access token in browser localStorage;
-- [ ] MCP is resource server, not custom IdP;
-- [ ] audience/scopes + object-level authorization;
-- [ ] tool handler cannot bypass application authorization;
-- [ ] provider secrets never enter MCP payloads or ordinary exports/logs;
-- [ ] worker never persists user's bearer token;
-- [ ] revocation semantics;
-- [ ] legacy local key migration rule.
+- [x] no access token in browser localStorage;
+- [x] MCP is resource server, not custom IdP;
+- [x] audience/scopes + object-level authorization;
+- [x] tool handler cannot bypass application authorization;
+- [x] provider secrets never enter MCP payloads or ordinary exports/logs;
+- [x] worker never persists user's bearer token;
+- [x] revocation semantics;
+- [x] legacy local key migration rule.
 
 ## G2.6 Migration sequence
 
-State: IN_PROGRESS
+State: COMPLETE
 
 Must decide:
 - anti-corruption seam;
@@ -216,14 +221,14 @@ Must decide:
 - final retirement criteria.
 
 Acceptance:
-- [ ] no big-bang rewrite;
-- [ ] no indefinite dual-write;
-- [ ] one canonical authority per project at a time;
-- [ ] failed migration leaves local source untouched;
-- [ ] migration plan is dry-run/fail-closed;
-- [ ] provider keys are never migrated silently;
-- [ ] rollback/kill-switch exists at every phase;
-- [ ] current tests define parity gates.
+- [x] no big-bang rewrite;
+- [x] no indefinite dual-write;
+- [x] one canonical authority per project at a time;
+- [x] failed migration leaves local source untouched;
+- [x] migration plan is dry-run/fail-closed;
+- [x] provider keys are never migrated silently;
+- [x] rollback/kill-switch exists at every phase;
+- [x] current tests define parity gates.
 
 Gate G2 passes only when remaining Astra questions are reduced to genuinely irreducible choices.
 
@@ -301,7 +306,7 @@ Do not block Astra for a still-running pilot unless its expected evidence can ma
 
 # G5 — Public history/privacy strategy
 
-State: TODO
+State: COMPLETE
 
 Problem:
 current active tree is neutral-ID only, but old public Git history may contain obsolete inferred identity text.
@@ -309,14 +314,17 @@ current active tree is neutral-ID only, but old public Git history may contain o
 Constraint:
 cannot rewrite history required by pinned P001–P004.
 
-Decision required before long-lived official E-wave transport:
-create a clean-history public bridge/root or equivalent sanitized transport history.
+Decision:
+keep the current lab as historical/pinned experiment history and create a NEW clean-history public bridge for the official post-Astra E-wave.
+
+Evidence:
+`00-GOVERNANCE/PUBLIC-BRIDGE-PRIVACY-DECISION.md`
 
 Acceptance:
-- [ ] strategy document exists;
-- [ ] old pinned pilots remain fetchable;
-- [ ] new official bridge does not expose obsolete identity inference through reachable official history;
-- [ ] no secrets/private source introduced.
+- [x] strategy document exists;
+- [x] old pinned pilots remain fetchable;
+- [x] new official bridge strategy uses a clean-history repository/root and does not inherit legacy Git history;
+- [x] no secrets/private source introduced by the strategy.
 
 ---
 

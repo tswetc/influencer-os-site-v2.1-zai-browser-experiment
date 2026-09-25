@@ -19,11 +19,12 @@ Binding plan:
 
 ## Current provisional escalation scope
 
-K1 — model/profile/provider-deployment identity boundary.
+K1 is CLOSED centrally with ModelRoute.
 
-K2 — ambiguous paid provider submission with no idempotency/lookup.
+Only K2 remains provisionally:
+platform-managed BudgetReservation/CostExposure settlement after a non-idempotent/no-lookup SUBMISSION_UNKNOWN.
 
-Do not spend Astra capacity on A1/A2/A5/A6 unless new evidence exposes a concrete contradiction.
+Do not spend Astra capacity on A1/A2/A5/A6/K1 unless new evidence exposes a concrete contradiction.
 
 ## Astra R001
 

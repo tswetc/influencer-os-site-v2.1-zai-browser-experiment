@@ -246,7 +246,7 @@ A6 is CLOSED centrally.
 
 ---
 
-## A3 — PROVISIONAL BASELINE
+## A3 — BASELINE SUPERSEDED/FINALIZED BY K1-MODEL-ROUTE-DECISION.md
 
 Use separate concerns:
 
@@ -292,18 +292,17 @@ never claim alias == immutable model version.
 Store alias + observed metadata + verification timestamp + returned model identifier when available.
 If a provider cannot expose immutable version identity, mark reproducibility limitation explicitly.
 
-### Remaining A3 decision for Astra
+### A3 final result
 
-Choose/validate the minimum stable identity boundary:
-should ModelProfileRevision bind one ProviderDeployment only, with fallback strategy living on GenerationJob/Strategy,
-or should one profile revision own a deployment set?
+Closed centrally by `K1-MODEL-ROUTE-DECISION.md`.
 
-Central preference:
-one immutable profile revision binds one primary deployment.
-Fallback/portfolio strategy belongs to GenerationStrategy/Job, not ModelProfile.
+Final architecture:
+ModelProfileRevision remains semantic/provider-route independent.
+Immutable ModelRoute binds it to ProviderDeployment + ProviderAdapterVersion.
+GenerationStrategy owns fallback/portfolio routing.
+GenerationAttempt pins exact executed route + ModelDeploymentSnapshot.
 
-Reason for escalation:
-this choice affects schema stability, marketplace semantics, eval promotion and historical reproducibility across direct providers and gateways.
+A3/K1 no longer requires Astra unless later evidence exposes a concrete contradiction.
 
 ---
 

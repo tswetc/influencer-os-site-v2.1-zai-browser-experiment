@@ -17,12 +17,16 @@ Status: PHASES_0_1_COMPLETE__PHASE_2_NEAR_FINAL
 - [x] Local/private media Git ignore boundary defined.
 - [x] Exact Wave v4 local runbook prepared.
 
-## Provisional remaining architecture knots
+## Provisional remaining architecture knot
 
-1. K1 — one ModelProfileRevision ↔ one primary ProviderDeployment versus profile-owned deployment set.
-2. K2 — SUBMISSION_UNKNOWN semantics/budget handling for non-idempotent provider crash window.
+K1 is CLOSED centrally by the normalized ModelRoute architecture.
 
-Central preferences are documented in PRE-ASTRA-CENTRAL-DECISIONS-R3.md.
+Only K2 remains:
+platform-managed billing/CostExposure settlement after an irreducible SUBMISSION_UNKNOWN window.
+
+Evidence:
+- K1-MODEL-ROUTE-DECISION.md
+- K2-AMBIGUOUS-SUBMISSION-ANALYSIS.md
 
 ## External/local work remaining
 
@@ -35,8 +39,8 @@ Central preferences are documented in PRE-ASTRA-CENTRAL-DECISIONS-R3.md.
 
 ## Central work remaining
 
-- [ ] final challenge of K1/K2;
-- [ ] public-history privacy strategy;
+- [ ] final challenge of K2;
+- [x] public-history privacy strategy accepted: clean-history official bridge;
 - [ ] pre-Astra executive/delta/evidence-router packet;
 - [ ] structural audit PASS;
 - [ ] semantic/adversarial audit PASS;

@@ -122,36 +122,45 @@ Central preference:
 SUBMISSION_UNKNOWN + no automatic retry/fallback + pending cost reconciliation.
 
 ## ADR-011 — Model/provider/adapter lifecycle
-Status: PROVISIONAL / NARROW OPEN K1
+Status: ACCEPTED
 
-Current hardcoded EngineId and per-engine compiler are source behavior, not sufficient future extensibility.
+Current hardcoded EngineId and per-engine compiler remain source behavior, not the permanent extensibility model.
 
 Accepted separation:
 - CapabilityDefinition;
-- Provider;
-- ModelFamily;
-- ProviderDeployment;
+- ModelIdentity;
 - ModelProfile;
 - ModelProfileRevision;
 - EngineAdapterVersion;
+- Provider;
+- ProviderDeployment;
 - ProviderAdapterVersion;
+- ModelRoute;
+- GenerationStrategy;
 - ModelDeploymentSnapshot;
 - ResearchEvidence;
 - EvalSuiteVersion/EvalRun;
 - PromotionDecision.
 
+A ModelProfileRevision is semantic and provider-route independent.
+
+ModelRoute is the immutable approved compatibility binding:
+ModelProfileRevision + ProviderDeployment + ProviderAdapterVersion + route-specific overrides/evidence/promotion state.
+
+A ModelProfileRevision may have zero, one or many ModelRoutes.
+
+Fallback/portfolio policy belongs to GenerationStrategy/GenerationJob, not ModelProfileRevision.
+
 Release lifecycle and operational health are separate axes.
 
-Historical PromptBuild pins ModelProfileRevision + EngineAdapterVersion.
-GenerationAttempt pins ProviderAdapterVersion + ModelDeploymentSnapshot.
+PromptBuild pins ModelProfileRevision + EngineAdapterVersion.
+GenerationAttempt pins exact ModelRoute + ProviderAdapterVersion + ModelDeploymentSnapshot.
 
-Mutable aliases are never claimed as immutable versions.
+Mutable provider aliases are never claimed as immutable versions.
+Material alias drift creates drift evidence/new route verification; old history is never rewritten.
 
-Remaining narrow K1:
-whether one ModelProfileRevision binds one primary deployment or a deployment set.
-
-Central preference:
-one primary deployment; fallback strategy outside profile.
+Decision evidence:
+`K1-MODEL-ROUTE-DECISION.md`.
 
 ## ADR-012 — Production asset/media storage
 Status: ACCEPTED
@@ -197,20 +206,29 @@ No whole-candidate merge.
 Promote only audited contracts/modules/components/design/interaction units.
 
 ## ADR-015 — Source/compiler/version provenance
-Status: PROVISIONAL
+Status: ACCEPTED
 
-PromptBuild must persist enough exact state to reconstruct the effective provider request.
+PromptBuild persists enough exact semantic state to reconstruct the effective compiled intent:
+- exact creative revision IDs;
+- ModelProfileRevision;
+- EngineAdapterVersion;
+- OS ruleset/compiler version;
+- deterministic input/final payload hashes.
 
-Creative-side first-class revision policy is now accepted:
-CharacterRevision · CanonRevision · SceneRevision · PlanRevision · WorkflowRevision.
+GenerationAttempt persists exact execution-route provenance:
+- ModelRoute;
+- ProviderConnection;
+- ProviderAdapterVersion;
+- ModelDeploymentSnapshot;
+- outbound request hash;
+- provider job/response identifiers where available.
 
-Execution resolves any FOLLOW_ACTIVE draft dependency to exact immutable revision IDs before PromptBuild/WorkflowRun.
+Historical objects never depend on ambiguous latest/current or mutable provider alias semantics.
 
-Historical objects never depend on ambiguous latest/current.
-
-Remaining OPEN:
-model/provider/adapter version and effective snapshot semantics.
-Owner: Astra A3.
+Decision evidence:
+`PRE-ASTRA-CENTRAL-DECISIONS-R2.md`
+and
+`K1-MODEL-ROUTE-DECISION.md`.
 
 ## ADR-016 — Audit and telemetry separate
 Status: ACCEPTED

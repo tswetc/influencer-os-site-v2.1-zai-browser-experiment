@@ -55,16 +55,18 @@ Evidence:
 - PRE-ASTRA-CENTRAL-DECISIONS-R3.md
 - PRE-ASTRA-SOURCE-BEHAVIOR-MATRIX.md
 
-## Remaining provisional Astra-class questions
+## Remaining provisional Astra-class question
 
-Only two high-risk choices remain provisionally:
+K1 is CLOSED centrally by `K1-MODEL-ROUTE-DECISION.md`:
+semantic ModelProfileRevision is provider-route independent and immutable ModelRoute binds it to ProviderDeployment + ProviderAdapterVersion.
 
-K1 — exact ModelProfileRevision ↔ ProviderDeployment identity boundary under direct-provider/gateway/model-alias drift.
+Only K2 remains provisionally:
+the platform-managed billing/CostExposure settlement invariant after irreducible SUBMISSION_UNKNOWN.
 
-K2 — exact durable policy for ambiguous paid submission when provider supports neither idempotency nor reliable lookup.
+See:
+`K2-AMBIGUOUS-SUBMISSION-ANALYSIS.md`.
 
-Central preferences are already documented.
-They stay in Astra scope only if the final Phase-2 challenge cannot close them safely.
+K2 stays in Astra scope only if the final Phase-2 challenge cannot close it safely or if managed billing is near-term.
 
 ## Browser pilots
 

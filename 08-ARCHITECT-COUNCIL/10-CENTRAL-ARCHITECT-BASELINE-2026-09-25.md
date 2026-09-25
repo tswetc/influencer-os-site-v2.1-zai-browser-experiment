@@ -4,8 +4,9 @@ Status: SETTLED_BASELINE_WITH_R2_R3_SUPPLEMENTS
 
 Current specific decisions in PRE-ASTRA-CENTRAL-DECISIONS-R2.md and PRE-ASTRA-CENTRAL-DECISIONS-R3.md supersede older OPEN wording below where they conflict.
 
-A1/A2/A5/A6 are now centrally closed.
-Only K1/K2 remain provisionally open.
+A1/A2/A5/A6 are centrally closed.
+K1 is also closed by `K1-MODEL-ROUTE-DECISION.md`.
+Only K2 remains provisionally open.
 
 Purpose: remove already-solvable architecture work from Astra R001 so scarce high-capability reasoning is spent only on the remaining dangerous decision knots.
 

@@ -26,8 +26,8 @@ Binding plan:
 
 ## Provisional hard architecture questions
 
-- [ ] K1 model/profile/provider-deployment identity boundary.
-- [ ] K2 non-idempotent ambiguous paid-submit window.
+- [x] K1 model/profile/provider-deployment identity boundary — CLOSED centrally with ModelRoute.
+- [ ] K2 platform-managed CostExposure settlement after non-idempotent ambiguous paid submit.
 
 ## Media/transport
 
@@ -52,13 +52,13 @@ Binding plan:
 
 ## Privacy/history
 
-- [ ] choose privacy-safe long-lived public bridge strategy;
-- [ ] preserve historical pinned pilot accessibility;
-- [ ] keep obsolete identity inference out of future official bridge history.
+- [x] choose privacy-safe long-lived public bridge strategy;
+- [x] preserve historical pinned pilot accessibility by leaving legacy experiment history intact;
+- [x] future official bridge will start from a clean sanitized root without inherited legacy Git history.
 
 ## Astra packet
 
-- [ ] K1/K2 final challenge;
+- [ ] K2 final challenge;
 - [ ] executive snapshot;
 - [ ] architecture delta map;
 - [ ] final open-knot file;
