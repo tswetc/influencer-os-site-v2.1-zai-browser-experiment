@@ -27,6 +27,12 @@ Cover:
 - mutable temporary state;
 - reference coverage.
 
+## Foundation extension rule
+
+Foundation `PlacePassport` is the canonical base contract. Build validation/coverage/lock helpers over it.
+Any richer place structures must use NEW exported type names owned by this lane.
+Never redeclare `PlacePassport` with a different shape.
+
 ## Frozen deterministic contract
 
 Any deterministic serialization/hash/identity behavior must conform exactly to:

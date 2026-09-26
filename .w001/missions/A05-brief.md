@@ -30,6 +30,12 @@ Implement:
 - compatibility adapter from legacy SceneSpec;
 - no change to legacy prompt building when new bindings are absent.
 
+## Foundation extension rule
+
+Foundation `PerformancePassport` and `ActionPhase` are canonical base contracts. Build validation/coverage/lock helpers over them.
+Any richer performance structures must use NEW exported type names owned by this lane.
+Never redeclare a foundation-exported type name with a different shape.
+
 ## Frozen deterministic contract
 
 Any deterministic serialization/hash/identity behavior must conform exactly to:

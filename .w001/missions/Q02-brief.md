@@ -53,6 +53,25 @@ Test:
 - provider secret/model alias contamination;
 - dangerous absolute/path-like metadata.
 
+## Target activation boundary
+
+Foundation-frozen targets testable immediately include:
+- malformed JSON shapes and prototype-like keys;
+- duplicate refs and unknown/case-variant roles;
+- NaN/Infinity/bounds at frozen contract boundaries;
+- LOCK vs EXCLUDE;
+- cross-root conflictKey behavior;
+- unsupported semantic LOCK;
+- multi-character gate;
+- Taste identity-role contamination;
+- unresolved legacy refs.
+
+Integration-activated targets must be recorded as failing-stub tests or findings until the owning lane lands; do not guess peer API shapes:
+- same-root runtime conflicts against A01 runtime API;
+- provider-secret/model-alias exclusion against A07 structures;
+- ref-count limits under the lane/capability bounds policy;
+- application-envelope hardening against A08.
+
 ## Rules
 
 No product source modifications.

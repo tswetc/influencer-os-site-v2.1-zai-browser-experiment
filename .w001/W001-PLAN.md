@@ -1,7 +1,7 @@
 # W001 — OS23.7 Continuity Foundation Integration
 
 Date: 2026-09-26
-Status: PRELAUNCH__PRODUCTION_BUILD_WAVE__CONSTRUCTION_SNAPSHOT_REQUIRED
+Status: PRELAUNCH__CONSTRUCTION_DONE__FINAL_PUBLIC_METADATA_RECONCILIATION_REQUIRED
 
 ## Why this is the first production wave
 
@@ -103,18 +103,19 @@ Models:
 
 Every worker:
 
-1. starts from exact W001 construction SHA;
-2. reads W001 context packet;
-3. may read within declared READ_SCOPE;
-4. may write only declared WRITE_SET;
-5. uses no GitHub write credential;
-6. makes incremental local commits;
-7. preserves current OS23.6 behavior;
-8. does not depend on unpublished same-wave peers;
-9. follows long-mission phases:
+1. clones the sanitized public W001 mirror and checks out the exact PUBLIC_INPUT_SHA supplied by the trusted launch prompt/record;
+2. treats PRIVATE_CONSTRUCTION_SHA as provenance/integration base only, never as the browser worker Git base;
+3. reads W001 context packet;
+4. may read within declared READ_SCOPE;
+5. may write only declared WRITE_SET;
+6. uses no GitHub write credential;
+7. makes incremental local commits;
+8. preserves current OS23.6 behavior;
+9. does not depend on unpublished same-wave peers;
+10. follows long-mission phases:
    implementation → tests → adversarial review → remediation → edge/fuzz → integration-risk review → cleanup → repeated verification → final freeze;
-10. returns compact artifacts through current handoff/inbox mechanism;
-11. cannot claim central acceptance.
+11. returns compact artifacts through current handoff/inbox mechanism;
+12. cannot claim central acceptance.
 
 ## Shared implementation principles
 

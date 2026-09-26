@@ -48,6 +48,11 @@ New normalized candidate structures may use the frozen W001 canonicalization rul
 
 ## Mandatory compatibility
 
+- `importLegacyCharacterPassport` from the foundation is a semantic projection, not the round-trip carrier.
+  Its projection intentionally does not preserve every legacy field/reference payload.
+  `CharacterContinuityRevision` must retain the original `CharacterPassport` wholesale so the frozen
+  legacy round-trip contract can preserve every existing field; any normalized projection is derived from that preserved source.
+
 - current CharacterPassport remains valid and usable;
 - no free-text biometric extraction;
 - no provider/model provenance invention;

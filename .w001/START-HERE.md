@@ -12,8 +12,9 @@ report `BLOCKED` with the exact failed step — do not improvise.
    `tswetc/influencer-os-site-v2.1-zai-browser-experiment`
    (branch `w001/construction-e642c181`).
 2. **Checkout the exact PUBLIC_INPUT_SHA supplied in your launch prompt** —
-   never trust the branch tip; `PUBLIC_INPUT_SHA` comes from the launch
-   controller / trusted launch record.
+   the branch tip is diagnostic only and is never worker trust authority;
+   `PUBLIC_INPUT_SHA` comes from the launch controller / trusted launch
+   record.
 3. **Assert** `git rev-parse HEAD == PUBLIC_INPUT_SHA`. Mismatch: STOP,
    report `INPUT_MISMATCH`.
 4. **Assert a clean worktree** (`git status --porcelain` is empty).
@@ -35,12 +36,15 @@ report `BLOCKED` with the exact failed step — do not improvise.
    `packet.source.private_construction_sha ==
    e642c1813cdc9cee67fdf589432b385c0fb05022`. This is provenance — it is NOT
    your git base. Your git base is PUBLIC_INPUT_SHA.
-9. **Verify the frozen shared-contract/vector hashes** listed in the packet
+9. **Verify all FOUR frozen launch-contract hashes** listed in the packet
    (`shared_contracts`): recompute SHA256 of
    `.w001/contracts/W001-SHARED-INTERFACES-V1.md`,
    `.w001/contracts/SERIALIZATION-VECTORS-V1.json`,
    `.w001/contracts/LEGACY-SOURCE-TRUTH-GATES-V1.md`, and
-   `.w001/missions/SHARED-CONTRACT.md`.
+   `.w001/missions/SHARED-CONTRACT.md`. Scope precedence: if the packet's
+   `read_scope` differs from prose `READ_SCOPE` in a mission brief, the
+   packet `read_scope` wins; the packet never expands WRITE_SET or weakens
+   forbidden paths.
 10. **Create your local worker branch** `w001/<RUN_ID>` from PUBLIC_INPUT_SHA.
 11. **Work only within your packet's `write_scope`** (the trusted ingestor
     enforces the full-history WRITE_SET independently). Read anything inside
@@ -74,6 +78,10 @@ bytes under `.w001/contracts/...` and `.w001/missions/...` in this mirror.
 - Deterministic helpers take timestamps/IDs via injection; no hidden
   `Date.now()`/random. Golden/integration fixtures use a fixed UTC date and
   explicit deterministic seeds.
+- Foundation-exported type names are canonical bases: compose/extend them
+  under new names; never redeclare incompatible same-named foundation
+  exports. Bounds belong to upper layers/capability contracts — do not add
+  foundation-level size rejections.
 - Incremental commits; forward fixes; before final freeze run a scope audit
   and `git diff --check`; record FINAL_HEAD; after FINAL_HEAD, zero tracked
   writes.

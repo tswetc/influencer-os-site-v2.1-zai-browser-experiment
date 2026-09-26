@@ -33,6 +33,12 @@ Implement types/validation for:
 - exact route resolution result;
 - capability support/conflict result.
 
+## Foundation extension rule
+
+Foundation `CapabilityProfile` is the canonical continuity-capability base.
+A07 may compose/extend it into richer model-facing contracts under NEW exported type names, but must never
+redeclare `CapabilityProfile` with an incompatible shape.
+
 ## Frozen shared contract
 
 Conform exactly to:

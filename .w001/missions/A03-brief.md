@@ -29,6 +29,12 @@ Cover:
 - exact-vs-flexible locks;
 - validation.
 
+## Foundation extension rule
+
+Foundation `ProductPassport` is the canonical base contract. Build validation/coverage/lock helpers over it.
+Any richer product structures must use NEW exported type names owned by this lane.
+Never redeclare `ProductPassport` with a different shape.
+
 ## Frozen deterministic contract
 
 Any deterministic serialization/hash/identity behavior must conform exactly to:

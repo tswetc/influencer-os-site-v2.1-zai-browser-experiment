@@ -47,6 +47,20 @@ If a shared contract is insufficient:
 emit `INTERFACE_CHANGE_REQUEST`;
 do not silently fork it.
 
+## Scope precedence
+
+The launch packet is the machine-authoritative run envelope.
+If a packet `read_scope` differs from prose `READ_SCOPE` in a mission brief, the packet `read_scope` wins.
+The packet cannot expand WRITE_SET beyond the trusted launch registry or weaken forbidden paths.
+
+## Bounds ownership
+
+Foundation validation intentionally accepts arbitrarily large-but-otherwise-valid semantic structures.
+Operational/storage/matching bounds belong to upper layers:
+- A01 owns revision-set/storage bounds;
+- `CapabilityProfile` owns matching limits such as `maxReferences`, `maxReferencesByRole`, and `maxCharacters`.
+Do not invent a foundation-level size rejection merely to create a local limit.
+
 ## Authority
 
 Product/governance:
@@ -81,6 +95,7 @@ No GitHub push/PR/remote mutation.
 
 - current OS23.6 behavior must remain unchanged when new OS v3 features are unused;
 - `lib/osv3/foundation/**` is frozen/shared construction input;
+- foundation-exported type names are canonical bases: lanes may compose/extend them under new names, but must not redeclare incompatible same-named types;
 - do not edit `.w001/**`;
 - no same-wave dependency on unpublished peer output;
 - no .env/credentials/private data;

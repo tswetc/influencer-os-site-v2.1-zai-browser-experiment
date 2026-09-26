@@ -27,6 +27,12 @@ Implement:
 - reference-role contamination guards;
 - merge/weight semantics where explicitly defined.
 
+## Foundation extension rule
+
+Foundation `TasteProfile`, `TasteMechanic` and `TasteDimension` are canonical base contracts.
+Build richer revision/merge/weight helpers over them; use NEW exported type names for richer structures.
+Never redeclare a foundation-exported type name with a different shape.
+
 ## Frozen deterministic contract
 
 Any deterministic serialization/hash/identity behavior must conform exactly to:
