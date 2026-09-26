@@ -1,0 +1,46 @@
+# W001-A05 — Performance + Scene Domain
+
+RUN_ID: W001-A05
+Model: GLM 5.3 Flash
+
+WRITE_SET:
+- lib/osv3/performance/**
+- lib/osv3/scene/**
+- tests/osv3/performance/**
+- tests/osv3/scene/**
+
+READ_SCOPE:
+- lib/osv3/foundation/**
+- lib/types.ts
+- lib/scene.ts
+- current SceneSpec/build semantics
+- relevant OS v3 context
+
+## Objective
+
+Formalize Motion/Performance continuity and additive Scene bindings without breaking legacy SceneSpec.
+
+Implement:
+- PerformancePassport/action phases;
+- phase ordering;
+- trajectory/timing/contact constraints;
+- performer/camera relation;
+- allowed retarget dimensions;
+- scene continuity binding structure for character/product/place/performance/taste;
+- compatibility adapter from legacy SceneSpec;
+- no change to legacy prompt building when new bindings are absent.
+
+## Extended backlog
+
+- invalid phase ordering;
+- duplicate phase IDs;
+- contact conflicts;
+- multi-character role references;
+- scene vs place boundary tests;
+- action vs camera motion distinction;
+- additive legacy product string + product revision binding semantics;
+- deterministic scene input hashing proposal.
+
+## Done
+
+Pure domain/adapter + tests; old SceneSpec remains intact.

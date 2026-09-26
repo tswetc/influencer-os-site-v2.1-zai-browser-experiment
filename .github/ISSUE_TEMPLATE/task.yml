@@ -1,0 +1,37 @@
+name: Codex task
+description: A bounded unit of implementation, verification, or migration.
+title: "[Task] "
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: What must be true when this issue is complete?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Canonical context
+      description: Link the exact Notion sources and relevant repository paths.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and exclusions
+      description: State what may change and what must remain untouched.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance checks
+      description: List tests, behavior checks, and release evidence.
+    validations:
+      required: true
+  - type: textarea
+    id: conflicts
+    attributes:
+      label: Known conflicts or unknowns
+      description: Record conflicting sources instead of guessing.
