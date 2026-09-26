@@ -12,6 +12,11 @@ READ_SCOPE:
 - current OS23.6 scene/build types
 - accepted Workflow Surfaces/Product Architecture context
 
+## Verified legacy source-truth context
+
+Also treat as required regression context:
+`waves/W001/contracts/LEGACY-SOURCE-TRUTH-GATES-V1.md`.
+
 ## Objective
 
 Define the typed semantic workflow representation shared by future Guided Studios and Expert Graph.
@@ -25,6 +30,21 @@ Implement contracts for node/recipe categories:
 - compare/eval;
 - approval/control;
 - asset/export handoff.
+
+## Frozen shared contract
+
+Conform exactly to:
+`waves/W001/contracts/W001-SHARED-INTERFACES-V1.md`.
+
+Workflow application-call nodes reference:
+- commandType;
+- commandVersion = 1;
+- input/output port mapping.
+
+Do not define a competing ApplicationCommand/ApplicationResult envelope.
+The workflow layer invokes/describes the same frozen application semantics that A08 implements.
+
+Deterministic recipe identities use the shared serialization/hash contract.
 
 ## Rules
 

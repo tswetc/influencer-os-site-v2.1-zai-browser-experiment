@@ -13,6 +13,31 @@ READ_SCOPE:
 - current OS23.6 tests
 - W001 plan/context
 
+## Frozen shared contracts
+
+Integration acceptance must treat these as normative:
+- `waves/W001/contracts/W001-SHARED-INTERFACES-V1.md`;
+- `waves/W001/contracts/SERIALIZATION-VECTORS-V1.json`.
+
+The merged candidate must demonstrate one compatible application envelope, one ModelStrategy enum, and one deterministic serialization/hash contract across all implementing lanes.
+
+## Z2 integration invariants
+
+For any season/feed/shoot integration fixture:
+- use a fixed UTC date;
+- use explicit deterministic seed(s);
+- never accept wall-clock-dependent golden output.
+
+Also verify:
+- `veo_broll` remains represented in legacy EngineId compatibility mapping even though current ENGINE_META has no normal UI card;
+- user-edited non-empty negative text preserves current override semantics over builder negative;
+- legacy feed fallback to `SCENE_PACKS[0]` remains unchanged when new OS v3 features are unused.
+
+## Verified legacy source-truth context
+
+Also treat as required regression context:
+`waves/W001/contracts/LEGACY-SOURCE-TRUTH-GATES-V1.md`.
+
 ## Objective
 
 Prepare the integration/recomposition harness for all W001 candidate lanes without consuming unpublished peer output.

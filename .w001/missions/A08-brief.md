@@ -14,6 +14,11 @@ READ_SCOPE:
 - current bundle/history semantics
 - accepted application architecture/context
 
+## Verified legacy source-truth context
+
+Also treat as required regression context:
+`waves/W001/contracts/LEGACY-SOURCE-TRUTH-GATES-V1.md`.
+
 ## Objective
 
 Build pure application-layer contracts that both future Guided Studios and Expert Graph can call.
@@ -28,6 +33,19 @@ Implement:
 - model strategy/route request separation;
 - self-check summary;
 - no paid execution side effect.
+
+## Frozen shared contract
+
+Conform exactly to:
+- `waves/W001/contracts/W001-SHARED-INTERFACES-V1.md`;
+- `waves/W001/contracts/SERIALIZATION-VECTORS-V1.json`.
+
+Implement the frozen `ApplicationCommandV1` / `ApplicationResultV1` semantics.
+Do not invent a competing envelope.
+
+Use the exact seven-value ModelStrategy enum frozen by the shared contract.
+
+Deterministic PromptBuild identity/hash must use the frozen canonical JSON + SHA-256 rules.
 
 ## Rules
 

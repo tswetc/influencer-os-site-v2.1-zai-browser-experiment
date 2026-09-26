@@ -3,17 +3,49 @@
 Status: PRELAUNCH_TEMPLATE
 Wave: W001 — OS23.7 Continuity Foundation Integration
 
-This template becomes launchable only after trusted local construction publishes:
-- exact CONSTRUCTION_SHA;
-- source delivery;
-- packet ID.
+This template becomes launchable only after the trusted GitHub mirror publishes:
+- exact PUBLIC_INPUT_SHA;
+- exact product-manifest hash;
+- exact per-slot packet path/hash;
+- trusted launch-registry binding to PRIVATE_CONSTRUCTION_SHA.
 
 ## Inputs
 
-CONSTRUCTION_SHA: {{CONSTRUCTION_SHA}}
-CANONICAL_BASE_SHA: 1158007fdaefd823e24d7a38d4fa7258814b541c
-CONTEXT_PACKET_ID: {{CONTEXT_PACKET_ID}}
-SOURCE: {{SOURCE_URL_OR_ATTACHMENT}}
+PUBLIC_REPO:
+`tswetc/influencer-os-site-v2.1-zai-browser-experiment`
+
+PUBLIC_BRANCH:
+`w001/construction-e642c181`
+
+PUBLIC_INPUT_SHA:
+`{{PUBLIC_INPUT_SHA}}`
+
+PRIVATE_CONSTRUCTION_SHA:
+`e642c1813cdc9cee67fdf589432b385c0fb05022`
+
+PACKET_PATH:
+`{{PACKET_PATH}}`
+
+PACKET_SHA256:
+`{{PACKET_SHA256}}`
+
+## Frozen shared W001 interfaces
+
+Every worker must treat these launch contracts as immutable shared input:
+
+- `../contracts/W001-SHARED-INTERFACES-V1.md`;
+- `../contracts/SERIALIZATION-VECTORS-V1.json`.
+
+The public GitHub mirror will expose the same bytes under `.w001/contracts/`.
+
+Workers must not invent incompatible:
+- application command/result envelopes;
+- ModelStrategy values;
+- deterministic JSON/hash/timestamp semantics.
+
+If a shared contract is insufficient:
+emit `INTERFACE_CHANGE_REQUEST`;
+do not silently fork it.
 
 ## Authority
 
@@ -30,16 +62,18 @@ It does NOT override founder/product authority.
 
 ## Startup
 
-1. acquire the W001 construction snapshot;
-2. verify source manifest/hash;
-3. enter the product repo;
-4. verify:
-   `git rev-parse HEAD == {{CONSTRUCTION_SHA}}`;
-5. create local named branch:
+1. clone/fetch the public GitHub worker substrate;
+2. checkout exact PUBLIC_INPUT_SHA;
+3. verify `git rev-parse HEAD == {{PUBLIC_INPUT_SHA}}`;
+4. validate `.w001/PRODUCT-MANIFEST.json`;
+5. validate your exact packet at PACKET_PATH against PACKET_SHA256;
+6. verify the packet declares PRIVATE_CONSTRUCTION_SHA `e642c1813cdc9cee67fdf589432b385c0fb05022`;
+7. verify the frozen shared-interface contract/vector hashes listed by the packet;
+8. create local named branch:
    `w001/{{RUN_ID}}`;
-6. record environment/tool versions;
-7. read required context;
-8. inspect the relevant code inside READ_SCOPE before editing.
+9. record environment/tool versions;
+10. read required context;
+11. inspect the relevant code inside READ_SCOPE before editing.
 
 No GitHub push/PR/remote mutation.
 
@@ -47,7 +81,7 @@ No GitHub push/PR/remote mutation.
 
 - current OS23.6 behavior must remain unchanged when new OS v3 features are unused;
 - `lib/osv3/foundation/**` is frozen/shared construction input;
-- do not edit .w001-context/**;
+- do not edit `.w001/**`;
 - no same-wave dependency on unpublished peer output;
 - no .env/credentials/private data;
 - no provider billing/live generation.
@@ -84,7 +118,7 @@ Finalize early only if useful assigned backlog is exhausted or a real blocker is
 - record FINAL_HEAD;
 - after FINAL_HEAD: zero tracked writes/commits;
 - create named-ref run.bundle;
-- verify + real disposable import from CONSTRUCTION_SHA;
+- verify + real disposable import from PUBLIC_INPUT_SHA;
 - proof output stays outside tracked tree.
 
 ## Handoff

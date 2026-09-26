@@ -14,6 +14,11 @@ READ_SCOPE:
 - components/passport-editor.tsx
 - relevant current tests/context
 
+## Verified legacy source-truth context
+
+Also treat as required regression context:
+`waves/W001/contracts/LEGACY-SOURCE-TRUTH-GATES-V1.md`.
+
 ## Objective
 
 Create the conservative compatibility boundary from existing CharacterPassport into OS v3 Character continuity semantics.
@@ -28,6 +33,18 @@ Implement:
 - migration warnings/partial provenance;
 - deterministic Character lock derivation only from explicit existing fields;
 - no fake biometrics/model identity.
+
+## Frozen migration/serialization contract
+
+Conform to the legacy round-trip rules in:
+- `os23.7/MIGRATION-FROM-OS23.6.md`;
+- `os23.7/REGRESSION-CONTRACT.md`;
+- `waves/W001/contracts/W001-SHARED-INTERFACES-V1.md`;
+- `waves/W001/contracts/SERIALIZATION-VECTORS-V1.json`.
+
+Preserve the original legacy backup/source representation.
+Do not canonicalize legacy backup bytes merely to fit new OS v3 serialization.
+New normalized candidate structures may use the frozen W001 canonicalization rules.
 
 ## Mandatory compatibility
 

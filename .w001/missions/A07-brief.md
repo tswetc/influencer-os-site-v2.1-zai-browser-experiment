@@ -14,6 +14,11 @@ READ_SCOPE:
 - architecture/model-evolution context in packet
 - current provider/engine behavior as read-only evidence
 
+## Verified legacy source-truth context
+
+Also treat as required regression context:
+`waves/W001/contracts/LEGACY-SOURCE-TRUTH-GATES-V1.md`.
+
 ## Objective
 
 Create the provider-neutral model semantics needed for continuity-aware routing without changing live provider behavior.
@@ -27,6 +32,23 @@ Implement types/validation for:
 - model strategy;
 - exact route resolution result;
 - capability support/conflict result.
+
+## Frozen shared contract
+
+Conform exactly to:
+`waves/W001/contracts/W001-SHARED-INTERFACES-V1.md`.
+
+ModelStrategy is frozen to exactly:
+- BEST_QUALITY
+- FAST
+- LOW_COST
+- BEST_CHARACTER
+- BEST_PRODUCT
+- BEST_MOTION
+- PINNED_MODEL
+
+Do not add, rename or reinterpret a strategy during W001.
+Exact immutable ModelRoute remains separate from strategy.
 
 ## Required separation
 

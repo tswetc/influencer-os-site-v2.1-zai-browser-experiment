@@ -13,6 +13,21 @@ READ_SCOPE:
 - app/app/page.tsx only as needed for behavior inventory
 - regression contract/context
 
+## Z2 source-truth constraint
+
+For feed/shoot/season-dependent golden fixtures:
+- inject an explicit fixed UTC date;
+- inject explicit deterministic seed(s);
+- never let `new Date()`, `Date.now()`, Math.random or current wall-clock state define a golden expectation.
+
+Cover the current legacy fallback:
+when no selected/last pack exists, feed uses `SCENE_PACKS[0]`.
+
+## Verified legacy source-truth context
+
+Also treat as required regression context:
+`waves/W001/contracts/LEGACY-SOURCE-TRUTH-GATES-V1.md`.
+
 ## Objective
 
 Turn current OS23.6 behavior into deterministic compatibility evidence before W001 integration.

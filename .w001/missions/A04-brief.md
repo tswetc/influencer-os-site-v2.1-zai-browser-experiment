@@ -27,6 +27,14 @@ Cover:
 - mutable temporary state;
 - reference coverage.
 
+## Frozen deterministic contract
+
+Any deterministic serialization/hash/identity behavior must conform exactly to:
+- `waves/W001/contracts/W001-SHARED-INTERFACES-V1.md`;
+- `waves/W001/contracts/SERIALIZATION-VECTORS-V1.json`.
+
+Do not invent a lane-specific canonical JSON/hash/timestamp scheme.
+
 ## Required rules
 
 - persistent physical place != temporary art direction;

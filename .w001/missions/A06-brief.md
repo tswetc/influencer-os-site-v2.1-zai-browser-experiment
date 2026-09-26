@@ -27,6 +27,14 @@ Implement:
 - reference-role contamination guards;
 - merge/weight semantics where explicitly defined.
 
+## Frozen deterministic contract
+
+Any deterministic serialization/hash/identity behavior must conform exactly to:
+- `waves/W001/contracts/W001-SHARED-INTERFACES-V1.md`;
+- `waves/W001/contracts/SERIALIZATION-VECTORS-V1.json`.
+
+Do not invent a lane-specific canonical JSON/hash/timestamp scheme.
+
 ## Hard truth boundary
 
 Semantic role validation does NOT prove visual de-identification.

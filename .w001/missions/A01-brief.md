@@ -29,6 +29,14 @@ Implement:
 - pure conflict aggregation helpers reusable across domains;
 - no provider/model-native identity embedded in semantic revisions.
 
+## Frozen deterministic contract
+
+Canonicalization/serialization/hash/timestamp behavior must conform exactly to:
+- `waves/W001/contracts/W001-SHARED-INTERFACES-V1.md`;
+- `waves/W001/contracts/SERIALIZATION-VECTORS-V1.json`.
+
+A01 does not own a new global serialization standard; it implements helpers conforming to the frozen launch contract.
+
 ## Mandatory behaviors
 
 - revision snapshots are immutable by contract;

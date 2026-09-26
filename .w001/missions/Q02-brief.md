@@ -12,6 +12,24 @@ READ_SCOPE:
 - existing current domain/storage/parser code
 - W001 accepted contracts/context
 
+## Frozen shared contracts under test
+
+Treat as normative:
+- `waves/W001/contracts/W001-SHARED-INTERFACES-V1.md`;
+- `waves/W001/contracts/SERIALIZATION-VECTORS-V1.json`.
+
+Add hostile/negative cases for:
+- invalid/non-finite canonical JSON values;
+- hidden randomness/time in deterministic helpers;
+- wrong ModelStrategy values;
+- competing application-command/result envelopes;
+- deterministic-vector mismatches.
+
+## Verified legacy source-truth context
+
+Also treat as required regression context:
+`waves/W001/contracts/LEGACY-SOURCE-TRUTH-GATES-V1.md`.
+
 ## Objective
 
 Create hostile runtime/import/migration cases for the new domain contracts.
