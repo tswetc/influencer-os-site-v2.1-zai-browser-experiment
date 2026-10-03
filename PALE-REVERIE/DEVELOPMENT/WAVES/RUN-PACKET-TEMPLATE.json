@@ -11,14 +11,16 @@
   },
   "mission": {
     "name": "<bounded mission name>",
-    "objective": "<one clear objective>",
+    "objective": "<single clear objective>",
     "preferred_model": "GLM-5.3",
     "no_early_finalization": true
   },
   "read_scope": [],
   "write_scope": [],
   "forbidden_paths": [],
-  "required_context": [],
+  "required_context": [
+    "PALE-REVERIE/GAME/GAME-BIBLE.md"
+  ],
   "asset_packs": [
     {
       "pack_id": "<pack-id>",
@@ -30,9 +32,10 @@
   "acceptance_gates": [],
   "hard_constraints": [
     "GitHub remote is read-only for Browser workers",
-    "no secrets or credentials in commits/artifacts",
+    "do not change game canon from run-local convenience",
+    "no secrets or credentials in commits or artifacts",
     "no same-wave dependency on unpublished peer output",
-    "no writes outside WRITE_SET",
+    "no tracked writes outside WRITE_SET",
     "forward fixes only; do not rewrite history to hide mistakes"
   ],
   "output_contract": {
@@ -59,7 +62,8 @@
     ],
     "worker_cannot_claim": [
       "HANDOFF_RECEIVED",
-      "CENTRAL_ACCEPTANCE"
+      "CENTRAL_ACCEPTANCE",
+      "FOUNDER_VISUAL_APPROVAL"
     ]
   }
 }

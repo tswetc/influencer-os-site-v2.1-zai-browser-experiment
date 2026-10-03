@@ -1,0 +1,24 @@
+{
+  "schema": "pale-reverie.asset-pack.v1",
+  "pack_id": "identity-core-v1",
+  "status": "draft",
+  "created_at": null,
+  "purpose": "",
+  "public_transport_allowed": false,
+  "items": [
+    {
+      "asset_id": "pr-eira-ref-001",
+      "version": 1,
+      "file": "files/pr-eira-ref-001.jpg",
+      "media_type": "image",
+      "role": "identity_reference",
+      "subject": "eira",
+      "sha256": "",
+      "bytes": 0,
+      "provenance": "founder_generated",
+      "rights_status": "unknown",
+      "review_status": "pending",
+      "notes": ""
+    }
+  ]
+}
