@@ -1,0 +1,65 @@
+{
+  "schema": "pale-reverie.worker-packet.v1",
+  "wave_id": "PR-WXXX",
+  "run_id": "PR-WXXX-A00",
+  "issued_at": null,
+  "source": {
+    "repository": "tswetc/influencer-os-site-v2.1-zai-browser-experiment",
+    "branch": "pr-wxxx/construction-<shortsha>",
+    "input_sha": "<40-char immutable SHA>",
+    "source_manifest_sha256": "<sha256>"
+  },
+  "mission": {
+    "name": "<bounded mission name>",
+    "objective": "<one clear objective>",
+    "preferred_model": "GLM-5.3",
+    "no_early_finalization": true
+  },
+  "read_scope": [],
+  "write_scope": [],
+  "forbidden_paths": [],
+  "required_context": [],
+  "asset_packs": [
+    {
+      "pack_id": "<pack-id>",
+      "pack_manifest_sha256": "<sha256>"
+    }
+  ],
+  "shared_contracts": [],
+  "required_tests": [],
+  "acceptance_gates": [],
+  "hard_constraints": [
+    "GitHub remote is read-only for Browser workers",
+    "no secrets or credentials in commits/artifacts",
+    "no same-wave dependency on unpublished peer output",
+    "no writes outside WRITE_SET",
+    "forward fixes only; do not rewrite history to hide mistakes"
+  ],
+  "output_contract": {
+    "version": "V1",
+    "final_statuses": [
+      "COMPLETE",
+      "PARTIAL",
+      "BLOCKED",
+      "FAILED"
+    ],
+    "required_artifacts": [
+      "<RUN_ID>-core.tar",
+      "<RUN_ID>-run.bundle"
+    ],
+    "optional_artifacts": [
+      "<RUN_ID>-evidence.tar"
+    ],
+    "required_result_files": [
+      "RUN-MANIFEST.json",
+      "RESULT.json",
+      "TEST-RESULTS.json",
+      "CHANGED-PATHS.txt",
+      "SHA256SUMS.txt"
+    ],
+    "worker_cannot_claim": [
+      "HANDOFF_RECEIVED",
+      "CENTRAL_ACCEPTANCE"
+    ]
+  }
+}
